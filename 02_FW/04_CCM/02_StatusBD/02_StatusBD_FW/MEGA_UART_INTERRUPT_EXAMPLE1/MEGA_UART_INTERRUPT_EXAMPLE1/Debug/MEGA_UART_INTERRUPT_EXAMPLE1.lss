@@ -1,0 +1,1427 @@
+
+MEGA_UART_INTERRUPT_EXAMPLE1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000004  00800100  000006d8  0000076c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000006d8  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000000ca  00800104  00800104  00000770  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000770  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000007a0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000040  00000000  00000000  000007e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001316  00000000  00000000  00000820  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000082d  00000000  00000000  00001b36  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000a82  00000000  00000000  00002363  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000f8  00000000  00000000  00002de8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000ebd7  00000000  00000000  00002ee0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000c94  00000000  00000000  00011ab7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000138  00000000  00000000  0001274b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_macro  000005ad  00000000  00000000  00012883  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	31 c0       	rjmp	.+98     	; 0x64 <__ctors_end>
+   2:	4b c0       	rjmp	.+150    	; 0x9a <__bad_interrupt>
+   4:	4a c0       	rjmp	.+148    	; 0x9a <__bad_interrupt>
+   6:	49 c0       	rjmp	.+146    	; 0x9a <__bad_interrupt>
+   8:	48 c0       	rjmp	.+144    	; 0x9a <__bad_interrupt>
+   a:	47 c0       	rjmp	.+142    	; 0x9a <__bad_interrupt>
+   c:	46 c0       	rjmp	.+140    	; 0x9a <__bad_interrupt>
+   e:	45 c0       	rjmp	.+138    	; 0x9a <__bad_interrupt>
+  10:	44 c0       	rjmp	.+136    	; 0x9a <__bad_interrupt>
+  12:	43 c0       	rjmp	.+134    	; 0x9a <__bad_interrupt>
+  14:	42 c0       	rjmp	.+132    	; 0x9a <__bad_interrupt>
+  16:	41 c0       	rjmp	.+130    	; 0x9a <__bad_interrupt>
+  18:	40 c0       	rjmp	.+128    	; 0x9a <__bad_interrupt>
+  1a:	3f c0       	rjmp	.+126    	; 0x9a <__bad_interrupt>
+  1c:	3e c0       	rjmp	.+124    	; 0x9a <__bad_interrupt>
+  1e:	3d c0       	rjmp	.+122    	; 0x9a <__bad_interrupt>
+  20:	3c c0       	rjmp	.+120    	; 0x9a <__bad_interrupt>
+  22:	3b c0       	rjmp	.+118    	; 0x9a <__bad_interrupt>
+  24:	83 c0       	rjmp	.+262    	; 0x12c <__vector_18>
+  26:	3a c0       	rjmp	.+116    	; 0x9c <__vector_19>
+  28:	38 c0       	rjmp	.+112    	; 0x9a <__bad_interrupt>
+  2a:	37 c0       	rjmp	.+110    	; 0x9a <__bad_interrupt>
+  2c:	36 c0       	rjmp	.+108    	; 0x9a <__bad_interrupt>
+  2e:	35 c0       	rjmp	.+106    	; 0x9a <__bad_interrupt>
+  30:	34 c0       	rjmp	.+104    	; 0x9a <__bad_interrupt>
+  32:	33 c0       	rjmp	.+102    	; 0x9a <__bad_interrupt>
+  34:	f7 c2       	rjmp	.+1518   	; 0x624 <__LOCK_REGION_LENGTH__+0x224>
+  36:	fc c2       	rjmp	.+1528   	; 0x630 <__LOCK_REGION_LENGTH__+0x230>
+  38:	01 c3       	rjmp	.+1538   	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+  3a:	06 c3       	rjmp	.+1548   	; 0x648 <__LOCK_REGION_LENGTH__+0x248>
+  3c:	0c c3       	rjmp	.+1560   	; 0x656 <__LOCK_REGION_LENGTH__+0x256>
+  3e:	11 c3       	rjmp	.+1570   	; 0x662 <__LOCK_REGION_LENGTH__+0x262>
+  40:	16 c3       	rjmp	.+1580   	; 0x66e <__LOCK_REGION_LENGTH__+0x26e>
+  42:	1b c3       	rjmp	.+1590   	; 0x67a <__LOCK_REGION_LENGTH__+0x27a>
+  44:	8e c2       	rjmp	.+1308   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  46:	8d c2       	rjmp	.+1306   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  48:	8c c2       	rjmp	.+1304   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  4a:	8b c2       	rjmp	.+1302   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  4c:	8a c2       	rjmp	.+1300   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  4e:	89 c2       	rjmp	.+1298   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  50:	88 c2       	rjmp	.+1296   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  52:	87 c2       	rjmp	.+1294   	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+  54:	eb c2       	rjmp	.+1494   	; 0x62c <__LOCK_REGION_LENGTH__+0x22c>
+  56:	f0 c2       	rjmp	.+1504   	; 0x638 <__LOCK_REGION_LENGTH__+0x238>
+  58:	f5 c2       	rjmp	.+1514   	; 0x644 <__LOCK_REGION_LENGTH__+0x244>
+  5a:	fb c2       	rjmp	.+1526   	; 0x652 <__LOCK_REGION_LENGTH__+0x252>
+  5c:	00 c3       	rjmp	.+1536   	; 0x65e <__LOCK_REGION_LENGTH__+0x25e>
+  5e:	05 c3       	rjmp	.+1546   	; 0x66a <__LOCK_REGION_LENGTH__+0x26a>
+  60:	0a c3       	rjmp	.+1556   	; 0x676 <__LOCK_REGION_LENGTH__+0x276>
+  62:	0f c3       	rjmp	.+1566   	; 0x682 <__LOCK_REGION_LENGTH__+0x282>
+
+00000064 <__ctors_end>:
+  64:	11 24       	eor	r1, r1
+  66:	1f be       	out	0x3f, r1	; 63
+  68:	cf ef       	ldi	r28, 0xFF	; 255
+  6a:	d2 e0       	ldi	r29, 0x02	; 2
+  6c:	de bf       	out	0x3e, r29	; 62
+  6e:	cd bf       	out	0x3d, r28	; 61
+
+00000070 <__do_copy_data>:
+  70:	11 e0       	ldi	r17, 0x01	; 1
+  72:	a0 e0       	ldi	r26, 0x00	; 0
+  74:	b1 e0       	ldi	r27, 0x01	; 1
+  76:	e8 ed       	ldi	r30, 0xD8	; 216
+  78:	f6 e0       	ldi	r31, 0x06	; 6
+  7a:	02 c0       	rjmp	.+4      	; 0x80 <__do_copy_data+0x10>
+  7c:	05 90       	lpm	r0, Z+
+  7e:	0d 92       	st	X+, r0
+  80:	a4 30       	cpi	r26, 0x04	; 4
+  82:	b1 07       	cpc	r27, r17
+  84:	d9 f7       	brne	.-10     	; 0x7c <__do_copy_data+0xc>
+
+00000086 <__do_clear_bss>:
+  86:	21 e0       	ldi	r18, 0x01	; 1
+  88:	a4 e0       	ldi	r26, 0x04	; 4
+  8a:	b1 e0       	ldi	r27, 0x01	; 1
+  8c:	01 c0       	rjmp	.+2      	; 0x90 <.do_clear_bss_start>
+
+0000008e <.do_clear_bss_loop>:
+  8e:	1d 92       	st	X+, r1
+
+00000090 <.do_clear_bss_start>:
+  90:	ae 3c       	cpi	r26, 0xCE	; 206
+  92:	b2 07       	cpc	r27, r18
+  94:	e1 f7       	brne	.-8      	; 0x8e <.do_clear_bss_loop>
+  96:	97 d1       	rcall	.+814    	; 0x3c6 <main>
+  98:	1d c3       	rjmp	.+1594   	; 0x6d4 <_exit>
+
+0000009a <__bad_interrupt>:
+  9a:	b2 cf       	rjmp	.-156    	; 0x0 <__vectors>
+
+0000009c <__vector_19>:
+ *
+ * This handler is called each time the UART data register is available for
+ * sending data.
+ */
+ISR(UART0_DATA_EMPTY_IRQ)
+{
+  9c:	1f 92       	push	r1
+  9e:	0f 92       	push	r0
+  a0:	0f b6       	in	r0, 0x3f	; 63
+  a2:	0f 92       	push	r0
+  a4:	11 24       	eor	r1, r1
+  a6:	2f 93       	push	r18
+  a8:	3f 93       	push	r19
+  aa:	4f 93       	push	r20
+  ac:	5f 93       	push	r21
+  ae:	8f 93       	push	r24
+  b0:	9f 93       	push	r25
+  b2:	af 93       	push	r26
+  b4:	bf 93       	push	r27
+  b6:	ef 93       	push	r30
+  b8:	ff 93       	push	r31
+ * \retval true   if the buffer is empty
+ * \retval false  if there is still data in the buffer
+ */
+static inline bool ring_buffer_is_empty(const struct ring_buffer *ring)
+{
+	return (ring->read_offset == ring->write_offset);
+  ba:	e9 ec       	ldi	r30, 0xC9	; 201
+  bc:	f1 e0       	ldi	r31, 0x01	; 1
+  be:	91 81       	ldd	r25, Z+1	; 0x01
+  c0:	80 81       	ld	r24, Z
+	// if there is data in the ring buffer, fetch it and send it
+	if (!ring_buffer_is_empty(&ring_buffer_out)) {
+  c2:	98 17       	cp	r25, r24
+  c4:	f9 f0       	breq	.+62     	; 0x104 <__vector_19+0x68>
+  c6:	91 81       	ldd	r25, Z+1	; 0x01
+  c8:	80 81       	ld	r24, Z
+ *
+ * \returns next data byte in buffer
+ */
+static inline uint8_t ring_buffer_get(struct ring_buffer *ring)
+{
+	Assert(!ring_buffer_is_empty(ring));
+  ca:	98 13       	cpse	r25, r24
+  cc:	01 c0       	rjmp	.+2      	; 0xd0 <__vector_19+0x34>
+  ce:	ff cf       	rjmp	.-2      	; 0xce <__vector_19+0x32>
+	uint8_t data = ring->buffer[ring->read_offset];
+  d0:	e9 ec       	ldi	r30, 0xC9	; 201
+  d2:	f1 e0       	ldi	r31, 0x01	; 1
+  d4:	81 81       	ldd	r24, Z+1	; 0x01
+  d6:	a3 81       	ldd	r26, Z+3	; 0x03
+  d8:	b4 81       	ldd	r27, Z+4	; 0x04
+  da:	a8 0f       	add	r26, r24
+  dc:	b1 1d       	adc	r27, r1
+  de:	9c 91       	ld	r25, X
+ *
+ * \returns the next read offset in the ring buffer
+ */
+static inline uint8_t ring_buffer_get_next_read(const struct ring_buffer *ring)
+{
+	return get_next(ring->read_offset, ring->size);
+  e0:	81 81       	ldd	r24, Z+1	; 0x01
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+  e2:	48 2f       	mov	r20, r24
+  e4:	50 e0       	ldi	r21, 0x00	; 0
+  e6:	22 81       	ldd	r18, Z+2	; 0x02
+  e8:	30 e0       	ldi	r19, 0x00	; 0
+  ea:	21 50       	subi	r18, 0x01	; 1
+  ec:	31 09       	sbc	r19, r1
+  ee:	42 17       	cp	r20, r18
+  f0:	53 07       	cpc	r21, r19
+  f2:	11 f0       	breq	.+4      	; 0xf8 <__vector_19+0x5c>
+  f4:	8f 5f       	subi	r24, 0xFF	; 255
+  f6:	01 c0       	rjmp	.+2      	; 0xfa <__vector_19+0x5e>
+  f8:	80 e0       	ldi	r24, 0x00	; 0
+ */
+static inline uint8_t ring_buffer_get(struct ring_buffer *ring)
+{
+	Assert(!ring_buffer_is_empty(ring));
+	uint8_t data = ring->buffer[ring->read_offset];
+	ring->read_offset = ring_buffer_get_next_read(ring);
+  fa:	80 93 ca 01 	sts	0x01CA, r24	; 0x8001ca <ring_buffer_out+0x1>
+		UDR0 = ring_buffer_get(&ring_buffer_out);
+  fe:	90 93 c6 00 	sts	0x00C6, r25	; 0x8000c6 <__EEPROM_REGION_LENGTH__+0x7f00c6>
+ 102:	05 c0       	rjmp	.+10     	; 0x10e <__vector_19+0x72>
+	}
+	else {
+		// no more data to send, turn off data ready interrupt
+		UCSR0B &= ~(1 << UDRIE0);
+ 104:	e1 ec       	ldi	r30, 0xC1	; 193
+ 106:	f0 e0       	ldi	r31, 0x00	; 0
+ 108:	80 81       	ld	r24, Z
+ 10a:	8f 7d       	andi	r24, 0xDF	; 223
+ 10c:	80 83       	st	Z, r24
+	}
+}
+ 10e:	ff 91       	pop	r31
+ 110:	ef 91       	pop	r30
+ 112:	bf 91       	pop	r27
+ 114:	af 91       	pop	r26
+ 116:	9f 91       	pop	r25
+ 118:	8f 91       	pop	r24
+ 11a:	5f 91       	pop	r21
+ 11c:	4f 91       	pop	r20
+ 11e:	3f 91       	pop	r19
+ 120:	2f 91       	pop	r18
+ 122:	0f 90       	pop	r0
+ 124:	0f be       	out	0x3f, r0	; 63
+ 126:	0f 90       	pop	r0
+ 128:	1f 90       	pop	r1
+ 12a:	18 95       	reti
+
+0000012c <__vector_18>:
+ * \brief Data RX interrupt handler
+ *
+ * This is the handler for UART receive data
+ */
+ISR(UART0_RX_IRQ)
+{
+ 12c:	1f 92       	push	r1
+ 12e:	0f 92       	push	r0
+ 130:	0f b6       	in	r0, 0x3f	; 63
+ 132:	0f 92       	push	r0
+ 134:	11 24       	eor	r1, r1
+ 136:	2f 93       	push	r18
+ 138:	3f 93       	push	r19
+ 13a:	4f 93       	push	r20
+ 13c:	5f 93       	push	r21
+ 13e:	6f 93       	push	r22
+ 140:	7f 93       	push	r23
+ 142:	8f 93       	push	r24
+ 144:	9f 93       	push	r25
+ 146:	af 93       	push	r26
+ 148:	bf 93       	push	r27
+ 14a:	ef 93       	push	r30
+ 14c:	ff 93       	push	r31
+	ring_buffer_put(&ring_buffer_in, UDR0);
+ 14e:	90 91 c6 00 	lds	r25, 0x00C6	; 0x8000c6 <__EEPROM_REGION_LENGTH__+0x7f00c6>
+ * \retval true  if the buffer is full
+ * \retval false if there is space available in the ring buffer
+ */
+static inline bool ring_buffer_is_full(const struct ring_buffer *ring)
+{
+	return (ring->read_offset == ring_buffer_get_next_write(ring));
+ 152:	e4 ec       	ldi	r30, 0xC4	; 196
+ 154:	f1 e0       	ldi	r31, 0x01	; 1
+ 156:	41 81       	ldd	r20, Z+1	; 0x01
+ *
+ * \returns the next write offset in the ring buffer
+ */
+static inline uint8_t ring_buffer_get_next_write(const struct ring_buffer *ring)
+{
+	return get_next(ring->write_offset, ring->size);
+ 158:	80 81       	ld	r24, Z
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 15a:	68 2f       	mov	r22, r24
+ 15c:	70 e0       	ldi	r23, 0x00	; 0
+ 15e:	22 81       	ldd	r18, Z+2	; 0x02
+ 160:	30 e0       	ldi	r19, 0x00	; 0
+ 162:	21 50       	subi	r18, 0x01	; 1
+ 164:	31 09       	sbc	r19, r1
+ 166:	62 17       	cp	r22, r18
+ 168:	73 07       	cpc	r23, r19
+ 16a:	11 f0       	breq	.+4      	; 0x170 <__vector_18+0x44>
+ 16c:	8f 5f       	subi	r24, 0xFF	; 255
+ 16e:	01 c0       	rjmp	.+2      	; 0x172 <__vector_18+0x46>
+ 170:	80 e0       	ldi	r24, 0x00	; 0
+ * \param data the byte to put to the buffer
+ *
+ */
+static inline void ring_buffer_put(struct ring_buffer *ring, uint8_t data)
+{
+	Assert(!ring_buffer_is_full(ring));
+ 172:	48 13       	cpse	r20, r24
+ 174:	01 c0       	rjmp	.+2      	; 0x178 <__vector_18+0x4c>
+ 176:	ff cf       	rjmp	.-2      	; 0x176 <__vector_18+0x4a>
+	ring->buffer[ring->write_offset] = data;
+ 178:	e4 ec       	ldi	r30, 0xC4	; 196
+ 17a:	f1 e0       	ldi	r31, 0x01	; 1
+ 17c:	80 81       	ld	r24, Z
+ 17e:	a3 81       	ldd	r26, Z+3	; 0x03
+ 180:	b4 81       	ldd	r27, Z+4	; 0x04
+ 182:	a8 0f       	add	r26, r24
+ 184:	b1 1d       	adc	r27, r1
+ 186:	9c 93       	st	X, r25
+ *
+ * \returns the next write offset in the ring buffer
+ */
+static inline uint8_t ring_buffer_get_next_write(const struct ring_buffer *ring)
+{
+	return get_next(ring->write_offset, ring->size);
+ 188:	80 81       	ld	r24, Z
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 18a:	48 2f       	mov	r20, r24
+ 18c:	50 e0       	ldi	r21, 0x00	; 0
+ 18e:	22 81       	ldd	r18, Z+2	; 0x02
+ 190:	30 e0       	ldi	r19, 0x00	; 0
+ 192:	21 50       	subi	r18, 0x01	; 1
+ 194:	31 09       	sbc	r19, r1
+ 196:	42 17       	cp	r20, r18
+ 198:	53 07       	cpc	r21, r19
+ 19a:	11 f0       	breq	.+4      	; 0x1a0 <__vector_18+0x74>
+ 19c:	8f 5f       	subi	r24, 0xFF	; 255
+ 19e:	01 c0       	rjmp	.+2      	; 0x1a2 <__vector_18+0x76>
+ 1a0:	80 e0       	ldi	r24, 0x00	; 0
+ */
+static inline void ring_buffer_put(struct ring_buffer *ring, uint8_t data)
+{
+	Assert(!ring_buffer_is_full(ring));
+	ring->buffer[ring->write_offset] = data;
+	ring->write_offset = ring_buffer_get_next_write(ring);
+ 1a2:	80 93 c4 01 	sts	0x01C4, r24	; 0x8001c4 <ring_buffer_in>
+	
+}
+ 1a6:	ff 91       	pop	r31
+ 1a8:	ef 91       	pop	r30
+ 1aa:	bf 91       	pop	r27
+ 1ac:	af 91       	pop	r26
+ 1ae:	9f 91       	pop	r25
+ 1b0:	8f 91       	pop	r24
+ 1b2:	7f 91       	pop	r23
+ 1b4:	6f 91       	pop	r22
+ 1b6:	5f 91       	pop	r21
+ 1b8:	4f 91       	pop	r20
+ 1ba:	3f 91       	pop	r19
+ 1bc:	2f 91       	pop	r18
+ 1be:	0f 90       	pop	r0
+ 1c0:	0f be       	out	0x3f, r0	; 63
+ 1c2:	0f 90       	pop	r0
+ 1c4:	1f 90       	pop	r1
+ 1c6:	18 95       	reti
+
+000001c8 <port_init>:
+ */
+
+void port_init(void)
+{
+	
+	DDRB =(0<<DDB7)|(0<<DDB6)|(0<<DDB5)|(0<<DDB4)|(0<<DDB3)|(1<<DDB2)|(1<<DDB1)|(1<<DDB0);
+ 1c8:	87 e0       	ldi	r24, 0x07	; 7
+ 1ca:	84 b9       	out	0x04, r24	; 4
+	DDRC =(1<<DDC6)|(1<<DDC5)|(1<<DDC4)|(1<<DDC3)|(1<<DDC2)|(1<<DDC1)|(1<<DDC0);
+ 1cc:	8f e7       	ldi	r24, 0x7F	; 127
+ 1ce:	87 b9       	out	0x07, r24	; 7
+	DDRD =(1<<DDD7)|(1<<DDD6)|(1<<DDD5)|(0<<DDD4)|(0<<DDD3)|(0<<DDD2)|(0<<DDD0);
+ 1d0:	80 ee       	ldi	r24, 0xE0	; 224
+ 1d2:	8a b9       	out	0x0a, r24	; 10
+	
+	PORTB = 0x00;
+ 1d4:	15 b8       	out	0x05, r1	; 5
+	PORTC = 0x00;
+ 1d6:	18 b8       	out	0x08, r1	; 8
+	PORTD = 0x00;
+ 1d8:	1b b8       	out	0x0b, r1	; 11
+	
+	PORTC = PORTC ^ (1<<PORTC0);_delay_ms(100);
+ 1da:	88 b1       	in	r24, 0x08	; 8
+ 1dc:	31 e0       	ldi	r19, 0x01	; 1
+ 1de:	83 27       	eor	r24, r19
+ 1e0:	88 b9       	out	0x08, r24	; 8
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1e2:	87 ea       	ldi	r24, 0xA7	; 167
+ 1e4:	91 e6       	ldi	r25, 0x61	; 97
+ 1e6:	01 97       	sbiw	r24, 0x01	; 1
+ 1e8:	f1 f7       	brne	.-4      	; 0x1e6 <port_init+0x1e>
+ 1ea:	00 c0       	rjmp	.+0      	; 0x1ec <port_init+0x24>
+ 1ec:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC1);_delay_ms(100);
+ 1ee:	88 b1       	in	r24, 0x08	; 8
+ 1f0:	22 e0       	ldi	r18, 0x02	; 2
+ 1f2:	82 27       	eor	r24, r18
+ 1f4:	88 b9       	out	0x08, r24	; 8
+ 1f6:	e7 ea       	ldi	r30, 0xA7	; 167
+ 1f8:	f1 e6       	ldi	r31, 0x61	; 97
+ 1fa:	31 97       	sbiw	r30, 0x01	; 1
+ 1fc:	f1 f7       	brne	.-4      	; 0x1fa <port_init+0x32>
+ 1fe:	00 c0       	rjmp	.+0      	; 0x200 <port_init+0x38>
+ 200:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC2);_delay_ms(100);
+ 202:	88 b1       	in	r24, 0x08	; 8
+ 204:	94 e0       	ldi	r25, 0x04	; 4
+ 206:	89 27       	eor	r24, r25
+ 208:	88 b9       	out	0x08, r24	; 8
+ 20a:	e7 ea       	ldi	r30, 0xA7	; 167
+ 20c:	f1 e6       	ldi	r31, 0x61	; 97
+ 20e:	31 97       	sbiw	r30, 0x01	; 1
+ 210:	f1 f7       	brne	.-4      	; 0x20e <port_init+0x46>
+ 212:	00 c0       	rjmp	.+0      	; 0x214 <port_init+0x4c>
+ 214:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC3);_delay_ms(100);
+ 216:	88 b1       	in	r24, 0x08	; 8
+ 218:	68 e0       	ldi	r22, 0x08	; 8
+ 21a:	86 27       	eor	r24, r22
+ 21c:	88 b9       	out	0x08, r24	; 8
+ 21e:	e7 ea       	ldi	r30, 0xA7	; 167
+ 220:	f1 e6       	ldi	r31, 0x61	; 97
+ 222:	31 97       	sbiw	r30, 0x01	; 1
+ 224:	f1 f7       	brne	.-4      	; 0x222 <port_init+0x5a>
+ 226:	00 c0       	rjmp	.+0      	; 0x228 <port_init+0x60>
+ 228:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC4);_delay_ms(100);
+ 22a:	88 b1       	in	r24, 0x08	; 8
+ 22c:	50 e1       	ldi	r21, 0x10	; 16
+ 22e:	85 27       	eor	r24, r21
+ 230:	88 b9       	out	0x08, r24	; 8
+ 232:	e7 ea       	ldi	r30, 0xA7	; 167
+ 234:	f1 e6       	ldi	r31, 0x61	; 97
+ 236:	31 97       	sbiw	r30, 0x01	; 1
+ 238:	f1 f7       	brne	.-4      	; 0x236 <port_init+0x6e>
+ 23a:	00 c0       	rjmp	.+0      	; 0x23c <port_init+0x74>
+ 23c:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC5);_delay_ms(100);
+ 23e:	48 b1       	in	r20, 0x08	; 8
+ 240:	80 e2       	ldi	r24, 0x20	; 32
+ 242:	48 27       	eor	r20, r24
+ 244:	48 b9       	out	0x08, r20	; 8
+ 246:	e7 ea       	ldi	r30, 0xA7	; 167
+ 248:	f1 e6       	ldi	r31, 0x61	; 97
+ 24a:	31 97       	sbiw	r30, 0x01	; 1
+ 24c:	f1 f7       	brne	.-4      	; 0x24a <port_init+0x82>
+ 24e:	00 c0       	rjmp	.+0      	; 0x250 <port_init+0x88>
+ 250:	00 00       	nop
+	
+	PORTB = PORTB ^ (1<<PORTB0); _delay_ms(100);
+ 252:	45 b1       	in	r20, 0x05	; 5
+ 254:	43 27       	eor	r20, r19
+ 256:	45 b9       	out	0x05, r20	; 5
+ 258:	e7 ea       	ldi	r30, 0xA7	; 167
+ 25a:	f1 e6       	ldi	r31, 0x61	; 97
+ 25c:	31 97       	sbiw	r30, 0x01	; 1
+ 25e:	f1 f7       	brne	.-4      	; 0x25c <port_init+0x94>
+ 260:	00 c0       	rjmp	.+0      	; 0x262 <port_init+0x9a>
+ 262:	00 00       	nop
+	PORTB = PORTB ^ (1<<PORTB1); _delay_ms(100);
+ 264:	45 b1       	in	r20, 0x05	; 5
+ 266:	42 27       	eor	r20, r18
+ 268:	45 b9       	out	0x05, r20	; 5
+ 26a:	e7 ea       	ldi	r30, 0xA7	; 167
+ 26c:	f1 e6       	ldi	r31, 0x61	; 97
+ 26e:	31 97       	sbiw	r30, 0x01	; 1
+ 270:	f1 f7       	brne	.-4      	; 0x26e <port_init+0xa6>
+ 272:	00 c0       	rjmp	.+0      	; 0x274 <port_init+0xac>
+ 274:	00 00       	nop
+	PORTB = PORTB ^ (1<<PORTB2); _delay_ms(100);
+ 276:	45 b1       	in	r20, 0x05	; 5
+ 278:	49 27       	eor	r20, r25
+ 27a:	45 b9       	out	0x05, r20	; 5
+ 27c:	e7 ea       	ldi	r30, 0xA7	; 167
+ 27e:	f1 e6       	ldi	r31, 0x61	; 97
+ 280:	31 97       	sbiw	r30, 0x01	; 1
+ 282:	f1 f7       	brne	.-4      	; 0x280 <port_init+0xb8>
+ 284:	00 c0       	rjmp	.+0      	; 0x286 <port_init+0xbe>
+ 286:	00 00       	nop
+
+	PORTD = PORTD ^ (1<<PORTD7); _delay_ms(100);
+ 288:	4b b1       	in	r20, 0x0b	; 11
+ 28a:	40 58       	subi	r20, 0x80	; 128
+ 28c:	4b b9       	out	0x0b, r20	; 11
+ 28e:	e7 ea       	ldi	r30, 0xA7	; 167
+ 290:	f1 e6       	ldi	r31, 0x61	; 97
+ 292:	31 97       	sbiw	r30, 0x01	; 1
+ 294:	f1 f7       	brne	.-4      	; 0x292 <port_init+0xca>
+ 296:	00 c0       	rjmp	.+0      	; 0x298 <port_init+0xd0>
+ 298:	00 00       	nop
+	PORTD = PORTD ^ (1<<PORTD6); _delay_ms(100);
+ 29a:	7b b1       	in	r23, 0x0b	; 11
+ 29c:	40 e4       	ldi	r20, 0x40	; 64
+ 29e:	74 27       	eor	r23, r20
+ 2a0:	7b b9       	out	0x0b, r23	; 11
+ 2a2:	e7 ea       	ldi	r30, 0xA7	; 167
+ 2a4:	f1 e6       	ldi	r31, 0x61	; 97
+ 2a6:	31 97       	sbiw	r30, 0x01	; 1
+ 2a8:	f1 f7       	brne	.-4      	; 0x2a6 <port_init+0xde>
+ 2aa:	00 c0       	rjmp	.+0      	; 0x2ac <port_init+0xe4>
+ 2ac:	00 00       	nop
+	PORTD = PORTD ^ (1<<PORTD5); _delay_ms(100);
+ 2ae:	7b b1       	in	r23, 0x0b	; 11
+ 2b0:	78 27       	eor	r23, r24
+ 2b2:	7b b9       	out	0x0b, r23	; 11
+ 2b4:	e7 ea       	ldi	r30, 0xA7	; 167
+ 2b6:	f1 e6       	ldi	r31, 0x61	; 97
+ 2b8:	31 97       	sbiw	r30, 0x01	; 1
+ 2ba:	f1 f7       	brne	.-4      	; 0x2b8 <port_init+0xf0>
+ 2bc:	00 c0       	rjmp	.+0      	; 0x2be <port_init+0xf6>
+ 2be:	00 00       	nop
+ 2c0:	e7 ea       	ldi	r30, 0xA7	; 167
+ 2c2:	f1 e6       	ldi	r31, 0x61	; 97
+ 2c4:	31 97       	sbiw	r30, 0x01	; 1
+ 2c6:	f1 f7       	brne	.-4      	; 0x2c4 <port_init+0xfc>
+ 2c8:	00 c0       	rjmp	.+0      	; 0x2ca <port_init+0x102>
+ 2ca:	00 00       	nop
+		
+	_delay_ms(100);
+	
+	PORTC = PORTC ^ (1<<PORTC0);_delay_ms(100);
+ 2cc:	78 b1       	in	r23, 0x08	; 8
+ 2ce:	73 27       	eor	r23, r19
+ 2d0:	78 b9       	out	0x08, r23	; 8
+ 2d2:	e7 ea       	ldi	r30, 0xA7	; 167
+ 2d4:	f1 e6       	ldi	r31, 0x61	; 97
+ 2d6:	31 97       	sbiw	r30, 0x01	; 1
+ 2d8:	f1 f7       	brne	.-4      	; 0x2d6 <port_init+0x10e>
+ 2da:	00 c0       	rjmp	.+0      	; 0x2dc <port_init+0x114>
+ 2dc:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC1);_delay_ms(100);
+ 2de:	78 b1       	in	r23, 0x08	; 8
+ 2e0:	72 27       	eor	r23, r18
+ 2e2:	78 b9       	out	0x08, r23	; 8
+ 2e4:	e7 ea       	ldi	r30, 0xA7	; 167
+ 2e6:	f1 e6       	ldi	r31, 0x61	; 97
+ 2e8:	31 97       	sbiw	r30, 0x01	; 1
+ 2ea:	f1 f7       	brne	.-4      	; 0x2e8 <port_init+0x120>
+ 2ec:	00 c0       	rjmp	.+0      	; 0x2ee <port_init+0x126>
+ 2ee:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC2);_delay_ms(100);
+ 2f0:	78 b1       	in	r23, 0x08	; 8
+ 2f2:	79 27       	eor	r23, r25
+ 2f4:	78 b9       	out	0x08, r23	; 8
+ 2f6:	e7 ea       	ldi	r30, 0xA7	; 167
+ 2f8:	f1 e6       	ldi	r31, 0x61	; 97
+ 2fa:	31 97       	sbiw	r30, 0x01	; 1
+ 2fc:	f1 f7       	brne	.-4      	; 0x2fa <port_init+0x132>
+ 2fe:	00 c0       	rjmp	.+0      	; 0x300 <__stack+0x1>
+ 300:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC3);_delay_ms(100);
+ 302:	78 b1       	in	r23, 0x08	; 8
+ 304:	67 27       	eor	r22, r23
+ 306:	68 b9       	out	0x08, r22	; 8
+ 308:	e7 ea       	ldi	r30, 0xA7	; 167
+ 30a:	f1 e6       	ldi	r31, 0x61	; 97
+ 30c:	31 97       	sbiw	r30, 0x01	; 1
+ 30e:	f1 f7       	brne	.-4      	; 0x30c <__stack+0xd>
+ 310:	00 c0       	rjmp	.+0      	; 0x312 <__stack+0x13>
+ 312:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC4);_delay_ms(100);
+ 314:	68 b1       	in	r22, 0x08	; 8
+ 316:	56 27       	eor	r21, r22
+ 318:	58 b9       	out	0x08, r21	; 8
+ 31a:	e7 ea       	ldi	r30, 0xA7	; 167
+ 31c:	f1 e6       	ldi	r31, 0x61	; 97
+ 31e:	31 97       	sbiw	r30, 0x01	; 1
+ 320:	f1 f7       	brne	.-4      	; 0x31e <__stack+0x1f>
+ 322:	00 c0       	rjmp	.+0      	; 0x324 <__stack+0x25>
+ 324:	00 00       	nop
+	PORTC = PORTC ^ (1<<PORTC5);_delay_ms(100);
+ 326:	58 b1       	in	r21, 0x08	; 8
+ 328:	58 27       	eor	r21, r24
+ 32a:	58 b9       	out	0x08, r21	; 8
+ 32c:	e7 ea       	ldi	r30, 0xA7	; 167
+ 32e:	f1 e6       	ldi	r31, 0x61	; 97
+ 330:	31 97       	sbiw	r30, 0x01	; 1
+ 332:	f1 f7       	brne	.-4      	; 0x330 <__stack+0x31>
+ 334:	00 c0       	rjmp	.+0      	; 0x336 <__stack+0x37>
+ 336:	00 00       	nop
+	
+	PORTB = PORTB ^ (1<<PORTB0); _delay_ms(100);
+ 338:	55 b1       	in	r21, 0x05	; 5
+ 33a:	35 27       	eor	r19, r21
+ 33c:	35 b9       	out	0x05, r19	; 5
+ 33e:	e7 ea       	ldi	r30, 0xA7	; 167
+ 340:	f1 e6       	ldi	r31, 0x61	; 97
+ 342:	31 97       	sbiw	r30, 0x01	; 1
+ 344:	f1 f7       	brne	.-4      	; 0x342 <__stack+0x43>
+ 346:	00 c0       	rjmp	.+0      	; 0x348 <__stack+0x49>
+ 348:	00 00       	nop
+	PORTB = PORTB ^ (1<<PORTB1); _delay_ms(100);
+ 34a:	35 b1       	in	r19, 0x05	; 5
+ 34c:	23 27       	eor	r18, r19
+ 34e:	25 b9       	out	0x05, r18	; 5
+ 350:	e7 ea       	ldi	r30, 0xA7	; 167
+ 352:	f1 e6       	ldi	r31, 0x61	; 97
+ 354:	31 97       	sbiw	r30, 0x01	; 1
+ 356:	f1 f7       	brne	.-4      	; 0x354 <__stack+0x55>
+ 358:	00 c0       	rjmp	.+0      	; 0x35a <__stack+0x5b>
+ 35a:	00 00       	nop
+	PORTB = PORTB ^ (1<<PORTB2); _delay_ms(100);
+ 35c:	25 b1       	in	r18, 0x05	; 5
+ 35e:	92 27       	eor	r25, r18
+ 360:	95 b9       	out	0x05, r25	; 5
+ 362:	e7 ea       	ldi	r30, 0xA7	; 167
+ 364:	f1 e6       	ldi	r31, 0x61	; 97
+ 366:	31 97       	sbiw	r30, 0x01	; 1
+ 368:	f1 f7       	brne	.-4      	; 0x366 <__stack+0x67>
+ 36a:	00 c0       	rjmp	.+0      	; 0x36c <__stack+0x6d>
+ 36c:	00 00       	nop
+
+	PORTD = PORTD ^ (1<<PORTD7); _delay_ms(100);
+ 36e:	9b b1       	in	r25, 0x0b	; 11
+ 370:	90 58       	subi	r25, 0x80	; 128
+ 372:	9b b9       	out	0x0b, r25	; 11
+ 374:	e7 ea       	ldi	r30, 0xA7	; 167
+ 376:	f1 e6       	ldi	r31, 0x61	; 97
+ 378:	31 97       	sbiw	r30, 0x01	; 1
+ 37a:	f1 f7       	brne	.-4      	; 0x378 <__stack+0x79>
+ 37c:	00 c0       	rjmp	.+0      	; 0x37e <__stack+0x7f>
+ 37e:	00 00       	nop
+	PORTD = PORTD ^ (1<<PORTD6); _delay_ms(100);
+ 380:	9b b1       	in	r25, 0x0b	; 11
+ 382:	49 27       	eor	r20, r25
+ 384:	4b b9       	out	0x0b, r20	; 11
+ 386:	e7 ea       	ldi	r30, 0xA7	; 167
+ 388:	f1 e6       	ldi	r31, 0x61	; 97
+ 38a:	31 97       	sbiw	r30, 0x01	; 1
+ 38c:	f1 f7       	brne	.-4      	; 0x38a <__stack+0x8b>
+ 38e:	00 c0       	rjmp	.+0      	; 0x390 <__stack+0x91>
+ 390:	00 00       	nop
+	PORTD = PORTD ^ (1<<PORTD5); _delay_ms(100);
+ 392:	9b b1       	in	r25, 0x0b	; 11
+ 394:	89 27       	eor	r24, r25
+ 396:	8b b9       	out	0x0b, r24	; 11
+ 398:	87 ea       	ldi	r24, 0xA7	; 167
+ 39a:	91 e6       	ldi	r25, 0x61	; 97
+ 39c:	01 97       	sbiw	r24, 0x01	; 1
+ 39e:	f1 f7       	brne	.-4      	; 0x39c <__stack+0x9d>
+ 3a0:	00 c0       	rjmp	.+0      	; 0x3a2 <__stack+0xa3>
+ 3a2:	00 00       	nop
+	
+	PORTB = 0x00;
+ 3a4:	15 b8       	out	0x05, r1	; 5
+	PORTC = 0x00;
+ 3a6:	18 b8       	out	0x08, r1	; 8
+	PORTD = 0x00;
+ 3a8:	1b b8       	out	0x0b, r1	; 11
+ 3aa:	08 95       	ret
+
+000003ac <getCheckSum>:
+uint8_t getCheckSum(uint8_t *data, uint8_t length)
+{
+	uint8_t csum;
+
+	csum = 0;
+	for(;length>0;length--)
+ 3ac:	66 23       	and	r22, r22
+ 3ae:	41 f0       	breq	.+16     	; 0x3c0 <getCheckSum+0x14>
+ 3b0:	e8 2f       	mov	r30, r24
+ 3b2:	f9 2f       	mov	r31, r25
+ 3b4:	80 e0       	ldi	r24, 0x00	; 0
+	{
+		csum += *data++;
+ 3b6:	91 91       	ld	r25, Z+
+ 3b8:	89 0f       	add	r24, r25
+uint8_t getCheckSum(uint8_t *data, uint8_t length)
+{
+	uint8_t csum;
+
+	csum = 0;
+	for(;length>0;length--)
+ 3ba:	61 50       	subi	r22, 0x01	; 1
+ 3bc:	e1 f7       	brne	.-8      	; 0x3b6 <getCheckSum+0xa>
+ 3be:	01 c0       	rjmp	.+2      	; 0x3c2 <getCheckSum+0x16>
+
+uint8_t getCheckSum(uint8_t *data, uint8_t length)
+{
+	uint8_t csum;
+
+	csum = 0;
+ 3c0:	80 e0       	ldi	r24, 0x00	; 0
+	{
+		csum += *data++;
+	}
+
+	return 0xFF - csum;
+}
+ 3c2:	80 95       	com	r24
+ 3c4:	08 95       	ret
+
+000003c6 <main>:
+ *
+ * \note The RX and TX pins should be externally connected in order to pass the
+ * test.
+ */
+int main(void)
+{
+ 3c6:	cf 93       	push	r28
+ 3c8:	df 93       	push	r29
+ 3ca:	cd b7       	in	r28, 0x3d	; 61
+ 3cc:	de b7       	in	r29, 0x3e	; 62
+ 3ce:	69 97       	sbiw	r28, 0x19	; 25
+ 3d0:	0f b6       	in	r0, 0x3f	; 63
+ 3d2:	f8 94       	cli
+ 3d4:	de bf       	out	0x3e, r29	; 62
+ 3d6:	0f be       	out	0x3f, r0	; 63
+ 3d8:	cd bf       	out	0x3d, r28	; 61
+	//uint8_t rdata;
+	uint8_t cnt;
+	uint8_t sposition=0;
+	port_init();
+ 3da:	f6 de       	rcall	.-532    	; 0x1c8 <port_init>
+	cli();
+ 3dc:	f8 94       	cli
+	//UBRR0H = (uint8_t)(ubrr >>8);
+	//UBRR0L = (uint8_t)(ubrr);	
+	
+#if defined UBRR0H
+	// get the values from the setbaud tool
+	UBRR0H = UBRRH_VALUE;
+ 3de:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__EEPROM_REGION_LENGTH__+0x7f00c5>
+	UBRR0L = UBRRL_VALUE;
+ 3e2:	8c e0       	ldi	r24, 0x0C	; 12
+ 3e4:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__EEPROM_REGION_LENGTH__+0x7f00c4>
+#else
+#error "Device is not supported by the driver"
+#endif
+
+#if USE_2X
+	UCSR0A |= (1 << U2X0);
+ 3e8:	e0 ec       	ldi	r30, 0xC0	; 192
+ 3ea:	f0 e0       	ldi	r31, 0x00	; 0
+ 3ec:	80 81       	ld	r24, Z
+ 3ee:	82 60       	ori	r24, 0x02	; 2
+ 3f0:	80 83       	st	Z, r24
+#endif
+
+	// enable RX and TX and set interrupts on rx complete
+	UCSR0B = (1 << RXEN0) | (1 << TXEN0) | (1 << RXCIE0);
+ 3f2:	e1 ec       	ldi	r30, 0xC1	; 193
+ 3f4:	f0 e0       	ldi	r31, 0x00	; 0
+ 3f6:	88 e9       	ldi	r24, 0x98	; 152
+ 3f8:	80 83       	st	Z, r24
+
+	// 8-bit, 1 stop bit, no parity, asynchronous UART
+	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00) | (0 << USBS0) |
+ 3fa:	86 e0       	ldi	r24, 0x06	; 6
+ 3fc:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__EEPROM_REGION_LENGTH__+0x7f00c2>
+			(0 << UPM01) | (0 << UPM00) | (0 << UMSEL01) |
+			(0 << UMSEL00);
+			
+	UCSR0B |=  (1 << UDRIE0);
+ 400:	80 81       	ld	r24, Z
+ 402:	80 62       	ori	r24, 0x20	; 32
+ 404:	80 83       	st	Z, r24
+ * \retval struct ring_buffer a struct containing the ring buffer
+ */
+static inline struct ring_buffer ring_buffer_init(uint8_t *buffer, uint8_t size)
+{
+	struct ring_buffer ring;
+	ring.write_offset = 0;
+ 406:	1d 8a       	std	Y+21, r1	; 0x15
+	ring.read_offset = 0;
+ 408:	1e 8a       	std	Y+22, r1	; 0x16
+	ring.size = size;
+ 40a:	80 e4       	ldi	r24, 0x40	; 64
+ 40c:	8f 8b       	std	Y+23, r24	; 0x17
+	ring.buffer = buffer;
+ 40e:	24 e4       	ldi	r18, 0x44	; 68
+ 410:	31 e0       	ldi	r19, 0x01	; 1
+ 412:	39 8f       	std	Y+25, r19	; 0x19
+ 414:	28 8f       	std	Y+24, r18	; 0x18
+	return ring;
+ 416:	95 e0       	ldi	r25, 0x05	; 5
+ 418:	fe 01       	movw	r30, r28
+ 41a:	75 96       	adiw	r30, 0x15	; 21
+ 41c:	de 01       	movw	r26, r28
+ 41e:	50 96       	adiw	r26, 0x10	; 16
+ 420:	01 90       	ld	r0, Z+
+ 422:	0d 92       	st	X+, r0
+ 424:	9a 95       	dec	r25
+ 426:	e1 f7       	brne	.-8      	; 0x420 <__LOCK_REGION_LENGTH__+0x20>
+ 428:	95 e0       	ldi	r25, 0x05	; 5
+ 42a:	fe 01       	movw	r30, r28
+ 42c:	70 96       	adiw	r30, 0x10	; 16
+ 42e:	de 01       	movw	r26, r28
+ 430:	1b 96       	adiw	r26, 0x0b	; 11
+ 432:	01 90       	ld	r0, Z+
+ 434:	0d 92       	st	X+, r0
+ 436:	9a 95       	dec	r25
+ 438:	e1 f7       	brne	.-8      	; 0x432 <__LOCK_REGION_LENGTH__+0x32>
+
+	// initialize the in and out buffer for the UART
+	ring_buffer_out = ring_buffer_init(out_buffer, BUFFER_SIZE);
+ 43a:	95 e0       	ldi	r25, 0x05	; 5
+ 43c:	fe 01       	movw	r30, r28
+ 43e:	3b 96       	adiw	r30, 0x0b	; 11
+ 440:	a9 ec       	ldi	r26, 0xC9	; 201
+ 442:	b1 e0       	ldi	r27, 0x01	; 1
+ 444:	01 90       	ld	r0, Z+
+ 446:	0d 92       	st	X+, r0
+ 448:	9a 95       	dec	r25
+ 44a:	e1 f7       	brne	.-8      	; 0x444 <__LOCK_REGION_LENGTH__+0x44>
+ * \retval struct ring_buffer a struct containing the ring buffer
+ */
+static inline struct ring_buffer ring_buffer_init(uint8_t *buffer, uint8_t size)
+{
+	struct ring_buffer ring;
+	ring.write_offset = 0;
+ 44c:	1d 8a       	std	Y+21, r1	; 0x15
+	ring.read_offset = 0;
+ 44e:	1e 8a       	std	Y+22, r1	; 0x16
+	ring.size = size;
+ 450:	8f 8b       	std	Y+23, r24	; 0x17
+	ring.buffer = buffer;
+ 452:	84 e8       	ldi	r24, 0x84	; 132
+ 454:	91 e0       	ldi	r25, 0x01	; 1
+ 456:	99 8f       	std	Y+25, r25	; 0x19
+ 458:	88 8f       	std	Y+24, r24	; 0x18
+	return ring;
+ 45a:	85 e0       	ldi	r24, 0x05	; 5
+ 45c:	fe 01       	movw	r30, r28
+ 45e:	75 96       	adiw	r30, 0x15	; 21
+ 460:	de 01       	movw	r26, r28
+ 462:	16 96       	adiw	r26, 0x06	; 6
+ 464:	01 90       	ld	r0, Z+
+ 466:	0d 92       	st	X+, r0
+ 468:	8a 95       	dec	r24
+ 46a:	e1 f7       	brne	.-8      	; 0x464 <__LOCK_REGION_LENGTH__+0x64>
+ 46c:	85 e0       	ldi	r24, 0x05	; 5
+ 46e:	fe 01       	movw	r30, r28
+ 470:	36 96       	adiw	r30, 0x06	; 6
+ 472:	de 01       	movw	r26, r28
+ 474:	11 96       	adiw	r26, 0x01	; 1
+ 476:	01 90       	ld	r0, Z+
+ 478:	0d 92       	st	X+, r0
+ 47a:	8a 95       	dec	r24
+ 47c:	e1 f7       	brne	.-8      	; 0x476 <__LOCK_REGION_LENGTH__+0x76>
+	ring_buffer_in = ring_buffer_init(in_buffer, BUFFER_SIZE);
+ 47e:	85 e0       	ldi	r24, 0x05	; 5
+ 480:	fe 01       	movw	r30, r28
+ 482:	31 96       	adiw	r30, 0x01	; 1
+ 484:	a4 ec       	ldi	r26, 0xC4	; 196
+ 486:	b1 e0       	ldi	r27, 0x01	; 1
+ 488:	01 90       	ld	r0, Z+
+ 48a:	0d 92       	st	X+, r0
+ 48c:	8a 95       	dec	r24
+ 48e:	e1 f7       	brne	.-8      	; 0x488 <__LOCK_REGION_LENGTH__+0x88>
+	uint8_t cnt;
+	uint8_t sposition=0;
+	port_init();
+	cli();
+	uart_init();
+	sei();
+ 490:	78 94       	sei
+
+	// Send the test string
+	for (cnt = 0; cnt < strlen(test_string); cnt++) {
+ 492:	90 e0       	ldi	r25, 0x00	; 0
+ 494:	60 e0       	ldi	r22, 0x00	; 0
+ 496:	71 e0       	ldi	r23, 0x01	; 1
+ * \retval true   if the buffer is empty
+ * \retval false  if there is still data in the buffer
+ */
+static inline bool ring_buffer_is_empty(const struct ring_buffer *ring)
+{
+	return (ring->read_offset == ring->write_offset);
+ 498:	e9 ec       	ldi	r30, 0xC9	; 201
+ 49a:	f1 e0       	ldi	r31, 0x01	; 1
+{
+	// Disable interrupts to get exclusive access to ring_buffer_out.
+	cli();
+	if (ring_buffer_is_empty(&ring_buffer_out)) {
+		// First data in buffer, enable data ready interrupt
+		UCSR0B |=  (1 << UDRIE0);
+ 49c:	41 ec       	ldi	r20, 0xC1	; 193
+ 49e:	50 e0       	ldi	r21, 0x00	; 0
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 4a0:	10 e0       	ldi	r17, 0x00	; 0
+	cli();
+	uart_init();
+	sei();
+
+	// Send the test string
+	for (cnt = 0; cnt < strlen(test_string); cnt++) {
+ 4a2:	35 c0       	rjmp	.+106    	; 0x50e <__LOCK_REGION_LENGTH__+0x10e>
+		uart_putchar(test_string[cnt]);
+ 4a4:	a9 2f       	mov	r26, r25
+ 4a6:	b0 e0       	ldi	r27, 0x00	; 0
+ 4a8:	a0 50       	subi	r26, 0x00	; 0
+ 4aa:	bf 4f       	sbci	r27, 0xFF	; 255
+ 4ac:	0c 91       	ld	r16, X
+ *
+ */
+static inline void uart_putchar(uint8_t data)
+{
+	// Disable interrupts to get exclusive access to ring_buffer_out.
+	cli();
+ 4ae:	f8 94       	cli
+ * \retval true   if the buffer is empty
+ * \retval false  if there is still data in the buffer
+ */
+static inline bool ring_buffer_is_empty(const struct ring_buffer *ring)
+{
+	return (ring->read_offset == ring->write_offset);
+ 4b0:	21 81       	ldd	r18, Z+1	; 0x01
+ 4b2:	80 81       	ld	r24, Z
+	if (ring_buffer_is_empty(&ring_buffer_out)) {
+ 4b4:	28 13       	cpse	r18, r24
+ 4b6:	04 c0       	rjmp	.+8      	; 0x4c0 <__LOCK_REGION_LENGTH__+0xc0>
+		// First data in buffer, enable data ready interrupt
+		UCSR0B |=  (1 << UDRIE0);
+ 4b8:	da 01       	movw	r26, r20
+ 4ba:	8c 91       	ld	r24, X
+ 4bc:	80 62       	ori	r24, 0x20	; 32
+ 4be:	8c 93       	st	X, r24
+ * \retval true  if the buffer is full
+ * \retval false if there is space available in the ring buffer
+ */
+static inline bool ring_buffer_is_full(const struct ring_buffer *ring)
+{
+	return (ring->read_offset == ring_buffer_get_next_write(ring));
+ 4c0:	f1 80       	ldd	r15, Z+1	; 0x01
+ *
+ * \returns the next write offset in the ring buffer
+ */
+static inline uint8_t ring_buffer_get_next_write(const struct ring_buffer *ring)
+{
+	return get_next(ring->write_offset, ring->size);
+ 4c2:	80 81       	ld	r24, Z
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 4c4:	a8 2f       	mov	r26, r24
+ 4c6:	b0 e0       	ldi	r27, 0x00	; 0
+ 4c8:	22 81       	ldd	r18, Z+2	; 0x02
+ 4ca:	30 e0       	ldi	r19, 0x00	; 0
+ 4cc:	21 50       	subi	r18, 0x01	; 1
+ 4ce:	31 09       	sbc	r19, r1
+ 4d0:	a2 17       	cp	r26, r18
+ 4d2:	b3 07       	cpc	r27, r19
+ 4d4:	11 f0       	breq	.+4      	; 0x4da <__LOCK_REGION_LENGTH__+0xda>
+ 4d6:	8f 5f       	subi	r24, 0xFF	; 255
+ 4d8:	01 c0       	rjmp	.+2      	; 0x4dc <__LOCK_REGION_LENGTH__+0xdc>
+ 4da:	81 2f       	mov	r24, r17
+ * \param data the byte to put to the buffer
+ *
+ */
+static inline void ring_buffer_put(struct ring_buffer *ring, uint8_t data)
+{
+	Assert(!ring_buffer_is_full(ring));
+ 4dc:	f8 12       	cpse	r15, r24
+ 4de:	01 c0       	rjmp	.+2      	; 0x4e2 <__LOCK_REGION_LENGTH__+0xe2>
+ 4e0:	ff cf       	rjmp	.-2      	; 0x4e0 <__LOCK_REGION_LENGTH__+0xe0>
+	ring->buffer[ring->write_offset] = data;
+ 4e2:	80 81       	ld	r24, Z
+ 4e4:	a3 81       	ldd	r26, Z+3	; 0x03
+ 4e6:	b4 81       	ldd	r27, Z+4	; 0x04
+ 4e8:	a8 0f       	add	r26, r24
+ 4ea:	b1 1d       	adc	r27, r1
+ 4ec:	0c 93       	st	X, r16
+ *
+ * \returns the next write offset in the ring buffer
+ */
+static inline uint8_t ring_buffer_get_next_write(const struct ring_buffer *ring)
+{
+	return get_next(ring->write_offset, ring->size);
+ 4ee:	80 81       	ld	r24, Z
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 4f0:	a8 2f       	mov	r26, r24
+ 4f2:	b0 e0       	ldi	r27, 0x00	; 0
+ 4f4:	22 81       	ldd	r18, Z+2	; 0x02
+ 4f6:	30 e0       	ldi	r19, 0x00	; 0
+ 4f8:	21 50       	subi	r18, 0x01	; 1
+ 4fa:	31 09       	sbc	r19, r1
+ 4fc:	a2 17       	cp	r26, r18
+ 4fe:	b3 07       	cpc	r27, r19
+ 500:	11 f0       	breq	.+4      	; 0x506 <__LOCK_REGION_LENGTH__+0x106>
+ 502:	8f 5f       	subi	r24, 0xFF	; 255
+ 504:	01 c0       	rjmp	.+2      	; 0x508 <__LOCK_REGION_LENGTH__+0x108>
+ 506:	81 2f       	mov	r24, r17
+ */
+static inline void ring_buffer_put(struct ring_buffer *ring, uint8_t data)
+{
+	Assert(!ring_buffer_is_full(ring));
+	ring->buffer[ring->write_offset] = data;
+	ring->write_offset = ring_buffer_get_next_write(ring);
+ 508:	80 83       	st	Z, r24
+	}
+	// Put data in buffer
+	ring_buffer_put(&ring_buffer_out, data);
+
+	// Re-enable interrupts
+	sei();
+ 50a:	78 94       	sei
+	cli();
+	uart_init();
+	sei();
+
+	// Send the test string
+	for (cnt = 0; cnt < strlen(test_string); cnt++) {
+ 50c:	9f 5f       	subi	r25, 0xFF	; 255
+ 50e:	db 01       	movw	r26, r22
+ 510:	0d 90       	ld	r0, X+
+ 512:	00 20       	and	r0, r0
+ 514:	e9 f7       	brne	.-6      	; 0x510 <__LOCK_REGION_LENGTH__+0x110>
+ 516:	11 97       	sbiw	r26, 0x01	; 1
+ 518:	a0 50       	subi	r26, 0x00	; 0
+ 51a:	b1 40       	sbci	r27, 0x01	; 1
+ 51c:	29 2f       	mov	r18, r25
+ 51e:	30 e0       	ldi	r19, 0x00	; 0
+ 520:	2a 17       	cp	r18, r26
+ 522:	3b 07       	cpc	r19, r27
+ 524:	08 f4       	brcc	.+2      	; 0x528 <__LOCK_REGION_LENGTH__+0x128>
+ 526:	be cf       	rjmp	.-132    	; 0x4a4 <__LOCK_REGION_LENGTH__+0xa4>
+ * \returns next data byte in buffer
+ */
+static inline uint8_t ring_buffer_get(struct ring_buffer *ring)
+{
+	Assert(!ring_buffer_is_empty(ring));
+	uint8_t data = ring->buffer[ring->read_offset];
+ 528:	04 ec       	ldi	r16, 0xC4	; 196
+ 52a:	11 e0       	ldi	r17, 0x01	; 1
+ 52c:	0f 2e       	mov	r0, r31
+ 52e:	f1 e1       	ldi	r31, 0x11	; 17
+ 530:	4f 2e       	mov	r4, r31
+ 532:	f1 e0       	ldi	r31, 0x01	; 1
+ 534:	5f 2e       	mov	r5, r31
+ 536:	f0 2d       	mov	r31, r0
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 538:	71 2c       	mov	r7, r1
+			cnt++;
+
+		} while (cnt<13);//rbuf[cnt-1] == 'E' && rbuf[cnt-2] == 'M');
+		
+
+		if(rbuf[0] == 0x43 && rbuf[1] == 0x43 && rbuf[2] == 0x4D && rbuf[3] == 0x53)
+ 53a:	0f 2e       	mov	r0, r31
+ 53c:	f4 e0       	ldi	r31, 0x04	; 4
+ 53e:	ef 2e       	mov	r14, r31
+ 540:	f1 e0       	ldi	r31, 0x01	; 1
+ 542:	ff 2e       	mov	r15, r31
+ 544:	f0 2d       	mov	r31, r0
+								case 0x15 : PORTC = PORTC | (1<<PORTC4); break;
+								case 0x06 : PORTC = PORTC ^ (1<<PORTC5); break;
+								case 0x16 : PORTC = PORTC | (1<<PORTC5); break;
+								case 0x07 : PORTB = PORTB ^ (1<<PORTB0); break;
+								case 0x17 : PORTB = PORTB | (1<<PORTB0); break;
+								case 0x08 : PORTB = PORTB ^ (1<<PORTB1); break;
+ 546:	68 94       	set
+ 548:	cc 24       	eor	r12, r12
+ 54a:	c1 f8       	bld	r12, 1
+								case 0x14 : PORTC = PORTC | (1<<PORTC3); break;
+								case 0x05 : PORTC = PORTC ^ (1<<PORTC4); break;
+								case 0x15 : PORTC = PORTC | (1<<PORTC4); break;
+								case 0x06 : PORTC = PORTC ^ (1<<PORTC5); break;
+								case 0x16 : PORTC = PORTC | (1<<PORTC5); break;
+								case 0x07 : PORTB = PORTB ^ (1<<PORTB0); break;
+ 54c:	dd 24       	eor	r13, r13
+ 54e:	d3 94       	inc	r13
+								case 0x13 : PORTC = PORTC | (1<<PORTC2); break;
+								case 0x04 : PORTC = PORTC ^ (1<<PORTC3); break;
+								case 0x14 : PORTC = PORTC | (1<<PORTC3); break;
+								case 0x05 : PORTC = PORTC ^ (1<<PORTC4); break;
+								case 0x15 : PORTC = PORTC | (1<<PORTC4); break;
+								case 0x06 : PORTC = PORTC ^ (1<<PORTC5); break;
+ 550:	68 94       	set
+ 552:	88 24       	eor	r8, r8
+ 554:	85 f8       	bld	r8, 5
+								case 0x12 : PORTC = PORTC | (1<<PORTC1); break;
+								case 0x03 : PORTC = PORTC ^ (1<<PORTC2); break;
+								case 0x13 : PORTC = PORTC | (1<<PORTC2); break;
+								case 0x04 : PORTC = PORTC ^ (1<<PORTC3); break;
+								case 0x14 : PORTC = PORTC | (1<<PORTC3); break;
+								case 0x05 : PORTC = PORTC ^ (1<<PORTC4); break;
+ 556:	68 94       	set
+ 558:	99 24       	eor	r9, r9
+ 55a:	94 f8       	bld	r9, 4
+							switch(data){
+								case 0x01 : PORTC = PORTC ^ (1<<PORTC0); break;
+								case 0x11 : PORTC = PORTC | (1<<PORTC0); break;
+								case 0x02 : PORTC = PORTC ^ (1<<PORTC1); break;
+								case 0x12 : PORTC = PORTC | (1<<PORTC1); break;
+								case 0x03 : PORTC = PORTC ^ (1<<PORTC2); break;
+ 55c:	68 94       	set
+ 55e:	aa 24       	eor	r10, r10
+ 560:	a2 f8       	bld	r10, 2
+ * \returns next data byte in buffer
+ */
+static inline uint8_t ring_buffer_get(struct ring_buffer *ring)
+{
+	Assert(!ring_buffer_is_empty(ring));
+	uint8_t data = ring->buffer[ring->read_offset];
+ 562:	f8 01       	movw	r30, r16
+ 564:	43 81       	ldd	r20, Z+3	; 0x03
+ 566:	54 81       	ldd	r21, Z+4	; 0x04
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 568:	22 81       	ldd	r18, Z+2	; 0x02
+ 56a:	30 e0       	ldi	r19, 0x00	; 0
+ 56c:	21 50       	subi	r18, 0x01	; 1
+ 56e:	31 09       	sbc	r19, r1
+ 570:	e4 e0       	ldi	r30, 0x04	; 4
+ 572:	f1 e0       	ldi	r31, 0x01	; 1
+ * \retval true   if the buffer is empty
+ * \retval false  if there is still data in the buffer
+ */
+static inline bool ring_buffer_is_empty(const struct ring_buffer *ring)
+{
+	return (ring->read_offset == ring->write_offset);
+ 574:	d8 01       	movw	r26, r16
+ 576:	11 96       	adiw	r26, 0x01	; 1
+ 578:	9c 91       	ld	r25, X
+ 57a:	11 97       	sbiw	r26, 0x01	; 1
+ 57c:	8c 91       	ld	r24, X
+		// Check if we have received the string we sent
+		
+		cnt = 0;
+		do {
+			// Wait for next character
+			while (!uart_char_waiting());
+ 57e:	98 17       	cp	r25, r24
+ 580:	c9 f3       	breq	.-14     	; 0x574 <__LOCK_REGION_LENGTH__+0x174>
+ 582:	11 96       	adiw	r26, 0x01	; 1
+ 584:	9c 91       	ld	r25, X
+ 586:	11 97       	sbiw	r26, 0x01	; 1
+ 588:	8c 91       	ld	r24, X
+ *
+ * \returns next data byte in buffer
+ */
+static inline uint8_t ring_buffer_get(struct ring_buffer *ring)
+{
+	Assert(!ring_buffer_is_empty(ring));
+ 58a:	98 13       	cpse	r25, r24
+ 58c:	01 c0       	rjmp	.+2      	; 0x590 <__LOCK_REGION_LENGTH__+0x190>
+ 58e:	ff cf       	rjmp	.-2      	; 0x58e <__LOCK_REGION_LENGTH__+0x18e>
+	uint8_t data = ring->buffer[ring->read_offset];
+ 590:	d8 01       	movw	r26, r16
+ 592:	11 96       	adiw	r26, 0x01	; 1
+ 594:	8c 91       	ld	r24, X
+ 596:	da 01       	movw	r26, r20
+ 598:	a8 0f       	add	r26, r24
+ 59a:	b1 1d       	adc	r27, r1
+ 59c:	9c 91       	ld	r25, X
+ *
+ * \returns the next read offset in the ring buffer
+ */
+static inline uint8_t ring_buffer_get_next_read(const struct ring_buffer *ring)
+{
+	return get_next(ring->read_offset, ring->size);
+ 59e:	d8 01       	movw	r26, r16
+ 5a0:	11 96       	adiw	r26, 0x01	; 1
+ 5a2:	8c 91       	ld	r24, X
+ *
+ * \returns next offset or 0 if we are wrapping
+ */
+static inline uint8_t get_next(uint8_t cur_offset, uint8_t size)
+{
+	return (cur_offset == (size - 1) ? 0 : cur_offset + 1);
+ 5a4:	68 2f       	mov	r22, r24
+ 5a6:	70 e0       	ldi	r23, 0x00	; 0
+ 5a8:	62 17       	cp	r22, r18
+ 5aa:	73 07       	cpc	r23, r19
+ 5ac:	11 f0       	breq	.+4      	; 0x5b2 <__LOCK_REGION_LENGTH__+0x1b2>
+ 5ae:	8f 5f       	subi	r24, 0xFF	; 255
+ 5b0:	01 c0       	rjmp	.+2      	; 0x5b4 <__LOCK_REGION_LENGTH__+0x1b4>
+ 5b2:	87 2d       	mov	r24, r7
+ */
+static inline uint8_t ring_buffer_get(struct ring_buffer *ring)
+{
+	Assert(!ring_buffer_is_empty(ring));
+	uint8_t data = ring->buffer[ring->read_offset];
+	ring->read_offset = ring_buffer_get_next_read(ring);
+ 5b4:	d8 01       	movw	r26, r16
+ 5b6:	11 96       	adiw	r26, 0x01	; 1
+ 5b8:	8c 93       	st	X, r24
+			rbuf[cnt] = uart_getchar();
+ 5ba:	91 93       	st	Z+, r25
+			cnt++;
+
+		} while (cnt<13);//rbuf[cnt-1] == 'E' && rbuf[cnt-2] == 'M');
+ 5bc:	e4 15       	cp	r30, r4
+ 5be:	f5 05       	cpc	r31, r5
+ 5c0:	c9 f6       	brne	.-78     	; 0x574 <__LOCK_REGION_LENGTH__+0x174>
+		
+
+		if(rbuf[0] == 0x43 && rbuf[1] == 0x43 && rbuf[2] == 0x4D && rbuf[3] == 0x53)
+ 5c2:	f7 01       	movw	r30, r14
+ 5c4:	80 81       	ld	r24, Z
+ 5c6:	83 34       	cpi	r24, 0x43	; 67
+ 5c8:	61 f6       	brne	.-104    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+ 5ca:	81 81       	ldd	r24, Z+1	; 0x01
+ 5cc:	83 34       	cpi	r24, 0x43	; 67
+ 5ce:	49 f6       	brne	.-110    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+ 5d0:	82 81       	ldd	r24, Z+2	; 0x02
+ 5d2:	8d 34       	cpi	r24, 0x4D	; 77
+ 5d4:	31 f6       	brne	.-116    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+ 5d6:	83 81       	ldd	r24, Z+3	; 0x03
+ 5d8:	83 35       	cpi	r24, 0x53	; 83
+ 5da:	19 f6       	brne	.-122    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+		{
+			//PORTC = PORTC ^ (1<<PORTC3);
+			if(rbuf[8] == getCheckSum((uint8_t*)(rbuf + sposition), 8)){
+ 5dc:	b0 84       	ldd	r11, Z+8	; 0x08
+ 5de:	68 e0       	ldi	r22, 0x08	; 8
+ 5e0:	c7 01       	movw	r24, r14
+ 5e2:	e4 de       	rcall	.-568    	; 0x3ac <getCheckSum>
+ 5e4:	b8 12       	cpse	r11, r24
+ 5e6:	bd cf       	rjmp	.-134    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+				//PORTC = PORTC ^ (1<<PORTC4);
+				uint8_t type = rbuf[sposition + 4];
+				uint8_t data = rbuf[sposition + 7];
+ 5e8:	d7 01       	movw	r26, r14
+ 5ea:	17 96       	adiw	r26, 0x07	; 7
+ 5ec:	8c 91       	ld	r24, X
+ 5ee:	17 97       	sbiw	r26, 0x07	; 7
+
+				switch(type){
+ 5f0:	14 96       	adiw	r26, 0x04	; 4
+ 5f2:	9c 91       	ld	r25, X
+ 5f4:	92 30       	cpi	r25, 0x02	; 2
+ 5f6:	09 f4       	brne	.+2      	; 0x5fa <__LOCK_REGION_LENGTH__+0x1fa>
+ 5f8:	46 c0       	rjmp	.+140    	; 0x686 <__LOCK_REGION_LENGTH__+0x286>
+ 5fa:	18 f4       	brcc	.+6      	; 0x602 <__LOCK_REGION_LENGTH__+0x202>
+ 5fc:	91 30       	cpi	r25, 0x01	; 1
+ 5fe:	41 f0       	breq	.+16     	; 0x610 <__LOCK_REGION_LENGTH__+0x210>
+ 600:	b0 cf       	rjmp	.-160    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+ 602:	93 30       	cpi	r25, 0x03	; 3
+ 604:	09 f4       	brne	.+2      	; 0x608 <__LOCK_REGION_LENGTH__+0x208>
+ 606:	59 c0       	rjmp	.+178    	; 0x6ba <__LOCK_REGION_LENGTH__+0x2ba>
+ 608:	94 30       	cpi	r25, 0x04	; 4
+ 60a:	09 f4       	brne	.+2      	; 0x60e <__LOCK_REGION_LENGTH__+0x20e>
+ 60c:	5f c0       	rjmp	.+190    	; 0x6cc <__LOCK_REGION_LENGTH__+0x2cc>
+ 60e:	a9 cf       	rjmp	.-174    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+					case 1 : { //
+							switch(data){
+ 610:	90 e0       	ldi	r25, 0x00	; 0
+ 612:	fc 01       	movw	r30, r24
+ 614:	31 97       	sbiw	r30, 0x01	; 1
+ 616:	e8 31       	cpi	r30, 0x18	; 24
+ 618:	f1 05       	cpc	r31, r1
+ 61a:	08 f0       	brcs	.+2      	; 0x61e <__LOCK_REGION_LENGTH__+0x21e>
+ 61c:	a2 cf       	rjmp	.-188    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+ 61e:	e6 5e       	subi	r30, 0xE6	; 230
+ 620:	ff 4f       	sbci	r31, 0xFF	; 255
+ 622:	09 94       	ijmp
+								case 0x01 : PORTC = PORTC ^ (1<<PORTC0); break;
+ 624:	88 b1       	in	r24, 0x08	; 8
+ 626:	8d 25       	eor	r24, r13
+ 628:	88 b9       	out	0x08, r24	; 8
+ 62a:	9b cf       	rjmp	.-202    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x11 : PORTC = PORTC | (1<<PORTC0); break;
+ 62c:	40 9a       	sbi	0x08, 0	; 8
+ 62e:	99 cf       	rjmp	.-206    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x02 : PORTC = PORTC ^ (1<<PORTC1); break;
+ 630:	88 b1       	in	r24, 0x08	; 8
+ 632:	8c 25       	eor	r24, r12
+ 634:	88 b9       	out	0x08, r24	; 8
+ 636:	95 cf       	rjmp	.-214    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x12 : PORTC = PORTC | (1<<PORTC1); break;
+ 638:	41 9a       	sbi	0x08, 1	; 8
+ 63a:	93 cf       	rjmp	.-218    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x03 : PORTC = PORTC ^ (1<<PORTC2); break;
+ 63c:	88 b1       	in	r24, 0x08	; 8
+ 63e:	8a 25       	eor	r24, r10
+ 640:	88 b9       	out	0x08, r24	; 8
+ 642:	8f cf       	rjmp	.-226    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x13 : PORTC = PORTC | (1<<PORTC2); break;
+ 644:	42 9a       	sbi	0x08, 2	; 8
+ 646:	8d cf       	rjmp	.-230    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x04 : PORTC = PORTC ^ (1<<PORTC3); break;
+ 648:	98 b1       	in	r25, 0x08	; 8
+ 64a:	88 e0       	ldi	r24, 0x08	; 8
+ 64c:	89 27       	eor	r24, r25
+ 64e:	88 b9       	out	0x08, r24	; 8
+ 650:	88 cf       	rjmp	.-240    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x14 : PORTC = PORTC | (1<<PORTC3); break;
+ 652:	43 9a       	sbi	0x08, 3	; 8
+ 654:	86 cf       	rjmp	.-244    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x05 : PORTC = PORTC ^ (1<<PORTC4); break;
+ 656:	88 b1       	in	r24, 0x08	; 8
+ 658:	89 25       	eor	r24, r9
+ 65a:	88 b9       	out	0x08, r24	; 8
+ 65c:	82 cf       	rjmp	.-252    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x15 : PORTC = PORTC | (1<<PORTC4); break;
+ 65e:	44 9a       	sbi	0x08, 4	; 8
+ 660:	80 cf       	rjmp	.-256    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x06 : PORTC = PORTC ^ (1<<PORTC5); break;
+ 662:	88 b1       	in	r24, 0x08	; 8
+ 664:	88 25       	eor	r24, r8
+ 666:	88 b9       	out	0x08, r24	; 8
+ 668:	7c cf       	rjmp	.-264    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x16 : PORTC = PORTC | (1<<PORTC5); break;
+ 66a:	45 9a       	sbi	0x08, 5	; 8
+ 66c:	7a cf       	rjmp	.-268    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x07 : PORTB = PORTB ^ (1<<PORTB0); break;
+ 66e:	85 b1       	in	r24, 0x05	; 5
+ 670:	8d 25       	eor	r24, r13
+ 672:	85 b9       	out	0x05, r24	; 5
+ 674:	76 cf       	rjmp	.-276    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x17 : PORTB = PORTB | (1<<PORTB0); break;
+ 676:	28 9a       	sbi	0x05, 0	; 5
+ 678:	74 cf       	rjmp	.-280    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x08 : PORTB = PORTB ^ (1<<PORTB1); break;
+ 67a:	85 b1       	in	r24, 0x05	; 5
+ 67c:	8c 25       	eor	r24, r12
+ 67e:	85 b9       	out	0x05, r24	; 5
+ 680:	70 cf       	rjmp	.-288    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x18 : PORTB = PORTB | (1<<PORTB1); break;
+ 682:	29 9a       	sbi	0x05, 1	; 5
+ 684:	6e cf       	rjmp	.-292    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								
+							}
+						break;
+						}
+					case 2 : {
+							switch(data){
+ 686:	83 32       	cpi	r24, 0x23	; 35
+ 688:	81 f0       	breq	.+32     	; 0x6aa <__LOCK_REGION_LENGTH__+0x2aa>
+ 68a:	28 f4       	brcc	.+10     	; 0x696 <__LOCK_REGION_LENGTH__+0x296>
+ 68c:	81 32       	cpi	r24, 0x21	; 33
+ 68e:	49 f0       	breq	.+18     	; 0x6a2 <__LOCK_REGION_LENGTH__+0x2a2>
+ 690:	82 32       	cpi	r24, 0x22	; 34
+ 692:	49 f0       	breq	.+18     	; 0x6a6 <__LOCK_REGION_LENGTH__+0x2a6>
+ 694:	66 cf       	rjmp	.-308    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+ 696:	85 32       	cpi	r24, 0x25	; 37
+ 698:	61 f0       	breq	.+24     	; 0x6b2 <__LOCK_REGION_LENGTH__+0x2b2>
+ 69a:	48 f0       	brcs	.+18     	; 0x6ae <__LOCK_REGION_LENGTH__+0x2ae>
+ 69c:	86 32       	cpi	r24, 0x26	; 38
+ 69e:	59 f0       	breq	.+22     	; 0x6b6 <__LOCK_REGION_LENGTH__+0x2b6>
+ 6a0:	60 cf       	rjmp	.-320    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x21 : PORTD = PORTD | (1<<PORTD5); break;
+ 6a2:	5d 9a       	sbi	0x0b, 5	; 11
+ 6a4:	5e cf       	rjmp	.-324    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x22 : PORTD = PORTD | (1<<PORTD6); break;
+ 6a6:	5e 9a       	sbi	0x0b, 6	; 11
+ 6a8:	5c cf       	rjmp	.-328    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x23 : PORTD = PORTD | (1<<PORTD7); break;
+ 6aa:	5f 9a       	sbi	0x0b, 7	; 11
+ 6ac:	5a cf       	rjmp	.-332    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x24 : PORTD = PORTD & ~(1<<PORTD5); break;
+ 6ae:	5d 98       	cbi	0x0b, 5	; 11
+ 6b0:	58 cf       	rjmp	.-336    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x25 : PORTD = PORTD & ~(1<<PORTD6); break;
+ 6b2:	5e 98       	cbi	0x0b, 6	; 11
+ 6b4:	56 cf       	rjmp	.-340    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x26 : PORTD = PORTD & ~(1<<PORTD7); break;
+ 6b6:	5f 98       	cbi	0x0b, 7	; 11
+ 6b8:	54 cf       	rjmp	.-344    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+							}
+						break;
+						}
+					case 3 : {
+							switch(data){
+ 6ba:	81 33       	cpi	r24, 0x31	; 49
+ 6bc:	19 f0       	breq	.+6      	; 0x6c4 <__LOCK_REGION_LENGTH__+0x2c4>
+ 6be:	82 33       	cpi	r24, 0x32	; 50
+ 6c0:	19 f0       	breq	.+6      	; 0x6c8 <__LOCK_REGION_LENGTH__+0x2c8>
+ 6c2:	4f cf       	rjmp	.-354    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x31 : PORTB = PORTB | (1<<PORTB2); break;
+ 6c4:	2a 9a       	sbi	0x05, 2	; 5
+ 6c6:	4d cf       	rjmp	.-358    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+								case 0x32 : PORTB = PORTB & ~(1<<PORTB2); break;
+ 6c8:	2a 98       	cbi	0x05, 2	; 5
+ 6ca:	4b cf       	rjmp	.-362    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+							}
+						break;
+						}
+					case 4 : {
+						PORTB = 0; PORTC = 0;PORTD = 0;break;
+ 6cc:	15 b8       	out	0x05, r1	; 5
+ 6ce:	18 b8       	out	0x08, r1	; 8
+ 6d0:	1b b8       	out	0x0b, r1	; 11
+ 6d2:	47 cf       	rjmp	.-370    	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+
+000006d4 <_exit>:
+ 6d4:	f8 94       	cli
+
+000006d6 <__stop_program>:
+ 6d6:	ff cf       	rjmp	.-2      	; 0x6d6 <__stop_program>

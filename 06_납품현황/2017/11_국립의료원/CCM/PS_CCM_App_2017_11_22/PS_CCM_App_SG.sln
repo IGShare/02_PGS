@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PS_CCM_App_SG", "PS_CCM_App_SG.vcproj", "{6674A849-7BB7-4FA0-A98A-9BE496DC927D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|IEC667 (ARMV4I) = Debug|IEC667 (ARMV4I)
+		Release|IEC667 (ARMV4I) = Release|IEC667 (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6674A849-7BB7-4FA0-A98A-9BE496DC927D}.Debug|IEC667 (ARMV4I).ActiveCfg = Debug|IEC667 (ARMV4I)
+		{6674A849-7BB7-4FA0-A98A-9BE496DC927D}.Debug|IEC667 (ARMV4I).Build.0 = Debug|IEC667 (ARMV4I)
+		{6674A849-7BB7-4FA0-A98A-9BE496DC927D}.Debug|IEC667 (ARMV4I).Deploy.0 = Debug|IEC667 (ARMV4I)
+		{6674A849-7BB7-4FA0-A98A-9BE496DC927D}.Release|IEC667 (ARMV4I).ActiveCfg = Release|IEC667 (ARMV4I)
+		{6674A849-7BB7-4FA0-A98A-9BE496DC927D}.Release|IEC667 (ARMV4I).Build.0 = Release|IEC667 (ARMV4I)
+		{6674A849-7BB7-4FA0-A98A-9BE496DC927D}.Release|IEC667 (ARMV4I).Deploy.0 = Release|IEC667 (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

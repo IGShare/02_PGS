@@ -1,0 +1,254 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\MCUProgrammer.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""      // 표준 구성 요소입니다.\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MCUProgrammer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MCUProgrammer 정보"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "MCUProgrammer, 버전 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2014",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "확인",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_MCUPROGRAMMER_DIALOG DIALOGEX 0, 0, 323, 347
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MCUProgrammer"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,209,326,50,14
+    PUSHBUTTON      "취소",IDCANCEL,266,326,50,14
+    GROUPBOX        "Flash Programming Memory",IDC_STATIC,7,46,309,68
+    EDITTEXT        IDC_ED_ELF_FILE_PATH,12,60,280,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BN_OPENELF,293,60,20,14
+    PUSHBUTTON      "Programming",IDC_BN_SCM_PROGRAMMING,202,78,110,30
+    COMBOBOX        IDC_COM_DEVICE,81,23,41,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Erase memory before programming",IDC_CK_CHIPERASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,84,124,10
+    CONTROL         "Verify programmed content",IDC_CK_VERIFY_CONTENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,98,101,10
+    GROUPBOX        "EEPROM",IDC_STATIC,7,123,309,126
+    EDITTEXT        IDC_EDIT_MODULEID,24,161,56,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Module ID (8bit)",IDC_STATIC,24,152,52,8
+    EDITTEXT        IDC_EDIT_REVISION,82,161,56,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Revision (8bit)",IDC_STATIC,82,152,46,8
+    LTEXT           "Reserved (16bit)",IDC_STATIC,140,152,52,8
+    EDITTEXT        IDC_EDIT_RESERVED,140,161,56,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_SERIAL,198,161,56,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Serial (24bit)",IDC_STATIC,198,152,52,8
+    CONTROL         "Device Information",IDC_CK_DEVICEINFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,138,74,10
+    CONTROL         "Parameter Information",IDC_CK_PARAMINFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,180,85,10
+    EDITTEXT        IDC_EDIT_CONTROLID,256,161,56,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Control ID (8bit)",IDC_STATIC,256,152,60,8
+    LTEXT           "Sensing Distance (cm)",IDC_STATIC,24,194,70,8
+    LTEXT           "ADC Amplitude",IDC_STATIC,96,194,48,8
+    LTEXT           "ADC Sensitivity",IDC_STATIC,168,195,47,8
+    LTEXT           "Tx Burst Count",IDC_STATIC,240,194,47,8
+    COMBOBOX        IDC_COM_SENSING_DIST,24,203,70,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP,WS_EX_RIGHT
+    COMBOBOX        IDC_COM_ADC_AMPLITUDE,96,203,70,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP,WS_EX_RIGHT
+    COMBOBOX        IDC_COM_ADC_SENSITIVITY,168,203,70,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP,WS_EX_RIGHT
+    COMBOBOX        IDC_COM_TXBURST_COUNT,240,203,70,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP,WS_EX_RIGHT
+    PUSHBUTTON      "Read",IDC_BN_EEREAD,206,227,46,15
+    PUSHBUTTON      "Write",IDC_BN_EEWRITE,257,226,46,15
+    PUSHBUTTON      "Reset",IDC_BN_EERESET,153,227,46,15
+    LTEXT           "Tool",IDC_STATIC,9,14,15,8
+    COMBOBOX        IDC_COM_TOOL,9,23,41,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Device",IDC_STATIC,66,14,21,8
+    LTEXT           "Interface",IDC_STATIC,118,14,28,8
+    COMBOBOX        IDC_COM_INTERFACE,123,23,21,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,7,7,169,32
+    PUSHBUTTON      "Apply",IDC_BN_DEVICE_APPLY,145,23,28,12
+    EDITTEXT        IDC_ED_FUSES,180,22,55,13,ES_AUTOHSCROLL
+    GROUPBOX        "Fuses",IDC_STATIC,177,7,139,32
+    PUSHBUTTON      "Read",IDC_BN_FUSE_READ,236,22,38,14
+    PUSHBUTTON      "Write",IDC_BN_FUSE_WRITE,275,22,38,14
+    CONTROL         "Auto Read",IDC_CK_AUTOREAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,268,12,47,10
+    CONTROL         "",IDC_RICHED_RESULT,"RichEdit20W",ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | WS_BORDER | WS_VSCROLL | WS_TABSTOP,7,255,309,69
+    LTEXT           "USM : 6FD7FF",IDC_STATIC,182,40,44,8
+    LTEXT           "SCM : EFD1FF",IDC_STATIC,234,40,44,8
+    CONTROL         "Auto Inc",IDC_RADIO_AUTO_INCREASE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,212,133,43,10
+    CONTROL         "Auto Dec",IDC_RADIO_AUTO_DECREASE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,259,133,46,10
+    GROUPBOX        "",IDC_STATIC,204,127,101,18
+    PUSHBUTTON      "One Click Program",IDC_BUTTON_ONE_CLICK_PROGRAM,26,228,77,14
+    COMBOBOX        IDC_COMBO_COMPORT,51,23,29,145,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "TODO: <파일 설명>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "MCUProgrammer.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "MCUProgrammer.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_MCUPROGRAMMER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 316
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 340
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "MCUProgrammer 정보(&A)..."
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\MCUProgrammer.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"      // 표준 구성 요소입니다.
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
