@@ -170,7 +170,7 @@ BOOL CPS_ServAppApp::InitInstance()
 	//}
 	//glInfoGlobal.iBDA.bufBDI[0].iVS.pView->GetParent ()->ShowWindow (SW_SHOWNORMAL);
 	//glInfoGlobal.iBDA.bufBDI[1].iVS.pView->GetParent ()->ShowWindow (SW_SHOWNORMAL);
-	pMainFrame->OnWindowLeftRight ();
+//	pMainFrame->OnWindowLeftRight ();
 	// 메인 도면을 맨 위에 띄움[E]
 
 	return TRUE;

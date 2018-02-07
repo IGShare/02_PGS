@@ -1,0 +1,3 @@
+myeom
+DESKTOP-GI5BCAT 
+2018년 2월 7일 수요일  오전 11:22:02
