@@ -1,0 +1,12 @@
+# Board Station BOM file 
+# date : Tuesday December 27, 2016; 11:08:40 
+
+
+
+  ITEM_NUMBER    COMPANY PART NO.     GEOMETRY     COUNT    DESCRIPTION       REFERENCE      
+
+       1                B+             tp0.9         3    B+              TH1 TH2 TH3        
+       2             PCB_HOLE         hole3.2        1    PCB_HOLE        H1                 
+       3            US14.4_01A       us14.4_01a      4    US14.4_01A      W1 W2 W3 W4        
+       4              ZR40R          zt40_zr40       2    ZR40R           O2 O4              
+       5               ZT40          zt40_zr40       2    ZT40            O1 O3              

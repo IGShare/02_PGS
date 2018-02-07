@@ -1,0 +1,31 @@
+# BOARD STATION COMPONENT CENTER LOCATION FILE FORMAT 6.0 
+# 
+# File Pathname: c:/WORK/igs-pem/pcb/mfg/component_location 
+# Design Name:   c:/WORK/igs-pem 
+# 
+# Date: 27/12/2016 - 11:30 am 
+# User: KHJ 
+# 
+# Component Center Location for ALL Components 
+# 
+# Board Name: default 
+# 
+# UNITS: mm 
+# 
+# Top Side Offset from Board Origin: 0  0 
+# 
+# Ref-Des     X-Loc       Y-Loc       Side        Rotation   ["PART_NO"] 
+# 
+  J1          70.5        27          Top         0           "CON2" 
+  J2          27.4        7           Top         0           "OSTYK41203030" 
+  J3          5.5         22.5        Top         90          "CON2" 
+  MH1         75          5           Top         0           "HOLE_MOUNT" 
+  MH2         5           5           Top         0           "HOLE_MOUNT" 
+  RV1         59.5        18          Top         0           "ERZ-V07D471" 
+  RV2         72.5        18          Top         0           "ERZ-V07D471" 
+  RV3         59.5        7           Top         0           "ERZ-V07D471" 
+# 
+# Bottom Side Offset from Board Origin: 0  0 
+# 
+# Ref-Des     X-Loc       Y-Loc       Side        Rotation   ["PART_NO"] 
+# 

@@ -1,0 +1,79 @@
+\t (00:00:13) allegro 16.6 P004 (v16-6-112G) Windows 32
+\t (00:00:13)     Journal start - Wed Jan 24 12:30:29 2018
+\t (00:00:13)         Host=USER User=Administrator Pid=42396 CPUs=4
+\t (00:00:13) 
+\d (00:00:13) Database opened: G:/01_work/00_IGS/02_Project2/01_USM/05_USM_P2-1/usm_p2-1/usm-p2-1_20180124.brd
+\i (00:00:13) generaledit 
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 48.7429 11.3200
+\i (00:00:14) trapsize 3659
+\i (00:00:16) setwindow form.vf_vis
+\i (00:00:16) FORM vf_vis all_all_visible YES 
+\i (00:00:16) FORM vf_vis all_all_visible NO 
+\i (00:00:17) FORM vf_vis all_all_visible YES 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom out 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom out 43.6936 30.0535
+\i (00:00:19) trapsize 7318
+\i (00:00:20) zoom in 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom in 7.8368 35.1758
+\i (00:00:20) trapsize 3659
+\i (00:00:43) xhilite 
+\i (00:00:43) xname_flush 
+\i (00:00:43) done 
+\i (00:00:43) generaledit 
+\i (00:00:45) setwindow form.vf_vis
+\i (00:00:45) FORM vf_vis all_all_visible NO 
+\i (00:00:48) setwindow pcb
+\i (00:00:48) roam y -96 
+\i (00:00:48) roam y -96
+\i (00:00:48) roam y -96 
+\i (00:00:48) roam y -96
+\i (00:00:49) roam y 96 
+\i (00:00:49) roam y 96
+\i (00:00:50) roam y -96 
+\i (00:00:50) roam y -96
+\i (00:01:06) zoom in 1 
+\i (00:01:06) setwindow pcb
+\i (00:01:06) zoom in 50.4991 17.2168
+\i (00:01:06) trapsize 1829
+\i (00:01:15) setwindow form.vf_vis
+\i (00:01:15) FORM vf_vis 1 all_colorvisible YES 
+\i (00:01:18) setwindow pcb
+\i (00:01:18) zoom out 1 
+\i (00:01:18) setwindow pcb
+\i (00:01:18) zoom out 48.1575 16.8144
+\i (00:01:18) trapsize 3659
+\i (00:01:30) setwindow form.vf_vis
+\i (00:01:30) FORM vf_vis 1 all_colorvisible NO 
+\i (00:01:46) FORM vf_vis 2 pin_colorvisible 1 
+\i (00:02:14) setwindow pcb
+\i (00:02:14) pick grid 61.9147 5.6914
+\t (00:02:14) last pick:  62.0000  5.7500
+\i (00:02:15) zoom out 1 
+\i (00:02:15) setwindow pcb
+\i (00:02:15) zoom out 61.9147 5.6914
+\i (00:02:15) trapsize 7318
+\i (00:02:17) roam y 96 
+\i (00:02:17) roam y 96
+\i (00:02:17) roam x 96 
+\i (00:02:17) roam x 96
+\i (00:02:19) zoom out 1 
+\i (00:02:19) setwindow pcb
+\i (00:02:19) zoom out 61.4158 6.3866
+\i (00:02:19) trapsize 14635
+\i (00:02:20) zoom in 1 
+\i (00:02:20) setwindow pcb
+\i (00:02:20) zoom in 61.7085 5.2157
+\i (00:02:20) trapsize 7318
+\i (00:02:22) save 
+\i (00:02:24) fillin no 
+\i (00:02:25) fillin "menu_cancel"
+\i (00:02:25) generaledit 
+\i (00:02:26) exit 
+\e (00:02:26) Do you want to save the changes you made to usm-p2-1_20180124.brd?
+\i (00:02:28) fillin no 
+\t (00:02:28)     Journal end - Wed Jan 24 12:32:44 2018

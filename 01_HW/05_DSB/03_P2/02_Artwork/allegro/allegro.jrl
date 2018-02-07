@@ -1,0 +1,21 @@
+\t (00:00:10) allegro 16.6 P004 (v16-6-112G) Windows 32
+\t (00:00:10)     Journal start - Tue Dec 27 17:29:37 2016
+\t (00:00:10)         Host=USER User=Administrator Pid=9004 CPUs=4
+\t (00:00:10) 
+\t (00:00:13) Starting new design...
+\i (00:00:13) trapsize 653
+\i (00:00:13) trapsize 641
+\i (00:00:13) trapsize 655
+\i (00:00:14) trapsize 682
+\i (00:00:14) trapsize 1057
+\i (00:00:14) generaledit 
+\i (00:00:15) open 
+\i (00:00:26) fillin "D:\01_work\00_IGS\01_Project2\04_USM\03_Artwork\usm-r1\usm-r1.brd"
+\i (00:00:26) cd "D:\01_work\00_IGS\01_Project2\04_USM\03_Artwork\usm-r1"
+\t (00:00:26) Opening existing design...
+\w (00:00:26) WARNING(SPMHDB-214): OrCAD PCB Designer Standard opening an Allegro XL design.
+\w (00:00:26) WARNING(SPMHDB-213): DRC set to "out of date". This product supports a different DRC set than last product used on drawing.
+\w (00:00:26) WARNING(SPMHOD-33): Design was last saved by a different product (Allegro XL). Constraints and other design data may not be available with this product. Functionality between two products may also be equivalent, you should consult the product functionality matrix to determine differences.
+\i (00:00:27) fillin confirm
+\i (00:00:27) trapsize 3658
+\t (00:00:27)     Journal end - Tue Dec 27 17:29:54 2016

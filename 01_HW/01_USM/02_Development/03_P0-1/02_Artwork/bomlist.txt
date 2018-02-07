@@ -1,0 +1,116 @@
+  Component List            
+  work\jina\wsm
+------------------------------------------------------------------------
+No. Description(Value)       Footprint(Part)         Q'ty   Location Reference
+------------------------------------------------------------------------
+  1 560PF             CC1608            1	C11       
+
+  2 100NF             CC1608           10	C12       C18       C27       C47       C48       
+							C49       C52       C53       C54       C55       
+
+  3 47NF              CC2012            1	C13       
+
+  4 2_2UF             CC2012            1	C15       
+
+  5 TCSCS1C685MAAR    TC3216            2	C16       C20       
+
+  6 15PF              CC1608            2	C17       C19       
+
+  7 680NF             CC1608            1	C37       
+
+  8 2_2UF             CC1608            2	C39       C51       
+
+  9 4_7UF             CC1608            1	C50       
+
+ 10 200PF             CC1608            1	C7        
+
+ 11 680PF             CC1608            1	C8        
+
+ 12 1NF               CC1608            1	C9        
+
+ 13 BAT54             BAT54             2	D1        D2        
+
+ 14 MMSD4148T1G       SOD-123           5	D11       D15       D16       D17       D5        
+
+ 15 BLM18HE152SN1     BEAD1608          1	FB1       
+
+ 16 MMBT3906          SOT23             1	Q1        
+
+ 17 MMBT3904          SOT23             7	Q10       Q3        Q4        Q5        Q6        
+							Q7        Q9        
+
+ 18 ZXTN04120HF_SOT23F SOT23             1	Q8        
+
+ 19 510K              RC1608            1	R1        
+
+ 20 1K                RC1608            1	R10       
+
+ 21 1M                RC1608            2	R11       R13       
+
+ 22 10K               RC1608            7	R15       R16       R22       R24       R42       
+							R6        R7        
+
+ 23 15                RC2012            2	R2        R8        
+
+ 24 3_9K              RC1608            1	R20       
+
+ 25 200               RC1608            1	R25       
+
+ 26 360K              RC1608            1	R28       
+
+ 27 47K               RC1608            2	R3        R33       
+
+ 28 100K              RC1608            2	R31       R32       
+
+ 29 3_3K              RC2012            2	R37       R41       
+
+ 30 2_7K              RC1608            2	R38       R44       
+
+ 31 3K                RC1608            2	R40       R46       
+
+ 32 4_7K              RC1608           10	R43       R45       R47       R50       R54       
+							R55       R56       R57       R58       R59       
+
+ 33 10                RC1608            2	R48       R49       
+
+ 34 200K              RC1608            1	R51       
+
+ 35 0                 RC1608            2	R52       R53       
+
+ 36 B+                TP                6	TP10      TP11      TP6       TP7       TP8       
+							TP9       
+
+ 37 SN65176BD_DNI     SOP8_3_9_6_1_27   1	U13       
+
+ 38 PCA9306           TSSOP8_2_8_4_0_65   1	U14       
+
+ 39 TPS73533QDRBRQ1   QFN8_3_0_65       1	U15       
+
+ 40 MMA8451Q          QFN16_3_0_5       1	U16       
+
+ 41 TXS0102-Q1        TSSOP8_2_3_3_1_0_5   1	U17       
+
+ 42 TL072ID           SOP8_3_9_6_1_27   1	U2        
+
+ 43 LP2951D           SOP8_3_9_6_1_27   1	U3        
+
+ 44 ATMEGA48V-10AU    QFP32_7_9_0_8     1	U5        
+
+ 45 SX-1_8MHZ_        SX-1              1	Y4        
+
+ 46 JSL_3528PGC       JSL-3528_ALT      4	D10       D14       D18       D19       
+
+ 47 JSL_3528URC       JSL-3528_ALT      4	D6        D7        D8        D9        
+
+ 48 PCB_HOLE          HOLE3_2           5	H1        H2        H3        H4        H5        
+
+ 49 TH                1PIN-HDR          2	TH1       TH2       
+
+ 50 TH                TP1_3             4	TH3       TH4       TH5       TH6       
+
+ 51 PH01_2_54_-SS40P-11_5MM HEADER6_2_5MM_S   1	J2        
+
+ 52 A2001-WV03        A2001-WV03        1	J3        
+
+-----------------------------------------------------------------------
+TOTAL								118
