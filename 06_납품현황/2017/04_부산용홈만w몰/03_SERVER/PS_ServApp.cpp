@@ -142,14 +142,14 @@ BOOL CPS_ServAppApp::InitInstance()
 		Sleep (0);
 	}
 
-	//pIJMV->bInfoCopyOK = FALSE;
-	//pIJMV->idxMainBDI = 1;
-	//pIJMV->idxSubBDI = -1;
-	//DoFileNew ();
-	//while (pIJMV->bInfoCopyOK == FALSE)
-	//{
-	//	Sleep (0);
-	//}
+	pIJMV->bInfoCopyOK = FALSE;
+	pIJMV->idxMainBDI = 1;
+	pIJMV->idxSubBDI = -1;
+	DoFileNew ();
+	while (pIJMV->bInfoCopyOK == FALSE)
+	{
+		Sleep (0);
+	}
 
 //	pMainFrame->OnWindowLeftRight ();
 	// 도면 1, 2 층 다 열고 좌우 정렬[E]
