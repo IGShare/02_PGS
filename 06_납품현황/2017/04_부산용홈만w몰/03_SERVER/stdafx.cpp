@@ -471,30 +471,17 @@ void GetCurStatFromBDI (
 		stPaAll.nTotal++;
 
 		if(pIDI->idxCCM == 0){
-			if (pIDI->idxSCM == 0 ||pIDI->idxSCM == 1)
-			{
-				stPa1F.nTotal++;
-			}
-			else if (pIDI->idxSCM == 2)
+			if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
 			{
 				stPa2F.nTotal++;
 			}
-			else if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
+			else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
 			{
 				stPa3F.nTotal++;
 			}
-			else if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6)
-			{
-				stPa4F.nTotal++;
-			}
-			else if (pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-			{
-				stPa5F.nTotal++;
-			}
-			else if (pIDI->idxSCM == 9 || pIDI->idxSCM == 10)
-			{
-				stPa6F.nTotal++;
-			}
+		}
+		else if(pIDI->idxCCM == 1){
+			stPa2F.nTotal++;
 		}
 
 		nStat = pBufISC[pIDI->idxCCM].bufItem[pIDI->idxSCM].iStat.bufUSM_Stat[pIDI->idxUSM_LGM] & MASK_FOR_ICCS_USM_LGM_STAT;
@@ -504,30 +491,17 @@ void GetCurStatFromBDI (
 		{
 			stPaAll.nFree++;
 			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 0 ||pIDI->idxSCM == 1)
-				{
-					stPa1F.nFree++;
-				}
-				else if (pIDI->idxSCM == 2)
+				if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
 				{
 					stPa2F.nFree++;
 				}
-				else if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
+				else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
 				{
 					stPa3F.nFree++;
 				}
-				else if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6)
-				{
-					stPa4F.nFree++;
-				}
-				else if (pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-				{
-					stPa5F.nFree++;
-				}
-				else if (pIDI->idxSCM == 9 || pIDI->idxSCM == 10)
-				{
-					stPa6F.nFree++;
-				}
+			}
+			else if(pIDI->idxCCM == 1){
+				stPa2F.nFree++;
 			}
 		}
 		else
@@ -535,53 +509,39 @@ void GetCurStatFromBDI (
 			stPaAll.nParked++;
 
 			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 0 ||pIDI->idxSCM == 1)
-				{
-					stPa1F.nParked++;
-				}
-				else if (pIDI->idxSCM == 2)
+				if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
 				{
 					stPa2F.nParked++;
 				}
-				else if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
+				else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
 				{
 					stPa3F.nParked++;
 				}
-				else if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6)
-				{
-					stPa4F.nParked++;
-				}
-				else if (pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-				{
-					stPa5F.nParked++;
-				}
-				else if (pIDI->idxSCM == 9 || pIDI->idxSCM == 10)
-				{
-					stPa6F.nParked++;
-				}
+			}
+			else if(pIDI->idxCCM == 1){
+				stPa2F.nParked++;
 			}
 		}
 	}
 }
 
 void MakeStreamCurStatFromBDI (
-	INFO_BACK_DRAWING_ITEM *pIBDI
-	, BYTE *stPa1F
+	INFO_BACK_DRAWING_ITEM *pIBDI_B2
+	, INFO_BACK_DRAWING_ITEM *pIBDI_B3
+	, BYTE *stPaALL
 	, BYTE *stPa2F
 	, BYTE *stPa3F
-	, BYTE *stPa4F
-	, BYTE *stPa5F
-	, BYTE *stPa6F
 )
 {
 	int i, m1=0, m2=0,m3=0,m4=0,m5=0,m6=0;
+	int total = 0, b2 = 0, b3=0;
 	BYTE nStat;
 	INFO_DISP_ITEM *pIDI;
 	ITEM_STAT_CCM *pBufISC = glInfoGlobal.unGVA.iGVA.pWMNC->GetBasePtrStatCCM ();
 
-	for (i=0; i<pIBDI->numDispItem; i++)
+	for (i=0; i<pIBDI_B2->numDispItem; i++)
 	{
-		pIDI = &pIBDI->bufDispItem[i];
+		pIDI = &pIBDI_B2->bufDispItem[i];
 
 		if (pIDI->idxDevType != IDX_DEV_TYPE_USM)
 		{
@@ -590,95 +550,52 @@ void MakeStreamCurStatFromBDI (
 
 		nStat = pBufISC[pIDI->idxCCM].bufItem[pIDI->idxSCM].iStat.bufUSM_Stat[pIDI->idxUSM_LGM] & MASK_FOR_ICCS_USM_LGM_STAT;
 
-		if (nStat == IDX_OPM_SENS_LED_ON_GREEN ||
-			nStat == IDX_OPM_FORC_LED_ON_GREEN)
+		if (nStat == IDX_OPM_SENS_LED_ON_GREEN  ||	nStat == IDX_OPM_FORC_LED_ON_GREEN)
 		{
+			total++;
 
 			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+				if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
 				{
-					stPa1F[m1++]='0';
+					b2++;
 				}
-				else if (pIDI->idxSCM == 2)
+				else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
 				{
-					stPa2F[m2++]='0';
-				}
-				if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
-				{
-					stPa3F[m3++]='0';
-				}
-				if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6)
-				{
-					stPa4F[m4++]='0';
-				}
-				if (pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-				{
-					stPa5F[m5++]='0';
-				}
-				if (pIDI->idxSCM == 9 || pIDI->idxSCM == 10)
-				{
-					stPa6F[m6++]='0';
-				}
-
-			}
-
-		}
-		else if(nStat == IDX_OPM_SENS_LED_ON_RED )
-		{
-			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
-				{
-					stPa1F[m1++]='1';
-				}
-				else if (pIDI->idxSCM == 2)
-				{
-					stPa2F[m2++]='1';
-				}
-				if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
-				{
-					stPa3F[m3++]='1';
-				}
-				if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6)
-				{
-					stPa4F[m4++]='1';
-				}
-				if (pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-				{
-					stPa5F[m5++]='1';
-				}
-				if (pIDI->idxSCM == 9 || pIDI->idxSCM == 10)
-				{
-					stPa6F[m6++]='1';
+					b3++;
 				}
 			}
+			else if(pIDI->idxCCM == 1){
+				b2++;
+			}
 		}
-		else
+	}
+	for (i=0; i<pIBDI_B3->numDispItem; i++)
+	{
+		pIDI = &pIBDI_B3->bufDispItem[i];
+
+		if (pIDI->idxDevType != IDX_DEV_TYPE_USM)
 		{
+			continue;
+		}
+
+		nStat = pBufISC[pIDI->idxCCM].bufItem[pIDI->idxSCM].iStat.bufUSM_Stat[pIDI->idxUSM_LGM] & MASK_FOR_ICCS_USM_LGM_STAT;
+
+		if (nStat == IDX_OPM_SENS_LED_ON_GREEN  ||	nStat == IDX_OPM_FORC_LED_ON_GREEN)
+		{
+			total++;
+
 			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+				if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
 				{
-					stPa1F[m1++]='2';
+					b2++;
 				}
-				else if (pIDI->idxSCM == 2)
+				else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
 				{
-					stPa2F[m2++]='2';
+					b3++;
 				}
-				if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
-				{
-					stPa3F[m3++]='2';
-				}
-				if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6)
-				{
-					stPa4F[m4++]='2';
-				}
-				if (pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-				{
-					stPa5F[m5++]='2';
-				}
-				if (pIDI->idxSCM == 9 || pIDI->idxSCM == 10)
-				{
-					stPa6F[m6++]='2';
-				}
+			}
+			else if(pIDI->idxCCM == 1){
+				b2++;
 			}
 		}
 	}

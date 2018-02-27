@@ -146,16 +146,15 @@ BOOL CExternalNetComm::PktRcv ()
 
 	int numRcv;
 	INFO_BACK_DRAWING_ALL *pIBDA = &glInfoGlobal.iBDA;
-	INFO_BACK_DRAWING_ITEM *pIBDI;
+	INFO_BACK_DRAWING_ITEM *pIBDI_B2, *pIBDI_B3;
 
-	pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[0]];
+	pIBDI_B2 = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[0]];
+	pIBDI_B3 = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[1]];
 	
-	BYTE stPa1F[200]={'P','G','S','#','T','O','T','A','L','#','1','#',};
-	BYTE stPa2F[200]={'P','G','S','#','T','O','T','A','L','#','2','#',};
-	BYTE stPa3F[200]={'P','G','S','#','T','O','T','A','L','#','3','#',};
-	BYTE stPa4F[200]={'P','G','S','#','T','O','T','A','L','#','4','#',};
-	BYTE stPa5F[200]={'P','G','S','#','T','O','T','A','L','#','5','#',};
-	BYTE stPa6F[200]={'P','G','S','#','T','O','T','A','L','#','6','#',};
+	BYTE stPaALL[200]={'S','P','G','S','#','T','O','T','A','L','#','B','A','#',};
+	BYTE stPa2F [200]={'S','P','G','S','#','T','O','T','A','L','#','B','2','#',};
+	BYTE stPa3F [200]={'S','P','G','S','#','T','O','T','A','L','#','B','3','#',};
+
 
 	numRcv = m_sConnectSocket->Receive (m_bufRcv, SZ_BUF_NET_RES_PKT);
 
@@ -169,9 +168,9 @@ BOOL CExternalNetComm::PktRcv ()
 	}
 	else
 	{
-		if(m_bufRcv[0]=='P'&&m_bufRcv[1]=='A'&&m_bufRcv[2]=='S'&&m_bufRcv[3]=='M'&&
-			m_bufRcv[4]=='#'&&m_bufRcv[5]=='T'&&m_bufRcv[6]=='O'&&m_bufRcv[7]=='T'&&
-			m_bufRcv[8]=='A'&&m_bufRcv[9]=='L'&&m_bufRcv[10]=='#')
+		if(m_bufRcv[0]=='C'&& m_bufRcv[1]=='P'&&m_bufRcv[2]=='A'&&m_bufRcv[3]=='S'&&m_bufRcv[4]=='M'&&
+			m_bufRcv[5]=='#'&&m_bufRcv[6]=='T'&&m_bufRcv[7]=='O'&&m_bufRcv[8]=='T'&&
+			m_bufRcv[9]=='A'&&m_bufRcv[10]=='L'&&m_bufRcv[11]=='#')
 		{
 			if(isConnectedCCM == FALSE)
 			{
@@ -179,36 +178,21 @@ BOOL CExternalNetComm::PktRcv ()
 				return TRUE;
 			}
 			
-			MakeStreamCurStatFromBDI (pIBDI, stPa1F+12, stPa2F+12, stPa3F+12, stPa4F+12, stPa5F+12, stPa6F+12);
+			MakeStreamCurStatFromBDI (pIBDI_B2, pIBDI_B3, stPaALL+14, stPa2F+14, stPa3F+14);
 
-			if(m_bufRcv[11] == '1')
+			if(m_bufRcv[13] == 'A')
 			{
-				m_sConnectSocket->Send (stPa1F, 100);
+				m_sConnectSocket->Send (stPaALL, 100);
 				return TRUE;
 			}
-			else if(m_bufRcv[11] == '2')
+			else if(m_bufRcv[13] == '2')
 			{
 				m_sConnectSocket->Send (stPa2F, 100);
 				return TRUE;
 			}
-			else if(m_bufRcv[11] == '3')
+			else if(m_bufRcv[13] == '3')
 			{
 				m_sConnectSocket->Send (stPa3F, 100);
-				return TRUE;
-			}
-			else if(m_bufRcv[11] == '4')
-			{
-				m_sConnectSocket->Send (stPa4F, 100);
-				return TRUE;
-			}
-			else if(m_bufRcv[11] == '5')
-			{
-				m_sConnectSocket->Send (stPa5F, 100);
-				return TRUE;
-			}
-			else if(m_bufRcv[11] == '6')
-			{
-				m_sConnectSocket->Send (stPa6F, 100);
 				return TRUE;
 			}
 			else

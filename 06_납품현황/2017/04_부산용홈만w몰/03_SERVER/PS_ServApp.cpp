@@ -134,7 +134,7 @@ BOOL CPS_ServAppApp::InitInstance()
 	INFO_JUST_MADE_VIEW *pIJMV = &glInfoGlobal.unGVA.iGVA.iJMV;
 
 	pIJMV->bInfoCopyOK = FALSE;
-	pIJMV->idxMainBDI = 0;
+	pIJMV->idxMainBDI = 1;
 	pIJMV->idxSubBDI = -1;
 	DoFileNew ();
 	while (pIJMV->bInfoCopyOK == FALSE)
@@ -143,13 +143,15 @@ BOOL CPS_ServAppApp::InitInstance()
 	}
 
 	pIJMV->bInfoCopyOK = FALSE;
-	pIJMV->idxMainBDI = 1;
+	pIJMV->idxMainBDI = 0;
 	pIJMV->idxSubBDI = -1;
 	DoFileNew ();
 	while (pIJMV->bInfoCopyOK == FALSE)
 	{
 		Sleep (0);
 	}
+
+
 
 //	pMainFrame->OnWindowLeftRight ();
 	// 도면 1, 2 층 다 열고 좌우 정렬[E]
