@@ -1,6 +1,0 @@
-[ 1] TH_NetCommMan_CCM: START
-[ 2] TH_NetCommMan_CCM: START
-[ 2] CONNECTED
-[ 1] CONNECTED
-[ 1] TH_NetCommMan_CCM(): END: idxErr: 1
-[ 2] TH_NetCommMan_CCM(): END: idxErr: 1
