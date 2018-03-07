@@ -155,93 +155,57 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 		m_pLicMain->InsertItem (0, LPCTSTR(strTmp));
 		strTmp = "B1F";
 		m_pLicMain->InsertItem (1, LPCTSTR(strTmp));
-		//strTmp = "B2F";
-		//m_pLicMain->InsertItem (2, LPCTSTR(strTmp));
-		//strTmp = "B3F";
-		//m_pLicMain->InsertItem (3, LPCTSTR(strTmp));
-		//strTmp = "B4F";
-		//m_pLicMain->InsertItem (4, LPCTSTR(strTmp));
+		strTmp = "B2F";
+		m_pLicMain->InsertItem (2, LPCTSTR(strTmp));
+		strTmp = "B3F";
+		m_pLicMain->InsertItem (3, LPCTSTR(strTmp));
+		strTmp = "B4F";
+		m_pLicMain->InsertItem (4, LPCTSTR(strTmp));
 
 	}
 //	for(int j = 0; j<pIBDA->numBDI; j++)
 	{
-		//pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[j]];
-		//GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
-		////전체
-		//strTmp.Format ("%d", stPaAll.nTotal);
-		//m_pLicMain->SetItem (0, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaAll.nParked);
-		//m_pLicMain->SetItem (0, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaAll.nFree);
-		//m_pLicMain->SetItem (0, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		
-		
-		//지상 
-		//B1F
 		pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[0]];
-		GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);		
-
-		strTmp.Format ("%d", stPaB1F.nTotal);
-		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		strTmp.Format ("%d", stPaB1F.nParked);
-		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		strTmp.Format ("%d", stPaB1F.nFree);
-		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		stPaAll.nTotal	+=stPaB1F.nTotal;
-		stPaAll.nParked	+=stPaB1F.nParked;
-		stPaAll.nFree	+=stPaB1F.nFree;
-
-		//B2F
-		//pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[1]];
-		//GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
-
-		//strTmp.Format ("%d", stPaB2F.nTotal);
-		//m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB2F.nParked);
-		//m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB2F.nFree);
-		//m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//stPaAll.nTotal	+=stPaB2F.nTotal;
-		//stPaAll.nParked	+=stPaB2F.nParked;
-		//stPaAll.nFree	+=stPaB2F.nFree;
-
-		////B3F
-		//pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[2]];
-		//GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
-
-		//strTmp.Format ("%d", stPaB3F.nTotal);
-		//m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB3F.nParked);
-		//m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB3F.nFree);
-		//m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//stPaAll.nTotal	+=stPaB3F.nTotal;
-		//stPaAll.nParked	+=stPaB3F.nParked;
-		//stPaAll.nFree	+=stPaB3F.nFree;
-
-		////B4F
-		//pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[3]];
-		//GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
-
-		//strTmp.Format ("%d", stPaB4F.nTotal);
-		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB4F.nParked);
-		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB4F.nFree);
-		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-
-		//stPaAll.nTotal	+=stPaB4F.nTotal;
-		//stPaAll.nParked	+=stPaB4F.nParked;
-		//stPaAll.nFree	+=stPaB4F.nFree;
-
+		GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
 		//전체
-		
 		strTmp.Format ("%d", stPaAll.nTotal);
 		m_pLicMain->SetItem (0, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 		strTmp.Format ("%d", stPaAll.nParked);
 		m_pLicMain->SetItem (0, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 		strTmp.Format ("%d", stPaAll.nFree);
 		m_pLicMain->SetItem (0, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		
+		//B1F
+		strTmp.Format ("%d", stPaB1F.nTotal);
+		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB1F.nParked);
+		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB1F.nFree);
+		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+
+		//B2F
+		strTmp.Format ("%d", stPaB2F.nTotal);
+		m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB2F.nParked);
+		m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB2F.nFree);
+		m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+
+		//B3F
+		strTmp.Format ("%d", stPaB3F.nTotal);
+		m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB3F.nParked);
+		m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB3F.nFree);
+		m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+
+		//B4F
+		strTmp.Format ("%d", stPaB4F.nTotal);
+		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB4F.nParked);
+		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB4F.nFree);
+		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 	}
 
 }
