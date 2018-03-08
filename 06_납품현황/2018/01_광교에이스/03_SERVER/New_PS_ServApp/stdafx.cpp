@@ -510,9 +510,9 @@ void GetCurStatFromBDI (
 	INFO_DISP_ITEM *pIDI;
 	ITEM_STAT_CCM *pBufISC = glInfoGlobal.unGVA.iGVA.pWMNC->GetBasePtrStatCCM ();
 
-	//stPaAll.nTotal = 0;
-	//stPaAll.nParked = 0;
-	//stPaAll.nFree = 0;
+	stPaAll.nTotal = 0;
+	stPaAll.nParked = 0;
+	stPaAll.nFree = 0;
 
 	stPaB1F.nTotal = 0;
 	stPaB1F.nParked = 0;
@@ -540,113 +540,78 @@ void GetCurStatFromBDI (
 		}
 
 		
-		//stPaAll.nTotal++;
+		stPaAll.nTotal++;
 
 		if(pIDI->idxCCM == 0){
-			stPaB1F.nTotal++;
+			if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+			{
+				stPaB4F.nTotal++;
+			}
+			else if (pIDI->idxSCM == 2)
+			{
+				stPaB3F.nTotal++;
+			}
+			else if (pIDI->idxSCM == 3)
+			{
+				stPaB2F.nTotal++;
+			}
+			else if (pIDI->idxSCM == 4)
+			{
+				stPaB1F.nTotal++;
+			}
 		}
-		//else if(pIDI->idxCCM == 1){
-		//	stPaB2F.nTotal++;
-		//}
-		//else if(pIDI->idxCCM == 2){
-		//	stPaB3F.nTotal++;
-		//}
-		//else if(pIDI->idxCCM == 3){
-		//	stPaB4F.nTotal++;
-		//}
-		
 
-		//else if(pIDI->idxCCM == 1){
-		//	if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2)
-		//	{
-		//		stPa3F.nTotal++;
-		//	}
-		//	else if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4 || pIDI->idxSCM == 5 )
-		//	{
-		//		stPa4F.nTotal++;
-		//	}
-		//	else if (pIDI->idxSCM == 6 || pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-		//	{
-		//		stPa5F.nTotal++;
-		//	}
-		//	////else if (pIDI->idxSCM == 9)
-		//	//{
-		//	//	stPa6F.nTotal = 196;
-		//	//}
-		//}
 
 		nStat = pBufISC[pIDI->idxCCM].bufItem[pIDI->idxSCM].iStat.bufUSM_Stat[pIDI->idxUSM_LGM] & MASK_FOR_ICCS_USM_LGM_STAT;
 
 		if (nStat == IDX_OPM_SENS_LED_ON_GREEN ||
 			nStat == IDX_OPM_FORC_LED_ON_GREEN)
 		{
-			//stPaAll.nFree++;
+			stPaAll.nFree++;
 			if(pIDI->idxCCM == 0){
-				stPaB1F.nFree++;
+				if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+				{
+					stPaB4F.nFree++;
+				}
+				else if (pIDI->idxSCM == 2)
+				{
+					stPaB3F.nFree++;
+				}
+				else if (pIDI->idxSCM == 3)
+				{
+					stPaB2F.nFree++;
+				}
+				else if (pIDI->idxSCM == 4)
+				{
+					stPaB1F.nFree++;
+				}
 			}
-	/*		else if(pIDI->idxCCM == 1){
-				stPaB2F.nFree++;
-			}
-			else if(pIDI->idxCCM == 2){
-				stPaB3F.nFree++;
-			}
-			else if(pIDI->idxCCM == 3){
-				stPaB4F.nFree++;
-			}*/
-			//else if(pIDI->idxCCM == 1){
-			//	if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2)
-			//	{
-			//		stPa3F.nFree++;
-			//	}
-			//	else if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4 || pIDI->idxSCM == 5 )
-			//	{
-			//		stPa4F.nFree++;
-			//	}
-			//	else if (pIDI->idxSCM == 6 || pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-			//	{
-			//		stPa5F.nFree++;
-			//	}
-			//	//else if (pIDI->idxSCM == 9)
-			//	//{
-			//	//	stPa6F.nFree++;
-			//	//}
-			//}
-
 		}
 		else
 		{
-			//stPaAll.nParked++;
+			stPaAll.nParked++;
 
 			if(pIDI->idxCCM == 0){
-				stPaB1F.nParked++;
+				if(pIDI->idxCCM == 0){
+					if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+					{
+						stPaB4F.nParked++;
+					}
+					else if (pIDI->idxSCM == 2)
+					{
+						stPaB3F.nParked++;
+					}
+					else if (pIDI->idxSCM == 3)
+					{
+						stPaB2F.nParked++;
+					}
+					else if (pIDI->idxSCM == 4)
+					{
+						stPaB1F.nParked++;
+					}
+				}
 			}
-			//else if(pIDI->idxCCM == 1){
-			//	stPaB2F.nParked++;
-			//}
-			//else if(pIDI->idxCCM == 2){
-			//	stPaB3F.nParked++;
-			//}
-			//else if(pIDI->idxCCM == 3){
-			//	stPaB4F.nParked++;
-			//}
-			//else if(pIDI->idxCCM == 1){
-			//	if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2)
-			//	{
-			//		stPa3F.nParked++;
-			//	}
-			//	else if (pIDI->idxSCM == 3 || pIDI->idxSCM == 4 || pIDI->idxSCM == 5 )
-			//	{
-			//		stPa4F.nParked++;
-			//	}
-			//	else if (pIDI->idxSCM == 6 || pIDI->idxSCM == 7 || pIDI->idxSCM == 8)
-			//	{
-			//		stPa5F.nParked++;
-			//	}
-			//	//else if (pIDI->idxSCM == 9)
-			//	//{
-			//	//	stPa6F.nParked++;
-			//	//}
-			//}
+
 		}
 	}
 }

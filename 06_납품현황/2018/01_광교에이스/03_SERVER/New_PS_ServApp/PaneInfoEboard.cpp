@@ -23,7 +23,7 @@ const LPSTR GL_STR_ML_COL_HDR[NUM_MAIN_LIST_COLUMN] = {
 	_T("CCM"),
 	_T("SCM"),
 	_T("USM"),
-	_T("USM-LGM"),
+	_T("SN"),
 };
 
 const LPSTR GL_STR_FMT_EBD_0_OP_MODE[1] = {
@@ -144,7 +144,7 @@ void CPaneInfoEboard::UpdateMainList (BOOL bFullUpdate)
 				m_pLicMain->SetItem (0, IDX_ML_COL_DEV_SCM, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 				strTmp.Format("%0.3d", pIDI->idxUSM_LGM+1);
 				m_pLicMain->SetItem (0, IDX_ML_COL_DEV_USM, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-				strTmp.Format("%0.3d", pICDA->bbbufICDevUSM[pIDI->idxCCM][pIDI->idxSCM][pIDI->idxUSM_LGM].iDev.nDevID_LGM);
+				strTmp.Format("%0.3d", pICDA->bbbufICDevUSM[pIDI->idxCCM][pIDI->idxSCM][pIDI->idxUSM_LGM].iDev.nSN.nDevNum);
 				m_pLicMain->SetItem (0, IDX_ML_COL_DEV_LGM, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 
 				//strTmp.Format("%s", _T("Serial"));
