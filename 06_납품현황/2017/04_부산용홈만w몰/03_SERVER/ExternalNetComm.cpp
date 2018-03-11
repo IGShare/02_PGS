@@ -168,42 +168,41 @@ BOOL CExternalNetComm::PktRcv ()
 	}
 	else
 	{
-		if(m_bufRcv[0]=='C'&& m_bufRcv[1]=='P'&&m_bufRcv[2]=='A'&&m_bufRcv[3]=='S'&&m_bufRcv[4]=='M'&&
-			m_bufRcv[5]=='#'&&m_bufRcv[6]=='T'&&m_bufRcv[7]=='O'&&m_bufRcv[8]=='T'&&
-			m_bufRcv[9]=='A'&&m_bufRcv[10]=='L'&&m_bufRcv[11]=='#')
+		if(m_bufRcv[0]=='C'&& m_bufRcv[1]=='P'&& m_bufRcv[2]=='G'&& m_bufRcv[3]=='S'&& m_bufRcv[4]=='#'&&
+		   m_bufRcv[5]=='T'&& m_bufRcv[6]=='O'&& m_bufRcv[7]=='T'&& m_bufRcv[8]=='A'&& m_bufRcv[9]=='L'&&m_bufRcv[10]=='#')
 		{
 			if(isConnectedCCM == FALSE)
 			{
-				m_sConnectSocket->Send ("NCCM", 100); // Not Connected CCM
+				m_sConnectSocket->Send ("NCCM", 5); // Not Connected CCM
 				return TRUE;
 			}
 			
 			MakeStreamCurStatFromBDI (pIBDI_B2, pIBDI_B3, stPaALL+14, stPa2F+14, stPa3F+14);
 
-			if(m_bufRcv[13] == 'A')
+			if(m_bufRcv[12] == 'A')
 			{
-				m_sConnectSocket->Send (stPaALL, 100);
+				m_sConnectSocket->Send (stPaALL, 19);
 				return TRUE;
 			}
-			else if(m_bufRcv[13] == '2')
+			else if(m_bufRcv[12] == '2')
 			{
-				m_sConnectSocket->Send (stPa2F, 100);
+				m_sConnectSocket->Send (stPa2F, 19);
 				return TRUE;
 			}
-			else if(m_bufRcv[13] == '3')
+			else if(m_bufRcv[12] == '3')
 			{
-				m_sConnectSocket->Send (stPa3F, 100);
+				m_sConnectSocket->Send (stPa3F, 19);
 				return TRUE;
 			}
 			else
 			{
-				m_sConnectSocket->Send ("RFOR", 100); // Reqested Floor Information is Out of Range
+				m_sConnectSocket->Send ("RFOR", 5); // Reqested Floor Information is Out of Range
 				return TRUE;
 			}
 		}
 		else
 		{
-			m_sConnectSocket->Send ("INVP", 14);
+			m_sConnectSocket->Send ("INVP", 5);
 			return TRUE;
 		}
 	}

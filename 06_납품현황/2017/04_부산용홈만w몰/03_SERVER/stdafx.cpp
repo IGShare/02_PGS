@@ -599,6 +599,47 @@ void MakeStreamCurStatFromBDI (
 			}
 		}
 	}
+
+	if(b2<10){
+		stPa2F[0] = '0';stPa2F[1] = '0';stPa2F[2] = '0';
+		itoa(b2, (char *)stPa2F+3, 10);
+	}
+	else if(b2<100){
+		stPa2F[0] = '0';stPa2F[1] = '0';
+		itoa(b2, (char *)stPa2F+2, 10);
+	}
+	else if(b2<1000){
+		stPa2F[0] = '0';
+		itoa(b2, (char *)stPa2F+1, 10);
+	}
+
+	if(b3<10){
+		stPa3F[0] = '0';stPa3F[1] = '0';stPa3F[2] = '0';
+		itoa(b3, (char *)stPa3F+3, 10);
+	}
+	else if(b3<100){
+		stPa3F[0] = '0';stPa3F[1] = '0';
+		itoa(b3, (char *)stPa3F+2, 10);
+	}
+	else if(b3<1000){
+		stPa3F[0] = '0';
+		itoa(b3, (char *)stPa3F+1, 10);
+	}
+
+	
+	if(b2+b3<10){
+		stPaALL[0] = '0';stPaALL[1] = '0';stPaALL[2] = '0';
+		itoa(b2+b3, (char *)stPaALL+3, 10);
+	}
+	else if(b2+b3<100){
+		stPaALL[0] = '0';stPaALL[1] = '0';
+		itoa(b2+b3, (char *)stPaALL+2, 10);
+	}
+	else if(b2+b3<1000){
+		stPaALL[0] = '0';
+		itoa(b2+b3, (char *)stPaALL+1, 10);
+	}
+
 }
 
 
