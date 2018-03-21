@@ -540,10 +540,17 @@ void GetCurStatFromBDI (
 		}
 
 		
-		//stPaAll.nTotal++;
+		stPaAll.nTotal++;
 
 		if(pIDI->idxCCM == 0){
-			stPaB1F.nTotal++;
+			if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
+			{
+				stPaB1F.nTotal++;
+			}
+			if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6 || pIDI->idxSCM == 7 || pIDI->idxSCM == 8 || pIDI->idxSCM == 9)
+			{
+				stPaB2F.nTotal++;
+			}
 		}
 		//else if(pIDI->idxCCM == 1){
 		//	stPaB2F.nTotal++;
@@ -580,10 +587,18 @@ void GetCurStatFromBDI (
 		if (nStat == IDX_OPM_SENS_LED_ON_GREEN ||
 			nStat == IDX_OPM_FORC_LED_ON_GREEN)
 		{
-			//stPaAll.nFree++;
+			stPaAll.nFree++;
 			if(pIDI->idxCCM == 0){
-				stPaB1F.nFree++;
+				if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
+				{
+					stPaB1F.nFree++;
+				}
+				if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6 || pIDI->idxSCM == 7 || pIDI->idxSCM == 8 || pIDI->idxSCM == 9)
+				{
+					stPaB2F.nFree++;
+				}
 			}
+
 	/*		else if(pIDI->idxCCM == 1){
 				stPaB2F.nFree++;
 			}
@@ -615,10 +630,17 @@ void GetCurStatFromBDI (
 		}
 		else
 		{
-			//stPaAll.nParked++;
+			stPaAll.nParked++;
 
 			if(pIDI->idxCCM == 0){
-				stPaB1F.nParked++;
+				if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3 || pIDI->idxSCM == 4)
+				{
+					stPaB1F.nParked++;
+				}
+				if (pIDI->idxSCM == 5 || pIDI->idxSCM == 6 || pIDI->idxSCM == 7 || pIDI->idxSCM == 8 || pIDI->idxSCM == 9)
+				{
+					stPaB2F.nParked++;
+				}
 			}
 			//else if(pIDI->idxCCM == 1){
 			//	stPaB2F.nParked++;

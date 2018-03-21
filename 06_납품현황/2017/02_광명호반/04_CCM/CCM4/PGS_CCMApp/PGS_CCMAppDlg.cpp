@@ -519,12 +519,13 @@ int CPGS_CCMAppDlg::AutoInitSCM (int idxSCM)
 		if (ReqSetUsmAddr (idxSCM) == TRUE)
 		{
 			Sleep (m_bufSCM_DevSettings[idxSCM].numUSM *110);
+			break;
 
-			if (ReqSetUsmAddr (idxSCM) == TRUE)
-			{
-				Sleep (m_bufSCM_DevSettings[idxSCM].numUSM *110);
-				break;
-			}
+			//if (ReqSetUsmAddr (idxSCM) == TRUE)
+			//{
+			//	Sleep (m_bufSCM_DevSettings[idxSCM].numUSM *110);
+			//	break;
+			//}
 		}
 
 		Sleep (glIGlobal.SetAD_timeWaitAfterCmdFail);
@@ -541,11 +542,12 @@ int CPGS_CCMAppDlg::AutoInitSCM (int idxSCM)
 		if (ReqSetLgmAddr (idxSCM) == TRUE)
 		{
 			Sleep (m_bufSCM_DevSettings[idxSCM].numLGM *110);
-			if (ReqSetLgmAddr (idxSCM) == TRUE)
-			{
-				Sleep (m_bufSCM_DevSettings[idxSCM].numLGM *110);
-				break;
-			}
+			break;
+			//if (ReqSetLgmAddr (idxSCM) == TRUE)
+			//{
+			//	Sleep (m_bufSCM_DevSettings[idxSCM].numLGM *110);
+			//	break;
+			//}
 		}
 
 		Sleep (glIGlobal.SetAD_timeWaitAfterCmdFail);
@@ -581,13 +583,14 @@ int CPGS_CCMAppDlg::AutoInitSCM (int idxSCM)
 			if (ReqSetUsmParam (idxSCM) == TRUE)
 			{
 				Sleep (m_bufSCM_DevSettings[idxSCM].numUSM *400);
+				break;
 
-				if (ReqSetUsmParam (idxSCM) == TRUE)
-				{
-					Sleep (m_bufSCM_DevSettings[idxSCM].numUSM *400);
-					break;
+				//if (ReqSetUsmParam (idxSCM) == TRUE)
+				//{
+				//	Sleep (m_bufSCM_DevSettings[idxSCM].numUSM *400);
+				//	break;
 
-				}
+				//}
 			}
 
 			Sleep (glIGlobal.SetAD_timeWaitAfterCmdFail);
@@ -766,17 +769,19 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	}
 
 	nEBD1_Green1_1		=	bufNGrGrp[ 3]+bufNGrGrp[ 4];
-	nEBD1_Green1_2		=	bufNGrGrp[ 2];	
-	nEBD1_Green1_3		=	bufNGrGrp[ 1];
+	nEBD1_Green1_2		=	bufNGrGrp[ 2];	// 상가
+	nEBD1_Green1_3		=	bufNGrGrp[ 1]; // 오피스텔
 	
 	nEBD1_Green2_L		=	bufNGrGrp[ 2];
 	nEBD1_Green2_R		=	bufNGrGrp[ 1];			
 	nEBD1_Green3_L		=	bufNGrGrp[ 3];				
 	nEBD1_Green3_R		=	bufNGrGrp[ 4];		
-	nEBD1_Green4_L		=	bufNGrGrp[ 1];				
-	nEBD1_Green4_R		=	bufNGrGrp[ 1];	
-	nEBD1_Green5_L		=	bufNGrGrp[ 1];				
-	nEBD1_Green5_R		=	bufNGrGrp[ 1];
+	nEBD1_Green4_L		=	bufNGrGrp[ 2];				
+	nEBD1_Green4_R		=	bufNGrGrp[ 2];	
+	nEBD1_Green5_L		=	bufNGrGrp[ 2];				
+	nEBD1_Green5_R		=	bufNGrGrp[ 2];
+	nEBD1_Green6_L		=	bufNGrGrp[ 1];				
+	nEBD1_Green6_R		=	bufNGrGrp[ 2];
 
 	//전광판 setting
 	// 0xe0 0x18	: _u	: 위쪽 화살표
@@ -796,7 +801,7 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 
 
 	if((nEBD1_Green2_L != m_nOld_EBD1_Green2_L) || (nEBD1_Green2_R != m_nOld_EBD1_Green2_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l B4%4d", nEBD1_Green2_R);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l%4d%4d", nEBD1_Green2_R, nEBD1_Green2_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID_02], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
@@ -834,6 +839,8 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	m_nOld_EBD1_Green4_R   = nEBD1_Green4_R;
 	m_nOld_EBD1_Green5_L   = nEBD1_Green5_L;
 	m_nOld_EBD1_Green5_R   = nEBD1_Green5_R;
+	m_nOld_EBD1_Green6_L   = nEBD1_Green6_L;
+	m_nOld_EBD1_Green6_R   = nEBD1_Green6_R;
 
 
 	memcpy (&m_bufNOldGrGrp[0], &bufNGrGrp[0], sizeof(int) *NUM_EBD_GROUP);

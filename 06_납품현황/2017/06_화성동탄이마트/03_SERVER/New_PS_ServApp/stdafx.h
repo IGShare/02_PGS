@@ -205,13 +205,13 @@ void GetCurStat_B1_Lower (int &nTotal, int &nParked, int &nFree);
 // EBoard[S]
 enum {
 	IDX_EBD_DEV_ENTRANCE_1,
-	IDX_EBD_DEV_ENTRANCE_2,
+//	IDX_EBD_DEV_ENTRANCE_2,
 
 	NUM_EBOARD_DEV
 };
 const LPSTR GL_STR_EBD_DEV_NAME[NUM_EBOARD_DEV] = {
 	_T("입구 1"),
-	_T("입구 2"),
+//	_T("입구 2"),
 };
 struct INFO_EBOARD_PARAM {
 	char strNetAddr[MAX_PATH];
@@ -223,15 +223,15 @@ const LPSTR GL_STR_EBD_NET_ADDR[NUM_EBOARD_DEV] = {
 //	_T("127.0.0.1"),
 //	_T("192.168.0.200"),
 	_T("192.168.0.200"),
-	_T("192.168.0.201"),
+//	_T("192.168.1.201"),
 };
 const int GL_NUM_EBD_NET_PORT[NUM_EBOARD_DEV] = {
 	5000,
-	5000,
+//	5000,
 };
 const int GL_NUM_EBD_DST_ID[NUM_EBOARD_DEV] = {
 	0,
-	1,
+//	1,
 };
 
 enum {

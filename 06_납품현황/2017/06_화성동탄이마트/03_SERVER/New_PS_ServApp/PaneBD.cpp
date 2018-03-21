@@ -145,8 +145,6 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 	stPaAll.nFree =0;
 
 
-
-
 	if (bFullUpdate == TRUE)
 	{
 		m_pLicMain->DeleteAllItems ();
@@ -155,8 +153,8 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 		m_pLicMain->InsertItem (0, LPCTSTR(strTmp));
 		strTmp = "B1F";
 		m_pLicMain->InsertItem (1, LPCTSTR(strTmp));
-		//strTmp = "B2F";
-		//m_pLicMain->InsertItem (2, LPCTSTR(strTmp));
+		strTmp = "B2F";
+		m_pLicMain->InsertItem (2, LPCTSTR(strTmp));
 		//strTmp = "B3F";
 		//m_pLicMain->InsertItem (3, LPCTSTR(strTmp));
 		//strTmp = "B4F";
@@ -187,23 +185,14 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 		strTmp.Format ("%d", stPaB1F.nFree);
 		m_pLicMain->SetItem (1, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		stPaAll.nTotal	+=stPaB1F.nTotal;
-		stPaAll.nParked	+=stPaB1F.nParked;
-		stPaAll.nFree	+=stPaB1F.nFree;
 
 		//B2F
-		//pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[1]];
-		//GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
-
-		//strTmp.Format ("%d", stPaB2F.nTotal);
-		//m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB2F.nParked);
-		//m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB2F.nFree);
-		//m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//stPaAll.nTotal	+=stPaB2F.nTotal;
-		//stPaAll.nParked	+=stPaB2F.nParked;
-		//stPaAll.nFree	+=stPaB2F.nFree;
+		strTmp.Format ("%d", stPaB2F.nTotal);
+		m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB2F.nParked);
+		m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB2F.nFree);
+		m_pLicMain->SetItem (2, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 
 		////B3F
 		//pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[2]];

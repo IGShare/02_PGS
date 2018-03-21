@@ -71,7 +71,7 @@ UINT TH_PROC_EBOARD (LPVOID pParam)
 
 			pIBDI = &glInfoGlobal.iBDA.bufBDI[glInfoGlobal.iBDA.bufIdxMainBDI[0]];
 			GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
-			strEBoardMsg.Format ("%4d", stPaB1F.nFree);
+			strEBoardMsg.Format ("%4d%4d", stPaB1F.nFree,stPaB2F.nFree);
 
 
 			szEBoardSendData = MakeEBoardSendData (
