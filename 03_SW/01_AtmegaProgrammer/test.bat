@@ -1,1 +1,0 @@
-atprogram.exe -t STK500 -i isp -c COM5 -d atmega48PA program -f IGS_USM_V1.0_20170719.elf
