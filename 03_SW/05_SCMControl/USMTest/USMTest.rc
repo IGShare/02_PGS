@@ -1,0 +1,305 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\USMTest.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""      // 표준 구성 요소입니다.\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\USMTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "USMTest 정보"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "USMTest, 버전 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "확인",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_USMTEST_DIALOG DIALOGEX 0, 0, 331, 394
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "USMTest"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_PORT,61,18,48,108,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BAUDRATE,111,18,48,106,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OPEN",IDC_BUTTON_COMPORT_OPEN,61,34,48,14
+    PUSHBUTTON      "CLOSE",IDC_BUTTON_COMPORT_CLOSE,110,34,48,14
+    EDITTEXT        IDC_EDIT_SERIAL_NUM_USM,55,70,36,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Device Mgr",IDC_BUTTON_DEVICE_MANAGER,9,17,50,32
+    EDITTEXT        IDC_EDIT_CTRL_NUM_USM,55,87,36,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "SET SERIAL NUM",IDC_BUTTON_SET_SERIAL_NUM,95,71,62,28
+    PUSHBUTTON      "SENSING ON",IDC_BUTTON_SENSING_ON,84,144,77,33
+    CTEXT           "Serial Num",IDC_STATIC,11,69,39,13,SS_CENTERIMAGE,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Get Status",IDC_BUTTON6,165,145,50,16
+    EDITTEXT        IDC_EDIT_PLC_RETURN_VAL,219,163,105,14,ES_AUTOHSCROLL
+    GROUPBOX        "Serial Communication",IDC_STATIC,7,7,154,45
+    CTEXT           "Ctrl ID",IDC_STATIC,11,86,39,13,SS_CENTERIMAGE,WS_EX_CLIENTEDGE
+    GROUPBOX        "USM Setting",IDC_STATIC,7,58,154,80
+    CTEXT           "PLC Return Value",IDC_STATIC,218,146,105,14,SS_CENTERIMAGE,WS_EX_CLIENTEDGE
+    LTEXT           "Status Message",IDC_STATIC_STATUS_MESSAGE,7,379,317,8
+    GROUPBOX        "SCM Setting",IDC_STATIC,165,7,61,44
+    LTEXT           "ID : ",IDC_STATIC,173,19,15,8
+    EDITTEXT        IDC_EDIT_SCM_ID,190,17,30,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "SET ID",IDC_BUTTON1,170,33,50,14
+    GROUPBOX        "LGM Setting",IDC_STATIC,166,58,154,80
+    EDITTEXT        IDC_EDIT_SERIAL_NUM_LGM,215,70,36,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CTRL_NUM_LGM,215,87,36,12,ES_AUTOHSCROLL
+    CTEXT           "Serial Num",IDC_STATIC,171,69,39,13,SS_CENTERIMAGE,WS_EX_CLIENTEDGE
+    CTEXT           "Ctrl ID",IDC_STATIC,171,86,39,13,SS_CENTERIMAGE,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "SET SERIAL NUM",IDC_BUTTON_SET_SERIAL_NUM_LGM,255,71,62,28
+    COMBOBOX        IDC_COMBO_USM_OP_MODE,11,120,81,88,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "SET OP MODE ",IDC_BUTTON_SET_OP_MODE_USM,95,118,62,17
+    COMBOBOX        IDC_COMBO_LGM_OP_MODE,171,120,81,88,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "SET OP MODE",IDC_BUTTON_SET_OP_MODE_LGM,255,118,62,17
+    PUSHBUTTON      "USM to LGM",IDC_BUTTON_USM_TO_LGM,7,144,77,33
+    LTEXT           "Auto Increase :",IDC_STATIC,23,105,50,8
+    LTEXT           "Auto Increase :",IDC_STATIC,181,105,50,8
+    CONTROL         "1",IDC_RADIO_AUTO_INCREASE_USM_1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,80,104,20,10
+    CONTROL         "8",IDC_RADIO_AUTO_INCREASE_USM_2,"Button",BS_AUTORADIOBUTTON,104,104,20,10
+    CONTROL         "16",IDC_RADIO_AUTO_INCREASE_USM_3,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,129,104,24,10
+    CONTROL         "1",IDC_RADIO_AUTO_INCREASE_LGM_1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,238,104,20,10
+    CONTROL         "8",IDC_RADIO_AUTO_INCREASE_LGM_5,"Button",BS_AUTORADIOBUTTON,262,104,20,10
+    CONTROL         "16",IDC_RADIO_AUTO_INCREASE_LGM_10,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,287,104,24,10
+    PUSHBUTTON      "RESET",IDC_BUTTON_DATA_RESET,165,161,50,16
+    PUSHBUTTON      "Read System Info",IDC_BUTTON_RD_SYS_INFO,231,10,86,40
+    CONTROL         "",IDC_RICHEDIT21,"RichEdit20A",ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,7,201,317,174
+    PUSHBUTTON      "Detail View",IDC_BUTTON3,7,187,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "TODO: <파일 설명>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "USMTest.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "USMTest.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_USMTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 324
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 387
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_USMTEST_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3431, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3635, 0x3030, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3239, 0x3631, 0x3030, "\000" 
+    IDC_COMBO_USM_OP_MODE, 0x403, 11, 0
+0x6553, 0x736e, 0x6e69, 0x2067, 0x6e4f, "\000" 
+    IDC_COMBO_USM_OP_MODE, 0x403, 8, 0
+0x654c, 0x2064, 0x664f, 0x0066, 
+    IDC_COMBO_USM_OP_MODE, 0x403, 13, 0
+0x654c, 0x2064, 0x7247, 0x6565, 0x206e, 0x6e4f, "\000" 
+    IDC_COMBO_USM_OP_MODE, 0x403, 11, 0
+0x654c, 0x2064, 0x6552, 0x2064, 0x6e4f, "\000" 
+    IDC_COMBO_USM_OP_MODE, 0x403, 13, 0
+0x654c, 0x2064, 0x6c42, 0x6e69, 0x696b, 0x676e, "\000" 
+    IDC_COMBO_LGM_OP_MODE, 0x403, 11, 0
+0x6553, 0x736e, 0x6e69, 0x2067, 0x6e4f, "\000" 
+    IDC_COMBO_LGM_OP_MODE, 0x403, 8, 0
+0x654c, 0x2064, 0x664f, 0x0066, 
+    IDC_COMBO_LGM_OP_MODE, 0x403, 13, 0
+0x654c, 0x2064, 0x7247, 0x6565, 0x206e, 0x6e4f, "\000" 
+    IDC_COMBO_LGM_OP_MODE, 0x403, 11, 0
+0x654c, 0x2064, 0x6552, 0x2064, 0x6e4f, "\000" 
+    IDC_COMBO_LGM_OP_MODE, 0x403, 13, 0
+0x654c, 0x2064, 0x6c42, 0x6e69, 0x696b, 0x676e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BI_FAIL             BITMAP                  "res\\bitmap1.bmp"
+IDB_BI_SUCCESS          BITMAP                  "res\\bitmap2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "USMTest 정보(&A)..."
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\USMTest.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"      // 표준 구성 요소입니다.
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

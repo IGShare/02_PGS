@@ -1,0 +1,684 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+                              C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o (exit)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+                              IGS_SCM.o (__do_copy_data)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+                              IGS_SCM.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+G_idDipValue        0x1               IGS_SCM.o
+G_txCntlBufPLC      0x4               IGS_SCM.o
+G_cntlmodeDipValue  0x1               IGS_SCM.o
+G_usmPLCInterruptF  0x78              IGS_SCM.o
+G_txAddBufPLC       0x5               IGS_SCM.o
+initialLGMF         0x1               IGS_SCM.o
+G_testmodeDipValue  0x1               IGS_SCM.o
+G_StatusBufLGMtoSCM
+                    0x28              IGS_SCM.o
+G_StatusBufUSMtoSCM
+                    0x78              IGS_SCM.o
+G_txBuf485          0x1e4             IGS_SCM.o
+G_lgmStatusBuf      0x28              IGS_SCM.o
+uaddCF              0x1               IGS_SCM.o
+G_usmCurrentCntlID  0x1               IGS_SCM.o
+u8data              0x1               IGS_SCM.o
+paramCF             0x1               IGS_SCM.o
+lopmodeCF           0x1               IGS_SCM.o
+G_rxBuf485          0x1e4             IGS_SCM.o
+initialUSMF         0x1               IGS_SCM.o
+G_lgmStatusCnt      0x28              IGS_SCM.o
+laddCF              0x1               IGS_SCM.o
+G_lgmTotalCnt       0x28              IGS_SCM.o
+uopmodeCF           0x1               IGS_SCM.o
+G_rxBufPLC          0x2               IGS_SCM.o
+G_485Packet         0x1ea             IGS_SCM.o
+G_usmStatusBuffer   0x78              IGS_SCM.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+ .text          0x00000000        0x0 IGS_SCM.o
+ .data          0x00000000        0x0 IGS_SCM.o
+ .bss           0x00000000        0x0 IGS_SCM.o
+ .text.SCMTF_SetClock
+                0x00000000       0x14 IGS_SCM.o
+ .text.SCMTF_ExIntInit
+                0x00000000        0x6 IGS_SCM.o
+ .text.SCM485F_BufferInit
+                0x00000000       0x12 IGS_SCM.o
+ .text.SCM485F_checkCRC16
+                0x00000000        0x8 IGS_SCM.o
+ .text.SCMEMF_ReadExtMemTest
+                0x00000000        0xc IGS_SCM.o
+ .bss.G_SULCR_V
+                0x00000000        0x1 IGS_SCM.o
+ .bss.G_usmStatusReqF
+                0x00000000        0x1 IGS_SCM.o
+ .bss.iterNum   0x00000000        0x1 IGS_SCM.o
+ .bss.G_invalidIDF
+                0x00000000        0x1 IGS_SCM.o
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800100         0x0000ff00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+LOAD IGS_SCM.o
+START GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a
+END GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a
+START GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51\libatmega128.a
+END GROUP
+                0x00020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                0x0000ff00                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xff00
+                0x00010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                0x00000400                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1cec
+ *(.vectors)
+ .vectors       0x00000000       0x8c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000008c                . = ALIGN (0x2)
+                0x0000008c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000008c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000008c                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+                0x0000008c                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000008c                __ctors_start = .
+ *(.ctors)
+                0x0000008c                __ctors_end = .
+                0x0000008c                __dtors_start = .
+ *(.dtors)
+                0x0000008c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000008c        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+                0x0000008c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000008c        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000098       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+                0x00000098                __do_copy_data
+ .init4         0x000000b2       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+                0x000000b2                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000c2        0x6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+ *(.init9)
+ *(.text)
+ .text          0x000000c8        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+                0x000000c8                __vector_22
+                0x000000c8                __vector_28
+                0x000000c8                __vector_1
+                0x000000c8                __vector_32
+                0x000000c8                __vector_34
+                0x000000c8                __vector_24
+                0x000000c8                __vector_12
+                0x000000c8                __bad_interrupt
+                0x000000c8                __vector_6
+                0x000000c8                __vector_31
+                0x000000c8                __vector_3
+                0x000000c8                __vector_23
+                0x000000c8                __vector_30
+                0x000000c8                __vector_25
+                0x000000c8                __vector_11
+                0x000000c8                __vector_13
+                0x000000c8                __vector_17
+                0x000000c8                __vector_27
+                0x000000c8                __vector_5
+                0x000000c8                __vector_33
+                0x000000c8                __vector_4
+                0x000000c8                __vector_9
+                0x000000c8                __vector_2
+                0x000000c8                __vector_21
+                0x000000c8                __vector_15
+                0x000000c8                __vector_29
+                0x000000c8                __vector_8
+                0x000000c8                __vector_26
+                0x000000c8                __vector_14
+                0x000000ca                . = ALIGN (0x2)
+ *(.text.*)
+ .text.crcsum   0x000000ca       0x40 IGS_SCM.o
+                0x000000ca                crcsum
+ .text.SCMTF_PortInit
+                0x0000010a       0x28 IGS_SCM.o
+                0x0000010a                SCMTF_PortInit
+ .text.SCMTF_ReadDipSwitchValueMYID
+                0x00000132       0x10 IGS_SCM.o
+                0x00000132                SCMTF_ReadDipSwitchValueMYID
+ .text.SCMTF_ReadDipSwitchValueMode
+                0x00000142        0xe IGS_SCM.o
+                0x00000142                SCMTF_ReadDipSwitchValueMode
+ .text.SCMTF_ReadDipSwitchValueTest
+                0x00000150        0xc IGS_SCM.o
+                0x00000150                SCMTF_ReadDipSwitchValueTest
+ .text.SCMTF_CheckOverCurrent
+                0x0000015c        0x8 IGS_SCM.o
+                0x0000015c                SCMTF_CheckOverCurrent
+ .text.SCM485F_USART0Init
+                0x00000164       0x14 IGS_SCM.o
+                0x00000164                SCM485F_USART0Init
+ .text.SCM485F_RxCompleteTimerInit
+                0x00000178        0xc IGS_SCM.o
+                0x00000178                SCM485F_RxCompleteTimerInit
+ .text.SCM485F_OneByteWrite_485
+                0x00000184       0x2e IGS_SCM.o
+                0x00000184                SCM485F_OneByteWrite_485
+ .text.SCM485F_OneByteRead_485
+                0x000001b2       0x50 IGS_SCM.o
+                0x000001b2                SCM485F_OneByteRead_485
+ .text.SCM485F_packetBufInit
+                0x00000202       0x30 IGS_SCM.o
+                0x00000202                SCM485F_packetBufInit
+ .text.SCM485F_getRxPacket
+                0x00000232       0xf4 IGS_SCM.o
+                0x00000232                SCM485F_getRxPacket
+ .text.SCM485F_makeTxPacket
+                0x00000326       0x98 IGS_SCM.o
+                0x00000326                SCM485F_makeTxPacket
+ .text.SCMPLCF_PLCTxTimerInit
+                0x000003be        0xc IGS_SCM.o
+                0x000003be                SCMPLCF_PLCTxTimerInit
+ .text.SCMPLCF_StatusUSMBuffInit
+                0x000003ca       0x2e IGS_SCM.o
+                0x000003ca                SCMPLCF_StatusUSMBuffInit
+ .text.SCMPLCF_StatusLGMBuffInit
+                0x000003f8       0x26 IGS_SCM.o
+                0x000003f8                SCMPLCF_StatusLGMBuffInit
+ .text.SCMPLCF_lgmStatusBuffInit
+                0x0000041e       0x16 IGS_SCM.o
+                0x0000041e                SCMPLCF_lgmStatusBuffInit
+ .text.SCMPLCF_lgmTotalCntBuffInit
+                0x00000434       0x16 IGS_SCM.o
+                0x00000434                SCMPLCF_lgmTotalCntBuffInit
+ .text.SCMPLCF_SendMessageAddPacket
+                0x0000044a      0x5b8 IGS_SCM.o
+                0x0000044a                SCMPLCF_SendMessageAddPacket
+ .text.SCMPLCF_SendMessageCntlPacket
+                0x00000a02      0x3d0 IGS_SCM.o
+                0x00000a02                SCMPLCF_SendMessageCntlPacket
+ .text.SCM485F_ExtMemInit
+                0x00000dd2       0x14 IGS_SCM.o
+                0x00000dd2                SCM485F_ExtMemInit
+ .text.SCMEMF_WriteExtMemUSMAddr
+                0x00000de6       0x86 IGS_SCM.o
+                0x00000de6                SCMEMF_WriteExtMemUSMAddr
+ .text.SCMEMF_WriteExtMemLGMAddr
+                0x00000e6c       0x8a IGS_SCM.o
+                0x00000e6c                SCMEMF_WriteExtMemLGMAddr
+ .text.SCMEMF_WriteExtMemUSMCntlID
+                0x00000ef6       0x20 IGS_SCM.o
+                0x00000ef6                SCMEMF_WriteExtMemUSMCntlID
+ .text.SCMEMF_WriteExtMemUSMOPMode
+                0x00000f16       0x2e IGS_SCM.o
+                0x00000f16                SCMEMF_WriteExtMemUSMOPMode
+ .text.SCMEMF_WriteExtMemLGMOPMode
+                0x00000f44       0x2e IGS_SCM.o
+                0x00000f44                SCMEMF_WriteExtMemLGMOPMode
+ .text.SCMEMF_WriteExtMemUSMParam
+                0x00000f72       0x74 IGS_SCM.o
+                0x00000f72                SCMEMF_WriteExtMemUSMParam
+ .text.SCMEMF_WriteExtMemUSMtoLGM
+                0x00000fe6       0x50 IGS_SCM.o
+                0x00000fe6                SCMEMF_WriteExtMemUSMtoLGM
+ .text.startup.main
+                0x00001036      0x386 IGS_SCM.o
+                0x00001036                main
+ .text.__vector_18
+                0x000013bc       0x7e IGS_SCM.o
+                0x000013bc                __vector_18
+ .text.__vector_16
+                0x0000143a      0x118 IGS_SCM.o
+                0x0000143a                __vector_16
+ .text.__vector_19
+                0x00001552       0x60 IGS_SCM.o
+                0x00001552                __vector_19
+ .text.__vector_20
+                0x000015b2       0x24 IGS_SCM.o
+                0x000015b2                __vector_20
+ .text.__vector_10
+                0x000015d6      0x64e IGS_SCM.o
+                0x000015d6                __vector_10
+ .text.__vector_7
+                0x00001c24       0xc4 IGS_SCM.o
+                0x00001c24                __vector_7
+                0x00001ce8                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001ce8        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+                0x00001ce8                _exit
+                0x00001ce8                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001ce8        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001cec                _etext = .
+
+.data           0x00800100      0x210 load address 0x00001cec
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ .data.G_dipSwitchTable
+                0x00800100       0x10 IGS_SCM.o
+                0x00800100                G_dipSwitchTable
+ *(.rodata)
+ *(.rodata*)
+ .rodata.crc_table
+                0x00800110      0x200 IGS_SCM.o
+ *(.gnu.linkonce.d*)
+                0x00800310                . = ALIGN (0x2)
+                0x00800310                _edata = .
+                0x00800310                PROVIDE (__data_end, .)
+
+.bss            0x00800310      0xd58
+                0x00800310                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.G_LedOffFlag
+                0x00800310        0x1 IGS_SCM.o
+                0x00800310                G_LedOffFlag
+ .bss.G_usmParam
+                0x00800311      0x1e0 IGS_SCM.o
+                0x00800311                G_usmParam
+ .bss.G_lgmOPMode
+                0x008004f1       0x28 IGS_SCM.o
+                0x008004f1                G_lgmOPMode
+ .bss.G_usmOPMode
+                0x00800519       0x78 IGS_SCM.o
+                0x00800519                G_usmOPMode
+ .bss.G_usmTolgm
+                0x00800591       0x78 IGS_SCM.o
+                0x00800591                G_usmTolgm
+ .bss.G_lgmAdd  0x00800609       0xa0 IGS_SCM.o
+                0x00800609                G_lgmAdd
+ .bss.G_usmAdd  0x008006a9      0x1e0 IGS_SCM.o
+                0x008006a9                G_usmAdd
+ .bss.ParamLoopCnt
+                0x00800889        0x1 IGS_SCM.o
+                0x00800889                ParamLoopCnt
+ .bss.ParamCnt  0x0080088a        0x1 IGS_SCM.o
+                0x0080088a                ParamCnt
+ .bss.G_SULCR   0x0080088b        0x1 IGS_SCM.o
+                0x0080088b                G_SULCR
+ .bss.G_lgmOPModeOnF
+                0x0080088c        0x1 IGS_SCM.o
+                0x0080088c                G_lgmOPModeOnF
+ .bss.G_usmOPModeOnF
+                0x0080088d        0x1 IGS_SCM.o
+                0x0080088d                G_usmOPModeOnF
+ .bss.G_usmSensingF
+                0x0080088e        0x1 IGS_SCM.o
+                0x0080088e                G_usmSensingF
+ .bss.G_plcLGMCurrentIndex
+                0x0080088f        0x1 IGS_SCM.o
+                0x0080088f                G_plcLGMCurrentIndex
+ .bss.G_plcUSMCurrentIndex
+                0x00800890        0x1 IGS_SCM.o
+                0x00800890                G_plcUSMCurrentIndex
+ .bss.G_plcTimerOverFlowCnt
+                0x00800891        0x1 IGS_SCM.o
+                0x00800891                G_plcTimerOverFlowCnt
+ .bss.G_RSCOMR  0x00800892        0x2 IGS_SCM.o
+                0x00800892                G_RSCOMR
+ .bss.G_485TimerOverFlowCnt
+                0x00800894        0x1 IGS_SCM.o
+                0x00800894                G_485TimerOverFlowCnt
+ .bss.G_totalLGMCnt
+                0x00800895        0x1 IGS_SCM.o
+                0x00800895                G_totalLGMCnt
+ .bss.G_totalUSMCnt
+                0x00800896        0x1 IGS_SCM.o
+                0x00800896                G_totalUSMCnt
+ *(COMMON)
+ COMMON         0x00800897      0x7d1 IGS_SCM.o
+                0x00800897                G_idDipValue
+                0x00800898                G_txCntlBufPLC
+                0x0080089c                G_cntlmodeDipValue
+                0x0080089d                G_usmPLCInterruptF
+                0x00800915                G_txAddBufPLC
+                0x0080091a                initialLGMF
+                0x0080091b                G_testmodeDipValue
+                0x0080091c                G_StatusBufLGMtoSCM
+                0x00800944                G_StatusBufUSMtoSCM
+                0x008009bc                G_txBuf485
+                0x00800ba0                G_lgmStatusBuf
+                0x00800bc8                uaddCF
+                0x00800bc9                G_usmCurrentCntlID
+                0x00800bca                u8data
+                0x00800bcb                paramCF
+                0x00800bcc                lopmodeCF
+                0x00800bcd                G_rxBuf485
+                0x00800db1                initialUSMF
+                0x00800db2                G_lgmStatusCnt
+                0x00800dda                laddCF
+                0x00800ddb                G_lgmTotalCnt
+                0x00800e03                uopmodeCF
+                0x00800e04                G_rxBufPLC
+                0x00800e06                G_485Packet
+                0x00800ff0                G_usmStatusBuffer
+                0x00801068                PROVIDE (__bss_end, .)
+                0x00001cec                __data_load_start = LOADADDR (.data)
+                0x00001efc                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00801068        0x0
+                [!provide]                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                PROVIDE (__noinit_end, .)
+                0x00801068                _end = .
+                [!provide]                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 IGS_SCM.o
+                                 0x31 (size before relaxing)
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x3c
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x3c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega128/avr51/crtatmega128.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(IGS_SCM_V1.0.elf elf32-avr)
+LOAD linker stubs

@@ -1,0 +1,111 @@
+\t (00:08:42) allegro 16.6 P004 (v16-6-112G) Windows 32
+\t (00:08:42)     Journal start - Tue Feb 21 19:03:44 2017
+\t (00:08:42)         Host=USER User=Administrator Pid=9728 CPUs=4
+\t (00:08:42) 
+\d (00:08:42) Database opened: C:/Users/Administrator/Desktop/작업_확인파일/lgm_p0-1/lgm_p0-1_20170221.brd
+\i (00:08:42) generaledit 
+\i (00:08:44) setwindow form.vf_vis
+\i (00:08:44) FORM vf_vis all_all_visible YES 
+\i (00:08:45) setwindow pcb
+\i (00:08:45) zoom in 1 
+\i (00:08:45) setwindow pcb
+\i (00:08:45) zoom in 73.7531 15.4835
+\i (00:08:45) trapsize 5743
+\i (00:08:46) zoom out 1 
+\i (00:08:46) setwindow pcb
+\i (00:08:46) zoom out 106.7151 4.8025
+\i (00:08:46) trapsize 11485
+\i (00:08:47) zoom in 1 
+\i (00:08:47) setwindow pcb
+\i (00:08:47) zoom in 69.7333 14.6796
+\i (00:08:47) trapsize 5743
+\i (00:08:48) zoom out 1 
+\i (00:08:48) setwindow pcb
+\i (00:08:48) zoom out 62.0384 16.4024
+\i (00:08:48) trapsize 11485
+\i (00:08:51) setwindow form.vf_vis
+\i (00:08:51) FORM vf_vis colorview_list Film: MASK_BOTTOM 
+\i (00:08:53) setwindow pcb
+\i (00:08:53) zoom in 1 
+\i (00:08:53) setwindow pcb
+\i (00:08:53) zoom in 136.2314 20.3073
+\i (00:08:53) trapsize 5743
+\i (00:08:55) zoom out 1 
+\i (00:08:55) setwindow pcb
+\i (00:08:55) zoom out 102.5804 4.5729
+\i (00:08:55) trapsize 11485
+\i (00:08:56) zoom in 1 
+\i (00:08:56) setwindow pcb
+\i (00:08:56) zoom in 20.1179 16.0579
+\i (00:08:56) trapsize 5743
+\i (00:09:01) setwindow form.vf_vis
+\i (00:09:01) FORM vf_vis colorview_list Film: MASK_TOP 
+\i (00:09:19) FORM vf_vis 1 all_colorvisible YES 
+\i (00:09:21) FORM vf_vis 2 all_colorvisible YES 
+\i (00:09:23) FORM vf_vis all_all_visible YES 
+\i (00:09:55) setwindow pcb
+\i (00:09:55) zoom out 1 
+\i (00:09:55) setwindow pcb
+\i (00:09:55) zoom out -1.0145 8.0184
+\i (00:09:55) trapsize 11485
+\i (00:09:56) zoom in 1 
+\i (00:09:56) setwindow pcb
+\i (00:09:56) zoom in -0.3255 11.4638
+\i (00:09:56) trapsize 5743
+\i (00:10:22) zoom out 1 
+\i (00:10:22) setwindow pcb
+\i (00:10:22) zoom out 57.7887 -5.8785
+\i (00:10:22) trapsize 11485
+\i (00:10:32) zoom in 1 
+\i (00:10:32) setwindow pcb
+\i (00:10:32) zoom in 61.6935 -6.3380
+\i (00:10:32) trapsize 5743
+\i (00:11:55) setwindow form.vf_vis
+\i (00:11:55) FORM vf_vis 1 all_colorvisible NO 
+\i (00:11:56) FORM vf_vis 2 all_colorvisible NO 
+\i (00:11:56) FORM vf_vis 3 all_colorvisible NO 
+\i (00:11:59) FORM vf_vis 2 all_colorvisible YES 
+\i (00:12:00) FORM vf_vis 2 all_colorvisible NO 
+\i (00:12:00) FORM vf_vis 2 all_colorvisible YES 
+\i (00:12:01) FORM vf_vis 2 all_colorvisible NO 
+\i (00:12:07) FORM vf_vis 1 all_colorvisible YES 
+\i (00:12:10) FORM vf_vis colorview_list Film: SILK_TOP 
+\i (00:12:13) FORM vf_vis 1 all_colorvisible YES 
+\i (00:12:14) FORM vf_vis 1 all_colorvisible NO 
+\i (00:12:15) FORM vf_vis 2 all_colorvisible YES 
+\i (00:12:16) FORM vf_vis 2 all_colorvisible NO 
+\i (00:12:27) FORM vf_vis 1 all_colorvisible YES 
+\i (00:12:29) FORM vf_vis 2 all_colorvisible YES 
+\i (00:12:32) FORM vf_vis colorview_list Film: ASSY_TOP 
+\i (00:12:33) FORM vf_vis 1 all_colorvisible YES 
+\i (00:12:35) FORM vf_vis 2 all_colorvisible YES 
+\i (00:12:38) setwindow pcb
+\i (00:12:38) pick grid 90.6357 -7.6013
+\t (00:12:38) last pick:  90.6000  -7.6000
+\i (00:12:40) zoom in 1 
+\i (00:12:40) setwindow pcb
+\i (00:12:40) zoom in 57.0995 5.7213
+\i (00:12:40) trapsize 2871
+\i (00:13:25) zoom out 1 
+\i (00:13:25) setwindow pcb
+\i (00:13:25) zoom out 82.1943 -2.4330
+\i (00:13:25) trapsize 5743
+\i (00:13:32) roam x 96 
+\i (00:13:32) roam x 96
+\i (00:13:37) setwindow form.vf_vis
+\i (00:13:37) FORM vf_vis colorview_list Film: MASK_TOP 
+\i (00:13:39) FORM vf_vis 1 all_colorvisible YES 
+\i (00:13:41) FORM vf_vis 2 all_colorvisible YES 
+\i (00:13:43) setwindow pcb
+\i (00:13:43) zoom in 1 
+\i (00:13:43) setwindow pcb
+\i (00:13:43) zoom in 120.9941 14.1054
+\i (00:13:43) trapsize 2871
+\i (00:13:44) zoom out 1 
+\i (00:13:44) setwindow pcb
+\i (00:13:44) zoom out 119.3288 13.9906
+\i (00:13:44) trapsize 5743
+\i (00:13:50) pick grid 82.5768 53.8435
+\t (00:13:50) last pick:  82.6000  53.8000
+\i (00:16:06) exit 
+\t (00:16:06)     Journal end - Tue Feb 21 19:11:08 2017

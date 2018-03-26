@@ -1,0 +1,11 @@
+# Board Station BOM file 
+# date : Tuesday December 27, 2016; 11:30:44 
+
+
+
+  ITEM_NUMBER    COMPANY PART NO.      GEOMETRY       COUNT     DESCRIPTION        REFERENCE      
+
+       1               CON2              con2           2    CON2              J1 J3              
+       2           ERZ-V07D471        erz-v07d471       3    ERZ-V07D471       RV1 RV2 RV3        
+       3            HOLE_MOUNT         mhole3.5         2    HOLE_MOUNT        MH1 MH2            
+       4          OSTYK41203030      ostyk41203030      1    OSTYK41203030     J2                 

@@ -1,0 +1,75 @@
+\t (00:00:13) allegro 16.6 P004 (v16-6-112G) Windows 32
+\t (00:00:13)     Journal start - Thu Feb 02 16:23:10 2017
+\t (00:00:13)         Host=USER User=Administrator Pid=5272 CPUs=4
+\t (00:00:13) 
+\d (00:00:13) Database opened: D:/01_work/00_IGS/01_Project2/04_USM/02_P1/Artwork/usm-r1_p1/usm-p1_20170201.brd
+\i (00:00:13) generaledit 
+\i (00:00:15) zoom in 1 
+\i (00:00:15) setwindow pcb
+\i (00:00:15) zoom in 35.5363 38.9102
+\i (00:00:15) trapsize 3466
+\i (00:00:25) setwindow form.vf_vis
+\i (00:00:25) FORM vf_vis 1 all_colorvisible YES 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom in 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom in 41.4290 33.7108
+\i (00:00:26) trapsize 1733
+\i (00:00:28) zoom out 1 
+\i (00:00:28) setwindow pcb
+\i (00:00:28) zoom out 37.0615 34.6467
+\i (00:00:28) trapsize 3466
+\i (00:00:49) setwindow form.vf_vis
+\i (00:00:49) FORM vf_vis 1 all_colorvisible NO 
+\i (00:00:49) FORM vf_vis 2 all_colorvisible YES 
+\i (00:00:50) FORM vf_vis 2 all_colorvisible NO 
+\i (00:01:34) FORM vf_vis 1 all_colorvisible YES 
+\i (00:01:38) setwindow pcb
+\i (00:01:38) zoom in 1 
+\i (00:01:38) setwindow pcb
+\i (00:01:38) zoom in 44.4792 38.1824
+\i (00:01:38) trapsize 1733
+\i (00:01:42) zoom out 1 
+\i (00:01:42) setwindow pcb
+\i (00:01:42) zoom out 36.5068 38.4944
+\i (00:01:42) trapsize 3466
+\i (00:10:34) zoom in 1 
+\i (00:10:34) setwindow pcb
+\i (00:10:34) zoom in 23.4737 50.9036
+\i (00:10:34) trapsize 1733
+\i (00:10:35) zoom out 1 
+\i (00:10:35) setwindow pcb
+\i (00:10:35) zoom out 24.0977 47.6800
+\i (00:10:35) trapsize 3466
+\i (00:10:39) zoom in 1 
+\i (00:10:39) setwindow pcb
+\i (00:10:39) zoom in 27.7719 43.7284
+\i (00:10:39) trapsize 1733
+\i (00:10:43) zoom out 1 
+\i (00:10:43) setwindow pcb
+\i (00:10:43) zoom out 23.1618 44.4563
+\i (00:10:43) trapsize 3466
+\i (00:10:46) zoom in 1 
+\i (00:10:46) setwindow pcb
+\i (00:10:46) zoom in 23.9937 36.1373
+\i (00:10:46) trapsize 1733
+\i (00:10:47) zoom out 1 
+\i (00:10:47) setwindow pcb
+\i (00:10:47) zoom out 23.9937 36.1373
+\i (00:10:47) trapsize 3466
+\i (00:12:21) zoom in 1 
+\i (00:12:21) setwindow pcb
+\i (00:12:21) zoom in 30.7183 40.9901
+\i (00:12:21) trapsize 1733
+\i (00:12:24) zoom out 1 
+\i (00:12:24) setwindow pcb
+\i (00:12:24) zoom out 22.2953 37.3852
+\i (00:12:24) trapsize 3466
+\i (00:29:12) trapsize 5076
+\i (00:29:13) trapsize 3466
+\i (00:29:14) open 
+\i (00:29:21) fillin "D:\01_work\00_IGS\01_Project2\06_LGM\02_Artwork\lgm_p0\lgm_p0_20170119.brd"
+\i (00:29:21) cd "D:\01_work\00_IGS\01_Project2\06_LGM\02_Artwork\lgm_p0"
+\t (00:29:21) Opening existing design...
+\i (00:29:21) trapsize 11183
+\t (00:29:21)     Journal end - Thu Feb 02 16:52:19 2017

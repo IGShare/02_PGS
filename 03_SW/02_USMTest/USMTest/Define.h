@@ -1,0 +1,46 @@
+#define IDX_DT_REQ_USM_STAT				0x01
+#define IDX_DT_REQ_LGM_STAT				0x02
+#define IDX_DT_REQ_SCM_VER				0x03
+
+#define IDX_DT_RES_USM_STAT				0x11
+#define IDX_DT_RES_LGM_STAT				0x12
+#define IDX_DT_RES_SCM_VER				0x13
+
+#define	IDX_DT_SET_USM_ADDRESS			0x21
+#define	IDX_DT_SET_LGM_ADDRESS			0x22
+#define	IDX_DT_SET_USM_OP_MODE			0x23
+#define	IDX_DT_SET_LGM_OP_MODE			0x24
+#define	IDX_DT_SET_USM_PARAM			0x25
+#define	IDX_DT_SET_USM_TO_LGM			0x26
+#define IDX_DT_SET_USM_OP_MODE_OFF		0x27
+#define IDX_DT_SET_LGM_OP_MODE_OFF		0x28
+
+#define	IDX_DT_RESET_USM_ADDRESS		0x51
+#define	IDX_DT_RESET_LGM_ADDRESS		0x52
+#define	IDX_DT_RESET_USM_OP_MODE		0x53
+#define	IDX_DT_RESET_LGM_OP_MODE		0x54
+#define	IDX_DT_RESET_USM_PARAM			0x55
+#define	IDX_DT_RESET_USM_TO_LGM			0x56
+
+#define	IDX_DT_ACK						0x31
+
+#define	IDX_DT_NACK						0x41
+#define	IDX_DT_INIT						0x42
+
+#define	IDX_DT_SENSING_OFF				0x61
+#define IDX_DT_SENSING_ON				0x62
+#define IDX_DT_SCM_RESET				0x71
+
+#define IDX_DT_EEPROM_SAVE				0x81
+
+
+
+#define INFO_SET_USM_ADDR_UNIT_SIZE		0x4	//byte
+#define INFO_SET_LGM_ADDR_UNIT_SIZE		0x4 //byte
+#define INFO_SET_USM_TO_LGM_UNIT_SIZE	0x2 //byte
+#define INFO_SET_SENSING_ON_UNIT_SIZE	0x0 //byte
+#define INFO_RESET_SCM_UNIT_SIZE		0x0 //byte
+#define INFO_SET_USM_PARAM_UNIT_SIZE		0x5	//byte
+
+#define INFO_MAX_RX_TX_PACKET_SIZE		0x200 //byte (512)
+

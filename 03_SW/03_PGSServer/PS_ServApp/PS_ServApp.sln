@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PS_ServApp", "PS_ServApp.vcproj", "{038BEC5E-BEBC-47A3-9C76-A37AA18F48DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{038BEC5E-BEBC-47A3-9C76-A37AA18F48DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{038BEC5E-BEBC-47A3-9C76-A37AA18F48DE}.Debug|Win32.Build.0 = Debug|Win32
+		{038BEC5E-BEBC-47A3-9C76-A37AA18F48DE}.Release|Win32.ActiveCfg = Release|Win32
+		{038BEC5E-BEBC-47A3-9C76-A37AA18F48DE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

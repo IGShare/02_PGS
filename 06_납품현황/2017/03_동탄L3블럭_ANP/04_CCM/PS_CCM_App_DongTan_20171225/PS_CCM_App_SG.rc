@@ -1,0 +1,313 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\PS_CCM_App_SG.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""      // 표준 구성 요소입니다.\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\PS_CCM_App_SG.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PS_CCM_APP_SG_DIALOG DIALOG  0, 0, 161, 135
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+FONT 9, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "EXIT",IDOK,7,7,50,55,NOT WS_VISIBLE
+END
+
+IDD_DLG_SETTING_GENERAL DIALOG  0, 0, 144, 170
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "장치 설정"
+FONT 10, "굴림"
+BEGIN
+    DEFPUSHBUTTON   "설정 종료",IDC_BUT_HIDE_DLG,12,135,56,21
+    PUSHBUTTON      "프로그램 종료",IDC_BUT_APP_EXIT,76,135,56,21
+    PUSHBUTTON      "높이 설정 (전체)",IDC_BUT_SET_MAX_DET_ALL,12,19,120,21
+    PUSHBUTTON      "높이 설정 (개별)",IDC_BUT_SET_MAX_DET_IND,12,45,120,21
+    PUSHBUTTON      "시리얼 번호 변경 (센서)",IDC_BUT_SET_USM_SN,12,71,120,21
+    PUSHBUTTON      "시리얼 번호 변경 (표시기)",IDC_BUT_SET_LGM_SN,12,97,120,21
+    GROUPBOX        "",IDC_STATIC,7,7,130,156
+END
+
+IDD_DLG_SHOW_WARN_MSG DIALOG  0, 0, 181, 111
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_BORDER
+FONT 10, "굴림"
+BEGIN
+    LTEXT           "시스템 초기화에 실패하였습니다.",IDC_STATIC,16,16,120,8
+    LTEXT           "CCM 장치의 전원을 껐다가 다시 켜 주세요.",IDC_STATIC,16,30,150,8
+    LTEXT           "만일 이 메세지가 계속해서 발생한다면,",IDC_STATIC,16,44,140,8
+    LTEXT           "통신 연결이 불안전하거나,",IDC_STATIC,16,58,96,8
+    LTEXT           "SCM, USM, LGM 장치에 고장이 발생한 경우입니다.",IDC_STATIC,16,72,156,8
+    LTEXT           "업체에 A/S 를 신청하여 주시기 바랍니다.",IDC_STATIC,16,86,145,8
+    GROUPBOX        "",IDC_STATIC,7,3,167,101
+END
+
+IDD_DLG_SET_MAX_DET_ALL DIALOG  0, 0, 128, 71
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "높이 설정 (전체)"
+FONT 16, "굴림체"
+BEGIN
+    DEFPUSHBUTTON   "설정",IDOK,7,50,56,14
+    PUSHBUTTON      "취소",IDCANCEL,65,50,56,14
+    CTEXT           "150 cm",IDC_STA_NUM_MAX_DET,34,28,60,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "+",IDC_BUT_INC_10,97,28,24,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_10,7,28,24,14
+    CTEXT           "SCM 1",IDC_STA_IDX_SCM,34,7,60,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "<<",IDC_BUT_SCM_LEFT,7,7,24,14
+    PUSHBUTTON      ">>",IDC_BUT_SCM_RIGHT,97,7,24,14
+END
+
+IDD_DLG_SET_MAX_DET_IND DIALOG  0, 0, 157, 94
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "높이 설정 (개별)"
+FONT 16, "굴림체"
+BEGIN
+    DEFPUSHBUTTON   "설정",IDOK,7,73,50,14
+    PUSHBUTTON      "취소",IDCANCEL,100,73,50,14
+    CTEXT           "SCM 1",IDC_STA_IDX_SCM,34,7,89,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "<<",IDC_BUT_SCM_LEFT,7,7,24,14
+    PUSHBUTTON      ">>",IDC_BUT_SCM_RIGHT,126,7,24,14
+    PUSHBUTTON      "<<",IDC_BUT_USM_LEFT,7,24,24,14
+    PUSHBUTTON      ">>",IDC_BUT_USM_RIGHT,126,24,24,14
+    CTEXT           "150 cm",IDC_STA_NUM_MAX_DET,34,49,89,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "+",IDC_BUT_INC_10,126,49,24,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_10,7,49,24,14
+    CTEXT           "USM 001 : 00000000",IDC_STA_IDX_USM,35,24,89,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_DLG_SET_DEV_SN DIALOG  0, 0, 196, 151
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "시리얼 번호 설정"
+FONT 16, "굴림체"
+BEGIN
+    PUSHBUTTON      "<<",IDC_BUT_SCM_LEFT,12,19,24,14
+    CTEXT           "SCM 1",IDC_STA_IDX_SCM,39,19,117,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      ">>",IDC_BUT_SCM_RIGHT,159,19,24,14
+    PUSHBUTTON      "<<",IDC_BUT_USM_LEFT,12,36,24,14
+    CTEXT           "USM 001 : 00000000",IDC_STA_IDX_USM_OLD,39,36,117,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      ">>",IDC_BUT_USM_RIGHT,159,36,24,14
+    PUSHBUTTON      "+",IDC_BUT_INC_100000,86,74,15,14
+    PUSHBUTTON      "+",IDC_BUT_INC_10000,102,74,15,14
+    PUSHBUTTON      "+",IDC_BUT_INC_1000,118,74,15,14
+    PUSHBUTTON      "+",IDC_BUT_INC_100,134,74,15,14
+    PUSHBUTTON      "+",IDC_BUT_INC_10,150,74,15,14
+    PUSHBUTTON      "+",IDC_BUT_INC_1,166,74,15,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_100000,86,106,15,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_10000,102,106,15,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_1000,118,106,15,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_100,134,106,15,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_10,150,106,15,14
+    PUSHBUTTON      "-",IDC_BUT_DEC_1,166,106,15,14
+    CTEXT           "USM 001 : 0   0   0   0   0   0   0   0",IDC_STA_IDX_USM_NEW,12,90,171,14,SS_CENTERIMAGE | WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "변경",IDC_BUT_SET_NEW_SN,12,106,58,14
+    DEFPUSHBUTTON   "설정",IDOK,7,130,50,14
+    PUSHBUTTON      "취소",IDCANCEL,139,130,50,14
+    GROUPBOX        "기존 시리얼 번호",IDC_STATIC,7,7,182,49
+    GROUPBOX        "새로운 시리얼 번호",IDC_STATIC,7,61,182,64
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "TODO: <파일 설명>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "PS_CCM_App_SG.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "PS_CCM_App_SG.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PS_CCM_APP_SG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_DLG_SETTING_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 137
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_DLG_SHOW_WARN_MSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_DLG_SET_MAX_DET_ALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 121
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_DLG_SET_MAX_DET_IND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DLG_SET_DEV_SN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BI_MAINSKIN         BITMAP                  "res\\MainSkin.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows 소켓을 초기화하지 못했습니다."
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\PS_CCM_App_SG.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"      // 표준 구성 요소입니다.
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,35 @@
+# BOARD STATION COMPONENT CENTER LOCATION FILE FORMAT 6.0 
+# 
+# File Pathname: c:/WORK/igs-dsb-r1/pcb/mfg/component_location 
+# Design Name:   c:/WORK/igs-dsb-r1 
+# 
+# Date: 27/12/2016 - 11:08 am 
+# User: KHJ 
+# 
+# Component Center Location for ALL Components 
+# 
+# Board Name: dsb 
+# 
+# UNITS: mm 
+# 
+# Top Side Offset from Board Origin: 0  0 
+# 
+# Ref-Des     X-Loc       Y-Loc       Side        Rotation   ["PART_NO"] 
+# 
+  H1          9.5         23.5        Top         0           "PCB_HOLE" 
+  O1          9.5         37.5        Top         270         "ZT40" 
+  O2          9.5         9.5         Top         270         "ZR40R" 
+  O3          9.5         37.5        Top         0           "ZT40" 
+  O4          9.5         9.5         Top         0           "ZR40R" 
+  TH1         4           28          Top         0           "B+" 
+  TH2         4           23.5        Top         0           "B+" 
+  TH3         4           19          Top         0           "B+" 
+  W1          9.5         37.5        Top         270         "US14.4_01A" 
+  W2          9.5         9.5         Top         270         "US14.4_01A" 
+  W3          9.5         37.5        Top         0           "US14.4_01A" 
+  W4          9.5         9.5         Top         0           "US14.4_01A" 
+# 
+# Bottom Side Offset from Board Origin: 0  0 
+# 
+# Ref-Des     X-Loc       Y-Loc       Side        Rotation   ["PART_NO"] 
+# 

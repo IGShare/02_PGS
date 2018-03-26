@@ -1,0 +1,3454 @@
+
+IGS_SCM_V1.0.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000210  00800100  00001cec  00001d80  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001cec  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000d58  00800310  00800310  00001f90  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00001f90  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001fc0  2**2
+                  CONTENTS, READONLY
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+       2:	00 00       	nop
+       4:	61 c0       	rjmp	.+194    	; 0xc8 <__bad_interrupt>
+       6:	00 00       	nop
+       8:	5f c0       	rjmp	.+190    	; 0xc8 <__bad_interrupt>
+       a:	00 00       	nop
+       c:	5d c0       	rjmp	.+186    	; 0xc8 <__bad_interrupt>
+       e:	00 00       	nop
+      10:	5b c0       	rjmp	.+182    	; 0xc8 <__bad_interrupt>
+      12:	00 00       	nop
+      14:	59 c0       	rjmp	.+178    	; 0xc8 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	57 c0       	rjmp	.+174    	; 0xc8 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	0c 94 12 0e 	jmp	0x1c24	; 0x1c24 <__vector_7>
+      20:	53 c0       	rjmp	.+166    	; 0xc8 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	51 c0       	rjmp	.+162    	; 0xc8 <__bad_interrupt>
+      26:	00 00       	nop
+      28:	0c 94 eb 0a 	jmp	0x15d6	; 0x15d6 <__vector_10>
+      2c:	4d c0       	rjmp	.+154    	; 0xc8 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	4b c0       	rjmp	.+150    	; 0xc8 <__bad_interrupt>
+      32:	00 00       	nop
+      34:	49 c0       	rjmp	.+146    	; 0xc8 <__bad_interrupt>
+      36:	00 00       	nop
+      38:	47 c0       	rjmp	.+142    	; 0xc8 <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	45 c0       	rjmp	.+138    	; 0xc8 <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	0c 94 1d 0a 	jmp	0x143a	; 0x143a <__vector_16>
+      44:	41 c0       	rjmp	.+130    	; 0xc8 <__bad_interrupt>
+      46:	00 00       	nop
+      48:	0c 94 de 09 	jmp	0x13bc	; 0x13bc <__vector_18>
+      4c:	0c 94 a9 0a 	jmp	0x1552	; 0x1552 <__vector_19>
+      50:	0c 94 d9 0a 	jmp	0x15b2	; 0x15b2 <__vector_20>
+      54:	39 c0       	rjmp	.+114    	; 0xc8 <__bad_interrupt>
+      56:	00 00       	nop
+      58:	37 c0       	rjmp	.+110    	; 0xc8 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	35 c0       	rjmp	.+106    	; 0xc8 <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	33 c0       	rjmp	.+102    	; 0xc8 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	31 c0       	rjmp	.+98     	; 0xc8 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	2f c0       	rjmp	.+94     	; 0xc8 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	2d c0       	rjmp	.+90     	; 0xc8 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	2b c0       	rjmp	.+86     	; 0xc8 <__bad_interrupt>
+      72:	00 00       	nop
+      74:	29 c0       	rjmp	.+82     	; 0xc8 <__bad_interrupt>
+      76:	00 00       	nop
+      78:	27 c0       	rjmp	.+78     	; 0xc8 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	25 c0       	rjmp	.+74     	; 0xc8 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	23 c0       	rjmp	.+70     	; 0xc8 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	21 c0       	rjmp	.+66     	; 0xc8 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	1f c0       	rjmp	.+62     	; 0xc8 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+      98:	13 e0       	ldi	r17, 0x03	; 3
+      9a:	a0 e0       	ldi	r26, 0x00	; 0
+      9c:	b1 e0       	ldi	r27, 0x01	; 1
+      9e:	ec ee       	ldi	r30, 0xEC	; 236
+      a0:	fc e1       	ldi	r31, 0x1C	; 28
+      a2:	00 e0       	ldi	r16, 0x00	; 0
+      a4:	0b bf       	out	0x3b, r16	; 59
+      a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+      a8:	07 90       	elpm	r0, Z+
+      aa:	0d 92       	st	X+, r0
+      ac:	a0 31       	cpi	r26, 0x10	; 16
+      ae:	b1 07       	cpc	r27, r17
+      b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+      b2:	20 e1       	ldi	r18, 0x10	; 16
+      b4:	a0 e1       	ldi	r26, 0x10	; 16
+      b6:	b3 e0       	ldi	r27, 0x03	; 3
+      b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+      ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+      bc:	a8 36       	cpi	r26, 0x68	; 104
+      be:	b2 07       	cpc	r27, r18
+      c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+      c2:	b9 d7       	rcall	.+3954   	; 0x1036 <main>
+      c4:	0c 94 74 0e 	jmp	0x1ce8	; 0x1ce8 <_exit>
+
+000000c8 <__bad_interrupt>:
+      c8:	9b cf       	rjmp	.-202    	; 0x0 <__vectors>
+
+000000ca <crcsum>:
+      ca:	cf 93       	push	r28
+      cc:	df 93       	push	r29
+      ce:	20 e0       	ldi	r18, 0x00	; 0
+      d0:	30 e0       	ldi	r19, 0x00	; 0
+      d2:	26 17       	cp	r18, r22
+      d4:	37 07       	cpc	r19, r23
+      d6:	a9 f0       	breq	.+42     	; 0x102 <crcsum+0x38>
+      d8:	a5 2f       	mov	r26, r21
+      da:	bb 27       	eor	r27, r27
+      dc:	fc 01       	movw	r30, r24
+      de:	e2 0f       	add	r30, r18
+      e0:	f3 1f       	adc	r31, r19
+      e2:	e0 81       	ld	r30, Z
+      e4:	ea 01       	movw	r28, r20
+      e6:	ce 27       	eor	r28, r30
+      e8:	fe 01       	movw	r30, r28
+      ea:	ff 27       	eor	r31, r31
+      ec:	ee 0f       	add	r30, r30
+      ee:	ff 1f       	adc	r31, r31
+      f0:	e0 5f       	subi	r30, 0xF0	; 240
+      f2:	fe 4f       	sbci	r31, 0xFE	; 254
+      f4:	40 81       	ld	r20, Z
+      f6:	51 81       	ldd	r21, Z+1	; 0x01
+      f8:	4a 27       	eor	r20, r26
+      fa:	5b 27       	eor	r21, r27
+      fc:	2f 5f       	subi	r18, 0xFF	; 255
+      fe:	3f 4f       	sbci	r19, 0xFF	; 255
+     100:	e8 cf       	rjmp	.-48     	; 0xd2 <crcsum+0x8>
+     102:	ca 01       	movw	r24, r20
+     104:	df 91       	pop	r29
+     106:	cf 91       	pop	r28
+     108:	08 95       	ret
+
+0000010a <SCMTF_PortInit>:
+     10a:	90 e7       	ldi	r25, 0x70	; 112
+     10c:	97 bb       	out	0x17, r25	; 23
+     10e:	88 e1       	ldi	r24, 0x18	; 24
+     110:	81 bb       	out	0x11, r24	; 17
+     112:	86 e9       	ldi	r24, 0x96	; 150
+     114:	82 b9       	out	0x02, r24	; 2
+     116:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+     11a:	e4 e6       	ldi	r30, 0x64	; 100
+     11c:	f0 e0       	ldi	r31, 0x00	; 0
+     11e:	80 81       	ld	r24, Z
+     120:	83 60       	ori	r24, 0x03	; 3
+     122:	80 83       	st	Z, r24
+     124:	12 ba       	out	0x12, r1	; 18
+     126:	98 bb       	out	0x18, r25	; 24
+     128:	84 e0       	ldi	r24, 0x04	; 4
+     12a:	83 b9       	out	0x03, r24	; 3
+     12c:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <__TEXT_REGION_LENGTH__+0x7e0062>
+     130:	08 95       	ret
+
+00000132 <SCMTF_ReadDipSwitchValueMYID>:
+     132:	e0 b1       	in	r30, 0x00	; 0
+     134:	e2 95       	swap	r30
+     136:	ef 70       	andi	r30, 0x0F	; 15
+     138:	f0 e0       	ldi	r31, 0x00	; 0
+     13a:	e0 50       	subi	r30, 0x00	; 0
+     13c:	ff 4f       	sbci	r31, 0xFF	; 255
+     13e:	80 81       	ld	r24, Z
+     140:	08 95       	ret
+
+00000142 <SCMTF_ReadDipSwitchValueMode>:
+     142:	80 b1       	in	r24, 0x00	; 0
+     144:	82 fb       	bst	r24, 2
+     146:	88 27       	eor	r24, r24
+     148:	80 f9       	bld	r24, 0
+     14a:	91 e0       	ldi	r25, 0x01	; 1
+     14c:	89 27       	eor	r24, r25
+     14e:	08 95       	ret
+
+00000150 <SCMTF_ReadDipSwitchValueTest>:
+     150:	80 b1       	in	r24, 0x00	; 0
+     152:	86 95       	lsr	r24
+     154:	81 70       	andi	r24, 0x01	; 1
+     156:	91 e0       	ldi	r25, 0x01	; 1
+     158:	89 27       	eor	r24, r25
+     15a:	08 95       	ret
+
+0000015c <SCMTF_CheckOverCurrent>:
+     15c:	81 e0       	ldi	r24, 0x01	; 1
+     15e:	0d 9b       	sbis	0x01, 5	; 1
+     160:	80 e0       	ldi	r24, 0x00	; 0
+     162:	08 95       	ret
+
+00000164 <SCM485F_USART0Init>:
+     164:	10 92 90 00 	sts	0x0090, r1	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+     168:	8c e0       	ldi	r24, 0x0C	; 12
+     16a:	89 b9       	out	0x09, r24	; 9
+     16c:	86 e0       	ldi	r24, 0x06	; 6
+     16e:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+     172:	88 e9       	ldi	r24, 0x98	; 152
+     174:	8a b9       	out	0x0a, r24	; 10
+     176:	08 95       	ret
+
+00000178 <SCM485F_RxCompleteTimerInit>:
+     178:	13 be       	out	0x33, r1	; 51
+     17a:	87 b7       	in	r24, 0x37	; 55
+     17c:	81 60       	ori	r24, 0x01	; 1
+     17e:	87 bf       	out	0x37, r24	; 55
+     180:	12 be       	out	0x32, r1	; 50
+     182:	08 95       	ret
+
+00000184 <SCM485F_OneByteWrite_485>:
+     184:	fc 01       	movw	r30, r24
+     186:	ee 51       	subi	r30, 0x1E	; 30
+     188:	fe 4f       	sbci	r31, 0xFE	; 254
+     18a:	20 81       	ld	r18, Z
+     18c:	31 81       	ldd	r19, Z+1	; 0x01
+     18e:	20 3e       	cpi	r18, 0xE0	; 224
+     190:	31 40       	sbci	r19, 0x01	; 1
+     192:	68 f4       	brcc	.+26     	; 0x1ae <SCM485F_OneByteWrite_485+0x2a>
+     194:	20 81       	ld	r18, Z
+     196:	31 81       	ldd	r19, Z+1	; 0x01
+     198:	dc 01       	movw	r26, r24
+     19a:	a2 0f       	add	r26, r18
+     19c:	b3 1f       	adc	r27, r19
+     19e:	6c 93       	st	X, r22
+     1a0:	80 81       	ld	r24, Z
+     1a2:	91 81       	ldd	r25, Z+1	; 0x01
+     1a4:	01 96       	adiw	r24, 0x01	; 1
+     1a6:	91 83       	std	Z+1, r25	; 0x01
+     1a8:	80 83       	st	Z, r24
+     1aa:	81 e0       	ldi	r24, 0x01	; 1
+     1ac:	08 95       	ret
+     1ae:	80 e0       	ldi	r24, 0x00	; 0
+     1b0:	08 95       	ret
+
+000001b2 <SCM485F_OneByteRead_485>:
+     1b2:	cf 93       	push	r28
+     1b4:	df 93       	push	r29
+     1b6:	fc 01       	movw	r30, r24
+     1b8:	ee 51       	subi	r30, 0x1E	; 30
+     1ba:	fe 4f       	sbci	r31, 0xFE	; 254
+     1bc:	40 81       	ld	r20, Z
+     1be:	51 81       	ldd	r21, Z+1	; 0x01
+     1c0:	ec 01       	movw	r28, r24
+     1c2:	c0 52       	subi	r28, 0x20	; 32
+     1c4:	de 4f       	sbci	r29, 0xFE	; 254
+     1c6:	28 81       	ld	r18, Y
+     1c8:	39 81       	ldd	r19, Y+1	; 0x01
+     1ca:	42 17       	cp	r20, r18
+     1cc:	53 07       	cpc	r21, r19
+     1ce:	68 f4       	brcc	.+26     	; 0x1ea <SCM485F_OneByteRead_485+0x38>
+     1d0:	20 81       	ld	r18, Z
+     1d2:	31 81       	ldd	r19, Z+1	; 0x01
+     1d4:	dc 01       	movw	r26, r24
+     1d6:	a2 0f       	add	r26, r18
+     1d8:	b3 1f       	adc	r27, r19
+     1da:	8c 91       	ld	r24, X
+     1dc:	db 01       	movw	r26, r22
+     1de:	8c 93       	st	X, r24
+     1e0:	80 81       	ld	r24, Z
+     1e2:	91 81       	ldd	r25, Z+1	; 0x01
+     1e4:	01 96       	adiw	r24, 0x01	; 1
+     1e6:	91 83       	std	Z+1, r25	; 0x01
+     1e8:	80 83       	st	Z, r24
+     1ea:	40 81       	ld	r20, Z
+     1ec:	51 81       	ldd	r21, Z+1	; 0x01
+     1ee:	28 81       	ld	r18, Y
+     1f0:	39 81       	ldd	r19, Y+1	; 0x01
+     1f2:	81 e0       	ldi	r24, 0x01	; 1
+     1f4:	42 17       	cp	r20, r18
+     1f6:	53 07       	cpc	r21, r19
+     1f8:	09 f0       	breq	.+2      	; 0x1fc <SCM485F_OneByteRead_485+0x4a>
+     1fa:	80 e0       	ldi	r24, 0x00	; 0
+     1fc:	df 91       	pop	r29
+     1fe:	cf 91       	pop	r28
+     200:	08 95       	ret
+
+00000202 <SCM485F_packetBufInit>:
+     202:	10 92 06 0e 	sts	0x0E06, r1	; 0x800e06 <G_485Packet>
+     206:	10 92 07 0e 	sts	0x0E07, r1	; 0x800e07 <G_485Packet+0x1>
+     20a:	10 92 08 0e 	sts	0x0E08, r1	; 0x800e08 <G_485Packet+0x2>
+     20e:	10 92 09 0e 	sts	0x0E09, r1	; 0x800e09 <G_485Packet+0x3>
+     212:	10 92 0a 0e 	sts	0x0E0A, r1	; 0x800e0a <G_485Packet+0x4>
+     216:	10 92 0b 0e 	sts	0x0E0B, r1	; 0x800e0b <G_485Packet+0x5>
+     21a:	ee e0       	ldi	r30, 0x0E	; 14
+     21c:	fe e0       	ldi	r31, 0x0E	; 14
+     21e:	11 92       	st	Z+, r1
+     220:	8f e0       	ldi	r24, 0x0F	; 15
+     222:	ee 3e       	cpi	r30, 0xEE	; 238
+     224:	f8 07       	cpc	r31, r24
+     226:	d9 f7       	brne	.-10     	; 0x21e <SCM485F_packetBufInit+0x1c>
+     228:	10 92 ef 0f 	sts	0x0FEF, r1	; 0x800fef <G_485Packet+0x1e9>
+     22c:	10 92 ee 0f 	sts	0x0FEE, r1	; 0x800fee <G_485Packet+0x1e8>
+     230:	08 95       	ret
+
+00000232 <SCM485F_getRxPacket>:
+     232:	e7 df       	rcall	.-50     	; 0x202 <SCM485F_packetBufInit>
+     234:	30 91 cd 0b 	lds	r19, 0x0BCD	; 0x800bcd <G_rxBuf485>
+     238:	80 91 ce 0b 	lds	r24, 0x0BCE	; 0x800bce <G_rxBuf485+0x1>
+     23c:	20 91 cf 0b 	lds	r18, 0x0BCF	; 0x800bcf <G_rxBuf485+0x2>
+     240:	90 e0       	ldi	r25, 0x00	; 0
+     242:	a0 e0       	ldi	r26, 0x00	; 0
+     244:	b0 e0       	ldi	r27, 0x00	; 0
+     246:	93 2b       	or	r25, r19
+     248:	dc 01       	movw	r26, r24
+     24a:	99 27       	eor	r25, r25
+     24c:	88 27       	eor	r24, r24
+     24e:	82 2b       	or	r24, r18
+     250:	80 93 06 0e 	sts	0x0E06, r24	; 0x800e06 <G_485Packet>
+     254:	90 93 07 0e 	sts	0x0E07, r25	; 0x800e07 <G_485Packet+0x1>
+     258:	a0 93 08 0e 	sts	0x0E08, r26	; 0x800e08 <G_485Packet+0x2>
+     25c:	b0 93 09 0e 	sts	0x0E09, r27	; 0x800e09 <G_485Packet+0x3>
+     260:	80 91 d0 0b 	lds	r24, 0x0BD0	; 0x800bd0 <G_rxBuf485+0x3>
+     264:	80 93 0a 0e 	sts	0x0E0A, r24	; 0x800e0a <G_485Packet+0x4>
+     268:	80 91 d1 0b 	lds	r24, 0x0BD1	; 0x800bd1 <G_rxBuf485+0x4>
+     26c:	80 93 0b 0e 	sts	0x0E0B, r24	; 0x800e0b <G_485Packet+0x5>
+     270:	20 91 d2 0b 	lds	r18, 0x0BD2	; 0x800bd2 <G_rxBuf485+0x5>
+     274:	80 91 d3 0b 	lds	r24, 0x0BD3	; 0x800bd3 <G_rxBuf485+0x6>
+     278:	90 e0       	ldi	r25, 0x00	; 0
+     27a:	92 2b       	or	r25, r18
+     27c:	81 3e       	cpi	r24, 0xE1	; 225
+     27e:	21 e0       	ldi	r18, 0x01	; 1
+     280:	92 07       	cpc	r25, r18
+     282:	10 f0       	brcs	.+4      	; 0x288 <SCM485F_getRxPacket+0x56>
+     284:	80 ee       	ldi	r24, 0xE0	; 224
+     286:	91 e0       	ldi	r25, 0x01	; 1
+     288:	90 93 0d 0e 	sts	0x0E0D, r25	; 0x800e0d <G_485Packet+0x7>
+     28c:	80 93 0c 0e 	sts	0x0E0C, r24	; 0x800e0c <G_485Packet+0x6>
+     290:	20 91 0c 0e 	lds	r18, 0x0E0C	; 0x800e0c <G_485Packet+0x6>
+     294:	30 91 0d 0e 	lds	r19, 0x0E0D	; 0x800e0d <G_485Packet+0x7>
+     298:	ee e0       	ldi	r30, 0x0E	; 14
+     29a:	fe e0       	ldi	r31, 0x0E	; 14
+     29c:	60 e0       	ldi	r22, 0x00	; 0
+     29e:	70 e0       	ldi	r23, 0x00	; 0
+     2a0:	cb 01       	movw	r24, r22
+     2a2:	07 96       	adiw	r24, 0x07	; 7
+     2a4:	62 17       	cp	r22, r18
+     2a6:	73 07       	cpc	r23, r19
+     2a8:	41 f0       	breq	.+16     	; 0x2ba <SCM485F_getRxPacket+0x88>
+     2aa:	dc 01       	movw	r26, r24
+     2ac:	a3 53       	subi	r26, 0x33	; 51
+     2ae:	b4 4f       	sbci	r27, 0xF4	; 244
+     2b0:	8c 91       	ld	r24, X
+     2b2:	81 93       	st	Z+, r24
+     2b4:	6f 5f       	subi	r22, 0xFF	; 255
+     2b6:	7f 4f       	sbci	r23, 0xFF	; 255
+     2b8:	f3 cf       	rjmp	.-26     	; 0x2a0 <SCM485F_getRxPacket+0x6e>
+     2ba:	fc 01       	movw	r30, r24
+     2bc:	e3 53       	subi	r30, 0x33	; 51
+     2be:	f4 4f       	sbci	r31, 0xF4	; 244
+     2c0:	20 81       	ld	r18, Z
+     2c2:	fb 01       	movw	r30, r22
+     2c4:	eb 52       	subi	r30, 0x2B	; 43
+     2c6:	f4 4f       	sbci	r31, 0xF4	; 244
+     2c8:	80 81       	ld	r24, Z
+     2ca:	90 e0       	ldi	r25, 0x00	; 0
+     2cc:	92 2b       	or	r25, r18
+     2ce:	90 93 ef 0f 	sts	0x0FEF, r25	; 0x800fef <G_485Packet+0x1e9>
+     2d2:	80 93 ee 0f 	sts	0x0FEE, r24	; 0x800fee <G_485Packet+0x1e8>
+     2d6:	6c 5f       	subi	r22, 0xFC	; 252
+     2d8:	7f 4f       	sbci	r23, 0xFF	; 255
+     2da:	4f ef       	ldi	r20, 0xFF	; 255
+     2dc:	5f ef       	ldi	r21, 0xFF	; 255
+     2de:	80 ed       	ldi	r24, 0xD0	; 208
+     2e0:	9b e0       	ldi	r25, 0x0B	; 11
+     2e2:	f3 de       	rcall	.-538    	; 0xca <crcsum>
+     2e4:	40 91 06 0e 	lds	r20, 0x0E06	; 0x800e06 <G_485Packet>
+     2e8:	50 91 07 0e 	lds	r21, 0x0E07	; 0x800e07 <G_485Packet+0x1>
+     2ec:	60 91 08 0e 	lds	r22, 0x0E08	; 0x800e08 <G_485Packet+0x2>
+     2f0:	70 91 09 0e 	lds	r23, 0x0E09	; 0x800e09 <G_485Packet+0x3>
+     2f4:	45 2b       	or	r20, r21
+     2f6:	46 2b       	or	r20, r22
+     2f8:	47 2b       	or	r20, r23
+     2fa:	79 f4       	brne	.+30     	; 0x31a <SCM485F_getRxPacket+0xe8>
+     2fc:	20 91 ee 0f 	lds	r18, 0x0FEE	; 0x800fee <G_485Packet+0x1e8>
+     300:	30 91 ef 0f 	lds	r19, 0x0FEF	; 0x800fef <G_485Packet+0x1e9>
+     304:	82 17       	cp	r24, r18
+     306:	93 07       	cpc	r25, r19
+     308:	51 f4       	brne	.+20     	; 0x31e <SCM485F_getRxPacket+0xec>
+     30a:	80 91 97 08 	lds	r24, 0x0897	; 0x800897 <G_idDipValue>
+     30e:	90 91 0a 0e 	lds	r25, 0x0E0A	; 0x800e0a <G_485Packet+0x4>
+     312:	98 13       	cpse	r25, r24
+     314:	06 c0       	rjmp	.+12     	; 0x322 <SCM485F_getRxPacket+0xf0>
+     316:	83 e0       	ldi	r24, 0x03	; 3
+     318:	08 95       	ret
+     31a:	80 e0       	ldi	r24, 0x00	; 0
+     31c:	08 95       	ret
+     31e:	81 e0       	ldi	r24, 0x01	; 1
+     320:	08 95       	ret
+     322:	82 e0       	ldi	r24, 0x02	; 2
+     324:	08 95       	ret
+
+00000326 <SCM485F_makeTxPacket>:
+     326:	cf 93       	push	r28
+     328:	df 93       	push	r29
+     32a:	eb 01       	movw	r28, r22
+     32c:	10 92 bc 09 	sts	0x09BC, r1	; 0x8009bc <G_txBuf485>
+     330:	10 92 bd 09 	sts	0x09BD, r1	; 0x8009bd <G_txBuf485+0x1>
+     334:	10 92 be 09 	sts	0x09BE, r1	; 0x8009be <G_txBuf485+0x2>
+     338:	90 91 97 08 	lds	r25, 0x0897	; 0x800897 <G_idDipValue>
+     33c:	90 93 bf 09 	sts	0x09BF, r25	; 0x8009bf <G_txBuf485+0x3>
+     340:	80 93 c0 09 	sts	0x09C0, r24	; 0x8009c0 <G_txBuf485+0x4>
+     344:	d0 93 c1 09 	sts	0x09C1, r29	; 0x8009c1 <G_txBuf485+0x5>
+     348:	60 93 c2 09 	sts	0x09C2, r22	; 0x8009c2 <G_txBuf485+0x6>
+     34c:	60 3e       	cpi	r22, 0xE0	; 224
+     34e:	71 40       	sbci	r23, 0x01	; 1
+     350:	18 f4       	brcc	.+6      	; 0x358 <SCM485F_makeTxPacket+0x32>
+     352:	20 97       	sbiw	r28, 0x00	; 0
+     354:	89 f0       	breq	.+34     	; 0x378 <SCM485F_makeTxPacket+0x52>
+     356:	02 c0       	rjmp	.+4      	; 0x35c <SCM485F_makeTxPacket+0x36>
+     358:	c0 ee       	ldi	r28, 0xE0	; 224
+     35a:	d1 e0       	ldi	r29, 0x01	; 1
+     35c:	80 e0       	ldi	r24, 0x00	; 0
+     35e:	90 e0       	ldi	r25, 0x00	; 0
+     360:	fa 01       	movw	r30, r20
+     362:	e8 0f       	add	r30, r24
+     364:	f9 1f       	adc	r31, r25
+     366:	20 81       	ld	r18, Z
+     368:	fc 01       	movw	r30, r24
+     36a:	ed 53       	subi	r30, 0x3D	; 61
+     36c:	f6 4f       	sbci	r31, 0xF6	; 246
+     36e:	20 83       	st	Z, r18
+     370:	01 96       	adiw	r24, 0x01	; 1
+     372:	8c 17       	cp	r24, r28
+     374:	9d 07       	cpc	r25, r29
+     376:	a0 f3       	brcs	.-24     	; 0x360 <SCM485F_makeTxPacket+0x3a>
+     378:	ce 01       	movw	r24, r28
+     37a:	0b 96       	adiw	r24, 0x0b	; 11
+     37c:	90 93 9d 0b 	sts	0x0B9D, r25	; 0x800b9d <G_txBuf485+0x1e1>
+     380:	80 93 9c 0b 	sts	0x0B9C, r24	; 0x800b9c <G_txBuf485+0x1e0>
+     384:	be 01       	movw	r22, r28
+     386:	6c 5f       	subi	r22, 0xFC	; 252
+     388:	7f 4f       	sbci	r23, 0xFF	; 255
+     38a:	4f ef       	ldi	r20, 0xFF	; 255
+     38c:	5f ef       	ldi	r21, 0xFF	; 255
+     38e:	8f eb       	ldi	r24, 0xBF	; 191
+     390:	99 e0       	ldi	r25, 0x09	; 9
+     392:	9b de       	rcall	.-714    	; 0xca <crcsum>
+     394:	fe 01       	movw	r30, r28
+     396:	ed 53       	subi	r30, 0x3D	; 61
+     398:	f6 4f       	sbci	r31, 0xF6	; 246
+     39a:	90 83       	st	Z, r25
+     39c:	fe 01       	movw	r30, r28
+     39e:	ec 53       	subi	r30, 0x3C	; 60
+     3a0:	f6 4f       	sbci	r31, 0xF6	; 246
+     3a2:	80 83       	st	Z, r24
+     3a4:	fe 01       	movw	r30, r28
+     3a6:	eb 53       	subi	r30, 0x3B	; 59
+     3a8:	f6 4f       	sbci	r31, 0xF6	; 246
+     3aa:	10 82       	st	Z, r1
+     3ac:	ca 53       	subi	r28, 0x3A	; 58
+     3ae:	d6 4f       	sbci	r29, 0xF6	; 246
+     3b0:	18 82       	st	Y, r1
+     3b2:	57 98       	cbi	0x0a, 7	; 10
+     3b4:	1a 98       	cbi	0x03, 2	; 3
+     3b6:	55 9a       	sbi	0x0a, 5	; 10
+     3b8:	df 91       	pop	r29
+     3ba:	cf 91       	pop	r28
+     3bc:	08 95       	ret
+
+000003be <SCMPLCF_PLCTxTimerInit>:
+     3be:	15 bc       	out	0x25, r1	; 37
+     3c0:	87 b7       	in	r24, 0x37	; 55
+     3c2:	80 64       	ori	r24, 0x40	; 64
+     3c4:	87 bf       	out	0x37, r24	; 55
+     3c6:	14 bc       	out	0x24, r1	; 36
+     3c8:	08 95       	ret
+
+000003ca <SCMPLCF_StatusUSMBuffInit>:
+     3ca:	80 e0       	ldi	r24, 0x00	; 0
+     3cc:	90 e0       	ldi	r25, 0x00	; 0
+     3ce:	fc 01       	movw	r30, r24
+     3d0:	ec 5b       	subi	r30, 0xBC	; 188
+     3d2:	f6 4f       	sbci	r31, 0xF6	; 246
+     3d4:	10 82       	st	Z, r1
+     3d6:	fc 01       	movw	r30, r24
+     3d8:	e0 51       	subi	r30, 0x10	; 16
+     3da:	f0 4f       	sbci	r31, 0xF0	; 240
+     3dc:	10 82       	st	Z, r1
+     3de:	fc 01       	movw	r30, r24
+     3e0:	e3 56       	subi	r30, 0x63	; 99
+     3e2:	f7 4f       	sbci	r31, 0xF7	; 247
+     3e4:	10 82       	st	Z, r1
+     3e6:	01 96       	adiw	r24, 0x01	; 1
+     3e8:	88 37       	cpi	r24, 0x78	; 120
+     3ea:	91 05       	cpc	r25, r1
+     3ec:	81 f7       	brne	.-32     	; 0x3ce <SCMPLCF_StatusUSMBuffInit+0x4>
+     3ee:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+     3f2:	80 93 44 09 	sts	0x0944, r24	; 0x800944 <G_StatusBufUSMtoSCM>
+     3f6:	08 95       	ret
+
+000003f8 <SCMPLCF_StatusLGMBuffInit>:
+     3f8:	80 e0       	ldi	r24, 0x00	; 0
+     3fa:	90 e0       	ldi	r25, 0x00	; 0
+     3fc:	fc 01       	movw	r30, r24
+     3fe:	e4 5e       	subi	r30, 0xE4	; 228
+     400:	f6 4f       	sbci	r31, 0xF6	; 246
+     402:	10 82       	st	Z, r1
+     404:	fc 01       	movw	r30, r24
+     406:	e0 56       	subi	r30, 0x60	; 96
+     408:	f4 4f       	sbci	r31, 0xF4	; 244
+     40a:	10 82       	st	Z, r1
+     40c:	01 96       	adiw	r24, 0x01	; 1
+     40e:	88 32       	cpi	r24, 0x28	; 40
+     410:	91 05       	cpc	r25, r1
+     412:	a1 f7       	brne	.-24     	; 0x3fc <SCMPLCF_StatusLGMBuffInit+0x4>
+     414:	80 91 95 08 	lds	r24, 0x0895	; 0x800895 <G_totalLGMCnt>
+     418:	80 93 1c 09 	sts	0x091C, r24	; 0x80091c <G_StatusBufLGMtoSCM>
+     41c:	08 95       	ret
+
+0000041e <SCMPLCF_lgmStatusBuffInit>:
+     41e:	80 e0       	ldi	r24, 0x00	; 0
+     420:	90 e0       	ldi	r25, 0x00	; 0
+     422:	fc 01       	movw	r30, r24
+     424:	ee 54       	subi	r30, 0x4E	; 78
+     426:	f2 4f       	sbci	r31, 0xF2	; 242
+     428:	10 82       	st	Z, r1
+     42a:	01 96       	adiw	r24, 0x01	; 1
+     42c:	88 32       	cpi	r24, 0x28	; 40
+     42e:	91 05       	cpc	r25, r1
+     430:	c1 f7       	brne	.-16     	; 0x422 <SCMPLCF_lgmStatusBuffInit+0x4>
+     432:	08 95       	ret
+
+00000434 <SCMPLCF_lgmTotalCntBuffInit>:
+     434:	80 e0       	ldi	r24, 0x00	; 0
+     436:	90 e0       	ldi	r25, 0x00	; 0
+     438:	fc 01       	movw	r30, r24
+     43a:	e5 52       	subi	r30, 0x25	; 37
+     43c:	f2 4f       	sbci	r31, 0xF2	; 242
+     43e:	10 82       	st	Z, r1
+     440:	01 96       	adiw	r24, 0x01	; 1
+     442:	88 32       	cpi	r24, 0x28	; 40
+     444:	91 05       	cpc	r25, r1
+     446:	c1 f7       	brne	.-16     	; 0x438 <SCMPLCF_lgmTotalCntBuffInit+0x4>
+     448:	08 95       	ret
+
+0000044a <SCMPLCF_SendMessageAddPacket>:
+     44a:	2f 92       	push	r2
+     44c:	3f 92       	push	r3
+     44e:	4f 92       	push	r4
+     450:	5f 92       	push	r5
+     452:	6f 92       	push	r6
+     454:	7f 92       	push	r7
+     456:	8f 92       	push	r8
+     458:	9f 92       	push	r9
+     45a:	af 92       	push	r10
+     45c:	bf 92       	push	r11
+     45e:	cf 92       	push	r12
+     460:	df 92       	push	r13
+     462:	ef 92       	push	r14
+     464:	ff 92       	push	r15
+     466:	0f 93       	push	r16
+     468:	1f 93       	push	r17
+     46a:	cf 93       	push	r28
+     46c:	df 93       	push	r29
+     46e:	cd b7       	in	r28, 0x3d	; 61
+     470:	de b7       	in	r29, 0x3e	; 62
+     472:	e0 97       	sbiw	r28, 0x30	; 48
+     474:	0f b6       	in	r0, 0x3f	; 63
+     476:	f8 94       	cli
+     478:	de bf       	out	0x3e, r29	; 62
+     47a:	0f be       	out	0x3f, r0	; 63
+     47c:	cd bf       	out	0x3d, r28	; 61
+     47e:	48 ab       	std	Y+48, r20	; 0x30
+     480:	49 83       	std	Y+1, r20	; 0x01
+     482:	5a 83       	std	Y+2, r21	; 0x02
+     484:	6b 83       	std	Y+3, r22	; 0x03
+     486:	7c 83       	std	Y+4, r23	; 0x04
+     488:	8d 83       	std	Y+5, r24	; 0x05
+     48a:	94 e8       	ldi	r25, 0x84	; 132
+     48c:	93 b9       	out	0x03, r25	; 3
+     48e:	e9 e2       	ldi	r30, 0x29	; 41
+     490:	f2 e0       	ldi	r31, 0x02	; 2
+     492:	31 97       	sbiw	r30, 0x01	; 1
+     494:	f1 f7       	brne	.-4      	; 0x492 <SCMPLCF_SendMessageAddPacket+0x48>
+     496:	00 c0       	rjmp	.+0      	; 0x498 <SCMPLCF_SendMessageAddPacket+0x4e>
+     498:	00 00       	nop
+     49a:	40 fb       	bst	r20, 0
+     49c:	88 24       	eor	r8, r8
+     49e:	80 f8       	bld	r8, 0
+     4a0:	91 2c       	mov	r9, r1
+     4a2:	96 94       	lsr	r9
+     4a4:	98 2c       	mov	r9, r8
+     4a6:	88 24       	eor	r8, r8
+     4a8:	97 94       	ror	r9
+     4aa:	87 94       	ror	r8
+     4ac:	98 2d       	mov	r25, r8
+     4ae:	94 60       	ori	r25, 0x04	; 4
+     4b0:	93 b9       	out	0x03, r25	; 3
+     4b2:	e9 e2       	ldi	r30, 0x29	; 41
+     4b4:	f2 e0       	ldi	r31, 0x02	; 2
+     4b6:	31 97       	sbiw	r30, 0x01	; 1
+     4b8:	f1 f7       	brne	.-4      	; 0x4b6 <SCMPLCF_SendMessageAddPacket+0x6c>
+     4ba:	00 c0       	rjmp	.+0      	; 0x4bc <SCMPLCF_SendMessageAddPacket+0x72>
+     4bc:	00 00       	nop
+     4be:	41 fb       	bst	r20, 1
+     4c0:	aa 24       	eor	r10, r10
+     4c2:	a0 f8       	bld	r10, 0
+     4c4:	b1 2c       	mov	r11, r1
+     4c6:	b6 94       	lsr	r11
+     4c8:	ba 2c       	mov	r11, r10
+     4ca:	aa 24       	eor	r10, r10
+     4cc:	b7 94       	ror	r11
+     4ce:	a7 94       	ror	r10
+     4d0:	9a 2d       	mov	r25, r10
+     4d2:	94 60       	ori	r25, 0x04	; 4
+     4d4:	93 b9       	out	0x03, r25	; 3
+     4d6:	e9 e2       	ldi	r30, 0x29	; 41
+     4d8:	f2 e0       	ldi	r31, 0x02	; 2
+     4da:	31 97       	sbiw	r30, 0x01	; 1
+     4dc:	f1 f7       	brne	.-4      	; 0x4da <SCMPLCF_SendMessageAddPacket+0x90>
+     4de:	00 c0       	rjmp	.+0      	; 0x4e0 <SCMPLCF_SendMessageAddPacket+0x96>
+     4e0:	00 00       	nop
+     4e2:	42 fb       	bst	r20, 2
+     4e4:	cc 24       	eor	r12, r12
+     4e6:	c0 f8       	bld	r12, 0
+     4e8:	d1 2c       	mov	r13, r1
+     4ea:	d6 94       	lsr	r13
+     4ec:	dc 2c       	mov	r13, r12
+     4ee:	cc 24       	eor	r12, r12
+     4f0:	d7 94       	ror	r13
+     4f2:	c7 94       	ror	r12
+     4f4:	9c 2d       	mov	r25, r12
+     4f6:	94 60       	ori	r25, 0x04	; 4
+     4f8:	93 b9       	out	0x03, r25	; 3
+     4fa:	e9 e2       	ldi	r30, 0x29	; 41
+     4fc:	f2 e0       	ldi	r31, 0x02	; 2
+     4fe:	31 97       	sbiw	r30, 0x01	; 1
+     500:	f1 f7       	brne	.-4      	; 0x4fe <SCMPLCF_SendMessageAddPacket+0xb4>
+     502:	00 c0       	rjmp	.+0      	; 0x504 <SCMPLCF_SendMessageAddPacket+0xba>
+     504:	00 00       	nop
+     506:	50 fb       	bst	r21, 0
+     508:	ee 24       	eor	r14, r14
+     50a:	e0 f8       	bld	r14, 0
+     50c:	f1 2c       	mov	r15, r1
+     50e:	f6 94       	lsr	r15
+     510:	fe 2c       	mov	r15, r14
+     512:	ee 24       	eor	r14, r14
+     514:	f7 94       	ror	r15
+     516:	e7 94       	ror	r14
+     518:	9e 2d       	mov	r25, r14
+     51a:	94 60       	ori	r25, 0x04	; 4
+     51c:	93 b9       	out	0x03, r25	; 3
+     51e:	e9 e2       	ldi	r30, 0x29	; 41
+     520:	f2 e0       	ldi	r31, 0x02	; 2
+     522:	31 97       	sbiw	r30, 0x01	; 1
+     524:	f1 f7       	brne	.-4      	; 0x522 <SCMPLCF_SendMessageAddPacket+0xd8>
+     526:	00 c0       	rjmp	.+0      	; 0x528 <SCMPLCF_SendMessageAddPacket+0xde>
+     528:	00 00       	nop
+     52a:	51 fb       	bst	r21, 1
+     52c:	00 27       	eor	r16, r16
+     52e:	00 f9       	bld	r16, 0
+     530:	10 e0       	ldi	r17, 0x00	; 0
+     532:	16 95       	lsr	r17
+     534:	10 2f       	mov	r17, r16
+     536:	00 27       	eor	r16, r16
+     538:	17 95       	ror	r17
+     53a:	07 95       	ror	r16
+     53c:	04 60       	ori	r16, 0x04	; 4
+     53e:	03 b9       	out	0x03, r16	; 3
+     540:	e9 e2       	ldi	r30, 0x29	; 41
+     542:	f2 e0       	ldi	r31, 0x02	; 2
+     544:	31 97       	sbiw	r30, 0x01	; 1
+     546:	f1 f7       	brne	.-4      	; 0x544 <SCMPLCF_SendMessageAddPacket+0xfa>
+     548:	00 c0       	rjmp	.+0      	; 0x54a <SCMPLCF_SendMessageAddPacket+0x100>
+     54a:	00 00       	nop
+     54c:	52 fb       	bst	r21, 2
+     54e:	aa 27       	eor	r26, r26
+     550:	a0 f9       	bld	r26, 0
+     552:	b0 e0       	ldi	r27, 0x00	; 0
+     554:	b6 95       	lsr	r27
+     556:	ba 2f       	mov	r27, r26
+     558:	aa 27       	eor	r26, r26
+     55a:	b7 95       	ror	r27
+     55c:	a7 95       	ror	r26
+     55e:	a4 60       	ori	r26, 0x04	; 4
+     560:	a3 b9       	out	0x03, r26	; 3
+     562:	e9 e2       	ldi	r30, 0x29	; 41
+     564:	f2 e0       	ldi	r31, 0x02	; 2
+     566:	31 97       	sbiw	r30, 0x01	; 1
+     568:	f1 f7       	brne	.-4      	; 0x566 <SCMPLCF_SendMessageAddPacket+0x11c>
+     56a:	00 c0       	rjmp	.+0      	; 0x56c <SCMPLCF_SendMessageAddPacket+0x122>
+     56c:	00 00       	nop
+     56e:	53 fb       	bst	r21, 3
+     570:	ee 27       	eor	r30, r30
+     572:	e0 f9       	bld	r30, 0
+     574:	f0 e0       	ldi	r31, 0x00	; 0
+     576:	f6 95       	lsr	r31
+     578:	fe 2f       	mov	r31, r30
+     57a:	ee 27       	eor	r30, r30
+     57c:	f7 95       	ror	r31
+     57e:	e7 95       	ror	r30
+     580:	e4 60       	ori	r30, 0x04	; 4
+     582:	e3 b9       	out	0x03, r30	; 3
+     584:	e9 e2       	ldi	r30, 0x29	; 41
+     586:	f2 e0       	ldi	r31, 0x02	; 2
+     588:	31 97       	sbiw	r30, 0x01	; 1
+     58a:	f1 f7       	brne	.-4      	; 0x588 <SCMPLCF_SendMessageAddPacket+0x13e>
+     58c:	00 c0       	rjmp	.+0      	; 0x58e <SCMPLCF_SendMessageAddPacket+0x144>
+     58e:	00 00       	nop
+     590:	54 fb       	bst	r21, 4
+     592:	22 27       	eor	r18, r18
+     594:	20 f9       	bld	r18, 0
+     596:	30 e0       	ldi	r19, 0x00	; 0
+     598:	36 95       	lsr	r19
+     59a:	32 2f       	mov	r19, r18
+     59c:	22 27       	eor	r18, r18
+     59e:	37 95       	ror	r19
+     5a0:	27 95       	ror	r18
+     5a2:	24 60       	ori	r18, 0x04	; 4
+     5a4:	23 b9       	out	0x03, r18	; 3
+     5a6:	e9 e2       	ldi	r30, 0x29	; 41
+     5a8:	f2 e0       	ldi	r31, 0x02	; 2
+     5aa:	31 97       	sbiw	r30, 0x01	; 1
+     5ac:	f1 f7       	brne	.-4      	; 0x5aa <SCMPLCF_SendMessageAddPacket+0x160>
+     5ae:	00 c0       	rjmp	.+0      	; 0x5b0 <SCMPLCF_SendMessageAddPacket+0x166>
+     5b0:	00 00       	nop
+     5b2:	55 fb       	bst	r21, 5
+     5b4:	66 24       	eor	r6, r6
+     5b6:	60 f8       	bld	r6, 0
+     5b8:	71 2c       	mov	r7, r1
+     5ba:	93 01       	movw	r18, r6
+     5bc:	36 95       	lsr	r19
+     5be:	32 2f       	mov	r19, r18
+     5c0:	22 27       	eor	r18, r18
+     5c2:	37 95       	ror	r19
+     5c4:	27 95       	ror	r18
+     5c6:	92 2f       	mov	r25, r18
+     5c8:	94 60       	ori	r25, 0x04	; 4
+     5ca:	93 b9       	out	0x03, r25	; 3
+     5cc:	e9 e2       	ldi	r30, 0x29	; 41
+     5ce:	f2 e0       	ldi	r31, 0x02	; 2
+     5d0:	31 97       	sbiw	r30, 0x01	; 1
+     5d2:	f1 f7       	brne	.-4      	; 0x5d0 <SCMPLCF_SendMessageAddPacket+0x186>
+     5d4:	00 c0       	rjmp	.+0      	; 0x5d6 <SCMPLCF_SendMessageAddPacket+0x18c>
+     5d6:	00 00       	nop
+     5d8:	56 fb       	bst	r21, 6
+     5da:	ff 27       	eor	r31, r31
+     5dc:	f0 f9       	bld	r31, 0
+     5de:	fe 83       	std	Y+6, r31	; 0x06
+     5e0:	1f 82       	std	Y+7, r1	; 0x07
+     5e2:	2e 81       	ldd	r18, Y+6	; 0x06
+     5e4:	3f 81       	ldd	r19, Y+7	; 0x07
+     5e6:	36 95       	lsr	r19
+     5e8:	32 2f       	mov	r19, r18
+     5ea:	22 27       	eor	r18, r18
+     5ec:	37 95       	ror	r19
+     5ee:	27 95       	ror	r18
+     5f0:	24 60       	ori	r18, 0x04	; 4
+     5f2:	23 b9       	out	0x03, r18	; 3
+     5f4:	e9 e2       	ldi	r30, 0x29	; 41
+     5f6:	f2 e0       	ldi	r31, 0x02	; 2
+     5f8:	31 97       	sbiw	r30, 0x01	; 1
+     5fa:	f1 f7       	brne	.-4      	; 0x5f8 <SCMPLCF_SendMessageAddPacket+0x1ae>
+     5fc:	00 c0       	rjmp	.+0      	; 0x5fe <SCMPLCF_SendMessageAddPacket+0x1b4>
+     5fe:	00 00       	nop
+     600:	55 1f       	adc	r21, r21
+     602:	55 27       	eor	r21, r21
+     604:	55 1f       	adc	r21, r21
+     606:	25 2f       	mov	r18, r21
+     608:	30 e0       	ldi	r19, 0x00	; 0
+     60a:	36 95       	lsr	r19
+     60c:	32 2f       	mov	r19, r18
+     60e:	22 27       	eor	r18, r18
+     610:	37 95       	ror	r19
+     612:	27 95       	ror	r18
+     614:	24 60       	ori	r18, 0x04	; 4
+     616:	23 b9       	out	0x03, r18	; 3
+     618:	e9 e2       	ldi	r30, 0x29	; 41
+     61a:	f2 e0       	ldi	r31, 0x02	; 2
+     61c:	31 97       	sbiw	r30, 0x01	; 1
+     61e:	f1 f7       	brne	.-4      	; 0x61c <SCMPLCF_SendMessageAddPacket+0x1d2>
+     620:	00 c0       	rjmp	.+0      	; 0x622 <SCMPLCF_SendMessageAddPacket+0x1d8>
+     622:	00 00       	nop
+     624:	f6 2f       	mov	r31, r22
+     626:	f1 70       	andi	r31, 0x01	; 1
+     628:	f8 87       	std	Y+8, r31	; 0x08
+     62a:	19 86       	std	Y+9, r1	; 0x09
+     62c:	28 85       	ldd	r18, Y+8	; 0x08
+     62e:	39 85       	ldd	r19, Y+9	; 0x09
+     630:	36 95       	lsr	r19
+     632:	32 2f       	mov	r19, r18
+     634:	22 27       	eor	r18, r18
+     636:	37 95       	ror	r19
+     638:	27 95       	ror	r18
+     63a:	24 60       	ori	r18, 0x04	; 4
+     63c:	23 b9       	out	0x03, r18	; 3
+     63e:	e9 e2       	ldi	r30, 0x29	; 41
+     640:	f2 e0       	ldi	r31, 0x02	; 2
+     642:	31 97       	sbiw	r30, 0x01	; 1
+     644:	f1 f7       	brne	.-4      	; 0x642 <SCMPLCF_SendMessageAddPacket+0x1f8>
+     646:	00 c0       	rjmp	.+0      	; 0x648 <SCMPLCF_SendMessageAddPacket+0x1fe>
+     648:	00 00       	nop
+     64a:	61 fb       	bst	r22, 1
+     64c:	ff 27       	eor	r31, r31
+     64e:	f0 f9       	bld	r31, 0
+     650:	fa 87       	std	Y+10, r31	; 0x0a
+     652:	1b 86       	std	Y+11, r1	; 0x0b
+     654:	2a 85       	ldd	r18, Y+10	; 0x0a
+     656:	3b 85       	ldd	r19, Y+11	; 0x0b
+     658:	36 95       	lsr	r19
+     65a:	32 2f       	mov	r19, r18
+     65c:	22 27       	eor	r18, r18
+     65e:	37 95       	ror	r19
+     660:	27 95       	ror	r18
+     662:	24 60       	ori	r18, 0x04	; 4
+     664:	23 b9       	out	0x03, r18	; 3
+     666:	e9 e2       	ldi	r30, 0x29	; 41
+     668:	f2 e0       	ldi	r31, 0x02	; 2
+     66a:	31 97       	sbiw	r30, 0x01	; 1
+     66c:	f1 f7       	brne	.-4      	; 0x66a <SCMPLCF_SendMessageAddPacket+0x220>
+     66e:	00 c0       	rjmp	.+0      	; 0x670 <SCMPLCF_SendMessageAddPacket+0x226>
+     670:	00 00       	nop
+     672:	62 fb       	bst	r22, 2
+     674:	ff 27       	eor	r31, r31
+     676:	f0 f9       	bld	r31, 0
+     678:	fc 87       	std	Y+12, r31	; 0x0c
+     67a:	1d 86       	std	Y+13, r1	; 0x0d
+     67c:	2c 85       	ldd	r18, Y+12	; 0x0c
+     67e:	3d 85       	ldd	r19, Y+13	; 0x0d
+     680:	36 95       	lsr	r19
+     682:	32 2f       	mov	r19, r18
+     684:	22 27       	eor	r18, r18
+     686:	37 95       	ror	r19
+     688:	27 95       	ror	r18
+     68a:	24 60       	ori	r18, 0x04	; 4
+     68c:	23 b9       	out	0x03, r18	; 3
+     68e:	e9 e2       	ldi	r30, 0x29	; 41
+     690:	f2 e0       	ldi	r31, 0x02	; 2
+     692:	31 97       	sbiw	r30, 0x01	; 1
+     694:	f1 f7       	brne	.-4      	; 0x692 <SCMPLCF_SendMessageAddPacket+0x248>
+     696:	00 c0       	rjmp	.+0      	; 0x698 <SCMPLCF_SendMessageAddPacket+0x24e>
+     698:	00 00       	nop
+     69a:	63 fb       	bst	r22, 3
+     69c:	ff 27       	eor	r31, r31
+     69e:	f0 f9       	bld	r31, 0
+     6a0:	fe 87       	std	Y+14, r31	; 0x0e
+     6a2:	1f 86       	std	Y+15, r1	; 0x0f
+     6a4:	2e 85       	ldd	r18, Y+14	; 0x0e
+     6a6:	3f 85       	ldd	r19, Y+15	; 0x0f
+     6a8:	36 95       	lsr	r19
+     6aa:	32 2f       	mov	r19, r18
+     6ac:	22 27       	eor	r18, r18
+     6ae:	37 95       	ror	r19
+     6b0:	27 95       	ror	r18
+     6b2:	24 60       	ori	r18, 0x04	; 4
+     6b4:	23 b9       	out	0x03, r18	; 3
+     6b6:	e9 e2       	ldi	r30, 0x29	; 41
+     6b8:	f2 e0       	ldi	r31, 0x02	; 2
+     6ba:	31 97       	sbiw	r30, 0x01	; 1
+     6bc:	f1 f7       	brne	.-4      	; 0x6ba <SCMPLCF_SendMessageAddPacket+0x270>
+     6be:	00 c0       	rjmp	.+0      	; 0x6c0 <SCMPLCF_SendMessageAddPacket+0x276>
+     6c0:	00 00       	nop
+     6c2:	64 fb       	bst	r22, 4
+     6c4:	ff 27       	eor	r31, r31
+     6c6:	f0 f9       	bld	r31, 0
+     6c8:	f8 8b       	std	Y+16, r31	; 0x10
+     6ca:	19 8a       	std	Y+17, r1	; 0x11
+     6cc:	28 89       	ldd	r18, Y+16	; 0x10
+     6ce:	39 89       	ldd	r19, Y+17	; 0x11
+     6d0:	36 95       	lsr	r19
+     6d2:	32 2f       	mov	r19, r18
+     6d4:	22 27       	eor	r18, r18
+     6d6:	37 95       	ror	r19
+     6d8:	27 95       	ror	r18
+     6da:	24 60       	ori	r18, 0x04	; 4
+     6dc:	23 b9       	out	0x03, r18	; 3
+     6de:	e9 e2       	ldi	r30, 0x29	; 41
+     6e0:	f2 e0       	ldi	r31, 0x02	; 2
+     6e2:	31 97       	sbiw	r30, 0x01	; 1
+     6e4:	f1 f7       	brne	.-4      	; 0x6e2 <SCMPLCF_SendMessageAddPacket+0x298>
+     6e6:	00 c0       	rjmp	.+0      	; 0x6e8 <SCMPLCF_SendMessageAddPacket+0x29e>
+     6e8:	00 00       	nop
+     6ea:	65 fb       	bst	r22, 5
+     6ec:	ff 27       	eor	r31, r31
+     6ee:	f0 f9       	bld	r31, 0
+     6f0:	fa 8b       	std	Y+18, r31	; 0x12
+     6f2:	1b 8a       	std	Y+19, r1	; 0x13
+     6f4:	2a 89       	ldd	r18, Y+18	; 0x12
+     6f6:	3b 89       	ldd	r19, Y+19	; 0x13
+     6f8:	36 95       	lsr	r19
+     6fa:	32 2f       	mov	r19, r18
+     6fc:	22 27       	eor	r18, r18
+     6fe:	37 95       	ror	r19
+     700:	27 95       	ror	r18
+     702:	24 60       	ori	r18, 0x04	; 4
+     704:	23 b9       	out	0x03, r18	; 3
+     706:	e9 e2       	ldi	r30, 0x29	; 41
+     708:	f2 e0       	ldi	r31, 0x02	; 2
+     70a:	31 97       	sbiw	r30, 0x01	; 1
+     70c:	f1 f7       	brne	.-4      	; 0x70a <SCMPLCF_SendMessageAddPacket+0x2c0>
+     70e:	00 c0       	rjmp	.+0      	; 0x710 <SCMPLCF_SendMessageAddPacket+0x2c6>
+     710:	00 00       	nop
+     712:	66 fb       	bst	r22, 6
+     714:	ff 27       	eor	r31, r31
+     716:	f0 f9       	bld	r31, 0
+     718:	fc 8b       	std	Y+20, r31	; 0x14
+     71a:	1d 8a       	std	Y+21, r1	; 0x15
+     71c:	2c 89       	ldd	r18, Y+20	; 0x14
+     71e:	3d 89       	ldd	r19, Y+21	; 0x15
+     720:	36 95       	lsr	r19
+     722:	32 2f       	mov	r19, r18
+     724:	22 27       	eor	r18, r18
+     726:	37 95       	ror	r19
+     728:	27 95       	ror	r18
+     72a:	24 60       	ori	r18, 0x04	; 4
+     72c:	23 b9       	out	0x03, r18	; 3
+     72e:	e9 e2       	ldi	r30, 0x29	; 41
+     730:	f2 e0       	ldi	r31, 0x02	; 2
+     732:	31 97       	sbiw	r30, 0x01	; 1
+     734:	f1 f7       	brne	.-4      	; 0x732 <SCMPLCF_SendMessageAddPacket+0x2e8>
+     736:	00 c0       	rjmp	.+0      	; 0x738 <SCMPLCF_SendMessageAddPacket+0x2ee>
+     738:	00 00       	nop
+     73a:	66 1f       	adc	r22, r22
+     73c:	66 27       	eor	r22, r22
+     73e:	66 1f       	adc	r22, r22
+     740:	26 2f       	mov	r18, r22
+     742:	30 e0       	ldi	r19, 0x00	; 0
+     744:	36 95       	lsr	r19
+     746:	32 2f       	mov	r19, r18
+     748:	22 27       	eor	r18, r18
+     74a:	37 95       	ror	r19
+     74c:	27 95       	ror	r18
+     74e:	24 60       	ori	r18, 0x04	; 4
+     750:	23 b9       	out	0x03, r18	; 3
+     752:	e9 e2       	ldi	r30, 0x29	; 41
+     754:	f2 e0       	ldi	r31, 0x02	; 2
+     756:	31 97       	sbiw	r30, 0x01	; 1
+     758:	f1 f7       	brne	.-4      	; 0x756 <SCMPLCF_SendMessageAddPacket+0x30c>
+     75a:	00 c0       	rjmp	.+0      	; 0x75c <SCMPLCF_SendMessageAddPacket+0x312>
+     75c:	00 00       	nop
+     75e:	f7 2f       	mov	r31, r23
+     760:	f1 70       	andi	r31, 0x01	; 1
+     762:	fe 8b       	std	Y+22, r31	; 0x16
+     764:	1f 8a       	std	Y+23, r1	; 0x17
+     766:	2e 89       	ldd	r18, Y+22	; 0x16
+     768:	3f 89       	ldd	r19, Y+23	; 0x17
+     76a:	36 95       	lsr	r19
+     76c:	32 2f       	mov	r19, r18
+     76e:	22 27       	eor	r18, r18
+     770:	37 95       	ror	r19
+     772:	27 95       	ror	r18
+     774:	24 60       	ori	r18, 0x04	; 4
+     776:	23 b9       	out	0x03, r18	; 3
+     778:	e9 e2       	ldi	r30, 0x29	; 41
+     77a:	f2 e0       	ldi	r31, 0x02	; 2
+     77c:	31 97       	sbiw	r30, 0x01	; 1
+     77e:	f1 f7       	brne	.-4      	; 0x77c <SCMPLCF_SendMessageAddPacket+0x332>
+     780:	00 c0       	rjmp	.+0      	; 0x782 <SCMPLCF_SendMessageAddPacket+0x338>
+     782:	00 00       	nop
+     784:	71 fb       	bst	r23, 1
+     786:	ff 27       	eor	r31, r31
+     788:	f0 f9       	bld	r31, 0
+     78a:	f8 8f       	std	Y+24, r31	; 0x18
+     78c:	19 8e       	std	Y+25, r1	; 0x19
+     78e:	28 8d       	ldd	r18, Y+24	; 0x18
+     790:	39 8d       	ldd	r19, Y+25	; 0x19
+     792:	36 95       	lsr	r19
+     794:	32 2f       	mov	r19, r18
+     796:	22 27       	eor	r18, r18
+     798:	37 95       	ror	r19
+     79a:	27 95       	ror	r18
+     79c:	24 60       	ori	r18, 0x04	; 4
+     79e:	23 b9       	out	0x03, r18	; 3
+     7a0:	e9 e2       	ldi	r30, 0x29	; 41
+     7a2:	f2 e0       	ldi	r31, 0x02	; 2
+     7a4:	31 97       	sbiw	r30, 0x01	; 1
+     7a6:	f1 f7       	brne	.-4      	; 0x7a4 <SCMPLCF_SendMessageAddPacket+0x35a>
+     7a8:	00 c0       	rjmp	.+0      	; 0x7aa <SCMPLCF_SendMessageAddPacket+0x360>
+     7aa:	00 00       	nop
+     7ac:	72 fb       	bst	r23, 2
+     7ae:	ff 27       	eor	r31, r31
+     7b0:	f0 f9       	bld	r31, 0
+     7b2:	fa 8f       	std	Y+26, r31	; 0x1a
+     7b4:	1b 8e       	std	Y+27, r1	; 0x1b
+     7b6:	2a 8d       	ldd	r18, Y+26	; 0x1a
+     7b8:	3b 8d       	ldd	r19, Y+27	; 0x1b
+     7ba:	36 95       	lsr	r19
+     7bc:	32 2f       	mov	r19, r18
+     7be:	22 27       	eor	r18, r18
+     7c0:	37 95       	ror	r19
+     7c2:	27 95       	ror	r18
+     7c4:	24 60       	ori	r18, 0x04	; 4
+     7c6:	23 b9       	out	0x03, r18	; 3
+     7c8:	e9 e2       	ldi	r30, 0x29	; 41
+     7ca:	f2 e0       	ldi	r31, 0x02	; 2
+     7cc:	31 97       	sbiw	r30, 0x01	; 1
+     7ce:	f1 f7       	brne	.-4      	; 0x7cc <SCMPLCF_SendMessageAddPacket+0x382>
+     7d0:	00 c0       	rjmp	.+0      	; 0x7d2 <SCMPLCF_SendMessageAddPacket+0x388>
+     7d2:	00 00       	nop
+     7d4:	73 fb       	bst	r23, 3
+     7d6:	ff 27       	eor	r31, r31
+     7d8:	f0 f9       	bld	r31, 0
+     7da:	fc 8f       	std	Y+28, r31	; 0x1c
+     7dc:	1d 8e       	std	Y+29, r1	; 0x1d
+     7de:	2c 8d       	ldd	r18, Y+28	; 0x1c
+     7e0:	3d 8d       	ldd	r19, Y+29	; 0x1d
+     7e2:	36 95       	lsr	r19
+     7e4:	32 2f       	mov	r19, r18
+     7e6:	22 27       	eor	r18, r18
+     7e8:	37 95       	ror	r19
+     7ea:	27 95       	ror	r18
+     7ec:	24 60       	ori	r18, 0x04	; 4
+     7ee:	23 b9       	out	0x03, r18	; 3
+     7f0:	e9 e2       	ldi	r30, 0x29	; 41
+     7f2:	f2 e0       	ldi	r31, 0x02	; 2
+     7f4:	31 97       	sbiw	r30, 0x01	; 1
+     7f6:	f1 f7       	brne	.-4      	; 0x7f4 <SCMPLCF_SendMessageAddPacket+0x3aa>
+     7f8:	00 c0       	rjmp	.+0      	; 0x7fa <SCMPLCF_SendMessageAddPacket+0x3b0>
+     7fa:	00 00       	nop
+     7fc:	74 fb       	bst	r23, 4
+     7fe:	ff 27       	eor	r31, r31
+     800:	f0 f9       	bld	r31, 0
+     802:	fe 8f       	std	Y+30, r31	; 0x1e
+     804:	1f 8e       	std	Y+31, r1	; 0x1f
+     806:	2e 8d       	ldd	r18, Y+30	; 0x1e
+     808:	3f 8d       	ldd	r19, Y+31	; 0x1f
+     80a:	36 95       	lsr	r19
+     80c:	32 2f       	mov	r19, r18
+     80e:	22 27       	eor	r18, r18
+     810:	37 95       	ror	r19
+     812:	27 95       	ror	r18
+     814:	24 60       	ori	r18, 0x04	; 4
+     816:	23 b9       	out	0x03, r18	; 3
+     818:	e9 e2       	ldi	r30, 0x29	; 41
+     81a:	f2 e0       	ldi	r31, 0x02	; 2
+     81c:	31 97       	sbiw	r30, 0x01	; 1
+     81e:	f1 f7       	brne	.-4      	; 0x81c <SCMPLCF_SendMessageAddPacket+0x3d2>
+     820:	00 c0       	rjmp	.+0      	; 0x822 <SCMPLCF_SendMessageAddPacket+0x3d8>
+     822:	00 00       	nop
+     824:	75 fb       	bst	r23, 5
+     826:	ff 27       	eor	r31, r31
+     828:	f0 f9       	bld	r31, 0
+     82a:	f8 a3       	std	Y+32, r31	; 0x20
+     82c:	19 a2       	std	Y+33, r1	; 0x21
+     82e:	28 a1       	ldd	r18, Y+32	; 0x20
+     830:	39 a1       	ldd	r19, Y+33	; 0x21
+     832:	36 95       	lsr	r19
+     834:	32 2f       	mov	r19, r18
+     836:	22 27       	eor	r18, r18
+     838:	37 95       	ror	r19
+     83a:	27 95       	ror	r18
+     83c:	24 60       	ori	r18, 0x04	; 4
+     83e:	23 b9       	out	0x03, r18	; 3
+     840:	e9 e2       	ldi	r30, 0x29	; 41
+     842:	f2 e0       	ldi	r31, 0x02	; 2
+     844:	31 97       	sbiw	r30, 0x01	; 1
+     846:	f1 f7       	brne	.-4      	; 0x844 <SCMPLCF_SendMessageAddPacket+0x3fa>
+     848:	00 c0       	rjmp	.+0      	; 0x84a <SCMPLCF_SendMessageAddPacket+0x400>
+     84a:	00 00       	nop
+     84c:	76 fb       	bst	r23, 6
+     84e:	ff 27       	eor	r31, r31
+     850:	f0 f9       	bld	r31, 0
+     852:	fa a3       	std	Y+34, r31	; 0x22
+     854:	1b a2       	std	Y+35, r1	; 0x23
+     856:	2a a1       	ldd	r18, Y+34	; 0x22
+     858:	3b a1       	ldd	r19, Y+35	; 0x23
+     85a:	36 95       	lsr	r19
+     85c:	32 2f       	mov	r19, r18
+     85e:	22 27       	eor	r18, r18
+     860:	37 95       	ror	r19
+     862:	27 95       	ror	r18
+     864:	24 60       	ori	r18, 0x04	; 4
+     866:	23 b9       	out	0x03, r18	; 3
+     868:	e9 e2       	ldi	r30, 0x29	; 41
+     86a:	f2 e0       	ldi	r31, 0x02	; 2
+     86c:	31 97       	sbiw	r30, 0x01	; 1
+     86e:	f1 f7       	brne	.-4      	; 0x86c <SCMPLCF_SendMessageAddPacket+0x422>
+     870:	00 c0       	rjmp	.+0      	; 0x872 <SCMPLCF_SendMessageAddPacket+0x428>
+     872:	00 00       	nop
+     874:	77 1f       	adc	r23, r23
+     876:	77 27       	eor	r23, r23
+     878:	77 1f       	adc	r23, r23
+     87a:	27 2f       	mov	r18, r23
+     87c:	30 e0       	ldi	r19, 0x00	; 0
+     87e:	36 95       	lsr	r19
+     880:	32 2f       	mov	r19, r18
+     882:	22 27       	eor	r18, r18
+     884:	37 95       	ror	r19
+     886:	27 95       	ror	r18
+     888:	24 60       	ori	r18, 0x04	; 4
+     88a:	23 b9       	out	0x03, r18	; 3
+     88c:	e9 e2       	ldi	r30, 0x29	; 41
+     88e:	f2 e0       	ldi	r31, 0x02	; 2
+     890:	31 97       	sbiw	r30, 0x01	; 1
+     892:	f1 f7       	brne	.-4      	; 0x890 <SCMPLCF_SendMessageAddPacket+0x446>
+     894:	00 c0       	rjmp	.+0      	; 0x896 <SCMPLCF_SendMessageAddPacket+0x44c>
+     896:	00 00       	nop
+     898:	f8 2f       	mov	r31, r24
+     89a:	f1 70       	andi	r31, 0x01	; 1
+     89c:	fc a3       	std	Y+36, r31	; 0x24
+     89e:	1d a2       	std	Y+37, r1	; 0x25
+     8a0:	2c a1       	ldd	r18, Y+36	; 0x24
+     8a2:	3d a1       	ldd	r19, Y+37	; 0x25
+     8a4:	36 95       	lsr	r19
+     8a6:	32 2f       	mov	r19, r18
+     8a8:	22 27       	eor	r18, r18
+     8aa:	37 95       	ror	r19
+     8ac:	27 95       	ror	r18
+     8ae:	24 60       	ori	r18, 0x04	; 4
+     8b0:	23 b9       	out	0x03, r18	; 3
+     8b2:	e9 e2       	ldi	r30, 0x29	; 41
+     8b4:	f2 e0       	ldi	r31, 0x02	; 2
+     8b6:	31 97       	sbiw	r30, 0x01	; 1
+     8b8:	f1 f7       	brne	.-4      	; 0x8b6 <SCMPLCF_SendMessageAddPacket+0x46c>
+     8ba:	00 c0       	rjmp	.+0      	; 0x8bc <SCMPLCF_SendMessageAddPacket+0x472>
+     8bc:	00 00       	nop
+     8be:	81 fb       	bst	r24, 1
+     8c0:	ff 27       	eor	r31, r31
+     8c2:	f0 f9       	bld	r31, 0
+     8c4:	fe a3       	std	Y+38, r31	; 0x26
+     8c6:	1f a2       	std	Y+39, r1	; 0x27
+     8c8:	2e a1       	ldd	r18, Y+38	; 0x26
+     8ca:	3f a1       	ldd	r19, Y+39	; 0x27
+     8cc:	36 95       	lsr	r19
+     8ce:	32 2f       	mov	r19, r18
+     8d0:	22 27       	eor	r18, r18
+     8d2:	37 95       	ror	r19
+     8d4:	27 95       	ror	r18
+     8d6:	24 60       	ori	r18, 0x04	; 4
+     8d8:	23 b9       	out	0x03, r18	; 3
+     8da:	e9 e2       	ldi	r30, 0x29	; 41
+     8dc:	f2 e0       	ldi	r31, 0x02	; 2
+     8de:	31 97       	sbiw	r30, 0x01	; 1
+     8e0:	f1 f7       	brne	.-4      	; 0x8de <SCMPLCF_SendMessageAddPacket+0x494>
+     8e2:	00 c0       	rjmp	.+0      	; 0x8e4 <SCMPLCF_SendMessageAddPacket+0x49a>
+     8e4:	00 00       	nop
+     8e6:	82 fb       	bst	r24, 2
+     8e8:	ff 27       	eor	r31, r31
+     8ea:	f0 f9       	bld	r31, 0
+     8ec:	f8 a7       	std	Y+40, r31	; 0x28
+     8ee:	19 a6       	std	Y+41, r1	; 0x29
+     8f0:	28 a5       	ldd	r18, Y+40	; 0x28
+     8f2:	39 a5       	ldd	r19, Y+41	; 0x29
+     8f4:	36 95       	lsr	r19
+     8f6:	32 2f       	mov	r19, r18
+     8f8:	22 27       	eor	r18, r18
+     8fa:	37 95       	ror	r19
+     8fc:	27 95       	ror	r18
+     8fe:	24 60       	ori	r18, 0x04	; 4
+     900:	23 b9       	out	0x03, r18	; 3
+     902:	e9 e2       	ldi	r30, 0x29	; 41
+     904:	f2 e0       	ldi	r31, 0x02	; 2
+     906:	31 97       	sbiw	r30, 0x01	; 1
+     908:	f1 f7       	brne	.-4      	; 0x906 <SCMPLCF_SendMessageAddPacket+0x4bc>
+     90a:	00 c0       	rjmp	.+0      	; 0x90c <SCMPLCF_SendMessageAddPacket+0x4c2>
+     90c:	00 00       	nop
+     90e:	83 fb       	bst	r24, 3
+     910:	ff 27       	eor	r31, r31
+     912:	f0 f9       	bld	r31, 0
+     914:	fa a7       	std	Y+42, r31	; 0x2a
+     916:	1b a6       	std	Y+43, r1	; 0x2b
+     918:	2a a5       	ldd	r18, Y+42	; 0x2a
+     91a:	3b a5       	ldd	r19, Y+43	; 0x2b
+     91c:	36 95       	lsr	r19
+     91e:	32 2f       	mov	r19, r18
+     920:	22 27       	eor	r18, r18
+     922:	37 95       	ror	r19
+     924:	27 95       	ror	r18
+     926:	24 60       	ori	r18, 0x04	; 4
+     928:	23 b9       	out	0x03, r18	; 3
+     92a:	e9 e2       	ldi	r30, 0x29	; 41
+     92c:	f2 e0       	ldi	r31, 0x02	; 2
+     92e:	31 97       	sbiw	r30, 0x01	; 1
+     930:	f1 f7       	brne	.-4      	; 0x92e <SCMPLCF_SendMessageAddPacket+0x4e4>
+     932:	00 c0       	rjmp	.+0      	; 0x934 <SCMPLCF_SendMessageAddPacket+0x4ea>
+     934:	00 00       	nop
+     936:	84 fb       	bst	r24, 4
+     938:	ff 27       	eor	r31, r31
+     93a:	f0 f9       	bld	r31, 0
+     93c:	fc a7       	std	Y+44, r31	; 0x2c
+     93e:	1d a6       	std	Y+45, r1	; 0x2d
+     940:	2c a5       	ldd	r18, Y+44	; 0x2c
+     942:	3d a5       	ldd	r19, Y+45	; 0x2d
+     944:	36 95       	lsr	r19
+     946:	32 2f       	mov	r19, r18
+     948:	22 27       	eor	r18, r18
+     94a:	37 95       	ror	r19
+     94c:	27 95       	ror	r18
+     94e:	24 60       	ori	r18, 0x04	; 4
+     950:	23 b9       	out	0x03, r18	; 3
+     952:	e9 e2       	ldi	r30, 0x29	; 41
+     954:	f2 e0       	ldi	r31, 0x02	; 2
+     956:	31 97       	sbiw	r30, 0x01	; 1
+     958:	f1 f7       	brne	.-4      	; 0x956 <SCMPLCF_SendMessageAddPacket+0x50c>
+     95a:	00 c0       	rjmp	.+0      	; 0x95c <SCMPLCF_SendMessageAddPacket+0x512>
+     95c:	00 00       	nop
+     95e:	85 fb       	bst	r24, 5
+     960:	ff 27       	eor	r31, r31
+     962:	f0 f9       	bld	r31, 0
+     964:	fe a7       	std	Y+46, r31	; 0x2e
+     966:	1f a6       	std	Y+47, r1	; 0x2f
+     968:	2e a5       	ldd	r18, Y+46	; 0x2e
+     96a:	3f a5       	ldd	r19, Y+47	; 0x2f
+     96c:	36 95       	lsr	r19
+     96e:	32 2f       	mov	r19, r18
+     970:	22 27       	eor	r18, r18
+     972:	37 95       	ror	r19
+     974:	27 95       	ror	r18
+     976:	24 60       	ori	r18, 0x04	; 4
+     978:	23 b9       	out	0x03, r18	; 3
+     97a:	e9 e2       	ldi	r30, 0x29	; 41
+     97c:	f2 e0       	ldi	r31, 0x02	; 2
+     97e:	31 97       	sbiw	r30, 0x01	; 1
+     980:	f1 f7       	brne	.-4      	; 0x97e <SCMPLCF_SendMessageAddPacket+0x534>
+     982:	00 c0       	rjmp	.+0      	; 0x984 <SCMPLCF_SendMessageAddPacket+0x53a>
+     984:	00 00       	nop
+     986:	86 fb       	bst	r24, 6
+     988:	22 24       	eor	r2, r2
+     98a:	20 f8       	bld	r2, 0
+     98c:	31 2c       	mov	r3, r1
+     98e:	91 01       	movw	r18, r2
+     990:	36 95       	lsr	r19
+     992:	32 2f       	mov	r19, r18
+     994:	22 27       	eor	r18, r18
+     996:	37 95       	ror	r19
+     998:	27 95       	ror	r18
+     99a:	24 60       	ori	r18, 0x04	; 4
+     99c:	23 b9       	out	0x03, r18	; 3
+     99e:	e9 e2       	ldi	r30, 0x29	; 41
+     9a0:	f2 e0       	ldi	r31, 0x02	; 2
+     9a2:	31 97       	sbiw	r30, 0x01	; 1
+     9a4:	f1 f7       	brne	.-4      	; 0x9a2 <SCMPLCF_SendMessageAddPacket+0x558>
+     9a6:	00 c0       	rjmp	.+0      	; 0x9a8 <SCMPLCF_SendMessageAddPacket+0x55e>
+     9a8:	00 00       	nop
+     9aa:	88 1f       	adc	r24, r24
+     9ac:	88 27       	eor	r24, r24
+     9ae:	88 1f       	adc	r24, r24
+     9b0:	90 e0       	ldi	r25, 0x00	; 0
+     9b2:	96 95       	lsr	r25
+     9b4:	98 2f       	mov	r25, r24
+     9b6:	88 27       	eor	r24, r24
+     9b8:	97 95       	ror	r25
+     9ba:	87 95       	ror	r24
+     9bc:	84 60       	ori	r24, 0x04	; 4
+     9be:	83 b9       	out	0x03, r24	; 3
+     9c0:	89 e2       	ldi	r24, 0x29	; 41
+     9c2:	92 e0       	ldi	r25, 0x02	; 2
+     9c4:	01 97       	sbiw	r24, 0x01	; 1
+     9c6:	f1 f7       	brne	.-4      	; 0x9c4 <SCMPLCF_SendMessageAddPacket+0x57a>
+     9c8:	00 c0       	rjmp	.+0      	; 0x9ca <SCMPLCF_SendMessageAddPacket+0x580>
+     9ca:	00 00       	nop
+     9cc:	84 e0       	ldi	r24, 0x04	; 4
+     9ce:	83 b9       	out	0x03, r24	; 3
+     9d0:	e0 96       	adiw	r28, 0x30	; 48
+     9d2:	0f b6       	in	r0, 0x3f	; 63
+     9d4:	f8 94       	cli
+     9d6:	de bf       	out	0x3e, r29	; 62
+     9d8:	0f be       	out	0x3f, r0	; 63
+     9da:	cd bf       	out	0x3d, r28	; 61
+     9dc:	df 91       	pop	r29
+     9de:	cf 91       	pop	r28
+     9e0:	1f 91       	pop	r17
+     9e2:	0f 91       	pop	r16
+     9e4:	ff 90       	pop	r15
+     9e6:	ef 90       	pop	r14
+     9e8:	df 90       	pop	r13
+     9ea:	cf 90       	pop	r12
+     9ec:	bf 90       	pop	r11
+     9ee:	af 90       	pop	r10
+     9f0:	9f 90       	pop	r9
+     9f2:	8f 90       	pop	r8
+     9f4:	7f 90       	pop	r7
+     9f6:	6f 90       	pop	r6
+     9f8:	5f 90       	pop	r5
+     9fa:	4f 90       	pop	r4
+     9fc:	3f 90       	pop	r3
+     9fe:	2f 90       	pop	r2
+     a00:	08 95       	ret
+
+00000a02 <SCMPLCF_SendMessageCntlPacket>:
+     a02:	2f 92       	push	r2
+     a04:	3f 92       	push	r3
+     a06:	4f 92       	push	r4
+     a08:	5f 92       	push	r5
+     a0a:	6f 92       	push	r6
+     a0c:	7f 92       	push	r7
+     a0e:	8f 92       	push	r8
+     a10:	9f 92       	push	r9
+     a12:	af 92       	push	r10
+     a14:	bf 92       	push	r11
+     a16:	cf 92       	push	r12
+     a18:	df 92       	push	r13
+     a1a:	ef 92       	push	r14
+     a1c:	ff 92       	push	r15
+     a1e:	0f 93       	push	r16
+     a20:	1f 93       	push	r17
+     a22:	cf 93       	push	r28
+     a24:	df 93       	push	r29
+     a26:	cd b7       	in	r28, 0x3d	; 61
+     a28:	de b7       	in	r29, 0x3e	; 62
+     a2a:	63 97       	sbiw	r28, 0x13	; 19
+     a2c:	0f b6       	in	r0, 0x3f	; 63
+     a2e:	f8 94       	cli
+     a30:	de bf       	out	0x3e, r29	; 62
+     a32:	0f be       	out	0x3f, r0	; 63
+     a34:	cd bf       	out	0x3d, r28	; 61
+     a36:	24 e8       	ldi	r18, 0x84	; 132
+     a38:	23 b9       	out	0x03, r18	; 3
+     a3a:	e9 e2       	ldi	r30, 0x29	; 41
+     a3c:	f2 e0       	ldi	r31, 0x02	; 2
+     a3e:	31 97       	sbiw	r30, 0x01	; 1
+     a40:	f1 f7       	brne	.-4      	; 0xa3e <SCMPLCF_SendMessageCntlPacket+0x3c>
+     a42:	00 c0       	rjmp	.+0      	; 0xa44 <SCMPLCF_SendMessageCntlPacket+0x42>
+     a44:	00 00       	nop
+     a46:	60 fb       	bst	r22, 0
+     a48:	aa 24       	eor	r10, r10
+     a4a:	a0 f8       	bld	r10, 0
+     a4c:	b1 2c       	mov	r11, r1
+     a4e:	b6 94       	lsr	r11
+     a50:	ba 2c       	mov	r11, r10
+     a52:	aa 24       	eor	r10, r10
+     a54:	b7 94       	ror	r11
+     a56:	a7 94       	ror	r10
+     a58:	fa 2d       	mov	r31, r10
+     a5a:	f4 60       	ori	r31, 0x04	; 4
+     a5c:	f3 b9       	out	0x03, r31	; 3
+     a5e:	e9 e2       	ldi	r30, 0x29	; 41
+     a60:	f2 e0       	ldi	r31, 0x02	; 2
+     a62:	31 97       	sbiw	r30, 0x01	; 1
+     a64:	f1 f7       	brne	.-4      	; 0xa62 <SCMPLCF_SendMessageCntlPacket+0x60>
+     a66:	00 c0       	rjmp	.+0      	; 0xa68 <SCMPLCF_SendMessageCntlPacket+0x66>
+     a68:	00 00       	nop
+     a6a:	61 fb       	bst	r22, 1
+     a6c:	cc 24       	eor	r12, r12
+     a6e:	c0 f8       	bld	r12, 0
+     a70:	d1 2c       	mov	r13, r1
+     a72:	d6 94       	lsr	r13
+     a74:	dc 2c       	mov	r13, r12
+     a76:	cc 24       	eor	r12, r12
+     a78:	d7 94       	ror	r13
+     a7a:	c7 94       	ror	r12
+     a7c:	fc 2d       	mov	r31, r12
+     a7e:	f4 60       	ori	r31, 0x04	; 4
+     a80:	f3 b9       	out	0x03, r31	; 3
+     a82:	e9 e2       	ldi	r30, 0x29	; 41
+     a84:	f2 e0       	ldi	r31, 0x02	; 2
+     a86:	31 97       	sbiw	r30, 0x01	; 1
+     a88:	f1 f7       	brne	.-4      	; 0xa86 <SCMPLCF_SendMessageCntlPacket+0x84>
+     a8a:	00 c0       	rjmp	.+0      	; 0xa8c <SCMPLCF_SendMessageCntlPacket+0x8a>
+     a8c:	00 00       	nop
+     a8e:	62 fb       	bst	r22, 2
+     a90:	ee 24       	eor	r14, r14
+     a92:	e0 f8       	bld	r14, 0
+     a94:	f1 2c       	mov	r15, r1
+     a96:	f6 94       	lsr	r15
+     a98:	fe 2c       	mov	r15, r14
+     a9a:	ee 24       	eor	r14, r14
+     a9c:	f7 94       	ror	r15
+     a9e:	e7 94       	ror	r14
+     aa0:	6e 2d       	mov	r22, r14
+     aa2:	64 60       	ori	r22, 0x04	; 4
+     aa4:	63 b9       	out	0x03, r22	; 3
+     aa6:	e9 e2       	ldi	r30, 0x29	; 41
+     aa8:	f2 e0       	ldi	r31, 0x02	; 2
+     aaa:	31 97       	sbiw	r30, 0x01	; 1
+     aac:	f1 f7       	brne	.-4      	; 0xaaa <SCMPLCF_SendMessageCntlPacket+0xa8>
+     aae:	00 c0       	rjmp	.+0      	; 0xab0 <SCMPLCF_SendMessageCntlPacket+0xae>
+     ab0:	00 00       	nop
+     ab2:	07 2f       	mov	r16, r23
+     ab4:	01 70       	andi	r16, 0x01	; 1
+     ab6:	10 e0       	ldi	r17, 0x00	; 0
+     ab8:	16 95       	lsr	r17
+     aba:	10 2f       	mov	r17, r16
+     abc:	00 27       	eor	r16, r16
+     abe:	17 95       	ror	r17
+     ac0:	07 95       	ror	r16
+     ac2:	04 60       	ori	r16, 0x04	; 4
+     ac4:	03 b9       	out	0x03, r16	; 3
+     ac6:	e9 e2       	ldi	r30, 0x29	; 41
+     ac8:	f2 e0       	ldi	r31, 0x02	; 2
+     aca:	31 97       	sbiw	r30, 0x01	; 1
+     acc:	f1 f7       	brne	.-4      	; 0xaca <SCMPLCF_SendMessageCntlPacket+0xc8>
+     ace:	00 c0       	rjmp	.+0      	; 0xad0 <SCMPLCF_SendMessageCntlPacket+0xce>
+     ad0:	00 00       	nop
+     ad2:	71 fb       	bst	r23, 1
+     ad4:	ff 27       	eor	r31, r31
+     ad6:	f0 f9       	bld	r31, 0
+     ad8:	fa 8b       	std	Y+18, r31	; 0x12
+     ada:	1b 8a       	std	Y+19, r1	; 0x13
+     adc:	2a 89       	ldd	r18, Y+18	; 0x12
+     ade:	3b 89       	ldd	r19, Y+19	; 0x13
+     ae0:	36 95       	lsr	r19
+     ae2:	32 2f       	mov	r19, r18
+     ae4:	22 27       	eor	r18, r18
+     ae6:	37 95       	ror	r19
+     ae8:	27 95       	ror	r18
+     aea:	3b 8b       	std	Y+19, r19	; 0x13
+     aec:	2a 8b       	std	Y+18, r18	; 0x12
+     aee:	24 60       	ori	r18, 0x04	; 4
+     af0:	23 b9       	out	0x03, r18	; 3
+     af2:	e9 e2       	ldi	r30, 0x29	; 41
+     af4:	f2 e0       	ldi	r31, 0x02	; 2
+     af6:	31 97       	sbiw	r30, 0x01	; 1
+     af8:	f1 f7       	brne	.-4      	; 0xaf6 <SCMPLCF_SendMessageCntlPacket+0xf4>
+     afa:	00 c0       	rjmp	.+0      	; 0xafc <SCMPLCF_SendMessageCntlPacket+0xfa>
+     afc:	00 00       	nop
+     afe:	72 fb       	bst	r23, 2
+     b00:	aa 27       	eor	r26, r26
+     b02:	a0 f9       	bld	r26, 0
+     b04:	b0 e0       	ldi	r27, 0x00	; 0
+     b06:	b6 95       	lsr	r27
+     b08:	ba 2f       	mov	r27, r26
+     b0a:	aa 27       	eor	r26, r26
+     b0c:	b7 95       	ror	r27
+     b0e:	a7 95       	ror	r26
+     b10:	a4 60       	ori	r26, 0x04	; 4
+     b12:	a3 b9       	out	0x03, r26	; 3
+     b14:	e9 e2       	ldi	r30, 0x29	; 41
+     b16:	f2 e0       	ldi	r31, 0x02	; 2
+     b18:	31 97       	sbiw	r30, 0x01	; 1
+     b1a:	f1 f7       	brne	.-4      	; 0xb18 <SCMPLCF_SendMessageCntlPacket+0x116>
+     b1c:	00 c0       	rjmp	.+0      	; 0xb1e <SCMPLCF_SendMessageCntlPacket+0x11c>
+     b1e:	00 00       	nop
+     b20:	73 fb       	bst	r23, 3
+     b22:	ee 27       	eor	r30, r30
+     b24:	e0 f9       	bld	r30, 0
+     b26:	f0 e0       	ldi	r31, 0x00	; 0
+     b28:	f6 95       	lsr	r31
+     b2a:	fe 2f       	mov	r31, r30
+     b2c:	ee 27       	eor	r30, r30
+     b2e:	f7 95       	ror	r31
+     b30:	e7 95       	ror	r30
+     b32:	e4 60       	ori	r30, 0x04	; 4
+     b34:	e3 b9       	out	0x03, r30	; 3
+     b36:	e9 e2       	ldi	r30, 0x29	; 41
+     b38:	f2 e0       	ldi	r31, 0x02	; 2
+     b3a:	31 97       	sbiw	r30, 0x01	; 1
+     b3c:	f1 f7       	brne	.-4      	; 0xb3a <SCMPLCF_SendMessageCntlPacket+0x138>
+     b3e:	00 c0       	rjmp	.+0      	; 0xb40 <SCMPLCF_SendMessageCntlPacket+0x13e>
+     b40:	00 00       	nop
+     b42:	74 fb       	bst	r23, 4
+     b44:	44 27       	eor	r20, r20
+     b46:	40 f9       	bld	r20, 0
+     b48:	50 e0       	ldi	r21, 0x00	; 0
+     b4a:	56 95       	lsr	r21
+     b4c:	54 2f       	mov	r21, r20
+     b4e:	44 27       	eor	r20, r20
+     b50:	57 95       	ror	r21
+     b52:	47 95       	ror	r20
+     b54:	44 60       	ori	r20, 0x04	; 4
+     b56:	43 b9       	out	0x03, r20	; 3
+     b58:	e9 e2       	ldi	r30, 0x29	; 41
+     b5a:	f2 e0       	ldi	r31, 0x02	; 2
+     b5c:	31 97       	sbiw	r30, 0x01	; 1
+     b5e:	f1 f7       	brne	.-4      	; 0xb5c <SCMPLCF_SendMessageCntlPacket+0x15a>
+     b60:	00 c0       	rjmp	.+0      	; 0xb62 <SCMPLCF_SendMessageCntlPacket+0x160>
+     b62:	00 00       	nop
+     b64:	75 fb       	bst	r23, 5
+     b66:	22 27       	eor	r18, r18
+     b68:	20 f9       	bld	r18, 0
+     b6a:	30 e0       	ldi	r19, 0x00	; 0
+     b6c:	36 95       	lsr	r19
+     b6e:	32 2f       	mov	r19, r18
+     b70:	22 27       	eor	r18, r18
+     b72:	37 95       	ror	r19
+     b74:	27 95       	ror	r18
+     b76:	24 60       	ori	r18, 0x04	; 4
+     b78:	23 b9       	out	0x03, r18	; 3
+     b7a:	e9 e2       	ldi	r30, 0x29	; 41
+     b7c:	f2 e0       	ldi	r31, 0x02	; 2
+     b7e:	31 97       	sbiw	r30, 0x01	; 1
+     b80:	f1 f7       	brne	.-4      	; 0xb7e <SCMPLCF_SendMessageCntlPacket+0x17c>
+     b82:	00 c0       	rjmp	.+0      	; 0xb84 <SCMPLCF_SendMessageCntlPacket+0x182>
+     b84:	00 00       	nop
+     b86:	76 fb       	bst	r23, 6
+     b88:	88 24       	eor	r8, r8
+     b8a:	80 f8       	bld	r8, 0
+     b8c:	91 2c       	mov	r9, r1
+     b8e:	94 01       	movw	r18, r8
+     b90:	36 95       	lsr	r19
+     b92:	32 2f       	mov	r19, r18
+     b94:	22 27       	eor	r18, r18
+     b96:	37 95       	ror	r19
+     b98:	27 95       	ror	r18
+     b9a:	24 60       	ori	r18, 0x04	; 4
+     b9c:	23 b9       	out	0x03, r18	; 3
+     b9e:	e9 e2       	ldi	r30, 0x29	; 41
+     ba0:	f2 e0       	ldi	r31, 0x02	; 2
+     ba2:	31 97       	sbiw	r30, 0x01	; 1
+     ba4:	f1 f7       	brne	.-4      	; 0xba2 <SCMPLCF_SendMessageCntlPacket+0x1a0>
+     ba6:	00 c0       	rjmp	.+0      	; 0xba8 <SCMPLCF_SendMessageCntlPacket+0x1a6>
+     ba8:	00 00       	nop
+     baa:	77 1f       	adc	r23, r23
+     bac:	77 27       	eor	r23, r23
+     bae:	77 1f       	adc	r23, r23
+     bb0:	27 2f       	mov	r18, r23
+     bb2:	30 e0       	ldi	r19, 0x00	; 0
+     bb4:	36 95       	lsr	r19
+     bb6:	32 2f       	mov	r19, r18
+     bb8:	22 27       	eor	r18, r18
+     bba:	37 95       	ror	r19
+     bbc:	27 95       	ror	r18
+     bbe:	24 60       	ori	r18, 0x04	; 4
+     bc0:	23 b9       	out	0x03, r18	; 3
+     bc2:	e9 e2       	ldi	r30, 0x29	; 41
+     bc4:	f2 e0       	ldi	r31, 0x02	; 2
+     bc6:	31 97       	sbiw	r30, 0x01	; 1
+     bc8:	f1 f7       	brne	.-4      	; 0xbc6 <SCMPLCF_SendMessageCntlPacket+0x1c4>
+     bca:	00 c0       	rjmp	.+0      	; 0xbcc <SCMPLCF_SendMessageCntlPacket+0x1ca>
+     bcc:	00 00       	nop
+     bce:	80 fb       	bst	r24, 0
+     bd0:	66 24       	eor	r6, r6
+     bd2:	60 f8       	bld	r6, 0
+     bd4:	71 2c       	mov	r7, r1
+     bd6:	93 01       	movw	r18, r6
+     bd8:	36 95       	lsr	r19
+     bda:	32 2f       	mov	r19, r18
+     bdc:	22 27       	eor	r18, r18
+     bde:	37 95       	ror	r19
+     be0:	27 95       	ror	r18
+     be2:	24 60       	ori	r18, 0x04	; 4
+     be4:	23 b9       	out	0x03, r18	; 3
+     be6:	e9 e2       	ldi	r30, 0x29	; 41
+     be8:	f2 e0       	ldi	r31, 0x02	; 2
+     bea:	31 97       	sbiw	r30, 0x01	; 1
+     bec:	f1 f7       	brne	.-4      	; 0xbea <SCMPLCF_SendMessageCntlPacket+0x1e8>
+     bee:	00 c0       	rjmp	.+0      	; 0xbf0 <SCMPLCF_SendMessageCntlPacket+0x1ee>
+     bf0:	00 00       	nop
+     bf2:	81 fb       	bst	r24, 1
+     bf4:	44 24       	eor	r4, r4
+     bf6:	40 f8       	bld	r4, 0
+     bf8:	51 2c       	mov	r5, r1
+     bfa:	92 01       	movw	r18, r4
+     bfc:	36 95       	lsr	r19
+     bfe:	32 2f       	mov	r19, r18
+     c00:	22 27       	eor	r18, r18
+     c02:	37 95       	ror	r19
+     c04:	27 95       	ror	r18
+     c06:	24 60       	ori	r18, 0x04	; 4
+     c08:	23 b9       	out	0x03, r18	; 3
+     c0a:	e9 e2       	ldi	r30, 0x29	; 41
+     c0c:	f2 e0       	ldi	r31, 0x02	; 2
+     c0e:	31 97       	sbiw	r30, 0x01	; 1
+     c10:	f1 f7       	brne	.-4      	; 0xc0e <SCMPLCF_SendMessageCntlPacket+0x20c>
+     c12:	00 c0       	rjmp	.+0      	; 0xc14 <SCMPLCF_SendMessageCntlPacket+0x212>
+     c14:	00 00       	nop
+     c16:	82 fb       	bst	r24, 2
+     c18:	ff 27       	eor	r31, r31
+     c1a:	f0 f9       	bld	r31, 0
+     c1c:	f9 83       	std	Y+1, r31	; 0x01
+     c1e:	1a 82       	std	Y+2, r1	; 0x02
+     c20:	29 81       	ldd	r18, Y+1	; 0x01
+     c22:	3a 81       	ldd	r19, Y+2	; 0x02
+     c24:	36 95       	lsr	r19
+     c26:	32 2f       	mov	r19, r18
+     c28:	22 27       	eor	r18, r18
+     c2a:	37 95       	ror	r19
+     c2c:	27 95       	ror	r18
+     c2e:	24 60       	ori	r18, 0x04	; 4
+     c30:	23 b9       	out	0x03, r18	; 3
+     c32:	e9 e2       	ldi	r30, 0x29	; 41
+     c34:	f2 e0       	ldi	r31, 0x02	; 2
+     c36:	31 97       	sbiw	r30, 0x01	; 1
+     c38:	f1 f7       	brne	.-4      	; 0xc36 <SCMPLCF_SendMessageCntlPacket+0x234>
+     c3a:	00 c0       	rjmp	.+0      	; 0xc3c <SCMPLCF_SendMessageCntlPacket+0x23a>
+     c3c:	00 00       	nop
+     c3e:	83 fb       	bst	r24, 3
+     c40:	88 27       	eor	r24, r24
+     c42:	80 f9       	bld	r24, 0
+     c44:	8b 83       	std	Y+3, r24	; 0x03
+     c46:	1c 82       	std	Y+4, r1	; 0x04
+     c48:	2b 81       	ldd	r18, Y+3	; 0x03
+     c4a:	3c 81       	ldd	r19, Y+4	; 0x04
+     c4c:	36 95       	lsr	r19
+     c4e:	32 2f       	mov	r19, r18
+     c50:	22 27       	eor	r18, r18
+     c52:	37 95       	ror	r19
+     c54:	27 95       	ror	r18
+     c56:	24 60       	ori	r18, 0x04	; 4
+     c58:	23 b9       	out	0x03, r18	; 3
+     c5a:	e9 e2       	ldi	r30, 0x29	; 41
+     c5c:	f2 e0       	ldi	r31, 0x02	; 2
+     c5e:	31 97       	sbiw	r30, 0x01	; 1
+     c60:	f1 f7       	brne	.-4      	; 0xc5e <SCMPLCF_SendMessageCntlPacket+0x25c>
+     c62:	00 c0       	rjmp	.+0      	; 0xc64 <SCMPLCF_SendMessageCntlPacket+0x262>
+     c64:	00 00       	nop
+     c66:	f9 2f       	mov	r31, r25
+     c68:	f1 70       	andi	r31, 0x01	; 1
+     c6a:	fd 83       	std	Y+5, r31	; 0x05
+     c6c:	1e 82       	std	Y+6, r1	; 0x06
+     c6e:	2d 81       	ldd	r18, Y+5	; 0x05
+     c70:	3e 81       	ldd	r19, Y+6	; 0x06
+     c72:	36 95       	lsr	r19
+     c74:	32 2f       	mov	r19, r18
+     c76:	22 27       	eor	r18, r18
+     c78:	37 95       	ror	r19
+     c7a:	27 95       	ror	r18
+     c7c:	24 60       	ori	r18, 0x04	; 4
+     c7e:	23 b9       	out	0x03, r18	; 3
+     c80:	e9 e2       	ldi	r30, 0x29	; 41
+     c82:	f2 e0       	ldi	r31, 0x02	; 2
+     c84:	31 97       	sbiw	r30, 0x01	; 1
+     c86:	f1 f7       	brne	.-4      	; 0xc84 <SCMPLCF_SendMessageCntlPacket+0x282>
+     c88:	00 c0       	rjmp	.+0      	; 0xc8a <SCMPLCF_SendMessageCntlPacket+0x288>
+     c8a:	00 00       	nop
+     c8c:	91 fb       	bst	r25, 1
+     c8e:	ff 27       	eor	r31, r31
+     c90:	f0 f9       	bld	r31, 0
+     c92:	ff 83       	std	Y+7, r31	; 0x07
+     c94:	18 86       	std	Y+8, r1	; 0x08
+     c96:	2f 81       	ldd	r18, Y+7	; 0x07
+     c98:	38 85       	ldd	r19, Y+8	; 0x08
+     c9a:	36 95       	lsr	r19
+     c9c:	32 2f       	mov	r19, r18
+     c9e:	22 27       	eor	r18, r18
+     ca0:	37 95       	ror	r19
+     ca2:	27 95       	ror	r18
+     ca4:	24 60       	ori	r18, 0x04	; 4
+     ca6:	23 b9       	out	0x03, r18	; 3
+     ca8:	e9 e2       	ldi	r30, 0x29	; 41
+     caa:	f2 e0       	ldi	r31, 0x02	; 2
+     cac:	31 97       	sbiw	r30, 0x01	; 1
+     cae:	f1 f7       	brne	.-4      	; 0xcac <SCMPLCF_SendMessageCntlPacket+0x2aa>
+     cb0:	00 c0       	rjmp	.+0      	; 0xcb2 <SCMPLCF_SendMessageCntlPacket+0x2b0>
+     cb2:	00 00       	nop
+     cb4:	92 fb       	bst	r25, 2
+     cb6:	ff 27       	eor	r31, r31
+     cb8:	f0 f9       	bld	r31, 0
+     cba:	f9 87       	std	Y+9, r31	; 0x09
+     cbc:	1a 86       	std	Y+10, r1	; 0x0a
+     cbe:	29 85       	ldd	r18, Y+9	; 0x09
+     cc0:	3a 85       	ldd	r19, Y+10	; 0x0a
+     cc2:	36 95       	lsr	r19
+     cc4:	32 2f       	mov	r19, r18
+     cc6:	22 27       	eor	r18, r18
+     cc8:	37 95       	ror	r19
+     cca:	27 95       	ror	r18
+     ccc:	24 60       	ori	r18, 0x04	; 4
+     cce:	23 b9       	out	0x03, r18	; 3
+     cd0:	e9 e2       	ldi	r30, 0x29	; 41
+     cd2:	f2 e0       	ldi	r31, 0x02	; 2
+     cd4:	31 97       	sbiw	r30, 0x01	; 1
+     cd6:	f1 f7       	brne	.-4      	; 0xcd4 <SCMPLCF_SendMessageCntlPacket+0x2d2>
+     cd8:	00 c0       	rjmp	.+0      	; 0xcda <SCMPLCF_SendMessageCntlPacket+0x2d8>
+     cda:	00 00       	nop
+     cdc:	93 fb       	bst	r25, 3
+     cde:	ff 27       	eor	r31, r31
+     ce0:	f0 f9       	bld	r31, 0
+     ce2:	fb 87       	std	Y+11, r31	; 0x0b
+     ce4:	1c 86       	std	Y+12, r1	; 0x0c
+     ce6:	2b 85       	ldd	r18, Y+11	; 0x0b
+     ce8:	3c 85       	ldd	r19, Y+12	; 0x0c
+     cea:	36 95       	lsr	r19
+     cec:	32 2f       	mov	r19, r18
+     cee:	22 27       	eor	r18, r18
+     cf0:	37 95       	ror	r19
+     cf2:	27 95       	ror	r18
+     cf4:	24 60       	ori	r18, 0x04	; 4
+     cf6:	23 b9       	out	0x03, r18	; 3
+     cf8:	e9 e2       	ldi	r30, 0x29	; 41
+     cfa:	f2 e0       	ldi	r31, 0x02	; 2
+     cfc:	31 97       	sbiw	r30, 0x01	; 1
+     cfe:	f1 f7       	brne	.-4      	; 0xcfc <SCMPLCF_SendMessageCntlPacket+0x2fa>
+     d00:	00 c0       	rjmp	.+0      	; 0xd02 <SCMPLCF_SendMessageCntlPacket+0x300>
+     d02:	00 00       	nop
+     d04:	94 fb       	bst	r25, 4
+     d06:	ff 27       	eor	r31, r31
+     d08:	f0 f9       	bld	r31, 0
+     d0a:	fd 87       	std	Y+13, r31	; 0x0d
+     d0c:	1e 86       	std	Y+14, r1	; 0x0e
+     d0e:	2d 85       	ldd	r18, Y+13	; 0x0d
+     d10:	3e 85       	ldd	r19, Y+14	; 0x0e
+     d12:	36 95       	lsr	r19
+     d14:	32 2f       	mov	r19, r18
+     d16:	22 27       	eor	r18, r18
+     d18:	37 95       	ror	r19
+     d1a:	27 95       	ror	r18
+     d1c:	24 60       	ori	r18, 0x04	; 4
+     d1e:	23 b9       	out	0x03, r18	; 3
+     d20:	e9 e2       	ldi	r30, 0x29	; 41
+     d22:	f2 e0       	ldi	r31, 0x02	; 2
+     d24:	31 97       	sbiw	r30, 0x01	; 1
+     d26:	f1 f7       	brne	.-4      	; 0xd24 <SCMPLCF_SendMessageCntlPacket+0x322>
+     d28:	00 c0       	rjmp	.+0      	; 0xd2a <SCMPLCF_SendMessageCntlPacket+0x328>
+     d2a:	00 00       	nop
+     d2c:	95 fb       	bst	r25, 5
+     d2e:	ff 27       	eor	r31, r31
+     d30:	f0 f9       	bld	r31, 0
+     d32:	ff 87       	std	Y+15, r31	; 0x0f
+     d34:	18 8a       	std	Y+16, r1	; 0x10
+     d36:	2f 85       	ldd	r18, Y+15	; 0x0f
+     d38:	38 89       	ldd	r19, Y+16	; 0x10
+     d3a:	36 95       	lsr	r19
+     d3c:	32 2f       	mov	r19, r18
+     d3e:	22 27       	eor	r18, r18
+     d40:	37 95       	ror	r19
+     d42:	27 95       	ror	r18
+     d44:	24 60       	ori	r18, 0x04	; 4
+     d46:	23 b9       	out	0x03, r18	; 3
+     d48:	e9 e2       	ldi	r30, 0x29	; 41
+     d4a:	f2 e0       	ldi	r31, 0x02	; 2
+     d4c:	31 97       	sbiw	r30, 0x01	; 1
+     d4e:	f1 f7       	brne	.-4      	; 0xd4c <SCMPLCF_SendMessageCntlPacket+0x34a>
+     d50:	00 c0       	rjmp	.+0      	; 0xd52 <SCMPLCF_SendMessageCntlPacket+0x350>
+     d52:	00 00       	nop
+     d54:	96 fb       	bst	r25, 6
+     d56:	22 24       	eor	r2, r2
+     d58:	20 f8       	bld	r2, 0
+     d5a:	31 2c       	mov	r3, r1
+     d5c:	91 01       	movw	r18, r2
+     d5e:	36 95       	lsr	r19
+     d60:	32 2f       	mov	r19, r18
+     d62:	22 27       	eor	r18, r18
+     d64:	37 95       	ror	r19
+     d66:	27 95       	ror	r18
+     d68:	24 60       	ori	r18, 0x04	; 4
+     d6a:	23 b9       	out	0x03, r18	; 3
+     d6c:	e9 e2       	ldi	r30, 0x29	; 41
+     d6e:	f2 e0       	ldi	r31, 0x02	; 2
+     d70:	31 97       	sbiw	r30, 0x01	; 1
+     d72:	f1 f7       	brne	.-4      	; 0xd70 <SCMPLCF_SendMessageCntlPacket+0x36e>
+     d74:	00 c0       	rjmp	.+0      	; 0xd76 <SCMPLCF_SendMessageCntlPacket+0x374>
+     d76:	00 00       	nop
+     d78:	99 1f       	adc	r25, r25
+     d7a:	99 27       	eor	r25, r25
+     d7c:	99 1f       	adc	r25, r25
+     d7e:	89 2f       	mov	r24, r25
+     d80:	90 e0       	ldi	r25, 0x00	; 0
+     d82:	96 95       	lsr	r25
+     d84:	98 2f       	mov	r25, r24
+     d86:	88 27       	eor	r24, r24
+     d88:	97 95       	ror	r25
+     d8a:	87 95       	ror	r24
+     d8c:	84 60       	ori	r24, 0x04	; 4
+     d8e:	83 b9       	out	0x03, r24	; 3
+     d90:	89 e2       	ldi	r24, 0x29	; 41
+     d92:	92 e0       	ldi	r25, 0x02	; 2
+     d94:	01 97       	sbiw	r24, 0x01	; 1
+     d96:	f1 f7       	brne	.-4      	; 0xd94 <SCMPLCF_SendMessageCntlPacket+0x392>
+     d98:	00 c0       	rjmp	.+0      	; 0xd9a <SCMPLCF_SendMessageCntlPacket+0x398>
+     d9a:	00 00       	nop
+     d9c:	84 e0       	ldi	r24, 0x04	; 4
+     d9e:	83 b9       	out	0x03, r24	; 3
+     da0:	63 96       	adiw	r28, 0x13	; 19
+     da2:	0f b6       	in	r0, 0x3f	; 63
+     da4:	f8 94       	cli
+     da6:	de bf       	out	0x3e, r29	; 62
+     da8:	0f be       	out	0x3f, r0	; 63
+     daa:	cd bf       	out	0x3d, r28	; 61
+     dac:	df 91       	pop	r29
+     dae:	cf 91       	pop	r28
+     db0:	1f 91       	pop	r17
+     db2:	0f 91       	pop	r16
+     db4:	ff 90       	pop	r15
+     db6:	ef 90       	pop	r14
+     db8:	df 90       	pop	r13
+     dba:	cf 90       	pop	r12
+     dbc:	bf 90       	pop	r11
+     dbe:	af 90       	pop	r10
+     dc0:	9f 90       	pop	r9
+     dc2:	8f 90       	pop	r8
+     dc4:	7f 90       	pop	r7
+     dc6:	6f 90       	pop	r6
+     dc8:	5f 90       	pop	r5
+     dca:	4f 90       	pop	r4
+     dcc:	3f 90       	pop	r3
+     dce:	2f 90       	pop	r2
+     dd0:	08 95       	ret
+
+00000dd2 <SCM485F_ExtMemInit>:
+     dd2:	85 b7       	in	r24, 0x35	; 53
+     dd4:	80 68       	ori	r24, 0x80	; 128
+     dd6:	85 bf       	out	0x35, r24	; 53
+     dd8:	88 e6       	ldi	r24, 0x68	; 104
+     dda:	80 93 6d 00 	sts	0x006D, r24	; 0x80006d <__TEXT_REGION_LENGTH__+0x7e006d>
+     dde:	82 e8       	ldi	r24, 0x82	; 130
+     de0:	80 93 6c 00 	sts	0x006C, r24	; 0x80006c <__TEXT_REGION_LENGTH__+0x7e006c>
+     de4:	08 95       	ret
+
+00000de6 <SCMEMF_WriteExtMemUSMAddr>:
+     de6:	0f 93       	push	r16
+     de8:	1f 93       	push	r17
+     dea:	cf 93       	push	r28
+     dec:	df 93       	push	r29
+     dee:	dc 01       	movw	r26, r24
+     df0:	e0 e0       	ldi	r30, 0x00	; 0
+     df2:	f0 e0       	ldi	r31, 0x00	; 0
+     df4:	86 2f       	mov	r24, r22
+     df6:	90 e0       	ldi	r25, 0x00	; 0
+     df8:	e8 17       	cp	r30, r24
+     dfa:	f9 07       	cpc	r31, r25
+     dfc:	68 f5       	brcc	.+90     	; 0xe58 <SCMEMF_WriteExtMemUSMAddr+0x72>
+     dfe:	11 96       	adiw	r26, 0x01	; 1
+     e00:	4c 91       	ld	r20, X
+     e02:	11 97       	sbiw	r26, 0x01	; 1
+     e04:	50 e0       	ldi	r21, 0x00	; 0
+     e06:	60 e0       	ldi	r22, 0x00	; 0
+     e08:	70 e0       	ldi	r23, 0x00	; 0
+     e0a:	ba 01       	movw	r22, r20
+     e0c:	55 27       	eor	r21, r21
+     e0e:	44 27       	eor	r20, r20
+     e10:	13 96       	adiw	r26, 0x03	; 3
+     e12:	2c 91       	ld	r18, X
+     e14:	13 97       	sbiw	r26, 0x03	; 3
+     e16:	42 2b       	or	r20, r18
+     e18:	12 96       	adiw	r26, 0x02	; 2
+     e1a:	0c 91       	ld	r16, X
+     e1c:	12 97       	sbiw	r26, 0x02	; 2
+     e1e:	10 e0       	ldi	r17, 0x00	; 0
+     e20:	10 2f       	mov	r17, r16
+     e22:	00 27       	eor	r16, r16
+     e24:	01 2e       	mov	r0, r17
+     e26:	00 0c       	add	r0, r0
+     e28:	22 0b       	sbc	r18, r18
+     e2a:	33 0b       	sbc	r19, r19
+     e2c:	40 2b       	or	r20, r16
+     e2e:	51 2b       	or	r21, r17
+     e30:	62 2b       	or	r22, r18
+     e32:	73 2b       	or	r23, r19
+     e34:	ef 01       	movw	r28, r30
+     e36:	cc 0f       	add	r28, r28
+     e38:	dd 1f       	adc	r29, r29
+     e3a:	cc 0f       	add	r28, r28
+     e3c:	dd 1f       	adc	r29, r29
+     e3e:	c7 55       	subi	r28, 0x57	; 87
+     e40:	d9 4f       	sbci	r29, 0xF9	; 249
+     e42:	48 83       	st	Y, r20
+     e44:	59 83       	std	Y+1, r21	; 0x01
+     e46:	6a 83       	std	Y+2, r22	; 0x02
+     e48:	7b 83       	std	Y+3, r23	; 0x03
+     e4a:	ef 01       	movw	r28, r30
+     e4c:	c7 5e       	subi	r28, 0xE7	; 231
+     e4e:	da 4f       	sbci	r29, 0xFA	; 250
+     e50:	18 82       	st	Y, r1
+     e52:	31 96       	adiw	r30, 0x01	; 1
+     e54:	14 96       	adiw	r26, 0x04	; 4
+     e56:	d0 cf       	rjmp	.-96     	; 0xdf8 <SCMEMF_WriteExtMemUSMAddr+0x12>
+     e58:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+     e5c:	84 60       	ori	r24, 0x04	; 4
+     e5e:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+     e62:	df 91       	pop	r29
+     e64:	cf 91       	pop	r28
+     e66:	1f 91       	pop	r17
+     e68:	0f 91       	pop	r16
+     e6a:	08 95       	ret
+
+00000e6c <SCMEMF_WriteExtMemLGMAddr>:
+     e6c:	cf 92       	push	r12
+     e6e:	df 92       	push	r13
+     e70:	ef 92       	push	r14
+     e72:	ff 92       	push	r15
+     e74:	cf 93       	push	r28
+     e76:	df 93       	push	r29
+     e78:	dc 01       	movw	r26, r24
+     e7a:	11 96       	adiw	r26, 0x01	; 1
+     e7c:	e0 e0       	ldi	r30, 0x00	; 0
+     e7e:	f0 e0       	ldi	r31, 0x00	; 0
+     e80:	86 2f       	mov	r24, r22
+     e82:	90 e0       	ldi	r25, 0x00	; 0
+     e84:	e8 17       	cp	r30, r24
+     e86:	f9 07       	cpc	r31, r25
+     e88:	50 f5       	brcc	.+84     	; 0xede <SCMEMF_WriteExtMemLGMAddr+0x72>
+     e8a:	3c 91       	ld	r19, X
+     e8c:	11 96       	adiw	r26, 0x01	; 1
+     e8e:	2c 91       	ld	r18, X
+     e90:	11 97       	sbiw	r26, 0x01	; 1
+     e92:	12 96       	adiw	r26, 0x02	; 2
+     e94:	4c 91       	ld	r20, X
+     e96:	12 97       	sbiw	r26, 0x02	; 2
+     e98:	50 e0       	ldi	r21, 0x00	; 0
+     e9a:	60 e0       	ldi	r22, 0x00	; 0
+     e9c:	70 e0       	ldi	r23, 0x00	; 0
+     e9e:	6a 01       	movw	r12, r20
+     ea0:	7b 01       	movw	r14, r22
+     ea2:	e3 2a       	or	r14, r19
+     ea4:	30 e0       	ldi	r19, 0x00	; 0
+     ea6:	52 2f       	mov	r21, r18
+     ea8:	44 27       	eor	r20, r20
+     eaa:	05 2e       	mov	r0, r21
+     eac:	00 0c       	add	r0, r0
+     eae:	66 0b       	sbc	r22, r22
+     eb0:	77 0b       	sbc	r23, r23
+     eb2:	4c 29       	or	r20, r12
+     eb4:	5d 29       	or	r21, r13
+     eb6:	6e 29       	or	r22, r14
+     eb8:	7f 29       	or	r23, r15
+     eba:	ef 01       	movw	r28, r30
+     ebc:	cc 0f       	add	r28, r28
+     ebe:	dd 1f       	adc	r29, r29
+     ec0:	cc 0f       	add	r28, r28
+     ec2:	dd 1f       	adc	r29, r29
+     ec4:	c7 5f       	subi	r28, 0xF7	; 247
+     ec6:	d9 4f       	sbci	r29, 0xF9	; 249
+     ec8:	48 83       	st	Y, r20
+     eca:	59 83       	std	Y+1, r21	; 0x01
+     ecc:	6a 83       	std	Y+2, r22	; 0x02
+     ece:	7b 83       	std	Y+3, r23	; 0x03
+     ed0:	ef 01       	movw	r28, r30
+     ed2:	cf 50       	subi	r28, 0x0F	; 15
+     ed4:	db 4f       	sbci	r29, 0xFB	; 251
+     ed6:	18 82       	st	Y, r1
+     ed8:	31 96       	adiw	r30, 0x01	; 1
+     eda:	14 96       	adiw	r26, 0x04	; 4
+     edc:	d3 cf       	rjmp	.-90     	; 0xe84 <SCMEMF_WriteExtMemLGMAddr+0x18>
+     ede:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+     ee2:	88 60       	ori	r24, 0x08	; 8
+     ee4:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+     ee8:	df 91       	pop	r29
+     eea:	cf 91       	pop	r28
+     eec:	ff 90       	pop	r15
+     eee:	ef 90       	pop	r14
+     ef0:	df 90       	pop	r13
+     ef2:	cf 90       	pop	r12
+     ef4:	08 95       	ret
+
+00000ef6 <SCMEMF_WriteExtMemUSMCntlID>:
+     ef6:	e5 e0       	ldi	r30, 0x05	; 5
+     ef8:	f1 e1       	ldi	r31, 0x11	; 17
+     efa:	20 e0       	ldi	r18, 0x00	; 0
+     efc:	30 e0       	ldi	r19, 0x00	; 0
+     efe:	90 e0       	ldi	r25, 0x00	; 0
+     f00:	28 17       	cp	r18, r24
+     f02:	39 07       	cpc	r19, r25
+     f04:	38 f4       	brcc	.+14     	; 0xf14 <SCMEMF_WriteExtMemUSMCntlID+0x1e>
+     f06:	41 e0       	ldi	r20, 0x01	; 1
+     f08:	42 0f       	add	r20, r18
+     f0a:	40 83       	st	Z, r20
+     f0c:	2f 5f       	subi	r18, 0xFF	; 255
+     f0e:	3f 4f       	sbci	r19, 0xFF	; 255
+     f10:	3a 96       	adiw	r30, 0x0a	; 10
+     f12:	f6 cf       	rjmp	.-20     	; 0xf00 <SCMEMF_WriteExtMemUSMCntlID+0xa>
+     f14:	08 95       	ret
+
+00000f16 <SCMEMF_WriteExtMemUSMOPMode>:
+     f16:	01 96       	adiw	r24, 0x01	; 1
+     f18:	20 e0       	ldi	r18, 0x00	; 0
+     f1a:	30 e0       	ldi	r19, 0x00	; 0
+     f1c:	70 e0       	ldi	r23, 0x00	; 0
+     f1e:	26 17       	cp	r18, r22
+     f20:	37 07       	cpc	r19, r23
+     f22:	50 f4       	brcc	.+20     	; 0xf38 <SCMEMF_WriteExtMemUSMOPMode+0x22>
+     f24:	fc 01       	movw	r30, r24
+     f26:	40 81       	ld	r20, Z
+     f28:	f9 01       	movw	r30, r18
+     f2a:	e7 5e       	subi	r30, 0xE7	; 231
+     f2c:	fa 4f       	sbci	r31, 0xFA	; 250
+     f2e:	40 83       	st	Z, r20
+     f30:	2f 5f       	subi	r18, 0xFF	; 255
+     f32:	3f 4f       	sbci	r19, 0xFF	; 255
+     f34:	02 96       	adiw	r24, 0x02	; 2
+     f36:	f3 cf       	rjmp	.-26     	; 0xf1e <SCMEMF_WriteExtMemUSMOPMode+0x8>
+     f38:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+     f3c:	80 62       	ori	r24, 0x20	; 32
+     f3e:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+     f42:	08 95       	ret
+
+00000f44 <SCMEMF_WriteExtMemLGMOPMode>:
+     f44:	01 96       	adiw	r24, 0x01	; 1
+     f46:	20 e0       	ldi	r18, 0x00	; 0
+     f48:	30 e0       	ldi	r19, 0x00	; 0
+     f4a:	70 e0       	ldi	r23, 0x00	; 0
+     f4c:	26 17       	cp	r18, r22
+     f4e:	37 07       	cpc	r19, r23
+     f50:	50 f4       	brcc	.+20     	; 0xf66 <SCMEMF_WriteExtMemLGMOPMode+0x22>
+     f52:	fc 01       	movw	r30, r24
+     f54:	40 81       	ld	r20, Z
+     f56:	f9 01       	movw	r30, r18
+     f58:	ef 50       	subi	r30, 0x0F	; 15
+     f5a:	fb 4f       	sbci	r31, 0xFB	; 251
+     f5c:	40 83       	st	Z, r20
+     f5e:	2f 5f       	subi	r18, 0xFF	; 255
+     f60:	3f 4f       	sbci	r19, 0xFF	; 255
+     f62:	02 96       	adiw	r24, 0x02	; 2
+     f64:	f3 cf       	rjmp	.-26     	; 0xf4c <SCMEMF_WriteExtMemLGMOPMode+0x8>
+     f66:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+     f6a:	80 64       	ori	r24, 0x40	; 64
+     f6c:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+     f70:	08 95       	ret
+
+00000f72 <SCMEMF_WriteExtMemUSMParam>:
+     f72:	cf 92       	push	r12
+     f74:	df 92       	push	r13
+     f76:	ff 92       	push	r15
+     f78:	0f 93       	push	r16
+     f7a:	1f 93       	push	r17
+     f7c:	cf 93       	push	r28
+     f7e:	df 93       	push	r29
+     f80:	a0 e0       	ldi	r26, 0x00	; 0
+     f82:	b0 e0       	ldi	r27, 0x00	; 0
+     f84:	c1 2c       	mov	r12, r1
+     f86:	d1 2c       	mov	r13, r1
+     f88:	40 e0       	ldi	r20, 0x00	; 0
+     f8a:	50 e0       	ldi	r21, 0x00	; 0
+     f8c:	70 e0       	ldi	r23, 0x00	; 0
+     f8e:	46 17       	cp	r20, r22
+     f90:	57 07       	cpc	r21, r23
+     f92:	e0 f4       	brcc	.+56     	; 0xfcc <SCMEMF_WriteExtMemUSMParam+0x5a>
+     f94:	ed 01       	movw	r28, r26
+     f96:	21 e0       	ldi	r18, 0x01	; 1
+     f98:	30 e0       	ldi	r19, 0x00	; 0
+     f9a:	86 01       	movw	r16, r12
+     f9c:	02 0f       	add	r16, r18
+     f9e:	13 1f       	adc	r17, r19
+     fa0:	08 0f       	add	r16, r24
+     fa2:	19 1f       	adc	r17, r25
+     fa4:	f8 01       	movw	r30, r16
+     fa6:	f0 80       	ld	r15, Z
+     fa8:	8e 01       	movw	r16, r28
+     faa:	0f 5e       	subi	r16, 0xEF	; 239
+     fac:	1c 4f       	sbci	r17, 0xFC	; 252
+     fae:	f8 01       	movw	r30, r16
+     fb0:	f0 82       	st	Z, r15
+     fb2:	2f 5f       	subi	r18, 0xFF	; 255
+     fb4:	3f 4f       	sbci	r19, 0xFF	; 255
+     fb6:	21 96       	adiw	r28, 0x01	; 1
+     fb8:	25 30       	cpi	r18, 0x05	; 5
+     fba:	31 05       	cpc	r19, r1
+     fbc:	71 f7       	brne	.-36     	; 0xf9a <SCMEMF_WriteExtMemUSMParam+0x28>
+     fbe:	f5 e0       	ldi	r31, 0x05	; 5
+     fc0:	cf 0e       	add	r12, r31
+     fc2:	d1 1c       	adc	r13, r1
+     fc4:	4f 5f       	subi	r20, 0xFF	; 255
+     fc6:	5f 4f       	sbci	r21, 0xFF	; 255
+     fc8:	14 96       	adiw	r26, 0x04	; 4
+     fca:	e1 cf       	rjmp	.-62     	; 0xf8e <SCMEMF_WriteExtMemUSMParam+0x1c>
+     fcc:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+     fd0:	80 61       	ori	r24, 0x10	; 16
+     fd2:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+     fd6:	df 91       	pop	r29
+     fd8:	cf 91       	pop	r28
+     fda:	1f 91       	pop	r17
+     fdc:	0f 91       	pop	r16
+     fde:	ff 90       	pop	r15
+     fe0:	df 90       	pop	r13
+     fe2:	cf 90       	pop	r12
+     fe4:	08 95       	ret
+
+00000fe6 <SCMEMF_WriteExtMemUSMtoLGM>:
+     fe6:	1f 93       	push	r17
+     fe8:	cf 93       	push	r28
+     fea:	df 93       	push	r29
+     fec:	ec 01       	movw	r28, r24
+     fee:	16 2f       	mov	r17, r22
+     ff0:	21 da       	rcall	.-3006   	; 0x434 <SCMPLCF_lgmTotalCntBuffInit>
+     ff2:	fe 01       	movw	r30, r28
+     ff4:	31 96       	adiw	r30, 0x01	; 1
+     ff6:	80 e0       	ldi	r24, 0x00	; 0
+     ff8:	90 e0       	ldi	r25, 0x00	; 0
+     ffa:	61 2f       	mov	r22, r17
+     ffc:	70 e0       	ldi	r23, 0x00	; 0
+     ffe:	86 17       	cp	r24, r22
+    1000:	97 07       	cpc	r25, r23
+    1002:	80 f4       	brcc	.+32     	; 0x1024 <SCMEMF_WriteExtMemUSMtoLGM+0x3e>
+    1004:	20 81       	ld	r18, Z
+    1006:	20 58       	subi	r18, 0x80	; 128
+    1008:	dc 01       	movw	r26, r24
+    100a:	af 56       	subi	r26, 0x6F	; 111
+    100c:	ba 4f       	sbci	r27, 0xFA	; 250
+    100e:	2c 93       	st	X, r18
+    1010:	a0 81       	ld	r26, Z
+    1012:	b0 e0       	ldi	r27, 0x00	; 0
+    1014:	a5 5a       	subi	r26, 0xA5	; 165
+    1016:	b2 4f       	sbci	r27, 0xF2	; 242
+    1018:	2c 91       	ld	r18, X
+    101a:	2f 5f       	subi	r18, 0xFF	; 255
+    101c:	2c 93       	st	X, r18
+    101e:	01 96       	adiw	r24, 0x01	; 1
+    1020:	32 96       	adiw	r30, 0x02	; 2
+    1022:	ed cf       	rjmp	.-38     	; 0xffe <SCMEMF_WriteExtMemUSMtoLGM+0x18>
+    1024:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    1028:	80 68       	ori	r24, 0x80	; 128
+    102a:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    102e:	df 91       	pop	r29
+    1030:	cf 91       	pop	r28
+    1032:	1f 91       	pop	r17
+    1034:	08 95       	ret
+
+00001036 <main>:
+    1036:	ff 92       	push	r15
+    1038:	0f 93       	push	r16
+    103a:	1f 93       	push	r17
+    103c:	cf 93       	push	r28
+    103e:	df 93       	push	r29
+    1040:	64 d8       	rcall	.-3896   	; 0x10a <SCMTF_PortInit>
+    1042:	c7 de       	rcall	.-626    	; 0xdd2 <SCM485F_ExtMemInit>
+    1044:	76 d8       	rcall	.-3860   	; 0x132 <SCMTF_ReadDipSwitchValueMYID>
+    1046:	80 93 97 08 	sts	0x0897, r24	; 0x800897 <G_idDipValue>
+    104a:	7b d8       	rcall	.-3850   	; 0x142 <SCMTF_ReadDipSwitchValueMode>
+    104c:	80 93 9c 08 	sts	0x089C, r24	; 0x80089c <G_cntlmodeDipValue>
+    1050:	7f d8       	rcall	.-3842   	; 0x150 <SCMTF_ReadDipSwitchValueTest>
+    1052:	80 93 1b 09 	sts	0x091B, r24	; 0x80091b <G_testmodeDipValue>
+    1056:	10 92 8b 08 	sts	0x088B, r1	; 0x80088b <G_SULCR>
+    105a:	80 91 9c 08 	lds	r24, 0x089C	; 0x80089c <G_cntlmodeDipValue>
+    105e:	81 11       	cpse	r24, r1
+    1060:	15 c0       	rjmp	.+42     	; 0x108c <main+0x56>
+    1062:	80 d8       	rcall	.-3840   	; 0x164 <SCM485F_USART0Init>
+    1064:	89 d8       	rcall	.-3822   	; 0x178 <SCM485F_RxCompleteTimerInit>
+    1066:	10 92 b0 0d 	sts	0x0DB0, r1	; 0x800db0 <G_rxBuf485+0x1e3>
+    106a:	10 92 af 0d 	sts	0x0DAF, r1	; 0x800daf <G_rxBuf485+0x1e2>
+    106e:	10 92 ae 0d 	sts	0x0DAE, r1	; 0x800dae <G_rxBuf485+0x1e1>
+    1072:	10 92 ad 0d 	sts	0x0DAD, r1	; 0x800dad <G_rxBuf485+0x1e0>
+    1076:	10 92 9f 0b 	sts	0x0B9F, r1	; 0x800b9f <G_txBuf485+0x1e3>
+    107a:	10 92 9e 0b 	sts	0x0B9E, r1	; 0x800b9e <G_txBuf485+0x1e2>
+    107e:	10 92 9d 0b 	sts	0x0B9D, r1	; 0x800b9d <G_txBuf485+0x1e1>
+    1082:	10 92 9c 0b 	sts	0x0B9C, r1	; 0x800b9c <G_txBuf485+0x1e0>
+    1086:	a1 d9       	rcall	.-3262   	; 0x3ca <SCMPLCF_StatusUSMBuffInit>
+    1088:	9a d9       	rcall	.-3276   	; 0x3be <SCMPLCF_PLCTxTimerInit>
+    108a:	10 c0       	rjmp	.+32     	; 0x10ac <main+0x76>
+    108c:	84 e6       	ldi	r24, 0x64	; 100
+    108e:	80 93 96 08 	sts	0x0896, r24	; 0x800896 <G_totalUSMCnt>
+    1092:	c3 e0       	ldi	r28, 0x03	; 3
+    1094:	c0 93 8b 08 	sts	0x088B, r28	; 0x80088b <G_SULCR>
+    1098:	81 e0       	ldi	r24, 0x01	; 1
+    109a:	80 93 8e 08 	sts	0x088E, r24	; 0x80088e <G_usmSensingF>
+    109e:	85 e0       	ldi	r24, 0x05	; 5
+    10a0:	80 93 98 08 	sts	0x0898, r24	; 0x800898 <G_txCntlBufPLC>
+    10a4:	84 e6       	ldi	r24, 0x64	; 100
+    10a6:	27 df       	rcall	.-434    	; 0xef6 <SCMEMF_WriteExtMemUSMCntlID>
+    10a8:	8a d9       	rcall	.-3308   	; 0x3be <SCMPLCF_PLCTxTimerInit>
+    10aa:	c5 bd       	out	0x25, r28	; 37
+    10ac:	78 94       	sei
+    10ae:	ff 24       	eor	r15, r15
+    10b0:	f3 94       	inc	r15
+    10b2:	54 d8       	rcall	.-3928   	; 0x15c <SCMTF_CheckOverCurrent>
+    10b4:	81 11       	cpse	r24, r1
+    10b6:	0a c0       	rjmp	.+20     	; 0x10cc <main+0x96>
+    10b8:	87 ec       	ldi	r24, 0xC7	; 199
+    10ba:	90 e0       	ldi	r25, 0x00	; 0
+    10bc:	01 97       	sbiw	r24, 0x01	; 1
+    10be:	f1 f7       	brne	.-4      	; 0x10bc <main+0x86>
+    10c0:	00 c0       	rjmp	.+0      	; 0x10c2 <main+0x8c>
+    10c2:	00 00       	nop
+    10c4:	4b d8       	rcall	.-3946   	; 0x15c <SCMTF_CheckOverCurrent>
+    10c6:	88 23       	and	r24, r24
+    10c8:	09 f4       	brne	.+2      	; 0x10cc <main+0x96>
+    10ca:	6d c1       	rjmp	.+730    	; 0x13a6 <__stack+0x2a7>
+    10cc:	c0 91 92 08 	lds	r28, 0x0892	; 0x800892 <G_RSCOMR>
+    10d0:	d0 91 93 08 	lds	r29, 0x0893	; 0x800893 <G_RSCOMR+0x1>
+    10d4:	1d 2f       	mov	r17, r29
+    10d6:	dd 23       	and	r29, r29
+    10d8:	09 f4       	brne	.+2      	; 0x10dc <main+0xa6>
+    10da:	f0 c0       	rjmp	.+480    	; 0x12bc <__stack+0x1bd>
+    10dc:	cd 2f       	mov	r28, r29
+    10de:	d0 ff       	sbrs	r29, 0
+    10e0:	2b c0       	rjmp	.+86     	; 0x1138 <__stack+0x39>
+    10e2:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    10e6:	8e 7f       	andi	r24, 0xFE	; 254
+    10e8:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    10ec:	6e d9       	rcall	.-3364   	; 0x3ca <SCMPLCF_StatusUSMBuffInit>
+    10ee:	60 91 0c 0e 	lds	r22, 0x0E0C	; 0x800e0c <G_485Packet+0x6>
+    10f2:	70 91 0d 0e 	lds	r23, 0x0E0D	; 0x800e0d <G_485Packet+0x7>
+    10f6:	76 95       	lsr	r23
+    10f8:	67 95       	ror	r22
+    10fa:	76 95       	lsr	r23
+    10fc:	67 95       	ror	r22
+    10fe:	60 93 96 08 	sts	0x0896, r22	; 0x800896 <G_totalUSMCnt>
+    1102:	60 93 44 09 	sts	0x0944, r22	; 0x800944 <G_StatusBufUSMtoSCM>
+    1106:	8e e0       	ldi	r24, 0x0E	; 14
+    1108:	9e e0       	ldi	r25, 0x0E	; 14
+    110a:	6d de       	rcall	.-806    	; 0xde6 <SCMEMF_WriteExtMemUSMAddr>
+    110c:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1110:	40 e0       	ldi	r20, 0x00	; 0
+    1112:	50 e0       	ldi	r21, 0x00	; 0
+    1114:	60 e0       	ldi	r22, 0x00	; 0
+    1116:	70 e0       	ldi	r23, 0x00	; 0
+    1118:	81 11       	cpse	r24, r1
+    111a:	02 c0       	rjmp	.+4      	; 0x1120 <__stack+0x21>
+    111c:	82 e4       	ldi	r24, 0x42	; 66
+    111e:	01 c0       	rjmp	.+2      	; 0x1122 <__stack+0x23>
+    1120:	81 e3       	ldi	r24, 0x31	; 49
+    1122:	01 d9       	rcall	.-3582   	; 0x326 <SCM485F_makeTxPacket>
+    1124:	10 92 90 08 	sts	0x0890, r1	; 0x800890 <G_plcUSMCurrentIndex>
+    1128:	10 92 8e 08 	sts	0x088E, r1	; 0x80088e <G_usmSensingF>
+    112c:	10 92 10 03 	sts	0x0310, r1	; 0x800310 <__data_end>
+    1130:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    1134:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    1138:	c1 ff       	sbrs	r28, 1
+    113a:	27 c0       	rjmp	.+78     	; 0x118a <__stack+0x8b>
+    113c:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    1140:	8d 7f       	andi	r24, 0xFD	; 253
+    1142:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    1146:	58 d9       	rcall	.-3408   	; 0x3f8 <SCMPLCF_StatusLGMBuffInit>
+    1148:	60 91 0c 0e 	lds	r22, 0x0E0C	; 0x800e0c <G_485Packet+0x6>
+    114c:	70 91 0d 0e 	lds	r23, 0x0E0D	; 0x800e0d <G_485Packet+0x7>
+    1150:	76 95       	lsr	r23
+    1152:	67 95       	ror	r22
+    1154:	76 95       	lsr	r23
+    1156:	67 95       	ror	r22
+    1158:	60 93 95 08 	sts	0x0895, r22	; 0x800895 <G_totalLGMCnt>
+    115c:	60 93 1c 09 	sts	0x091C, r22	; 0x80091c <G_StatusBufLGMtoSCM>
+    1160:	8e e0       	ldi	r24, 0x0E	; 14
+    1162:	9e e0       	ldi	r25, 0x0E	; 14
+    1164:	83 de       	rcall	.-762    	; 0xe6c <SCMEMF_WriteExtMemLGMAddr>
+    1166:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    116a:	40 e0       	ldi	r20, 0x00	; 0
+    116c:	50 e0       	ldi	r21, 0x00	; 0
+    116e:	60 e0       	ldi	r22, 0x00	; 0
+    1170:	70 e0       	ldi	r23, 0x00	; 0
+    1172:	81 11       	cpse	r24, r1
+    1174:	02 c0       	rjmp	.+4      	; 0x117a <__stack+0x7b>
+    1176:	82 e4       	ldi	r24, 0x42	; 66
+    1178:	01 c0       	rjmp	.+2      	; 0x117c <__stack+0x7d>
+    117a:	81 e3       	ldi	r24, 0x31	; 49
+    117c:	d4 d8       	rcall	.-3672   	; 0x326 <SCM485F_makeTxPacket>
+    117e:	10 92 8f 08 	sts	0x088F, r1	; 0x80088f <G_plcLGMCurrentIndex>
+    1182:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    1186:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    118a:	c2 ff       	sbrs	r28, 2
+    118c:	15 c0       	rjmp	.+42     	; 0x11b8 <__stack+0xb9>
+    118e:	60 91 96 08 	lds	r22, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1192:	8e e0       	ldi	r24, 0x0E	; 14
+    1194:	9e e0       	ldi	r25, 0x0E	; 14
+    1196:	27 df       	rcall	.-434    	; 0xfe6 <SCMEMF_WriteExtMemUSMtoLGM>
+    1198:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    119c:	40 e0       	ldi	r20, 0x00	; 0
+    119e:	50 e0       	ldi	r21, 0x00	; 0
+    11a0:	60 e0       	ldi	r22, 0x00	; 0
+    11a2:	70 e0       	ldi	r23, 0x00	; 0
+    11a4:	81 11       	cpse	r24, r1
+    11a6:	02 c0       	rjmp	.+4      	; 0x11ac <__stack+0xad>
+    11a8:	82 e4       	ldi	r24, 0x42	; 66
+    11aa:	01 c0       	rjmp	.+2      	; 0x11ae <__stack+0xaf>
+    11ac:	81 e3       	ldi	r24, 0x31	; 49
+    11ae:	bb d8       	rcall	.-3722   	; 0x326 <SCM485F_makeTxPacket>
+    11b0:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    11b4:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    11b8:	c3 ff       	sbrs	r28, 3
+    11ba:	18 c0       	rjmp	.+48     	; 0x11ec <__stack+0xed>
+    11bc:	f0 92 8d 08 	sts	0x088D, r15	; 0x80088d <G_usmOPModeOnF>
+    11c0:	60 91 96 08 	lds	r22, 0x0896	; 0x800896 <G_totalUSMCnt>
+    11c4:	8e e0       	ldi	r24, 0x0E	; 14
+    11c6:	9e e0       	ldi	r25, 0x0E	; 14
+    11c8:	a6 de       	rcall	.-692    	; 0xf16 <SCMEMF_WriteExtMemUSMOPMode>
+    11ca:	ff d8       	rcall	.-3586   	; 0x3ca <SCMPLCF_StatusUSMBuffInit>
+    11cc:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    11d0:	40 e0       	ldi	r20, 0x00	; 0
+    11d2:	50 e0       	ldi	r21, 0x00	; 0
+    11d4:	60 e0       	ldi	r22, 0x00	; 0
+    11d6:	70 e0       	ldi	r23, 0x00	; 0
+    11d8:	81 11       	cpse	r24, r1
+    11da:	02 c0       	rjmp	.+4      	; 0x11e0 <__stack+0xe1>
+    11dc:	82 e4       	ldi	r24, 0x42	; 66
+    11de:	01 c0       	rjmp	.+2      	; 0x11e2 <__stack+0xe3>
+    11e0:	81 e3       	ldi	r24, 0x31	; 49
+    11e2:	a1 d8       	rcall	.-3774   	; 0x326 <SCM485F_makeTxPacket>
+    11e4:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    11e8:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    11ec:	c4 ff       	sbrs	r28, 4
+    11ee:	18 c0       	rjmp	.+48     	; 0x1220 <__stack+0x121>
+    11f0:	f0 92 8c 08 	sts	0x088C, r15	; 0x80088c <G_lgmOPModeOnF>
+    11f4:	60 91 96 08 	lds	r22, 0x0896	; 0x800896 <G_totalUSMCnt>
+    11f8:	8e e0       	ldi	r24, 0x0E	; 14
+    11fa:	9e e0       	ldi	r25, 0x0E	; 14
+    11fc:	a3 de       	rcall	.-698    	; 0xf44 <SCMEMF_WriteExtMemLGMOPMode>
+    11fe:	fc d8       	rcall	.-3592   	; 0x3f8 <SCMPLCF_StatusLGMBuffInit>
+    1200:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1204:	40 e0       	ldi	r20, 0x00	; 0
+    1206:	50 e0       	ldi	r21, 0x00	; 0
+    1208:	60 e0       	ldi	r22, 0x00	; 0
+    120a:	70 e0       	ldi	r23, 0x00	; 0
+    120c:	81 11       	cpse	r24, r1
+    120e:	02 c0       	rjmp	.+4      	; 0x1214 <__stack+0x115>
+    1210:	82 e4       	ldi	r24, 0x42	; 66
+    1212:	01 c0       	rjmp	.+2      	; 0x1216 <__stack+0x117>
+    1214:	81 e3       	ldi	r24, 0x31	; 49
+    1216:	87 d8       	rcall	.-3826   	; 0x326 <SCM485F_makeTxPacket>
+    1218:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    121c:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    1220:	c5 ff       	sbrs	r28, 5
+    1222:	1d c0       	rjmp	.+58     	; 0x125e <__stack+0x15f>
+    1224:	19 be       	out	0x39, r1	; 57
+    1226:	10 92 8e 08 	sts	0x088E, r1	; 0x80088e <G_usmSensingF>
+    122a:	60 91 96 08 	lds	r22, 0x0896	; 0x800896 <G_totalUSMCnt>
+    122e:	8e e0       	ldi	r24, 0x0E	; 14
+    1230:	9e e0       	ldi	r25, 0x0E	; 14
+    1232:	9f de       	rcall	.-706    	; 0xf72 <SCMEMF_WriteExtMemUSMParam>
+    1234:	10 92 8a 08 	sts	0x088A, r1	; 0x80088a <ParamCnt>
+    1238:	10 92 90 08 	sts	0x0890, r1	; 0x800890 <G_plcUSMCurrentIndex>
+    123c:	c6 d8       	rcall	.-3700   	; 0x3ca <SCMPLCF_StatusUSMBuffInit>
+    123e:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1242:	40 e0       	ldi	r20, 0x00	; 0
+    1244:	50 e0       	ldi	r21, 0x00	; 0
+    1246:	60 e0       	ldi	r22, 0x00	; 0
+    1248:	70 e0       	ldi	r23, 0x00	; 0
+    124a:	81 11       	cpse	r24, r1
+    124c:	02 c0       	rjmp	.+4      	; 0x1252 <__stack+0x153>
+    124e:	82 e4       	ldi	r24, 0x42	; 66
+    1250:	01 c0       	rjmp	.+2      	; 0x1254 <__stack+0x155>
+    1252:	81 e3       	ldi	r24, 0x31	; 49
+    1254:	68 d8       	rcall	.-3888   	; 0x326 <SCM485F_makeTxPacket>
+    1256:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    125a:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    125e:	c6 ff       	sbrs	r28, 6
+    1260:	13 c0       	rjmp	.+38     	; 0x1288 <__stack+0x189>
+    1262:	10 92 8d 08 	sts	0x088D, r1	; 0x80088d <G_usmOPModeOnF>
+    1266:	b1 d8       	rcall	.-3742   	; 0x3ca <SCMPLCF_StatusUSMBuffInit>
+    1268:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    126c:	40 e0       	ldi	r20, 0x00	; 0
+    126e:	50 e0       	ldi	r21, 0x00	; 0
+    1270:	60 e0       	ldi	r22, 0x00	; 0
+    1272:	70 e0       	ldi	r23, 0x00	; 0
+    1274:	81 11       	cpse	r24, r1
+    1276:	02 c0       	rjmp	.+4      	; 0x127c <__stack+0x17d>
+    1278:	82 e4       	ldi	r24, 0x42	; 66
+    127a:	01 c0       	rjmp	.+2      	; 0x127e <__stack+0x17f>
+    127c:	81 e3       	ldi	r24, 0x31	; 49
+    127e:	53 d8       	rcall	.-3930   	; 0x326 <SCM485F_makeTxPacket>
+    1280:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    1284:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    1288:	17 ff       	sbrs	r17, 7
+    128a:	13 cf       	rjmp	.-474    	; 0x10b2 <main+0x7c>
+    128c:	10 92 8c 08 	sts	0x088C, r1	; 0x80088c <G_lgmOPModeOnF>
+    1290:	b3 d8       	rcall	.-3738   	; 0x3f8 <SCMPLCF_StatusLGMBuffInit>
+    1292:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1296:	81 11       	cpse	r24, r1
+    1298:	06 c0       	rjmp	.+12     	; 0x12a6 <__stack+0x1a7>
+    129a:	40 e0       	ldi	r20, 0x00	; 0
+    129c:	50 e0       	ldi	r21, 0x00	; 0
+    129e:	60 e0       	ldi	r22, 0x00	; 0
+    12a0:	70 e0       	ldi	r23, 0x00	; 0
+    12a2:	82 e4       	ldi	r24, 0x42	; 66
+    12a4:	05 c0       	rjmp	.+10     	; 0x12b0 <__stack+0x1b1>
+    12a6:	40 e0       	ldi	r20, 0x00	; 0
+    12a8:	50 e0       	ldi	r21, 0x00	; 0
+    12aa:	60 e0       	ldi	r22, 0x00	; 0
+    12ac:	70 e0       	ldi	r23, 0x00	; 0
+    12ae:	81 e3       	ldi	r24, 0x31	; 49
+    12b0:	3a d8       	rcall	.-3980   	; 0x326 <SCM485F_makeTxPacket>
+    12b2:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    12b6:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    12ba:	fb ce       	rjmp	.-522    	; 0x10b2 <main+0x7c>
+    12bc:	cc 23       	and	r28, r28
+    12be:	09 f4       	brne	.+2      	; 0x12c2 <__stack+0x1c3>
+    12c0:	f8 ce       	rjmp	.-528    	; 0x10b2 <main+0x7c>
+    12c2:	8e 01       	movw	r16, r28
+    12c4:	11 27       	eor	r17, r17
+    12c6:	c0 ff       	sbrs	r28, 0
+    12c8:	19 c0       	rjmp	.+50     	; 0x12fc <__stack+0x1fd>
+    12ca:	60 91 96 08 	lds	r22, 0x0896	; 0x800896 <G_totalUSMCnt>
+    12ce:	61 11       	cpse	r22, r1
+    12d0:	06 c0       	rjmp	.+12     	; 0x12de <__stack+0x1df>
+    12d2:	40 e0       	ldi	r20, 0x00	; 0
+    12d4:	50 e0       	ldi	r21, 0x00	; 0
+    12d6:	60 e0       	ldi	r22, 0x00	; 0
+    12d8:	70 e0       	ldi	r23, 0x00	; 0
+    12da:	82 e4       	ldi	r24, 0x42	; 66
+    12dc:	0a c0       	rjmp	.+20     	; 0x12f2 <__stack+0x1f3>
+    12de:	70 e0       	ldi	r23, 0x00	; 0
+    12e0:	6f 5f       	subi	r22, 0xFF	; 255
+    12e2:	7f 4f       	sbci	r23, 0xFF	; 255
+    12e4:	75 95       	asr	r23
+    12e6:	67 95       	ror	r22
+    12e8:	6f 5f       	subi	r22, 0xFF	; 255
+    12ea:	7f 4f       	sbci	r23, 0xFF	; 255
+    12ec:	44 e4       	ldi	r20, 0x44	; 68
+    12ee:	59 e0       	ldi	r21, 0x09	; 9
+    12f0:	81 e1       	ldi	r24, 0x11	; 17
+    12f2:	19 d8       	rcall	.-4046   	; 0x326 <SCM485F_makeTxPacket>
+    12f4:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    12f8:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    12fc:	01 ff       	sbrs	r16, 1
+    12fe:	1c c0       	rjmp	.+56     	; 0x1338 <__stack+0x239>
+    1300:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1304:	81 11       	cpse	r24, r1
+    1306:	06 c0       	rjmp	.+12     	; 0x1314 <__stack+0x215>
+    1308:	40 e0       	ldi	r20, 0x00	; 0
+    130a:	50 e0       	ldi	r21, 0x00	; 0
+    130c:	60 e0       	ldi	r22, 0x00	; 0
+    130e:	70 e0       	ldi	r23, 0x00	; 0
+    1310:	82 e4       	ldi	r24, 0x42	; 66
+    1312:	0c c0       	rjmp	.+24     	; 0x132c <__stack+0x22d>
+    1314:	60 91 95 08 	lds	r22, 0x0895	; 0x800895 <G_totalLGMCnt>
+    1318:	70 e0       	ldi	r23, 0x00	; 0
+    131a:	6f 5f       	subi	r22, 0xFF	; 255
+    131c:	7f 4f       	sbci	r23, 0xFF	; 255
+    131e:	75 95       	asr	r23
+    1320:	67 95       	ror	r22
+    1322:	6f 5f       	subi	r22, 0xFF	; 255
+    1324:	7f 4f       	sbci	r23, 0xFF	; 255
+    1326:	4c e1       	ldi	r20, 0x1C	; 28
+    1328:	59 e0       	ldi	r21, 0x09	; 9
+    132a:	82 e1       	ldi	r24, 0x12	; 18
+    132c:	0e 94 93 01 	call	0x326	; 0x326 <SCM485F_makeTxPacket>
+    1330:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    1334:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    1338:	02 ff       	sbrs	r16, 2
+    133a:	13 c0       	rjmp	.+38     	; 0x1362 <__stack+0x263>
+    133c:	f0 92 8e 08 	sts	0x088E, r15	; 0x80088e <G_usmSensingF>
+    1340:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1344:	40 e0       	ldi	r20, 0x00	; 0
+    1346:	50 e0       	ldi	r21, 0x00	; 0
+    1348:	60 e0       	ldi	r22, 0x00	; 0
+    134a:	70 e0       	ldi	r23, 0x00	; 0
+    134c:	81 11       	cpse	r24, r1
+    134e:	02 c0       	rjmp	.+4      	; 0x1354 <__stack+0x255>
+    1350:	82 e4       	ldi	r24, 0x42	; 66
+    1352:	01 c0       	rjmp	.+2      	; 0x1356 <__stack+0x257>
+    1354:	81 e3       	ldi	r24, 0x31	; 49
+    1356:	0e 94 93 01 	call	0x326	; 0x326 <SCM485F_makeTxPacket>
+    135a:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    135e:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    1362:	03 ff       	sbrs	r16, 3
+    1364:	13 c0       	rjmp	.+38     	; 0x138c <__stack+0x28d>
+    1366:	10 92 8e 08 	sts	0x088E, r1	; 0x80088e <G_usmSensingF>
+    136a:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    136e:	40 e0       	ldi	r20, 0x00	; 0
+    1370:	50 e0       	ldi	r21, 0x00	; 0
+    1372:	60 e0       	ldi	r22, 0x00	; 0
+    1374:	70 e0       	ldi	r23, 0x00	; 0
+    1376:	81 11       	cpse	r24, r1
+    1378:	02 c0       	rjmp	.+4      	; 0x137e <__stack+0x27f>
+    137a:	82 e4       	ldi	r24, 0x42	; 66
+    137c:	01 c0       	rjmp	.+2      	; 0x1380 <__stack+0x281>
+    137e:	81 e3       	ldi	r24, 0x31	; 49
+    1380:	0e 94 93 01 	call	0x326	; 0x326 <SCM485F_makeTxPacket>
+    1384:	10 92 93 08 	sts	0x0893, r1	; 0x800893 <G_RSCOMR+0x1>
+    1388:	10 92 92 08 	sts	0x0892, r1	; 0x800892 <G_RSCOMR>
+    138c:	c7 ff       	sbrs	r28, 7
+    138e:	91 ce       	rjmp	.-734    	; 0x10b2 <main+0x7c>
+    1390:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1394:	88 23       	and	r24, r24
+    1396:	09 f4       	brne	.+2      	; 0x139a <__stack+0x29b>
+    1398:	80 cf       	rjmp	.-256    	; 0x129a <__stack+0x19b>
+    139a:	40 e0       	ldi	r20, 0x00	; 0
+    139c:	50 e0       	ldi	r21, 0x00	; 0
+    139e:	60 e0       	ldi	r22, 0x00	; 0
+    13a0:	70 e0       	ldi	r23, 0x00	; 0
+    13a2:	81 e4       	ldi	r24, 0x41	; 65
+    13a4:	85 cf       	rjmp	.-246    	; 0x12b0 <__stack+0x1b1>
+    13a6:	80 e1       	ldi	r24, 0x10	; 16
+    13a8:	83 b9       	out	0x03, r24	; 3
+    13aa:	c4 98       	cbi	0x18, 4	; 24
+    13ac:	80 e0       	ldi	r24, 0x00	; 0
+    13ae:	90 e0       	ldi	r25, 0x00	; 0
+    13b0:	df 91       	pop	r29
+    13b2:	cf 91       	pop	r28
+    13b4:	1f 91       	pop	r17
+    13b6:	0f 91       	pop	r16
+    13b8:	ff 90       	pop	r15
+    13ba:	08 95       	ret
+
+000013bc <__vector_18>:
+    13bc:	1f 92       	push	r1
+    13be:	0f 92       	push	r0
+    13c0:	0f b6       	in	r0, 0x3f	; 63
+    13c2:	0f 92       	push	r0
+    13c4:	11 24       	eor	r1, r1
+    13c6:	0b b6       	in	r0, 0x3b	; 59
+    13c8:	0f 92       	push	r0
+    13ca:	2f 93       	push	r18
+    13cc:	3f 93       	push	r19
+    13ce:	4f 93       	push	r20
+    13d0:	5f 93       	push	r21
+    13d2:	6f 93       	push	r22
+    13d4:	7f 93       	push	r23
+    13d6:	8f 93       	push	r24
+    13d8:	9f 93       	push	r25
+    13da:	af 93       	push	r26
+    13dc:	bf 93       	push	r27
+    13de:	ef 93       	push	r30
+    13e0:	ff 93       	push	r31
+    13e2:	8c b1       	in	r24, 0x0c	; 12
+    13e4:	80 93 ca 0b 	sts	0x0BCA, r24	; 0x800bca <u8data>
+    13e8:	60 91 ca 0b 	lds	r22, 0x0BCA	; 0x800bca <u8data>
+    13ec:	8d ec       	ldi	r24, 0xCD	; 205
+    13ee:	9b e0       	ldi	r25, 0x0B	; 11
+    13f0:	0e 94 c2 00 	call	0x184	; 0x184 <SCM485F_OneByteWrite_485>
+    13f4:	81 11       	cpse	r24, r1
+    13f6:	08 c0       	rjmp	.+16     	; 0x1408 <__vector_18+0x4c>
+    13f8:	10 92 b0 0d 	sts	0x0DB0, r1	; 0x800db0 <G_rxBuf485+0x1e3>
+    13fc:	10 92 af 0d 	sts	0x0DAF, r1	; 0x800daf <G_rxBuf485+0x1e2>
+    1400:	10 92 ae 0d 	sts	0x0DAE, r1	; 0x800dae <G_rxBuf485+0x1e1>
+    1404:	10 92 ad 0d 	sts	0x0DAD, r1	; 0x800dad <G_rxBuf485+0x1e0>
+    1408:	12 be       	out	0x32, r1	; 50
+    140a:	84 e0       	ldi	r24, 0x04	; 4
+    140c:	83 bf       	out	0x33, r24	; 51
+    140e:	c4 9a       	sbi	0x18, 4	; 24
+    1410:	c5 9a       	sbi	0x18, 5	; 24
+    1412:	c6 9a       	sbi	0x18, 6	; 24
+    1414:	ff 91       	pop	r31
+    1416:	ef 91       	pop	r30
+    1418:	bf 91       	pop	r27
+    141a:	af 91       	pop	r26
+    141c:	9f 91       	pop	r25
+    141e:	8f 91       	pop	r24
+    1420:	7f 91       	pop	r23
+    1422:	6f 91       	pop	r22
+    1424:	5f 91       	pop	r21
+    1426:	4f 91       	pop	r20
+    1428:	3f 91       	pop	r19
+    142a:	2f 91       	pop	r18
+    142c:	0f 90       	pop	r0
+    142e:	0b be       	out	0x3b, r0	; 59
+    1430:	0f 90       	pop	r0
+    1432:	0f be       	out	0x3f, r0	; 63
+    1434:	0f 90       	pop	r0
+    1436:	1f 90       	pop	r1
+    1438:	18 95       	reti
+
+0000143a <__vector_16>:
+    143a:	1f 92       	push	r1
+    143c:	0f 92       	push	r0
+    143e:	0f b6       	in	r0, 0x3f	; 63
+    1440:	0f 92       	push	r0
+    1442:	11 24       	eor	r1, r1
+    1444:	0b b6       	in	r0, 0x3b	; 59
+    1446:	0f 92       	push	r0
+    1448:	2f 93       	push	r18
+    144a:	3f 93       	push	r19
+    144c:	4f 93       	push	r20
+    144e:	5f 93       	push	r21
+    1450:	6f 93       	push	r22
+    1452:	7f 93       	push	r23
+    1454:	8f 93       	push	r24
+    1456:	9f 93       	push	r25
+    1458:	af 93       	push	r26
+    145a:	bf 93       	push	r27
+    145c:	ef 93       	push	r30
+    145e:	ff 93       	push	r31
+    1460:	12 be       	out	0x32, r1	; 50
+    1462:	80 91 94 08 	lds	r24, 0x0894	; 0x800894 <G_485TimerOverFlowCnt>
+    1466:	8f 5f       	subi	r24, 0xFF	; 255
+    1468:	80 93 94 08 	sts	0x0894, r24	; 0x800894 <G_485TimerOverFlowCnt>
+    146c:	80 91 94 08 	lds	r24, 0x0894	; 0x800894 <G_485TimerOverFlowCnt>
+    1470:	81 30       	cpi	r24, 0x01	; 1
+    1472:	09 f0       	breq	.+2      	; 0x1476 <__vector_16+0x3c>
+    1474:	5b c0       	rjmp	.+182    	; 0x152c <__vector_16+0xf2>
+    1476:	13 be       	out	0x33, r1	; 51
+    1478:	10 92 b0 0d 	sts	0x0DB0, r1	; 0x800db0 <G_rxBuf485+0x1e3>
+    147c:	10 92 af 0d 	sts	0x0DAF, r1	; 0x800daf <G_rxBuf485+0x1e2>
+    1480:	10 92 ae 0d 	sts	0x0DAE, r1	; 0x800dae <G_rxBuf485+0x1e1>
+    1484:	10 92 ad 0d 	sts	0x0DAD, r1	; 0x800dad <G_rxBuf485+0x1e0>
+    1488:	10 92 9f 0b 	sts	0x0B9F, r1	; 0x800b9f <G_txBuf485+0x1e3>
+    148c:	10 92 9e 0b 	sts	0x0B9E, r1	; 0x800b9e <G_txBuf485+0x1e2>
+    1490:	10 92 9d 0b 	sts	0x0B9D, r1	; 0x800b9d <G_txBuf485+0x1e1>
+    1494:	10 92 9c 0b 	sts	0x0B9C, r1	; 0x800b9c <G_txBuf485+0x1e0>
+    1498:	10 92 94 08 	sts	0x0894, r1	; 0x800894 <G_485TimerOverFlowCnt>
+    149c:	0e 94 19 01 	call	0x232	; 0x232 <SCM485F_getRxPacket>
+    14a0:	81 30       	cpi	r24, 0x01	; 1
+    14a2:	21 f0       	breq	.+8      	; 0x14ac <__vector_16+0x72>
+    14a4:	18 f0       	brcs	.+6      	; 0x14ac <__vector_16+0x72>
+    14a6:	83 30       	cpi	r24, 0x03	; 3
+    14a8:	19 f0       	breq	.+6      	; 0x14b0 <__vector_16+0x76>
+    14aa:	40 c0       	rjmp	.+128    	; 0x152c <__vector_16+0xf2>
+    14ac:	c6 98       	cbi	0x18, 6	; 24
+    14ae:	3e c0       	rjmp	.+124    	; 0x152c <__vector_16+0xf2>
+    14b0:	20 91 0b 0e 	lds	r18, 0x0E0B	; 0x800e0b <G_485Packet+0x5>
+    14b4:	80 91 92 08 	lds	r24, 0x0892	; 0x800892 <G_RSCOMR>
+    14b8:	90 91 93 08 	lds	r25, 0x0893	; 0x800893 <G_RSCOMR+0x1>
+    14bc:	24 32       	cpi	r18, 0x24	; 36
+    14be:	29 f1       	breq	.+74     	; 0x150a <__vector_16+0xd0>
+    14c0:	78 f4       	brcc	.+30     	; 0x14e0 <__vector_16+0xa6>
+    14c2:	21 32       	cpi	r18, 0x21	; 33
+    14c4:	f1 f0       	breq	.+60     	; 0x1502 <__vector_16+0xc8>
+    14c6:	30 f4       	brcc	.+12     	; 0x14d4 <__vector_16+0x9a>
+    14c8:	21 30       	cpi	r18, 0x01	; 1
+    14ca:	29 f1       	breq	.+74     	; 0x1516 <__vector_16+0xdc>
+    14cc:	22 30       	cpi	r18, 0x02	; 2
+    14ce:	49 f5       	brne	.+82     	; 0x1522 <__vector_16+0xe8>
+    14d0:	82 60       	ori	r24, 0x02	; 2
+    14d2:	28 c0       	rjmp	.+80     	; 0x1524 <__vector_16+0xea>
+    14d4:	22 32       	cpi	r18, 0x22	; 34
+    14d6:	b9 f0       	breq	.+46     	; 0x1506 <__vector_16+0xcc>
+    14d8:	23 32       	cpi	r18, 0x23	; 35
+    14da:	19 f5       	brne	.+70     	; 0x1522 <__vector_16+0xe8>
+    14dc:	98 60       	ori	r25, 0x08	; 8
+    14de:	22 c0       	rjmp	.+68     	; 0x1524 <__vector_16+0xea>
+    14e0:	27 32       	cpi	r18, 0x27	; 39
+    14e2:	b9 f0       	breq	.+46     	; 0x1512 <__vector_16+0xd8>
+    14e4:	30 f4       	brcc	.+12     	; 0x14f2 <__vector_16+0xb8>
+    14e6:	25 32       	cpi	r18, 0x25	; 37
+    14e8:	91 f0       	breq	.+36     	; 0x150e <__vector_16+0xd4>
+    14ea:	26 32       	cpi	r18, 0x26	; 38
+    14ec:	d1 f4       	brne	.+52     	; 0x1522 <__vector_16+0xe8>
+    14ee:	94 60       	ori	r25, 0x04	; 4
+    14f0:	19 c0       	rjmp	.+50     	; 0x1524 <__vector_16+0xea>
+    14f2:	21 36       	cpi	r18, 0x61	; 97
+    14f4:	a1 f0       	breq	.+40     	; 0x151e <__vector_16+0xe4>
+    14f6:	22 36       	cpi	r18, 0x62	; 98
+    14f8:	81 f0       	breq	.+32     	; 0x151a <__vector_16+0xe0>
+    14fa:	28 32       	cpi	r18, 0x28	; 40
+    14fc:	91 f4       	brne	.+36     	; 0x1522 <__vector_16+0xe8>
+    14fe:	90 68       	ori	r25, 0x80	; 128
+    1500:	11 c0       	rjmp	.+34     	; 0x1524 <__vector_16+0xea>
+    1502:	91 60       	ori	r25, 0x01	; 1
+    1504:	0f c0       	rjmp	.+30     	; 0x1524 <__vector_16+0xea>
+    1506:	92 60       	ori	r25, 0x02	; 2
+    1508:	0d c0       	rjmp	.+26     	; 0x1524 <__vector_16+0xea>
+    150a:	90 61       	ori	r25, 0x10	; 16
+    150c:	0b c0       	rjmp	.+22     	; 0x1524 <__vector_16+0xea>
+    150e:	90 62       	ori	r25, 0x20	; 32
+    1510:	09 c0       	rjmp	.+18     	; 0x1524 <__vector_16+0xea>
+    1512:	90 64       	ori	r25, 0x40	; 64
+    1514:	07 c0       	rjmp	.+14     	; 0x1524 <__vector_16+0xea>
+    1516:	81 60       	ori	r24, 0x01	; 1
+    1518:	05 c0       	rjmp	.+10     	; 0x1524 <__vector_16+0xea>
+    151a:	84 60       	ori	r24, 0x04	; 4
+    151c:	03 c0       	rjmp	.+6      	; 0x1524 <__vector_16+0xea>
+    151e:	88 60       	ori	r24, 0x08	; 8
+    1520:	01 c0       	rjmp	.+2      	; 0x1524 <__vector_16+0xea>
+    1522:	80 68       	ori	r24, 0x80	; 128
+    1524:	90 93 93 08 	sts	0x0893, r25	; 0x800893 <G_RSCOMR+0x1>
+    1528:	80 93 92 08 	sts	0x0892, r24	; 0x800892 <G_RSCOMR>
+    152c:	ff 91       	pop	r31
+    152e:	ef 91       	pop	r30
+    1530:	bf 91       	pop	r27
+    1532:	af 91       	pop	r26
+    1534:	9f 91       	pop	r25
+    1536:	8f 91       	pop	r24
+    1538:	7f 91       	pop	r23
+    153a:	6f 91       	pop	r22
+    153c:	5f 91       	pop	r21
+    153e:	4f 91       	pop	r20
+    1540:	3f 91       	pop	r19
+    1542:	2f 91       	pop	r18
+    1544:	0f 90       	pop	r0
+    1546:	0b be       	out	0x3b, r0	; 59
+    1548:	0f 90       	pop	r0
+    154a:	0f be       	out	0x3f, r0	; 63
+    154c:	0f 90       	pop	r0
+    154e:	1f 90       	pop	r1
+    1550:	18 95       	reti
+
+00001552 <__vector_19>:
+    1552:	1f 92       	push	r1
+    1554:	0f 92       	push	r0
+    1556:	0f b6       	in	r0, 0x3f	; 63
+    1558:	0f 92       	push	r0
+    155a:	11 24       	eor	r1, r1
+    155c:	0b b6       	in	r0, 0x3b	; 59
+    155e:	0f 92       	push	r0
+    1560:	2f 93       	push	r18
+    1562:	3f 93       	push	r19
+    1564:	4f 93       	push	r20
+    1566:	5f 93       	push	r21
+    1568:	6f 93       	push	r22
+    156a:	7f 93       	push	r23
+    156c:	8f 93       	push	r24
+    156e:	9f 93       	push	r25
+    1570:	af 93       	push	r26
+    1572:	bf 93       	push	r27
+    1574:	ef 93       	push	r30
+    1576:	ff 93       	push	r31
+    1578:	6c e2       	ldi	r22, 0x2C	; 44
+    157a:	70 e0       	ldi	r23, 0x00	; 0
+    157c:	8c eb       	ldi	r24, 0xBC	; 188
+    157e:	99 e0       	ldi	r25, 0x09	; 9
+    1580:	0e 94 d9 00 	call	0x1b2	; 0x1b2 <SCM485F_OneByteRead_485>
+    1584:	81 30       	cpi	r24, 0x01	; 1
+    1586:	11 f4       	brne	.+4      	; 0x158c <__vector_19+0x3a>
+    1588:	55 98       	cbi	0x0a, 5	; 10
+    158a:	56 9a       	sbi	0x0a, 6	; 10
+    158c:	ff 91       	pop	r31
+    158e:	ef 91       	pop	r30
+    1590:	bf 91       	pop	r27
+    1592:	af 91       	pop	r26
+    1594:	9f 91       	pop	r25
+    1596:	8f 91       	pop	r24
+    1598:	7f 91       	pop	r23
+    159a:	6f 91       	pop	r22
+    159c:	5f 91       	pop	r21
+    159e:	4f 91       	pop	r20
+    15a0:	3f 91       	pop	r19
+    15a2:	2f 91       	pop	r18
+    15a4:	0f 90       	pop	r0
+    15a6:	0b be       	out	0x3b, r0	; 59
+    15a8:	0f 90       	pop	r0
+    15aa:	0f be       	out	0x3f, r0	; 63
+    15ac:	0f 90       	pop	r0
+    15ae:	1f 90       	pop	r1
+    15b0:	18 95       	reti
+
+000015b2 <__vector_20>:
+    15b2:	1f 92       	push	r1
+    15b4:	0f 92       	push	r0
+    15b6:	0f b6       	in	r0, 0x3f	; 63
+    15b8:	0f 92       	push	r0
+    15ba:	11 24       	eor	r1, r1
+    15bc:	8f 93       	push	r24
+    15be:	56 98       	cbi	0x0a, 6	; 10
+    15c0:	57 9a       	sbi	0x0a, 7	; 10
+    15c2:	1a 9a       	sbi	0x03, 2	; 3
+    15c4:	83 e0       	ldi	r24, 0x03	; 3
+    15c6:	85 bd       	out	0x25, r24	; 37
+    15c8:	14 bc       	out	0x24, r1	; 36
+    15ca:	8f 91       	pop	r24
+    15cc:	0f 90       	pop	r0
+    15ce:	0f be       	out	0x3f, r0	; 63
+    15d0:	0f 90       	pop	r0
+    15d2:	1f 90       	pop	r1
+    15d4:	18 95       	reti
+
+000015d6 <__vector_10>:
+    15d6:	1f 92       	push	r1
+    15d8:	0f 92       	push	r0
+    15da:	0f b6       	in	r0, 0x3f	; 63
+    15dc:	0f 92       	push	r0
+    15de:	11 24       	eor	r1, r1
+    15e0:	0b b6       	in	r0, 0x3b	; 59
+    15e2:	0f 92       	push	r0
+    15e4:	2f 93       	push	r18
+    15e6:	3f 93       	push	r19
+    15e8:	4f 93       	push	r20
+    15ea:	5f 93       	push	r21
+    15ec:	6f 93       	push	r22
+    15ee:	7f 93       	push	r23
+    15f0:	8f 93       	push	r24
+    15f2:	9f 93       	push	r25
+    15f4:	af 93       	push	r26
+    15f6:	bf 93       	push	r27
+    15f8:	cf 93       	push	r28
+    15fa:	df 93       	push	r29
+    15fc:	ef 93       	push	r30
+    15fe:	ff 93       	push	r31
+    1600:	14 bc       	out	0x24, r1	; 36
+    1602:	80 91 91 08 	lds	r24, 0x0891	; 0x800891 <G_plcTimerOverFlowCnt>
+    1606:	8f 5f       	subi	r24, 0xFF	; 255
+    1608:	80 93 91 08 	sts	0x0891, r24	; 0x800891 <G_plcTimerOverFlowCnt>
+    160c:	80 91 91 08 	lds	r24, 0x0891	; 0x800891 <G_plcTimerOverFlowCnt>
+    1610:	8f 31       	cpi	r24, 0x1F	; 31
+    1612:	08 f4       	brcc	.+2      	; 0x1616 <__vector_10+0x40>
+    1614:	f2 c2       	rjmp	.+1508   	; 0x1bfa <__vector_10+0x624>
+    1616:	10 92 91 08 	sts	0x0891, r1	; 0x800891 <G_plcTimerOverFlowCnt>
+    161a:	90 91 90 08 	lds	r25, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    161e:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1622:	98 17       	cp	r25, r24
+    1624:	10 f0       	brcs	.+4      	; 0x162a <__vector_10+0x54>
+    1626:	10 92 90 08 	sts	0x0890, r1	; 0x800890 <G_plcUSMCurrentIndex>
+    162a:	90 91 8f 08 	lds	r25, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    162e:	80 91 95 08 	lds	r24, 0x0895	; 0x800895 <G_totalLGMCnt>
+    1632:	98 17       	cp	r25, r24
+    1634:	10 f0       	brcs	.+4      	; 0x163a <__vector_10+0x64>
+    1636:	10 92 8f 08 	sts	0x088F, r1	; 0x80088f <G_plcLGMCurrentIndex>
+    163a:	90 91 8b 08 	lds	r25, 0x088B	; 0x80088b <G_SULCR>
+    163e:	91 70       	andi	r25, 0x01	; 1
+    1640:	90 93 b1 0d 	sts	0x0DB1, r25	; 0x800db1 <initialUSMF>
+    1644:	90 91 8b 08 	lds	r25, 0x088B	; 0x80088b <G_SULCR>
+    1648:	92 70       	andi	r25, 0x02	; 2
+    164a:	90 93 1a 09 	sts	0x091A, r25	; 0x80091a <initialLGMF>
+    164e:	90 91 8b 08 	lds	r25, 0x088B	; 0x80088b <G_SULCR>
+    1652:	90 71       	andi	r25, 0x10	; 16
+    1654:	90 93 cb 0b 	sts	0x0BCB, r25	; 0x800bcb <paramCF>
+    1658:	90 91 b1 0d 	lds	r25, 0x0DB1	; 0x800db1 <initialUSMF>
+    165c:	91 30       	cpi	r25, 0x01	; 1
+    165e:	29 f4       	brne	.+10     	; 0x166a <__vector_10+0x94>
+    1660:	90 91 1a 09 	lds	r25, 0x091A	; 0x80091a <initialLGMF>
+    1664:	92 30       	cpi	r25, 0x02	; 2
+    1666:	09 f4       	brne	.+2      	; 0x166a <__vector_10+0x94>
+    1668:	f5 c0       	rjmp	.+490    	; 0x1854 <__vector_10+0x27e>
+    166a:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    166e:	84 70       	andi	r24, 0x04	; 4
+    1670:	80 93 c8 0b 	sts	0x0BC8, r24	; 0x800bc8 <uaddCF>
+    1674:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    1678:	88 70       	andi	r24, 0x08	; 8
+    167a:	80 93 da 0d 	sts	0x0DDA, r24	; 0x800dda <laddCF>
+    167e:	80 91 c8 0b 	lds	r24, 0x0BC8	; 0x800bc8 <uaddCF>
+    1682:	84 30       	cpi	r24, 0x04	; 4
+    1684:	09 f0       	breq	.+2      	; 0x1688 <__vector_10+0xb2>
+    1686:	89 c0       	rjmp	.+274    	; 0x179a <__vector_10+0x1c4>
+    1688:	80 91 10 03 	lds	r24, 0x0310	; 0x800310 <__data_end>
+    168c:	81 11       	cpse	r24, r1
+    168e:	21 c0       	rjmp	.+66     	; 0x16d2 <__vector_10+0xfc>
+    1690:	87 e0       	ldi	r24, 0x07	; 7
+    1692:	80 93 15 09 	sts	0x0915, r24	; 0x800915 <G_txAddBufPLC>
+    1696:	10 92 16 09 	sts	0x0916, r1	; 0x800916 <G_txAddBufPLC+0x1>
+    169a:	10 92 17 09 	sts	0x0917, r1	; 0x800917 <G_txAddBufPLC+0x2>
+    169e:	10 92 18 09 	sts	0x0918, r1	; 0x800918 <G_txAddBufPLC+0x3>
+    16a2:	10 92 19 09 	sts	0x0919, r1	; 0x800919 <G_txAddBufPLC+0x4>
+    16a6:	40 91 15 09 	lds	r20, 0x0915	; 0x800915 <G_txAddBufPLC>
+    16aa:	50 91 16 09 	lds	r21, 0x0916	; 0x800916 <G_txAddBufPLC+0x1>
+    16ae:	60 91 17 09 	lds	r22, 0x0917	; 0x800917 <G_txAddBufPLC+0x2>
+    16b2:	70 91 18 09 	lds	r23, 0x0918	; 0x800918 <G_txAddBufPLC+0x3>
+    16b6:	80 91 19 09 	lds	r24, 0x0919	; 0x800919 <G_txAddBufPLC+0x4>
+    16ba:	0e 94 25 02 	call	0x44a	; 0x44a <SCMPLCF_SendMessageAddPacket>
+    16be:	81 e0       	ldi	r24, 0x01	; 1
+    16c0:	80 93 10 03 	sts	0x0310, r24	; 0x800310 <__data_end>
+    16c4:	8f e1       	ldi	r24, 0x1F	; 31
+    16c6:	9e e4       	ldi	r25, 0x4E	; 78
+    16c8:	01 97       	sbiw	r24, 0x01	; 1
+    16ca:	f1 f7       	brne	.-4      	; 0x16c8 <__vector_10+0xf2>
+    16cc:	00 c0       	rjmp	.+0      	; 0x16ce <__vector_10+0xf8>
+    16ce:	00 00       	nop
+    16d0:	94 c2       	rjmp	.+1320   	; 0x1bfa <__vector_10+0x624>
+    16d2:	10 92 15 09 	sts	0x0915, r1	; 0x800915 <G_txAddBufPLC>
+    16d6:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    16da:	94 e0       	ldi	r25, 0x04	; 4
+    16dc:	e9 9f       	mul	r30, r25
+    16de:	f0 01       	movw	r30, r0
+    16e0:	11 24       	eor	r1, r1
+    16e2:	e7 55       	subi	r30, 0x57	; 87
+    16e4:	f9 4f       	sbci	r31, 0xF9	; 249
+    16e6:	80 81       	ld	r24, Z
+    16e8:	91 81       	ldd	r25, Z+1	; 0x01
+    16ea:	a2 81       	ldd	r26, Z+2	; 0x02
+    16ec:	b3 81       	ldd	r27, Z+3	; 0x03
+    16ee:	cd 01       	movw	r24, r26
+    16f0:	aa 27       	eor	r26, r26
+    16f2:	bb 27       	eor	r27, r27
+    16f4:	80 93 16 09 	sts	0x0916, r24	; 0x800916 <G_txAddBufPLC+0x1>
+    16f8:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    16fc:	84 e0       	ldi	r24, 0x04	; 4
+    16fe:	e8 9f       	mul	r30, r24
+    1700:	f0 01       	movw	r30, r0
+    1702:	11 24       	eor	r1, r1
+    1704:	e7 55       	subi	r30, 0x57	; 87
+    1706:	f9 4f       	sbci	r31, 0xF9	; 249
+    1708:	80 81       	ld	r24, Z
+    170a:	91 81       	ldd	r25, Z+1	; 0x01
+    170c:	a2 81       	ldd	r26, Z+2	; 0x02
+    170e:	b3 81       	ldd	r27, Z+3	; 0x03
+    1710:	89 2f       	mov	r24, r25
+    1712:	9a 2f       	mov	r25, r26
+    1714:	ab 2f       	mov	r26, r27
+    1716:	bb 27       	eor	r27, r27
+    1718:	80 93 17 09 	sts	0x0917, r24	; 0x800917 <G_txAddBufPLC+0x2>
+    171c:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1720:	94 e0       	ldi	r25, 0x04	; 4
+    1722:	e9 9f       	mul	r30, r25
+    1724:	f0 01       	movw	r30, r0
+    1726:	11 24       	eor	r1, r1
+    1728:	e7 55       	subi	r30, 0x57	; 87
+    172a:	f9 4f       	sbci	r31, 0xF9	; 249
+    172c:	80 81       	ld	r24, Z
+    172e:	91 81       	ldd	r25, Z+1	; 0x01
+    1730:	a2 81       	ldd	r26, Z+2	; 0x02
+    1732:	b3 81       	ldd	r27, Z+3	; 0x03
+    1734:	80 93 18 09 	sts	0x0918, r24	; 0x800918 <G_txAddBufPLC+0x3>
+    1738:	80 91 90 08 	lds	r24, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    173c:	8f 5f       	subi	r24, 0xFF	; 255
+    173e:	80 93 19 09 	sts	0x0919, r24	; 0x800919 <G_txAddBufPLC+0x4>
+    1742:	c5 98       	cbi	0x18, 5	; 24
+    1744:	20 91 90 08 	lds	r18, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1748:	30 e0       	ldi	r19, 0x00	; 0
+    174a:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    174e:	90 e0       	ldi	r25, 0x00	; 0
+    1750:	01 97       	sbiw	r24, 0x01	; 1
+    1752:	28 17       	cp	r18, r24
+    1754:	39 07       	cpc	r19, r25
+    1756:	79 f4       	brne	.+30     	; 0x1776 <__vector_10+0x1a0>
+    1758:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    175c:	81 60       	ori	r24, 0x01	; 1
+    175e:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    1762:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    1766:	8b 7f       	andi	r24, 0xFB	; 251
+    1768:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    176c:	10 92 90 08 	sts	0x0890, r1	; 0x800890 <G_plcUSMCurrentIndex>
+    1770:	c5 9a       	sbi	0x18, 5	; 24
+    1772:	c4 9a       	sbi	0x18, 4	; 24
+    1774:	05 c0       	rjmp	.+10     	; 0x1780 <__vector_10+0x1aa>
+    1776:	80 91 90 08 	lds	r24, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    177a:	8f 5f       	subi	r24, 0xFF	; 255
+    177c:	80 93 90 08 	sts	0x0890, r24	; 0x800890 <G_plcUSMCurrentIndex>
+    1780:	40 91 15 09 	lds	r20, 0x0915	; 0x800915 <G_txAddBufPLC>
+    1784:	50 91 16 09 	lds	r21, 0x0916	; 0x800916 <G_txAddBufPLC+0x1>
+    1788:	60 91 17 09 	lds	r22, 0x0917	; 0x800917 <G_txAddBufPLC+0x2>
+    178c:	70 91 18 09 	lds	r23, 0x0918	; 0x800918 <G_txAddBufPLC+0x3>
+    1790:	80 91 19 09 	lds	r24, 0x0919	; 0x800919 <G_txAddBufPLC+0x4>
+    1794:	0e 94 25 02 	call	0x44a	; 0x44a <SCMPLCF_SendMessageAddPacket>
+    1798:	30 c2       	rjmp	.+1120   	; 0x1bfa <__vector_10+0x624>
+    179a:	80 91 da 0d 	lds	r24, 0x0DDA	; 0x800dda <laddCF>
+    179e:	88 30       	cpi	r24, 0x08	; 8
+    17a0:	09 f0       	breq	.+2      	; 0x17a4 <__vector_10+0x1ce>
+    17a2:	2b c2       	rjmp	.+1110   	; 0x1bfa <__vector_10+0x624>
+    17a4:	82 e0       	ldi	r24, 0x02	; 2
+    17a6:	80 93 15 09 	sts	0x0915, r24	; 0x800915 <G_txAddBufPLC>
+    17aa:	e0 91 8f 08 	lds	r30, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    17ae:	84 e0       	ldi	r24, 0x04	; 4
+    17b0:	e8 9f       	mul	r30, r24
+    17b2:	f0 01       	movw	r30, r0
+    17b4:	11 24       	eor	r1, r1
+    17b6:	e7 5f       	subi	r30, 0xF7	; 247
+    17b8:	f9 4f       	sbci	r31, 0xF9	; 249
+    17ba:	80 81       	ld	r24, Z
+    17bc:	91 81       	ldd	r25, Z+1	; 0x01
+    17be:	a2 81       	ldd	r26, Z+2	; 0x02
+    17c0:	b3 81       	ldd	r27, Z+3	; 0x03
+    17c2:	cd 01       	movw	r24, r26
+    17c4:	aa 27       	eor	r26, r26
+    17c6:	bb 27       	eor	r27, r27
+    17c8:	80 93 16 09 	sts	0x0916, r24	; 0x800916 <G_txAddBufPLC+0x1>
+    17cc:	e0 91 8f 08 	lds	r30, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    17d0:	94 e0       	ldi	r25, 0x04	; 4
+    17d2:	e9 9f       	mul	r30, r25
+    17d4:	f0 01       	movw	r30, r0
+    17d6:	11 24       	eor	r1, r1
+    17d8:	e7 5f       	subi	r30, 0xF7	; 247
+    17da:	f9 4f       	sbci	r31, 0xF9	; 249
+    17dc:	80 81       	ld	r24, Z
+    17de:	91 81       	ldd	r25, Z+1	; 0x01
+    17e0:	a2 81       	ldd	r26, Z+2	; 0x02
+    17e2:	b3 81       	ldd	r27, Z+3	; 0x03
+    17e4:	89 2f       	mov	r24, r25
+    17e6:	9a 2f       	mov	r25, r26
+    17e8:	ab 2f       	mov	r26, r27
+    17ea:	bb 27       	eor	r27, r27
+    17ec:	80 93 17 09 	sts	0x0917, r24	; 0x800917 <G_txAddBufPLC+0x2>
+    17f0:	e0 91 8f 08 	lds	r30, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    17f4:	84 e0       	ldi	r24, 0x04	; 4
+    17f6:	e8 9f       	mul	r30, r24
+    17f8:	f0 01       	movw	r30, r0
+    17fa:	11 24       	eor	r1, r1
+    17fc:	e7 5f       	subi	r30, 0xF7	; 247
+    17fe:	f9 4f       	sbci	r31, 0xF9	; 249
+    1800:	80 81       	ld	r24, Z
+    1802:	91 81       	ldd	r25, Z+1	; 0x01
+    1804:	a2 81       	ldd	r26, Z+2	; 0x02
+    1806:	b3 81       	ldd	r27, Z+3	; 0x03
+    1808:	80 93 18 09 	sts	0x0918, r24	; 0x800918 <G_txAddBufPLC+0x3>
+    180c:	80 91 8f 08 	lds	r24, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    1810:	8f 5f       	subi	r24, 0xFF	; 255
+    1812:	80 93 19 09 	sts	0x0919, r24	; 0x800919 <G_txAddBufPLC+0x4>
+    1816:	c5 98       	cbi	0x18, 5	; 24
+    1818:	20 91 8f 08 	lds	r18, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    181c:	30 e0       	ldi	r19, 0x00	; 0
+    181e:	80 91 95 08 	lds	r24, 0x0895	; 0x800895 <G_totalLGMCnt>
+    1822:	90 e0       	ldi	r25, 0x00	; 0
+    1824:	01 97       	sbiw	r24, 0x01	; 1
+    1826:	28 17       	cp	r18, r24
+    1828:	39 07       	cpc	r19, r25
+    182a:	71 f4       	brne	.+28     	; 0x1848 <__vector_10+0x272>
+    182c:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    1830:	82 60       	ori	r24, 0x02	; 2
+    1832:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    1836:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    183a:	87 7f       	andi	r24, 0xF7	; 247
+    183c:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    1840:	10 92 8f 08 	sts	0x088F, r1	; 0x80088f <G_plcLGMCurrentIndex>
+    1844:	c5 9a       	sbi	0x18, 5	; 24
+    1846:	9c cf       	rjmp	.-200    	; 0x1780 <__vector_10+0x1aa>
+    1848:	80 91 8f 08 	lds	r24, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    184c:	8f 5f       	subi	r24, 0xFF	; 255
+    184e:	80 93 8f 08 	sts	0x088F, r24	; 0x80088f <G_plcLGMCurrentIndex>
+    1852:	96 cf       	rjmp	.-212    	; 0x1780 <__vector_10+0x1aa>
+    1854:	90 91 b1 0d 	lds	r25, 0x0DB1	; 0x800db1 <initialUSMF>
+    1858:	91 30       	cpi	r25, 0x01	; 1
+    185a:	09 f0       	breq	.+2      	; 0x185e <__vector_10+0x288>
+    185c:	84 c0       	rjmp	.+264    	; 0x1966 <__vector_10+0x390>
+    185e:	20 91 1a 09 	lds	r18, 0x091A	; 0x80091a <initialLGMF>
+    1862:	22 30       	cpi	r18, 0x02	; 2
+    1864:	09 f0       	breq	.+2      	; 0x1868 <__vector_10+0x292>
+    1866:	7f c0       	rjmp	.+254    	; 0x1966 <__vector_10+0x390>
+    1868:	20 91 cb 0b 	lds	r18, 0x0BCB	; 0x800bcb <paramCF>
+    186c:	20 31       	cpi	r18, 0x10	; 16
+    186e:	09 f0       	breq	.+2      	; 0x1872 <__vector_10+0x29c>
+    1870:	7a c0       	rjmp	.+244    	; 0x1966 <__vector_10+0x390>
+    1872:	c5 98       	cbi	0x18, 5	; 24
+    1874:	90 93 98 08 	sts	0x0898, r25	; 0x800898 <G_txCntlBufPLC>
+    1878:	80 91 90 08 	lds	r24, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    187c:	8f 5f       	subi	r24, 0xFF	; 255
+    187e:	80 93 99 08 	sts	0x0899, r24	; 0x800899 <G_txCntlBufPLC+0x1>
+    1882:	80 91 8a 08 	lds	r24, 0x088A	; 0x80088a <ParamCnt>
+    1886:	81 11       	cpse	r24, r1
+    1888:	0c c0       	rjmp	.+24     	; 0x18a2 <__vector_10+0x2cc>
+    188a:	8c e0       	ldi	r24, 0x0C	; 12
+    188c:	80 93 9a 08 	sts	0x089A, r24	; 0x80089a <G_txCntlBufPLC+0x2>
+    1890:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1894:	94 e0       	ldi	r25, 0x04	; 4
+    1896:	e9 9f       	mul	r30, r25
+    1898:	f0 01       	movw	r30, r0
+    189a:	11 24       	eor	r1, r1
+    189c:	ef 5e       	subi	r30, 0xEF	; 239
+    189e:	fc 4f       	sbci	r31, 0xFC	; 252
+    18a0:	2f c0       	rjmp	.+94     	; 0x1900 <__vector_10+0x32a>
+    18a2:	80 91 8a 08 	lds	r24, 0x088A	; 0x80088a <ParamCnt>
+    18a6:	81 30       	cpi	r24, 0x01	; 1
+    18a8:	61 f4       	brne	.+24     	; 0x18c2 <__vector_10+0x2ec>
+    18aa:	8d e0       	ldi	r24, 0x0D	; 13
+    18ac:	80 93 9a 08 	sts	0x089A, r24	; 0x80089a <G_txCntlBufPLC+0x2>
+    18b0:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    18b4:	84 e0       	ldi	r24, 0x04	; 4
+    18b6:	e8 9f       	mul	r30, r24
+    18b8:	f0 01       	movw	r30, r0
+    18ba:	11 24       	eor	r1, r1
+    18bc:	ee 5e       	subi	r30, 0xEE	; 238
+    18be:	fc 4f       	sbci	r31, 0xFC	; 252
+    18c0:	1f c0       	rjmp	.+62     	; 0x1900 <__vector_10+0x32a>
+    18c2:	80 91 8a 08 	lds	r24, 0x088A	; 0x80088a <ParamCnt>
+    18c6:	82 30       	cpi	r24, 0x02	; 2
+    18c8:	61 f4       	brne	.+24     	; 0x18e2 <__vector_10+0x30c>
+    18ca:	8e e0       	ldi	r24, 0x0E	; 14
+    18cc:	80 93 9a 08 	sts	0x089A, r24	; 0x80089a <G_txCntlBufPLC+0x2>
+    18d0:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    18d4:	94 e0       	ldi	r25, 0x04	; 4
+    18d6:	e9 9f       	mul	r30, r25
+    18d8:	f0 01       	movw	r30, r0
+    18da:	11 24       	eor	r1, r1
+    18dc:	ed 5e       	subi	r30, 0xED	; 237
+    18de:	fc 4f       	sbci	r31, 0xFC	; 252
+    18e0:	0f c0       	rjmp	.+30     	; 0x1900 <__vector_10+0x32a>
+    18e2:	80 91 8a 08 	lds	r24, 0x088A	; 0x80088a <ParamCnt>
+    18e6:	83 30       	cpi	r24, 0x03	; 3
+    18e8:	71 f4       	brne	.+28     	; 0x1906 <__vector_10+0x330>
+    18ea:	8f e0       	ldi	r24, 0x0F	; 15
+    18ec:	80 93 9a 08 	sts	0x089A, r24	; 0x80089a <G_txCntlBufPLC+0x2>
+    18f0:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    18f4:	84 e0       	ldi	r24, 0x04	; 4
+    18f6:	e8 9f       	mul	r30, r24
+    18f8:	f0 01       	movw	r30, r0
+    18fa:	11 24       	eor	r1, r1
+    18fc:	ec 5e       	subi	r30, 0xEC	; 236
+    18fe:	fc 4f       	sbci	r31, 0xFC	; 252
+    1900:	80 81       	ld	r24, Z
+    1902:	80 93 9b 08 	sts	0x089B, r24	; 0x80089b <G_txCntlBufPLC+0x3>
+    1906:	80 91 8a 08 	lds	r24, 0x088A	; 0x80088a <ParamCnt>
+    190a:	83 30       	cpi	r24, 0x03	; 3
+    190c:	41 f4       	brne	.+16     	; 0x191e <__vector_10+0x348>
+    190e:	10 92 8a 08 	sts	0x088A, r1	; 0x80088a <ParamCnt>
+    1912:	80 91 90 08 	lds	r24, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1916:	8f 5f       	subi	r24, 0xFF	; 255
+    1918:	80 93 90 08 	sts	0x0890, r24	; 0x800890 <G_plcUSMCurrentIndex>
+    191c:	05 c0       	rjmp	.+10     	; 0x1928 <__vector_10+0x352>
+    191e:	80 91 8a 08 	lds	r24, 0x088A	; 0x80088a <ParamCnt>
+    1922:	8f 5f       	subi	r24, 0xFF	; 255
+    1924:	80 93 8a 08 	sts	0x088A, r24	; 0x80088a <ParamCnt>
+    1928:	20 91 90 08 	lds	r18, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    192c:	30 e0       	ldi	r19, 0x00	; 0
+    192e:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1932:	90 e0       	ldi	r25, 0x00	; 0
+    1934:	01 97       	sbiw	r24, 0x01	; 1
+    1936:	28 17       	cp	r18, r24
+    1938:	39 07       	cpc	r19, r25
+    193a:	59 f4       	brne	.+22     	; 0x1952 <__vector_10+0x37c>
+    193c:	c5 9a       	sbi	0x18, 5	; 24
+    193e:	c4 9a       	sbi	0x18, 4	; 24
+    1940:	80 91 8b 08 	lds	r24, 0x088B	; 0x80088b <G_SULCR>
+    1944:	8f 7e       	andi	r24, 0xEF	; 239
+    1946:	80 93 8b 08 	sts	0x088B, r24	; 0x80088b <G_SULCR>
+    194a:	10 92 89 08 	sts	0x0889, r1	; 0x800889 <ParamLoopCnt>
+    194e:	10 92 90 08 	sts	0x0890, r1	; 0x800890 <G_plcUSMCurrentIndex>
+    1952:	60 91 98 08 	lds	r22, 0x0898	; 0x800898 <G_txCntlBufPLC>
+    1956:	70 91 99 08 	lds	r23, 0x0899	; 0x800899 <G_txCntlBufPLC+0x1>
+    195a:	80 91 9a 08 	lds	r24, 0x089A	; 0x80089a <G_txCntlBufPLC+0x2>
+    195e:	90 91 9b 08 	lds	r25, 0x089B	; 0x80089b <G_txCntlBufPLC+0x3>
+    1962:	4f d8       	rcall	.-3938   	; 0xa02 <SCMPLCF_SendMessageCntlPacket>
+    1964:	4a c1       	rjmp	.+660    	; 0x1bfa <__vector_10+0x624>
+    1966:	90 91 8e 08 	lds	r25, 0x088E	; 0x80088e <G_usmSensingF>
+    196a:	91 30       	cpi	r25, 0x01	; 1
+    196c:	09 f0       	breq	.+2      	; 0x1970 <__vector_10+0x39a>
+    196e:	45 c1       	rjmp	.+650    	; 0x1bfa <__vector_10+0x624>
+    1970:	90 91 9c 08 	lds	r25, 0x089C	; 0x80089c <G_cntlmodeDipValue>
+    1974:	91 11       	cpse	r25, r1
+    1976:	48 c0       	rjmp	.+144    	; 0x1a08 <__vector_10+0x432>
+    1978:	93 e0       	ldi	r25, 0x03	; 3
+    197a:	90 93 98 08 	sts	0x0898, r25	; 0x800898 <G_txCntlBufPLC>
+    197e:	90 91 8f 08 	lds	r25, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    1982:	9f 5f       	subi	r25, 0xFF	; 255
+    1984:	90 93 99 08 	sts	0x0899, r25	; 0x800899 <G_txCntlBufPLC+0x1>
+    1988:	90 91 8c 08 	lds	r25, 0x088C	; 0x80088c <G_lgmOPModeOnF>
+    198c:	91 30       	cpi	r25, 0x01	; 1
+    198e:	71 f4       	brne	.+28     	; 0x19ac <__vector_10+0x3d6>
+    1990:	e0 91 8f 08 	lds	r30, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    1994:	f0 e0       	ldi	r31, 0x00	; 0
+    1996:	ef 50       	subi	r30, 0x0F	; 15
+    1998:	fb 4f       	sbci	r31, 0xFB	; 251
+    199a:	90 81       	ld	r25, Z
+    199c:	91 11       	cpse	r25, r1
+    199e:	0c c0       	rjmp	.+24     	; 0x19b8 <__vector_10+0x3e2>
+    19a0:	e0 91 8f 08 	lds	r30, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    19a4:	f0 e0       	ldi	r31, 0x00	; 0
+    19a6:	e0 56       	subi	r30, 0x60	; 96
+    19a8:	f4 4f       	sbci	r31, 0xF4	; 244
+    19aa:	05 c0       	rjmp	.+10     	; 0x19b6 <__vector_10+0x3e0>
+    19ac:	e0 91 99 08 	lds	r30, 0x0899	; 0x800899 <G_txCntlBufPLC+0x1>
+    19b0:	f0 e0       	ldi	r31, 0x00	; 0
+    19b2:	e1 56       	subi	r30, 0x61	; 97
+    19b4:	f4 4f       	sbci	r31, 0xF4	; 244
+    19b6:	90 81       	ld	r25, Z
+    19b8:	20 91 1b 09 	lds	r18, 0x091B	; 0x80091b <G_testmodeDipValue>
+    19bc:	21 30       	cpi	r18, 0x01	; 1
+    19be:	09 f4       	brne	.+2      	; 0x19c2 <__vector_10+0x3ec>
+    19c0:	96 e0       	ldi	r25, 0x06	; 6
+    19c2:	90 93 9a 08 	sts	0x089A, r25	; 0x80089a <G_txCntlBufPLC+0x2>
+    19c6:	10 92 9b 08 	sts	0x089B, r1	; 0x80089b <G_txCntlBufPLC+0x3>
+    19ca:	20 91 8f 08 	lds	r18, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    19ce:	30 e0       	ldi	r19, 0x00	; 0
+    19d0:	90 e0       	ldi	r25, 0x00	; 0
+    19d2:	01 97       	sbiw	r24, 0x01	; 1
+    19d4:	28 17       	cp	r18, r24
+    19d6:	39 07       	cpc	r19, r25
+    19d8:	19 f4       	brne	.+6      	; 0x19e0 <__vector_10+0x40a>
+    19da:	10 92 8f 08 	sts	0x088F, r1	; 0x80088f <G_plcLGMCurrentIndex>
+    19de:	05 c0       	rjmp	.+10     	; 0x19ea <__vector_10+0x414>
+    19e0:	80 91 8f 08 	lds	r24, 0x088F	; 0x80088f <G_plcLGMCurrentIndex>
+    19e4:	8f 5f       	subi	r24, 0xFF	; 255
+    19e6:	80 93 8f 08 	sts	0x088F, r24	; 0x80088f <G_plcLGMCurrentIndex>
+    19ea:	60 91 98 08 	lds	r22, 0x0898	; 0x800898 <G_txCntlBufPLC>
+    19ee:	70 91 99 08 	lds	r23, 0x0899	; 0x800899 <G_txCntlBufPLC+0x1>
+    19f2:	80 91 9a 08 	lds	r24, 0x089A	; 0x80089a <G_txCntlBufPLC+0x2>
+    19f6:	90 91 9b 08 	lds	r25, 0x089B	; 0x80089b <G_txCntlBufPLC+0x3>
+    19fa:	03 d8       	rcall	.-4090   	; 0xa02 <SCMPLCF_SendMessageCntlPacket>
+    19fc:	ef e1       	ldi	r30, 0x1F	; 31
+    19fe:	fe e4       	ldi	r31, 0x4E	; 78
+    1a00:	31 97       	sbiw	r30, 0x01	; 1
+    1a02:	f1 f7       	brne	.-4      	; 0x1a00 <__vector_10+0x42a>
+    1a04:	00 c0       	rjmp	.+0      	; 0x1a06 <__vector_10+0x430>
+    1a06:	00 00       	nop
+    1a08:	80 91 9c 08 	lds	r24, 0x089C	; 0x80089c <G_cntlmodeDipValue>
+    1a0c:	88 23       	and	r24, r24
+    1a0e:	11 f0       	breq	.+4      	; 0x1a14 <__vector_10+0x43e>
+    1a10:	84 e0       	ldi	r24, 0x04	; 4
+    1a12:	01 c0       	rjmp	.+2      	; 0x1a16 <__vector_10+0x440>
+    1a14:	81 e0       	ldi	r24, 0x01	; 1
+    1a16:	80 93 98 08 	sts	0x0898, r24	; 0x800898 <G_txCntlBufPLC>
+    1a1a:	80 91 90 08 	lds	r24, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1a1e:	8f 5f       	subi	r24, 0xFF	; 255
+    1a20:	80 93 99 08 	sts	0x0899, r24	; 0x800899 <G_txCntlBufPLC+0x1>
+    1a24:	80 91 9c 08 	lds	r24, 0x089C	; 0x80089c <G_cntlmodeDipValue>
+    1a28:	81 11       	cpse	r24, r1
+    1a2a:	06 c0       	rjmp	.+12     	; 0x1a38 <__vector_10+0x462>
+    1a2c:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1a30:	f0 e0       	ldi	r31, 0x00	; 0
+    1a32:	e7 5e       	subi	r30, 0xE7	; 231
+    1a34:	fa 4f       	sbci	r31, 0xFA	; 250
+    1a36:	80 81       	ld	r24, Z
+    1a38:	80 91 99 08 	lds	r24, 0x0899	; 0x800899 <G_txCntlBufPLC+0x1>
+    1a3c:	80 93 c9 0b 	sts	0x0BC9, r24	; 0x800bc9 <G_usmCurrentCntlID>
+    1a40:	80 91 9c 08 	lds	r24, 0x089C	; 0x80089c <G_cntlmodeDipValue>
+    1a44:	81 11       	cpse	r24, r1
+    1a46:	c5 98       	cbi	0x18, 5	; 24
+    1a48:	80 91 8d 08 	lds	r24, 0x088D	; 0x80088d <G_usmOPModeOnF>
+    1a4c:	81 30       	cpi	r24, 0x01	; 1
+    1a4e:	39 f4       	brne	.+14     	; 0x1a5e <__vector_10+0x488>
+    1a50:	e0 91 90 08 	lds	r30, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1a54:	f0 e0       	ldi	r31, 0x00	; 0
+    1a56:	e7 5e       	subi	r30, 0xE7	; 231
+    1a58:	fa 4f       	sbci	r31, 0xFA	; 250
+    1a5a:	80 81       	ld	r24, Z
+    1a5c:	01 c0       	rjmp	.+2      	; 0x1a60 <__vector_10+0x48a>
+    1a5e:	80 e0       	ldi	r24, 0x00	; 0
+    1a60:	90 91 1b 09 	lds	r25, 0x091B	; 0x80091b <G_testmodeDipValue>
+    1a64:	91 30       	cpi	r25, 0x01	; 1
+    1a66:	59 f0       	breq	.+22     	; 0x1a7e <__vector_10+0x4a8>
+    1a68:	83 30       	cpi	r24, 0x03	; 3
+    1a6a:	61 f0       	breq	.+24     	; 0x1a84 <__vector_10+0x4ae>
+    1a6c:	50 f0       	brcs	.+20     	; 0x1a82 <__vector_10+0x4ac>
+    1a6e:	85 30       	cpi	r24, 0x05	; 5
+    1a70:	49 f0       	breq	.+18     	; 0x1a84 <__vector_10+0x4ae>
+    1a72:	18 f0       	brcs	.+6      	; 0x1a7a <__vector_10+0x4a4>
+    1a74:	86 30       	cpi	r24, 0x06	; 6
+    1a76:	29 f4       	brne	.+10     	; 0x1a82 <__vector_10+0x4ac>
+    1a78:	02 c0       	rjmp	.+4      	; 0x1a7e <__vector_10+0x4a8>
+    1a7a:	84 e0       	ldi	r24, 0x04	; 4
+    1a7c:	03 c0       	rjmp	.+6      	; 0x1a84 <__vector_10+0x4ae>
+    1a7e:	86 e0       	ldi	r24, 0x06	; 6
+    1a80:	01 c0       	rjmp	.+2      	; 0x1a84 <__vector_10+0x4ae>
+    1a82:	88 e0       	ldi	r24, 0x08	; 8
+    1a84:	80 93 9a 08 	sts	0x089A, r24	; 0x80089a <G_txCntlBufPLC+0x2>
+    1a88:	10 92 9b 08 	sts	0x089B, r1	; 0x80089b <G_txCntlBufPLC+0x3>
+    1a8c:	20 91 90 08 	lds	r18, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1a90:	30 e0       	ldi	r19, 0x00	; 0
+    1a92:	80 91 96 08 	lds	r24, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1a96:	90 e0       	ldi	r25, 0x00	; 0
+    1a98:	01 97       	sbiw	r24, 0x01	; 1
+    1a9a:	28 17       	cp	r18, r24
+    1a9c:	39 07       	cpc	r19, r25
+    1a9e:	09 f0       	breq	.+2      	; 0x1aa2 <__vector_10+0x4cc>
+    1aa0:	9b c0       	rjmp	.+310    	; 0x1bd8 <__vector_10+0x602>
+    1aa2:	10 92 90 08 	sts	0x0890, r1	; 0x800890 <G_plcUSMCurrentIndex>
+    1aa6:	0e 94 0f 02 	call	0x41e	; 0x41e <SCMPLCF_lgmStatusBuffInit>
+    1aaa:	60 91 96 08 	lds	r22, 0x0896	; 0x800896 <G_totalUSMCnt>
+    1aae:	81 e0       	ldi	r24, 0x01	; 1
+    1ab0:	90 e0       	ldi	r25, 0x00	; 0
+    1ab2:	86 17       	cp	r24, r22
+    1ab4:	a0 f5       	brcc	.+104    	; 0x1b1e <__vector_10+0x548>
+    1ab6:	ac 01       	movw	r20, r24
+    1ab8:	41 50       	subi	r20, 0x01	; 1
+    1aba:	51 09       	sbc	r21, r1
+    1abc:	ea 01       	movw	r28, r20
+    1abe:	c0 51       	subi	r28, 0x10	; 16
+    1ac0:	d0 4f       	sbci	r29, 0xF0	; 240
+    1ac2:	38 81       	ld	r19, Y
+    1ac4:	dc 01       	movw	r26, r24
+    1ac6:	a0 51       	subi	r26, 0x10	; 16
+    1ac8:	b0 4f       	sbci	r27, 0xF0	; 240
+    1aca:	7c 91       	ld	r23, X
+    1acc:	f0 e1       	ldi	r31, 0x10	; 16
+    1ace:	3f 9f       	mul	r19, r31
+    1ad0:	90 01       	movw	r18, r0
+    1ad2:	11 24       	eor	r1, r1
+    1ad4:	37 2f       	mov	r19, r23
+    1ad6:	3f 70       	andi	r19, 0x0F	; 15
+    1ad8:	23 2b       	or	r18, r19
+    1ada:	e8 2f       	mov	r30, r24
+    1adc:	e6 95       	lsr	r30
+    1ade:	f0 e0       	ldi	r31, 0x00	; 0
+    1ae0:	eb 5b       	subi	r30, 0xBB	; 187
+    1ae2:	f6 4f       	sbci	r31, 0xF6	; 246
+    1ae4:	20 83       	st	Z, r18
+    1ae6:	fa 01       	movw	r30, r20
+    1ae8:	ef 56       	subi	r30, 0x6F	; 111
+    1aea:	fa 4f       	sbci	r31, 0xFA	; 250
+    1aec:	e0 81       	ld	r30, Z
+    1aee:	28 81       	ld	r18, Y
+    1af0:	21 30       	cpi	r18, 0x01	; 1
+    1af2:	31 f0       	breq	.+12     	; 0x1b00 <__vector_10+0x52a>
+    1af4:	f0 e0       	ldi	r31, 0x00	; 0
+    1af6:	ee 54       	subi	r30, 0x4E	; 78
+    1af8:	f2 4f       	sbci	r31, 0xF2	; 242
+    1afa:	20 81       	ld	r18, Z
+    1afc:	2f 5f       	subi	r18, 0xFF	; 255
+    1afe:	20 83       	st	Z, r18
+    1b00:	fc 01       	movw	r30, r24
+    1b02:	ef 56       	subi	r30, 0x6F	; 111
+    1b04:	fa 4f       	sbci	r31, 0xFA	; 250
+    1b06:	e0 81       	ld	r30, Z
+    1b08:	2c 91       	ld	r18, X
+    1b0a:	21 30       	cpi	r18, 0x01	; 1
+    1b0c:	31 f0       	breq	.+12     	; 0x1b1a <__vector_10+0x544>
+    1b0e:	f0 e0       	ldi	r31, 0x00	; 0
+    1b10:	ee 54       	subi	r30, 0x4E	; 78
+    1b12:	f2 4f       	sbci	r31, 0xF2	; 242
+    1b14:	20 81       	ld	r18, Z
+    1b16:	2f 5f       	subi	r18, 0xFF	; 255
+    1b18:	20 83       	st	Z, r18
+    1b1a:	02 96       	adiw	r24, 0x02	; 2
+    1b1c:	ca cf       	rjmp	.-108    	; 0x1ab2 <__vector_10+0x4dc>
+    1b1e:	c0 91 95 08 	lds	r28, 0x0895	; 0x800895 <G_totalLGMCnt>
+    1b22:	81 e0       	ldi	r24, 0x01	; 1
+    1b24:	90 e0       	ldi	r25, 0x00	; 0
+    1b26:	20 e0       	ldi	r18, 0x00	; 0
+    1b28:	30 e0       	ldi	r19, 0x00	; 0
+    1b2a:	e8 2f       	mov	r30, r24
+    1b2c:	8c 17       	cp	r24, r28
+    1b2e:	08 f0       	brcs	.+2      	; 0x1b32 <__vector_10+0x55c>
+    1b30:	58 c0       	rjmp	.+176    	; 0x1be2 <__vector_10+0x60c>
+    1b32:	dc 01       	movw	r26, r24
+    1b34:	ae 54       	subi	r26, 0x4E	; 78
+    1b36:	b2 4f       	sbci	r27, 0xF2	; 242
+    1b38:	5c 91       	ld	r21, X
+    1b3a:	dc 01       	movw	r26, r24
+    1b3c:	a5 52       	subi	r26, 0x25	; 37
+    1b3e:	b2 4f       	sbci	r27, 0xF2	; 242
+    1b40:	4c 91       	ld	r20, X
+    1b42:	54 17       	cp	r21, r20
+    1b44:	10 f0       	brcs	.+4      	; 0x1b4a <__vector_10+0x574>
+    1b46:	55 e0       	ldi	r21, 0x05	; 5
+    1b48:	01 c0       	rjmp	.+2      	; 0x1b4c <__vector_10+0x576>
+    1b4a:	54 e0       	ldi	r21, 0x04	; 4
+    1b4c:	b9 01       	movw	r22, r18
+    1b4e:	6e 5f       	subi	r22, 0xFE	; 254
+    1b50:	7f 4f       	sbci	r23, 0xFF	; 255
+    1b52:	db 01       	movw	r26, r22
+    1b54:	ae 54       	subi	r26, 0x4E	; 78
+    1b56:	b2 4f       	sbci	r27, 0xF2	; 242
+    1b58:	fc 91       	ld	r31, X
+    1b5a:	db 01       	movw	r26, r22
+    1b5c:	a5 52       	subi	r26, 0x25	; 37
+    1b5e:	b2 4f       	sbci	r27, 0xF2	; 242
+    1b60:	4c 91       	ld	r20, X
+    1b62:	f4 17       	cp	r31, r20
+    1b64:	10 f0       	brcs	.+4      	; 0x1b6a <__vector_10+0x594>
+    1b66:	45 e0       	ldi	r20, 0x05	; 5
+    1b68:	01 c0       	rjmp	.+2      	; 0x1b6c <__vector_10+0x596>
+    1b6a:	44 e0       	ldi	r20, 0x04	; 4
+    1b6c:	dc 01       	movw	r26, r24
+    1b6e:	a3 56       	subi	r26, 0x63	; 99
+    1b70:	b7 4f       	sbci	r27, 0xF7	; 247
+    1b72:	fc 91       	ld	r31, X
+    1b74:	f1 11       	cpse	r31, r1
+    1b76:	01 c0       	rjmp	.+2      	; 0x1b7a <__vector_10+0x5a4>
+    1b78:	50 e0       	ldi	r21, 0x00	; 0
+    1b7a:	db 01       	movw	r26, r22
+    1b7c:	a3 56       	subi	r26, 0x63	; 99
+    1b7e:	b7 4f       	sbci	r27, 0xF7	; 247
+    1b80:	fc 91       	ld	r31, X
+    1b82:	f1 11       	cpse	r31, r1
+    1b84:	01 c0       	rjmp	.+2      	; 0x1b88 <__vector_10+0x5b2>
+    1b86:	40 e0       	ldi	r20, 0x00	; 0
+    1b88:	f0 91 8c 08 	lds	r31, 0x088C	; 0x80088c <G_lgmOPModeOnF>
+    1b8c:	f1 30       	cpi	r31, 0x01	; 1
+    1b8e:	61 f4       	brne	.+24     	; 0x1ba8 <__vector_10+0x5d2>
+    1b90:	d9 01       	movw	r26, r18
+    1b92:	af 50       	subi	r26, 0x0F	; 15
+    1b94:	bb 4f       	sbci	r27, 0xFB	; 251
+    1b96:	fc 91       	ld	r31, X
+    1b98:	f1 11       	cpse	r31, r1
+    1b9a:	5c 91       	ld	r21, X
+    1b9c:	dc 01       	movw	r26, r24
+    1b9e:	af 50       	subi	r26, 0x0F	; 15
+    1ba0:	bb 4f       	sbci	r27, 0xFB	; 251
+    1ba2:	fc 91       	ld	r31, X
+    1ba4:	f1 11       	cpse	r31, r1
+    1ba6:	4c 91       	ld	r20, X
+    1ba8:	f0 e1       	ldi	r31, 0x10	; 16
+    1baa:	5f 9f       	mul	r21, r31
+    1bac:	d0 01       	movw	r26, r0
+    1bae:	11 24       	eor	r1, r1
+    1bb0:	f4 2f       	mov	r31, r20
+    1bb2:	ff 70       	andi	r31, 0x0F	; 15
+    1bb4:	af 2b       	or	r26, r31
+    1bb6:	e6 95       	lsr	r30
+    1bb8:	ef 5f       	subi	r30, 0xFF	; 255
+    1bba:	f0 e0       	ldi	r31, 0x00	; 0
+    1bbc:	e4 5e       	subi	r30, 0xE4	; 228
+    1bbe:	f6 4f       	sbci	r31, 0xF6	; 246
+    1bc0:	a0 83       	st	Z, r26
+    1bc2:	f9 01       	movw	r30, r18
+    1bc4:	e0 56       	subi	r30, 0x60	; 96
+    1bc6:	f4 4f       	sbci	r31, 0xF4	; 244
+    1bc8:	50 83       	st	Z, r21
+    1bca:	fc 01       	movw	r30, r24
+    1bcc:	e0 56       	subi	r30, 0x60	; 96
+    1bce:	f4 4f       	sbci	r31, 0xF4	; 244
+    1bd0:	40 83       	st	Z, r20
+    1bd2:	02 96       	adiw	r24, 0x02	; 2
+    1bd4:	9b 01       	movw	r18, r22
+    1bd6:	a9 cf       	rjmp	.-174    	; 0x1b2a <__vector_10+0x554>
+    1bd8:	80 91 90 08 	lds	r24, 0x0890	; 0x800890 <G_plcUSMCurrentIndex>
+    1bdc:	8f 5f       	subi	r24, 0xFF	; 255
+    1bde:	80 93 90 08 	sts	0x0890, r24	; 0x800890 <G_plcUSMCurrentIndex>
+    1be2:	60 91 98 08 	lds	r22, 0x0898	; 0x800898 <G_txCntlBufPLC>
+    1be6:	70 91 99 08 	lds	r23, 0x0899	; 0x800899 <G_txCntlBufPLC+0x1>
+    1bea:	80 91 9a 08 	lds	r24, 0x089A	; 0x80089a <G_txCntlBufPLC+0x2>
+    1bee:	90 91 9b 08 	lds	r25, 0x089B	; 0x80089b <G_txCntlBufPLC+0x3>
+    1bf2:	0e 94 01 05 	call	0xa02	; 0xa02 <SCMPLCF_SendMessageCntlPacket>
+    1bf6:	80 e4       	ldi	r24, 0x40	; 64
+    1bf8:	89 bf       	out	0x39, r24	; 57
+    1bfa:	ff 91       	pop	r31
+    1bfc:	ef 91       	pop	r30
+    1bfe:	df 91       	pop	r29
+    1c00:	cf 91       	pop	r28
+    1c02:	bf 91       	pop	r27
+    1c04:	af 91       	pop	r26
+    1c06:	9f 91       	pop	r25
+    1c08:	8f 91       	pop	r24
+    1c0a:	7f 91       	pop	r23
+    1c0c:	6f 91       	pop	r22
+    1c0e:	5f 91       	pop	r21
+    1c10:	4f 91       	pop	r20
+    1c12:	3f 91       	pop	r19
+    1c14:	2f 91       	pop	r18
+    1c16:	0f 90       	pop	r0
+    1c18:	0b be       	out	0x3b, r0	; 59
+    1c1a:	0f 90       	pop	r0
+    1c1c:	0f be       	out	0x3f, r0	; 63
+    1c1e:	0f 90       	pop	r0
+    1c20:	1f 90       	pop	r1
+    1c22:	18 95       	reti
+
+00001c24 <__vector_7>:
+    1c24:	1f 92       	push	r1
+    1c26:	0f 92       	push	r0
+    1c28:	0f b6       	in	r0, 0x3f	; 63
+    1c2a:	0f 92       	push	r0
+    1c2c:	11 24       	eor	r1, r1
+    1c2e:	0b b6       	in	r0, 0x3b	; 59
+    1c30:	0f 92       	push	r0
+    1c32:	2f 93       	push	r18
+    1c34:	8f 93       	push	r24
+    1c36:	9f 93       	push	r25
+    1c38:	ef 93       	push	r30
+    1c3a:	ff 93       	push	r31
+    1c3c:	e4 e0       	ldi	r30, 0x04	; 4
+    1c3e:	fe e0       	ldi	r31, 0x0E	; 14
+    1c40:	88 ef       	ldi	r24, 0xF8	; 248
+    1c42:	81 83       	std	Z+1, r24	; 0x01
+    1c44:	81 b1       	in	r24, 0x01	; 1
+    1c46:	8f e6       	ldi	r24, 0x6F	; 111
+    1c48:	97 e1       	ldi	r25, 0x17	; 23
+    1c4a:	01 97       	sbiw	r24, 0x01	; 1
+    1c4c:	f1 f7       	brne	.-4      	; 0x1c4a <__vector_7+0x26>
+    1c4e:	00 c0       	rjmp	.+0      	; 0x1c50 <__vector_7+0x2c>
+    1c50:	00 00       	nop
+    1c52:	81 b1       	in	r24, 0x01	; 1
+    1c54:	91 81       	ldd	r25, Z+1	; 0x01
+    1c56:	86 fb       	bst	r24, 6
+    1c58:	88 27       	eor	r24, r24
+    1c5a:	80 f9       	bld	r24, 0
+    1c5c:	89 0f       	add	r24, r25
+    1c5e:	81 83       	std	Z+1, r24	; 0x01
+    1c60:	8f e9       	ldi	r24, 0x9F	; 159
+    1c62:	9f e0       	ldi	r25, 0x0F	; 15
+    1c64:	01 97       	sbiw	r24, 0x01	; 1
+    1c66:	f1 f7       	brne	.-4      	; 0x1c64 <__vector_7+0x40>
+    1c68:	00 c0       	rjmp	.+0      	; 0x1c6a <__vector_7+0x46>
+    1c6a:	00 00       	nop
+    1c6c:	91 b1       	in	r25, 0x01	; 1
+    1c6e:	21 81       	ldd	r18, Z+1	; 0x01
+    1c70:	96 fb       	bst	r25, 6
+    1c72:	88 27       	eor	r24, r24
+    1c74:	80 f9       	bld	r24, 0
+    1c76:	88 0f       	add	r24, r24
+    1c78:	82 0f       	add	r24, r18
+    1c7a:	81 83       	std	Z+1, r24	; 0x01
+    1c7c:	8f e9       	ldi	r24, 0x9F	; 159
+    1c7e:	9f e0       	ldi	r25, 0x0F	; 15
+    1c80:	01 97       	sbiw	r24, 0x01	; 1
+    1c82:	f1 f7       	brne	.-4      	; 0x1c80 <__vector_7+0x5c>
+    1c84:	00 c0       	rjmp	.+0      	; 0x1c86 <__vector_7+0x62>
+    1c86:	00 00       	nop
+    1c88:	91 b1       	in	r25, 0x01	; 1
+    1c8a:	21 81       	ldd	r18, Z+1	; 0x01
+    1c8c:	96 fb       	bst	r25, 6
+    1c8e:	88 27       	eor	r24, r24
+    1c90:	80 f9       	bld	r24, 0
+    1c92:	88 0f       	add	r24, r24
+    1c94:	88 0f       	add	r24, r24
+    1c96:	82 0f       	add	r24, r18
+    1c98:	81 83       	std	Z+1, r24	; 0x01
+    1c9a:	8f e9       	ldi	r24, 0x9F	; 159
+    1c9c:	9f e0       	ldi	r25, 0x0F	; 15
+    1c9e:	01 97       	sbiw	r24, 0x01	; 1
+    1ca0:	f1 f7       	brne	.-4      	; 0x1c9e <__vector_7+0x7a>
+    1ca2:	00 c0       	rjmp	.+0      	; 0x1ca4 <__vector_7+0x80>
+    1ca4:	00 00       	nop
+    1ca6:	80 91 c9 0b 	lds	r24, 0x0BC9	; 0x800bc9 <G_usmCurrentCntlID>
+    1caa:	90 e0       	ldi	r25, 0x00	; 0
+    1cac:	21 81       	ldd	r18, Z+1	; 0x01
+    1cae:	20 95       	com	r18
+    1cb0:	fc 01       	movw	r30, r24
+    1cb2:	e1 51       	subi	r30, 0x11	; 17
+    1cb4:	f0 4f       	sbci	r31, 0xF0	; 240
+    1cb6:	20 83       	st	Z, r18
+    1cb8:	e0 91 c9 0b 	lds	r30, 0x0BC9	; 0x800bc9 <G_usmCurrentCntlID>
+    1cbc:	f0 e0       	ldi	r31, 0x00	; 0
+    1cbe:	e0 57       	subi	r30, 0x70	; 112
+    1cc0:	fa 4f       	sbci	r31, 0xFA	; 250
+    1cc2:	e0 81       	ld	r30, Z
+    1cc4:	f0 e0       	ldi	r31, 0x00	; 0
+    1cc6:	e3 56       	subi	r30, 0x63	; 99
+    1cc8:	f7 4f       	sbci	r31, 0xF7	; 247
+    1cca:	81 e0       	ldi	r24, 0x01	; 1
+    1ccc:	80 83       	st	Z, r24
+    1cce:	19 be       	out	0x39, r1	; 57
+    1cd0:	ff 91       	pop	r31
+    1cd2:	ef 91       	pop	r30
+    1cd4:	9f 91       	pop	r25
+    1cd6:	8f 91       	pop	r24
+    1cd8:	2f 91       	pop	r18
+    1cda:	0f 90       	pop	r0
+    1cdc:	0b be       	out	0x3b, r0	; 59
+    1cde:	0f 90       	pop	r0
+    1ce0:	0f be       	out	0x3f, r0	; 63
+    1ce2:	0f 90       	pop	r0
+    1ce4:	1f 90       	pop	r1
+    1ce6:	18 95       	reti
+
+00001ce8 <_exit>:
+    1ce8:	f8 94       	cli
+
+00001cea <__stop_program>:
+    1cea:	ff cf       	rjmp	.-2      	; 0x1cea <__stop_program>
