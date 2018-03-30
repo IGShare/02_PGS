@@ -869,7 +869,7 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	}
 
 	if((nEBD1_Green11_L != m_nOld_EBD1_Green11_L) || (nEBD1_Green11_R != m_nOld_EBD1_Green11_R) ){
-		sprintf_s (strTmp, MAX_PATH, "_r_r_r_r%4d%4d", nEBD1_Green5_R, nEBD1_Green5_R);
+		sprintf_s (strTmp, MAX_PATH, "_r_r_r_r%4d%4d", nEBD1_Green11_R, nEBD1_Green11_R);
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID11], strTmp, bufClrGreen, &m_commEbd1);
 		Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
