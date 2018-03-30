@@ -709,8 +709,8 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	int nEBD1_Green4_L, nEBD1_Green4_R;
 	int nEBD1_Green5_L, nEBD1_Green5_R;
 	int nEBD1_Green6_L, nEBD1_Green6_R;
-	//int nEBD1_Green7_L, nEBD1_Green7_R;
-	//int nEBD1_Green8_L, nEBD1_Green8_R;
+	int nEBD1_Green7_L, nEBD1_Green7_R;
+	int nEBD1_Green8_L, nEBD1_Green8_R;
 	//int nEBD1_Green9_L, nEBD1_Green9_R;
 	//int nEBD1_Green10_L, nEBD1_Green10_R;
 	//int nEBD1_Green11_L, nEBD1_Green11_R;
@@ -750,19 +750,29 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 		}
 	}
 
-	nEBD1_Green1_L		=	bufNGrGrp[ 2]; //Áö»ó2Ãþ ÀÏºÎ				
-	nEBD1_Green1_R		=	bufNGrGrp[ 4]; //Áö»ó3Ãþ ÀüÃ¼				
-	nEBD1_Green2_L		=	bufNGrGrp[ 1]; // 1F			
-	nEBD1_Green2_R		=	bufNGrGrp[ 1]; // Áö»ó1ÃþÀüÃ¼				
-	nEBD1_Green3_L		=	bufNGrGrp[ 4];				
-	nEBD1_Green3_R		=	bufNGrGrp[ 5];		
+	nEBD1_Green1_L		=	bufNGrGrp[ 1];			
+	nEBD1_Green1_R		=	bufNGrGrp[ 2];
 
-	nEBD1_Green4_L		=	bufNGrGrp[ 5];				
-	nEBD1_Green4_R		=	bufNGrGrp[ 6];				
-	nEBD1_Green5_L		=	bufNGrGrp[ 6];				
-	nEBD1_Green5_R		=	bufNGrGrp[ 7];				
-	nEBD1_Green6_L		=	bufNGrGrp[ 7];				
-	nEBD1_Green6_R		=	glIGlobal.EBDComm_numFreeCMS; // ¿Á»óÃþ (Áß¾Ó°¨½Ã¹Ý)	
+	nEBD1_Green2_L		=	bufNGrGrp[ 1]+bufNGrGrp[ 2]+bufNGrGrp[ 3];		
+	nEBD1_Green2_R		=	bufNGrGrp[ 6];	
+
+	nEBD1_Green3_L		=	bufNGrGrp[ 1]+bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4]+bufNGrGrp[ 6]+bufNGrGrp[ 7];				
+	nEBD1_Green3_R		=	bufNGrGrp[ 5]+bufNGrGrp[ 9]+bufNGrGrp[10]+bufNGrGrp[11]+bufNGrGrp[12]+bufNGrGrp[13]+bufNGrGrp[14]+bufNGrGrp[15]+bufNGrGrp[16];	
+
+	nEBD1_Green4_L		=	bufNGrGrp[ 1];				
+	nEBD1_Green4_R		=	bufNGrGrp[ 2];
+
+	nEBD1_Green5_L		=	bufNGrGrp[10]+bufNGrGrp[11]+bufNGrGrp[12]+bufNGrGrp[13]+bufNGrGrp[14]+bufNGrGrp[15]+bufNGrGrp[16];			
+	nEBD1_Green5_R		=	bufNGrGrp[ 7];	
+
+	nEBD1_Green6_L		=	bufNGrGrp[12]+bufNGrGrp[13]+bufNGrGrp[14]+bufNGrGrp[15]+bufNGrGrp[16];			
+	nEBD1_Green6_R		=	bufNGrGrp[ 5];	
+	
+	nEBD1_Green7_L		=	bufNGrGrp[ 14];				
+	nEBD1_Green7_R		=	bufNGrGrp[12]+bufNGrGrp[13]+bufNGrGrp[14]+bufNGrGrp[15];	
+
+	nEBD1_Green8_L		=	bufNGrGrp[ 12];				
+	nEBD1_Green8_R		=	bufNGrGrp[ 13];
 
 	//Àü±¤ÆÇ setting
 	// 0xe0 0x18	: _u	: À§ÂÊ È­»ìÇ¥
@@ -774,38 +784,50 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 
 
 	if((nEBD1_Green1_L != m_nOld_EBD1_Green1_L) || (nEBD1_Green1_R != m_nOld_EBD1_Green1_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green1_R, nEBD1_Green1_L);
+			sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d", nEBD1_Green1_R, nEBD1_Green1_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID1], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
 	if((nEBD1_Green2_L != m_nOld_EBD1_Green2_L) || (nEBD1_Green2_R != m_nOld_EBD1_Green2_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_r_r%4d  1F", nEBD1_Green2_R, nEBD1_Green2_L);
+			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green2_R, nEBD1_Green2_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID2], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
 	if((nEBD1_Green3_L != m_nOld_EBD1_Green3_L) || (nEBD1_Green3_R != m_nOld_EBD1_Green3_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green3_R, nEBD1_Green3_L);
+			sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d", nEBD1_Green3_R, nEBD1_Green3_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID3], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
 
 	if((nEBD1_Green4_L != m_nOld_EBD1_Green4_L) || (nEBD1_Green4_R != m_nOld_EBD1_Green4_R) ){
-		sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green4_R, nEBD1_Green4_L);
+		sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d", nEBD1_Green4_R, nEBD1_Green4_L);
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID4], strTmp, bufClrGreen, &m_commEbd1);
 		Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
 
 	if((nEBD1_Green5_L != m_nOld_EBD1_Green5_L) || (nEBD1_Green5_R != m_nOld_EBD1_Green5_R) ){
-		sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green5_R, nEBD1_Green5_L);
+		sprintf_s (strTmp, MAX_PATH, "_l_l_l_l%4d%4d", nEBD1_Green5_R, nEBD1_Green5_L);
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID5], strTmp, bufClrGreen, &m_commEbd1);
 		Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
 
 	if((nEBD1_Green6_L != m_nOld_EBD1_Green6_L) || (nEBD1_Green6_R != m_nOld_EBD1_Green6_R) ){
-		sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green6_R, nEBD1_Green6_L);
+		sprintf_s (strTmp, MAX_PATH, "_l_l_l_l%4d%4d", nEBD1_Green6_R, nEBD1_Green6_L);
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID6], strTmp, bufClrGreen, &m_commEbd1);
+		Sleep (glIGlobal.EBD1Comm_timeSendInterval);
+	}
+
+	if((nEBD1_Green7_L != m_nOld_EBD1_Green7_L) || (nEBD1_Green7_R != m_nOld_EBD1_Green7_R) ){
+		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d", nEBD1_Green7_R, nEBD1_Green7_L);
+		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID7], strTmp, bufClrGreen, &m_commEbd1);
+		Sleep (glIGlobal.EBD1Comm_timeSendInterval);
+	}
+
+	if((nEBD1_Green8_L != m_nOld_EBD1_Green8_L) || (nEBD1_Green8_R != m_nOld_EBD1_Green8_R) ){
+		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d", nEBD1_Green8_R, nEBD1_Green8_L);
+		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID8], strTmp, bufClrGreen, &m_commEbd1);
 		Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
 
@@ -816,6 +838,18 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	m_nOld_EBD1_Green2_R   = nEBD1_Green2_R;
 	m_nOld_EBD1_Green3_L   = nEBD1_Green3_L;
 	m_nOld_EBD1_Green3_R   = nEBD1_Green3_R;
+
+	m_nOld_EBD1_Green4_L	= nEBD1_Green4_L;
+	m_nOld_EBD1_Green4_R	= nEBD1_Green4_R;
+	m_nOld_EBD1_Green5_L	= nEBD1_Green5_L;
+	m_nOld_EBD1_Green5_R	= nEBD1_Green5_R;
+	m_nOld_EBD1_Green6_L	= nEBD1_Green6_L;
+	m_nOld_EBD1_Green6_R	= nEBD1_Green6_R;
+	m_nOld_EBD1_Green7_L	= nEBD1_Green7_L;
+	m_nOld_EBD1_Green7_R	= nEBD1_Green7_R;
+	m_nOld_EBD1_Green8_L	= nEBD1_Green8_L;
+	m_nOld_EBD1_Green8_R	= nEBD1_Green8_R;
+
 
 
 	memcpy (&m_bufNOldGrGrp[0], &bufNGrGrp[0], sizeof(int) *NUM_EBD_GROUP);
