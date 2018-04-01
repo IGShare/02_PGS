@@ -780,22 +780,27 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 
 	nEBD1_Green7_L		=	bufNGrGrp[ 1]+bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4]+bufNGrGrp[ 5]+bufNGrGrp[ 6]+bufNGrGrp[ 7]+bufNGrGrp[15];
 	nEBD1_Green7_R		=	bufNGrGrp[ 8]+bufNGrGrp[ 9]+bufNGrGrp[ 10]+bufNGrGrp[ 11]+bufNGrGrp[ 12]+bufNGrGrp[ 13]+bufNGrGrp[14]+bufNGrGrp[16]+bufNGrGrp[ 17]+bufNGrGrp[ 18]+bufNGrGrp[19]+bufNGrGrp[20];		
+
 	nEBD1_Green8_FL		=	bufNGrGrp[ 8];
 	nEBD1_Green8_FR		=	bufNGrGrp[ 8];	
 	nEBD1_Green8_BL		=	bufNGrGrp[ 8];
 	nEBD1_Green8_BR		=	bufNGrGrp[ 8];
+	
 	nEBD1_Green9_FL		=	bufNGrGrp[ 9];
 	nEBD1_Green9_FR		=	bufNGrGrp[ 9];	
 	nEBD1_Green9_BL		=	bufNGrGrp[ 9];
 	nEBD1_Green9_BR		=	bufNGrGrp[ 9];	
+	
 	nEBD1_Green10_L		=	bufNGrGrp[ 10]+bufNGrGrp[ 11]+bufNGrGrp[ 12]+bufNGrGrp[ 13]+bufNGrGrp[14]+bufNGrGrp[15];
 	nEBD1_Green10_R		=	bufNGrGrp[ 18]+bufNGrGrp[19]+bufNGrGrp[20]+bufNGrGrp[21];	
 
 
 	nEBD1_Green11_L		=	bufNGrGrp[ 16]+bufNGrGrp[20]+bufNGrGrp[21];				
 	nEBD1_Green11_R		=	bufNGrGrp[ 16]+bufNGrGrp[20]+bufNGrGrp[21];				
+	
 	nEBD1_Green12_L		=	bufNGrGrp[ 16]+bufNGrGrp[21];				
 	nEBD1_Green12_R		=	bufNGrGrp[ 16]+bufNGrGrp[21];					
+	
 	nEBD1_Green13_L		=	bufNGrGrp[ 16];				
 	nEBD1_Green13_R		=	bufNGrGrp[ 16];
 
@@ -809,7 +814,7 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 
 
 	if((nEBD1_Green1_FL != m_nOld_EBD1_Green1_L) || (nEBD1_Green1_FR != m_nOld_EBD1_Green1_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_l_l_r_r_l_l%4d%4d%4d%4d", nEBD1_Green1_FR, nEBD1_Green1_FL,nEBD1_Green1_BR, nEBD1_Green1_BL);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_r_r_l_l_r_r%4d%4d%4d%4d", nEBD1_Green1_BL, nEBD1_Green1_BR,nEBD1_Green1_FL, nEBD1_Green1_FR);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID1], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
@@ -827,7 +832,7 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	}
 
 	if((nEBD1_Green4_FL != m_nOld_EBD1_Green4_L) || (nEBD1_Green4_FR != m_nOld_EBD1_Green4_R) ){
-		sprintf_s (strTmp, MAX_PATH, "_r_r_r_r_l_l_l_l%4d%4d%4d%4d", nEBD1_Green4_FR, nEBD1_Green4_FL,nEBD1_Green4_BR, nEBD1_Green4_BL);
+		sprintf_s (strTmp, MAX_PATH, "_l_l_l_l_r_r_r_r%4d%4d%4d%4d", nEBD1_Green4_BL, nEBD1_Green4_BR,nEBD1_Green4_FL, nEBD1_Green4_FR);
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID4], strTmp, bufClrGreen, &m_commEbd1);
 		Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
@@ -851,13 +856,13 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 		
 	}
 	if((nEBD1_Green8_FL != m_nOld_EBD1_Green8_L) || (nEBD1_Green8_FR != m_nOld_EBD1_Green8_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_r_r_l_l_l_l%4d%4d%4d%4d", nEBD1_Green8_FR, nEBD1_Green8_FL,nEBD1_Green8_BR, nEBD1_Green8_BL);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l_r_r_r_r%4d%4d%4d%4d", nEBD1_Green8_BL, nEBD1_Green8_BR,nEBD1_Green8_FL, nEBD1_Green8_FR);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID8], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
 	if((nEBD1_Green9_FL != m_nOld_EBD1_Green9_L) || (nEBD1_Green9_FR != m_nOld_EBD1_Green9_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_r_r_l_l_l_l%4d%4d%4d%4d", nEBD1_Green9_FR, nEBD1_Green9_FL,nEBD1_Green9_BR, nEBD1_Green9_BL);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l_r_r_r_r%4d%4d%4d%4d", nEBD1_Green9_BL, nEBD1_Green9_BR,nEBD1_Green9_FL, nEBD1_Green9_FR);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID9], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
@@ -904,15 +909,19 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 
 	m_nOld_EBD1_Green7_L   = nEBD1_Green7_L;
 	m_nOld_EBD1_Green7_R   = nEBD1_Green7_R;
+
 	m_nOld_EBD1_Green8_L   = nEBD1_Green8_FL;
 	m_nOld_EBD1_Green8_R   = nEBD1_Green8_FR;
+
 	m_nOld_EBD1_Green9_L   = nEBD1_Green9_FL;
 	m_nOld_EBD1_Green9_R   = nEBD1_Green9_FR;
 
 	m_nOld_EBD1_Green10_L   = nEBD1_Green10_L;
 	m_nOld_EBD1_Green10_R   = nEBD1_Green10_R;
+
 	m_nOld_EBD1_Green11_L   = nEBD1_Green11_L;
 	m_nOld_EBD1_Green11_R   = nEBD1_Green11_R;
+
 	m_nOld_EBD1_Green12_L   = nEBD1_Green12_L;
 	m_nOld_EBD1_Green12_R   = nEBD1_Green12_R;
 
