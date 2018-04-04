@@ -40,6 +40,66 @@ static UINT indicators[] =
 	ID_INDICATOR_SCRL,
 };
 
+UINT TH_PROC_EBOARD (LPVOID pParam)
+{
+	CMainFrame *pParent = (CMainFrame *)pParam;
+	int idxEBoard = pParent->m_EBD_CHK_idxEBoard;
+
+	int i, szEBoardSendData, bufClr[MAX_PATH], bufNumTotal[2], bufNumParked[2], bufNumFree[2];
+	STAT_PARKING_AREA stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F;
+	BYTE bufEBoardSendData[SZ_EBD_SND_BUF];
+	CString strEBoardMsg;
+	INFO_BACK_DRAWING_ITEM *pIBDI;
+	int tmpb2, tmp3, tmp4, tmp5;
+	static int nDpCnt=0; 
+
+	for (i=0; i<MAX_PATH; i++)
+	{
+		bufClr[i] = IDX_EBD_CLR_GREEN;
+	}
+
+	CString cSTmp;
+	pParent->m_EBD_CHK_idxEBoard = -1;
+
+	while (pParent->m_EBD_bufBEndThread[idxEBoard] == FALSE)
+	{
+		if (pParent->m_EBD_bufManClNetComm[idxEBoard].IsConnected () == TRUE)
+		{
+
+			AddReport ("[%2d] %s : ERROR: TCP Connencted\n", idxEBoard, glInfoGlobal.unGVA.iGVA.bufIEbdParam[idxEBoard].strNetAddr);
+
+
+			pIBDI = &glInfoGlobal.iBDA.bufBDI[glInfoGlobal.iBDA.bufIdxMainBDI[0]];
+			GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
+			strEBoardMsg.Format ("%4d%4d", stPaB2F.nFree,stPaB3F.nFree);
+
+
+			szEBoardSendData = MakeEBoardSendData (
+				glInfoGlobal.unGVA.iGVA.bufIEbdParam[idxEBoard].nDstID,
+				strEBoardMsg, bufClr, bufEBoardSendData);
+
+			pParent->m_EBD_bufManClNetComm[idxEBoard].SendData (&bufEBoardSendData[0], szEBoardSendData);
+
+
+			::Sleep(4000);
+		}
+		else
+		{
+			pParent->m_EBD_bufManClNetComm[idxEBoard].Connect(
+				glInfoGlobal.unGVA.iGVA.bufIEbdParam[idxEBoard].strNetAddr,
+				glInfoGlobal.unGVA.iGVA.bufIEbdParam[idxEBoard].nNetPort);
+
+			AddReport ("[%2d] %s : ERROR: TCP not Connencted\n", idxEBoard, glInfoGlobal.unGVA.iGVA.bufIEbdParam[idxEBoard].strNetAddr);
+
+			::Sleep(100);
+		}
+	}
+	pParent->m_EBD_bufManClNetComm[idxEBoard].Close();
+	pParent->m_EBD_bufBEndThread[idxEBoard] = FALSE;
+
+	return 0;
+}
+
 // CMainFrame 생성/소멸
 
 CMainFrame::CMainFrame()
@@ -49,10 +109,19 @@ CMainFrame::CMainFrame()
 /*	_CrtSetDbgFlag (_CRTDBG_ALLOC_MEM_DF |_CRTDBG_LEAK_CHECK_DF);
 	_CrtSetBreakAlloc (867);
 */
+	int i;
+
 	ResetReport (STR_REPORT_FILE_NAME);
 	ReadInitSettingsFromFile ();
 
 	glInfoGlobal.unGVA.iGVA.pWMNC = new CWrapManNetComm;
+
+	for (i=0; i<NUM_EBOARD_DEV; i++)
+	{
+		strcpy_s (glInfoGlobal.unGVA.iGVA.bufIEbdParam[i].strNetAddr, MAX_PATH, GL_STR_EBD_NET_ADDR[i]);
+		glInfoGlobal.unGVA.iGVA.bufIEbdParam[i].nNetPort = GL_NUM_EBD_NET_PORT[i];
+		glInfoGlobal.unGVA.iGVA.bufIEbdParam[i].nDstID = GL_NUM_EBD_DST_ID[i];
+	}
 }
 
 CMainFrame::~CMainFrame()
@@ -69,6 +138,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	// 모든 사용자 인터페이스 요소를 그리는 데 사용하는 비주얼 관리자를 설정합니다.
 	CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));
+	int i;
 
 /*	BOOL bNameValid;
 
@@ -140,6 +210,20 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	glInfoGlobal.unGVA.iGVA.pPaneBD = &m_paneBD;
 	glInfoGlobal.unGVA.iGVA.pWMNC->SetUpdateNotifyFunc (UpdateCurDispStat);
 
+	for (i=0; i<NUM_EBOARD_DEV; i++)
+	{
+		m_EBD_bufBEndThread[i] = FALSE;
+
+		m_EBD_CHK_idxEBoard = i;
+
+		AfxBeginThread (TH_PROC_EBOARD, this);
+
+		while (m_EBD_CHK_idxEBoard != -1)
+		{
+			Sleep (0);
+		}
+	}
+
 	return 0;
 }
 
@@ -150,6 +234,20 @@ void CMainFrame::OnDestroy()
 	CMDIFrameWndEx::OnDestroy();
 
 	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
+
+	int i;
+
+	for (i=0; i<NUM_EBOARD_DEV; i++)
+	{
+		m_EBD_bufBEndThread[i] = TRUE;
+	}
+	for (i=0; i<NUM_EBOARD_DEV; i++)
+	{
+		while (m_EBD_bufBEndThread[i] == TRUE)
+		{
+			Sleep (0);
+		}
+	}
 }
 
 BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)

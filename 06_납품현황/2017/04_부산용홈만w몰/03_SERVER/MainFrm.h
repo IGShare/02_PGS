@@ -6,6 +6,7 @@
 
 #include "PaneBD.h"
 #include "PaneInfoEboard.h"
+#include "ManClNetComm.h"
 
 enum {
 	IDX_PANE_BD,
@@ -29,6 +30,13 @@ public:
 
 public:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+
+	// EBoard[S]
+	CManClNetComm m_EBD_bufManClNetComm[NUM_EBOARD_DEV];
+	volatile BOOL m_EBD_bufBEndThread[NUM_EBOARD_DEV];
+
+	volatile int m_EBD_CHK_idxEBoard;
+	// EBoard[E]
 
 public:
 	virtual ~CMainFrame();

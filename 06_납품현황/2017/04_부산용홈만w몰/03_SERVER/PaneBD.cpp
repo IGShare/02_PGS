@@ -142,7 +142,7 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 
 	
 	pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[0]];
-	GetCurStatFromBDI (pIBDI, stPaAll, stPa1F,stPa2F,stPa3F,stPa4F,stPa5F,stPa6F);
+	GetCurStatFromBDI (pIBDI, stPaAll, stPa1F,stPa2F,stPa3F,stPa4F);
 	stPaAll_FINAL.nTotal	= stPaAll.nTotal;
 	stPaAll_FINAL.nFree		= stPaAll.nFree;
 	stPaAll_FINAL.nParked	= stPaAll.nParked;
@@ -154,7 +154,7 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 	stPa3F_FINAL.nParked	= stPa3F.nParked;
 
 	pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[1]];
-	GetCurStatFromBDI (pIBDI, stPaAll, stPa1F,stPa2F,stPa3F,stPa4F,stPa5F,stPa6F);
+	GetCurStatFromBDI (pIBDI, stPaAll, stPa1F,stPa2F,stPa3F,stPa4F);
 	stPaAll_FINAL.nTotal	+= stPaAll.nTotal;
 	stPaAll_FINAL.nFree		+= stPaAll.nFree;
 	stPaAll_FINAL.nParked	+= stPaAll.nParked;

@@ -225,6 +225,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ManClNetComm.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\ManNetComm.cpp"
 				>
 			</File>
@@ -320,6 +324,10 @@
 			</File>
 			<File
 				RelativePath=".\MainFrm.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ManClNetComm.h"
 				>
 			</File>
 			<File

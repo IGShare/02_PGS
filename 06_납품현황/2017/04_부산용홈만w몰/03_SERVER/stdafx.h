@@ -195,9 +195,60 @@ struct STAT_PARKING_AREA {
 	int nFree;
 };
 
-void GetCurStatFromBDI (INFO_BACK_DRAWING_ITEM *pIBDI, STAT_PARKING_AREA &stPaAll, STAT_PARKING_AREA &stPa1F, STAT_PARKING_AREA &stPa2F, STAT_PARKING_AREA &stPa3F, STAT_PARKING_AREA &stPa4F, STAT_PARKING_AREA &stPa5F, STAT_PARKING_AREA &stPa6F);
+void GetCurStatFromBDI (INFO_BACK_DRAWING_ITEM *pIBDI, STAT_PARKING_AREA &stPaAll, STAT_PARKING_AREA &stPa1F, STAT_PARKING_AREA &stPa2F, STAT_PARKING_AREA &stPa3F, STAT_PARKING_AREA &stPa4F);
 void MakeStreamCurStatFromBDI (INFO_BACK_DRAWING_ITEM *pIBDI_B2, INFO_BACK_DRAWING_ITEM *pIBDI_B3, BYTE *stPaALL, BYTE *stPa2F, BYTE *stPa3F);
 void UpdateCurDispStat ();
+
+void GetCurStat_B1_Upper (int &nTotal, int &nParked, int &nFree);
+void GetCurStat_B1_Lower (int &nTotal, int &nParked, int &nFree);
+// EBoard[S]
+enum {
+	IDX_EBD_DEV_ENTRANCE_1,
+//	IDX_EBD_DEV_ENTRANCE_2,
+
+	NUM_EBOARD_DEV
+};
+const LPSTR GL_STR_EBD_DEV_NAME[NUM_EBOARD_DEV] = {
+	_T("입구 1"),
+//	_T("입구 2"),
+};
+struct INFO_EBOARD_PARAM {
+	char strNetAddr[MAX_PATH];
+	int nNetPort;
+	int nDstID;
+};
+
+const LPSTR GL_STR_EBD_NET_ADDR[NUM_EBOARD_DEV] = {
+//	_T("127.0.0.1"),
+//	_T("192.168.0.200"),
+	_T("192.168.1.200"),
+//	_T("192.168.1.201"),
+};
+const int GL_NUM_EBD_NET_PORT[NUM_EBOARD_DEV] = {
+	5000,
+//	5000,
+};
+const int GL_NUM_EBD_DST_ID[NUM_EBOARD_DEV] = {
+	0,
+//	1,
+};
+
+enum {
+	IDX_EBD_CLR_BLACK,
+	IDX_EBD_CLR_RED,
+	IDX_EBD_CLR_GREEN,
+	IDX_EBD_CLR_YELLOW,
+	IDX_EBD_CLR_PURPLE,
+	IDX_EBD_CLR_MARGENTA,
+	IDX_EBD_CLR_CYAN,
+	IDX_EBD_CLR_WHITE,
+
+	NUM_EBD_TXT_CLR
+};
+
+#define SZ_EBD_SND_BUF		512
+int MakeEBoardSendData (int nDST, CString strSnd, int *bufClr, BYTE *bufSnd);
+// EBoard[E]
 
 
 struct INFO_JUST_MADE_VIEW {
@@ -214,6 +265,8 @@ struct INFO_GL_VAR_ALL {
 	INFO_JUST_MADE_VIEW iJMV;
 	CWrapManNetComm *pWMNC;
 	CPaneBD *pPaneBD;
+	INFO_EBOARD_PARAM bufIEbdParam[NUM_EBOARD_DEV];
+
 };
 
 #define SZ_BUF_DUMMY_FOR_UN_GL_VAR_ALL		(16 *1024)

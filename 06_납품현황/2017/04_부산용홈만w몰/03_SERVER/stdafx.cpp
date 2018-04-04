@@ -421,8 +421,6 @@ void GetCurStatFromBDI (
 	, STAT_PARKING_AREA &stPa2F
 	, STAT_PARKING_AREA &stPa3F
 	, STAT_PARKING_AREA &stPa4F
-	, STAT_PARKING_AREA &stPa5F
-	, STAT_PARKING_AREA &stPa6F
 )
 {
 	int i;
@@ -450,13 +448,7 @@ void GetCurStatFromBDI (
 	stPa4F.nParked = 0;
 	stPa4F.nFree = 0;
 
-	stPa5F.nTotal = 0;
-	stPa5F.nParked = 0;
-	stPa5F.nFree = 0;
 
-	stPa6F.nTotal = 0;
-	stPa6F.nParked = 0;
-	stPa6F.nFree = 0;
 
 	for (i=0; i<pIBDI->numDispItem; i++)
 	{
@@ -471,16 +463,10 @@ void GetCurStatFromBDI (
 		stPaAll.nTotal++;
 
 		if(pIDI->idxCCM == 0){
-			if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
-			{
-				stPa2F.nTotal++;
-			}
-			else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
-			{
+
 				stPa3F.nTotal++;
-			}
 		}
-		else if(pIDI->idxCCM == 1){
+		else if(pIDI->idxCCM == 1 || pIDI->idxCCM == 2){
 			stPa2F.nTotal++;
 		}
 
@@ -491,16 +477,10 @@ void GetCurStatFromBDI (
 		{
 			stPaAll.nFree++;
 			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
-				{
-					stPa2F.nFree++;
-				}
-				else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
-				{
+
 					stPa3F.nFree++;
-				}
 			}
-			else if(pIDI->idxCCM == 1){
+			else if(pIDI->idxCCM == 1 || pIDI->idxCCM == 2){
 				stPa2F.nFree++;
 			}
 		}
@@ -509,16 +489,10 @@ void GetCurStatFromBDI (
 			stPaAll.nParked++;
 
 			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 4 || pIDI->idxSCM == 5 ||pIDI->idxSCM == 6 ||pIDI->idxSCM == 7 ||pIDI->idxSCM == 8 ||pIDI->idxSCM == 9 ||pIDI->idxSCM == 10)
-				{
-					stPa2F.nParked++;
-				}
-				else if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1 || pIDI->idxSCM == 2 || pIDI->idxSCM == 3)
-				{
+
 					stPa3F.nParked++;
-				}
 			}
-			else if(pIDI->idxCCM == 1){
+			else if(pIDI->idxCCM == 1 || pIDI->idxCCM == 2){
 				stPa2F.nParked++;
 			}
 		}
