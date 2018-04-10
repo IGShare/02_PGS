@@ -759,8 +759,8 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	nEBD1_Green3_L		=	bufNGrGrp[ 1]+bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4]+bufNGrGrp[ 6]+bufNGrGrp[ 7];				
 	nEBD1_Green3_R		=	bufNGrGrp[ 5]+bufNGrGrp[ 9]+bufNGrGrp[10]+bufNGrGrp[11]+bufNGrGrp[12]+bufNGrGrp[13]+bufNGrGrp[14]+bufNGrGrp[15]+bufNGrGrp[16];	
 
-	nEBD1_Green4_L		=	bufNGrGrp[ 1];				
-	nEBD1_Green4_R		=	bufNGrGrp[ 2];
+	nEBD1_Green4_L		=	bufNGrGrp[ 17];				
+	nEBD1_Green4_R		=	bufNGrGrp[ 8];
 
 	nEBD1_Green5_L		=	bufNGrGrp[10]+bufNGrGrp[11]+bufNGrGrp[12]+bufNGrGrp[13]+bufNGrGrp[14]+bufNGrGrp[15]+bufNGrGrp[16];			
 	nEBD1_Green5_R		=	bufNGrGrp[ 7];	
