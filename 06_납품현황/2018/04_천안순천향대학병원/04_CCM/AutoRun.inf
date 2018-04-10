@@ -1,0 +1,5 @@
+[AutoRun]
+open=\EZPARK\PGS_CCMApp.exe
+[AutoRun2]
+open=\Windows\explorer.exe
+Sleep=0

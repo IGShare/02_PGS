@@ -424,7 +424,7 @@ void CMCUProgrammerDlg::OnBnClickedBnDeviceApply()
 		//strCmd.Format(L"%s %s %s %s %s %s %s %s %s %s%s",AVR_ATPROGRAM_FILE_NAME,L"-t",m_strToolName,L"-i",AVR_PROGRAMMING_INTERFACE0,L"-c", L"COM5", L"-d",m_strDeviceName,AVR_PROG_OPTION_FUSES_READ, L"> fuse_read_result.txt" );// = AVR_ATPROGRAM_FILE_NAME+L"-t"+AVR_PROGRAMMER_NAME+L"-i"+AVR_PROGRAMMING_INTERFACE + L"-d" + m_strDeviceName + L"program -f" + m_elfFileName;
 
 		RunMCUProgrammer(strPath, strCmd, L"run_fuses.bat");
-		Sleep(4000);
+		Sleep(6000);
 		
 		wchar_t strTmp[512];
 
@@ -625,7 +625,7 @@ void CMCUProgrammerDlg::OnBnClickedBnEeread()
 	//strCmd.Format(L"%s %s %s %s %s %s %s %s %s",AVR_ATPROGRAM_FILE_NAME,L"-t",m_strToolName,L"-i",m_strInterfaceName,L"-d",m_strDeviceName,AVR_PROG_OPTION_EEPROM_READ, L"> eeprom_read_result.txt" );
 
 	RunMCUProgrammer(strPath, strCmd, L"run_eeprom_read.bat");
-	Sleep(4000);
+	Sleep(6000);
 	
 	wchar_t strTmp[512];
 	GetOneLineFromResultFile(strTmp, L"eeprom_read_result.txt");
@@ -758,7 +758,7 @@ void CMCUProgrammerDlg::OnBnClickedBnEewrite()
 	//strCmd.Format(L"%s %s %s %s %s %s %s %s %s %s %s",AVR_ATPROGRAM_FILE_NAME,L"-t",m_strToolName,L"-i",m_strInterfaceName,L"-d",m_strDeviceName,AVR_PROG_OPTION_EEPROM_WRITE, L"--values", strEEPROMInfo, L"> eeprom_write_result.txt" );
 
 	RunMCUProgrammer(strPath, strCmd, L"run_eeprom_write.bat");
-	Sleep(4000);
+	Sleep(6000);
 
 	wchar_t strTmp[512];
 	GetOneLineFromResultFile(strTmp, L"eeprom_write_result.txt");
