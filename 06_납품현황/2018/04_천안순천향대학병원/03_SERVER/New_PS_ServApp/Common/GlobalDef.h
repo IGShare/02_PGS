@@ -1,0 +1,126 @@
+//#include "GlobalDef.h"
+
+#ifndef __GLOBAL_DEF__
+#define __GLOBAL_DEF__
+
+#pragma pack(push, 1)
+
+enum {
+	IDX_DEV_TYPE_USM,
+	IDX_DEV_TYPE_LGM,
+	IDX_DEV_TYPE_SCM,
+	IDX_DEV_TYPE_CCM,
+
+	NUM_DEV_TYPE
+};
+
+#define MIN_DEV_ID_USM				1
+#define MAX_DEV_ID_USM				127
+
+#define MIN_DEV_ID_LGM				129
+#define MAX_DEV_ID_LGM				255
+
+#define MIN_DEV_ID_SCM				1
+#define MAX_DEV_ID_SCM				15
+
+#define MIN_DEV_ID_CCM				1
+#define MAX_DEV_ID_CCM				16
+
+#define MAX_NUM_USM					(MAX_DEV_ID_USM -MIN_DEV_ID_USM +1)
+#define MAX_NUM_LGM					(MAX_DEV_ID_LGM -MIN_DEV_ID_LGM +1)
+#define MAX_NUM_SCM					(MAX_DEV_ID_SCM -MIN_DEV_ID_SCM +1)
+#define MAX_NUM_CCM					(MAX_DEV_ID_CCM -MIN_DEV_ID_CCM +1)
+
+struct INFO_SERIAL_NUM {
+	BYTE idxDevType;
+	BYTE nRev;
+	BYTE nReserved_0;
+	BYTE nReserved_1;
+	DWORD nDevNum;
+};
+
+#define MIN_SN_REV_NUM				1
+#define MAX_SN_REV_NUM				15
+
+#define MIN_SN_DEV_NUM				1
+#define MAX_SN_DEV_NUM				99999999
+
+enum {
+	IDX_OPM_SENS_LED_OFF = 0x00,
+	IDX_OPM_SENS_LED_ON_GREEN,
+	IDX_OPM_SENS_LED_ON_RED,
+	IDX_OPM_SENS_LED_ON_BLUE,
+	IDX_OPM_FORC_LED_OFF,
+	IDX_OPM_FORC_LED_ON_GREEN,
+	IDX_OPM_FORC_LED_ON_RED,
+	IDX_OPM_FORC_LED_BLINKING,	// Test mode
+	
+
+
+	NUM_OP_MODE
+};
+
+// USM parameter[S]
+enum {
+	IDX_USM_PARAM_MAX_DET_DIST,
+	IDX_USM_PARAM_ADC_AMP_LV,
+	IDX_USM_PARAM_ADC_SNS_LV,
+	IDX_USN_PARAM_TX_BURST_CNT,
+
+	NUM_USM_PARAM
+};
+#define MIN_USMP_MAX_DET_DIST		150	// MAX_DET_DIST
+#define MAX_USMP_MAX_DET_DIST		400
+#define DEF_USMP_MAX_DET_DIST		200
+#define INC_USMP_MAX_DET_DIST		10
+#define MIN_USMP_ADC_AMP_LV			50	// ADC_AMP_LV
+#define MAX_USMP_ADC_AMP_LV			150
+#define DEF_USMP_ADC_AMP_LV			90
+#define INC_USMP_ADC_AMP_LV			1
+#define MIN_USMP_ADC_SNS_LV			1	// ADC_SNS_LV
+#define MAX_USMP_ADC_SNS_LV			15
+#define DEF_USMP_ADC_SNS_LV			5
+#define INC_USMP_ADC_SNS_LV			1
+#define MIN_USMP_TX_BURST_CNT		1	// TX_BURST_CNT
+#define MAX_USMP_TX_BURST_CNT		15
+#define DEF_USMP_TX_BURST_CNT		10
+#define INC_USMP_TX_BURST_CNT		1
+// USM parameter[E]
+
+
+struct INFO_DEV_USM {
+	INFO_SERIAL_NUM nSN;
+	BYTE nDevID;
+
+	BYTE idxOpMode;
+	BYTE bufParam[NUM_USM_PARAM];
+	BYTE nDevID_LGM;
+	BYTE bStartParkingF;
+	SYSTEMTIME nLTPTimeRef;
+	SYSTEMTIME nLTPTimeCur;
+
+	BYTE bGreenCnt;
+	BYTE nGroup;
+
+};
+
+struct INFO_DEV_LGM {
+	INFO_SERIAL_NUM nSN;
+	BYTE nDevID;
+
+	BYTE idxOpMode;
+};
+
+struct INFO_DEV_SCM {
+	INFO_SERIAL_NUM nSN;
+	BYTE nDevID;
+};
+
+struct INFO_DEV_CCM {
+	INFO_SERIAL_NUM nSN;
+	BYTE nDevID;
+};
+
+#pragma pack(pop)
+
+#endif
