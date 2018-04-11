@@ -47,6 +47,7 @@ UINT TH_PROC_EBOARD (LPVOID pParam)
 
 	int i, szEBoardSendData, bufClr[MAX_PATH], bufNumTotal[2], bufNumParked[2], bufNumFree[2];
 	STAT_PARKING_AREA stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F;
+	int all = 0, b2F = 0, b3F = 0;
 	BYTE bufEBoardSendData[SZ_EBD_SND_BUF];
 	CString strEBoardMsg;
 	INFO_BACK_DRAWING_ITEM *pIBDI;
@@ -71,7 +72,12 @@ UINT TH_PROC_EBOARD (LPVOID pParam)
 
 			pIBDI = &glInfoGlobal.iBDA.bufBDI[glInfoGlobal.iBDA.bufIdxMainBDI[0]];
 			GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
-			strEBoardMsg.Format ("%4d%4d", stPaB2F.nFree,stPaB3F.nFree);
+			b2F = stPaB2F.nFree;
+			pIBDI = &glInfoGlobal.iBDA.bufBDI[glInfoGlobal.iBDA.bufIdxMainBDI[1]];
+			GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
+			b3F = stPaB3F.nFree;
+
+			strEBoardMsg.Format ("%4d%4d", b3F, b2F);
 
 
 			szEBoardSendData = MakeEBoardSendData (
