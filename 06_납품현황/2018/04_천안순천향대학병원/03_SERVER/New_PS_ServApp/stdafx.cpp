@@ -543,22 +543,22 @@ void GetCurStatFromBDI (
 		stPaAll.nTotal++;
 
 		if(pIDI->idxCCM == 0){
-			if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+			if (pIDI->idxSCM == 0)
 			{
-				stPaB4F.nTotal++;
+				stPaB1F.nTotal++;
+			}
+			else if (pIDI->idxSCM == 1)
+			{
+				stPaB2F.nTotal++;
 			}
 			else if (pIDI->idxSCM == 2)
 			{
 				stPaB3F.nTotal++;
 			}
-			else if (pIDI->idxSCM == 3)
-			{
-				stPaB2F.nTotal++;
-			}
-			else if (pIDI->idxSCM == 4)
-			{
-				stPaB1F.nTotal++;
-			}
+			//else if (pIDI->idxSCM == 4)
+			//{
+			//	stPaB1F.nTotal++;
+			//}
 		}
 
 
@@ -569,22 +569,22 @@ void GetCurStatFromBDI (
 		{
 			stPaAll.nFree++;
 			if(pIDI->idxCCM == 0){
-				if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+				if (pIDI->idxSCM == 0)
 				{
-					stPaB4F.nFree++;
+					stPaB1F.nFree++;
+				}
+				else if (pIDI->idxSCM == 1)
+				{
+					stPaB2F.nFree++;
 				}
 				else if (pIDI->idxSCM == 2)
 				{
 					stPaB3F.nFree++;
 				}
-				else if (pIDI->idxSCM == 3)
-				{
-					stPaB2F.nFree++;
-				}
-				else if (pIDI->idxSCM == 4)
-				{
-					stPaB1F.nFree++;
-				}
+				//else if (pIDI->idxSCM == 4)
+				//{
+				//	stPaB1F.nFree++;
+				//}
 			}
 		}
 		else
@@ -593,22 +593,22 @@ void GetCurStatFromBDI (
 
 			if(pIDI->idxCCM == 0){
 				if(pIDI->idxCCM == 0){
-					if (pIDI->idxSCM == 0 || pIDI->idxSCM == 1)
+					if (pIDI->idxSCM == 0)
 					{
-						stPaB4F.nParked++;
+						stPaB1F.nParked++;
+					}
+					else if (pIDI->idxSCM == 1)
+					{
+						stPaB2F.nParked++;
 					}
 					else if (pIDI->idxSCM == 2)
 					{
 						stPaB3F.nParked++;
 					}
-					else if (pIDI->idxSCM == 3)
-					{
-						stPaB2F.nParked++;
-					}
-					else if (pIDI->idxSCM == 4)
-					{
-						stPaB1F.nParked++;
-					}
+					//else if (pIDI->idxSCM == 4)
+					//{
+					//	stPaB1F.nParked++;
+					//}
 				}
 			}
 
