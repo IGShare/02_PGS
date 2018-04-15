@@ -720,6 +720,8 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	//int nEBD1_Green14_L, nEBD1_Green14_R;
 	//int nEBD1_Green15_L, nEBD1_Green15_R;
 
+	m_pManNetComm->m_CentralMonitorGreenCnt = glIGlobal.EBDComm_numFreeCMS;
+
 	int i, j;
 	int bufClrGreen[MAX_NUM_STR_IN_EBD], bufClrRed[MAX_NUM_STR_IN_EBD];
 	int bufNGrGrp[NUM_EBD_GROUP];

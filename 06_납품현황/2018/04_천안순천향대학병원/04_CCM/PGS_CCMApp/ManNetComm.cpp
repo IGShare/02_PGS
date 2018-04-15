@@ -160,6 +160,7 @@ CManNetComm::CManNetComm(ITEM_RESM_USM_LGM_STAT *pBufOldStatUSM_LGM)
 		memset (&m_bufStatUSM_LGM[0], 0, sizeof(ITEM_RESM_USM_LGM_STAT) *MAX_NUM_SCM);
 	}
 
+	m_CentralMonitorGreenCnt = 0;
 	AfxBeginThread (TH_NetCommProc, this);
 }
 
@@ -318,7 +319,8 @@ BOOL CManNetComm::ProcRcvPkt ()
 
 		nLength = 3 +sizeof(ITEM_RESM_USM_LGM_STAT);
 		pIHdrReqM_Snd->nDataType = IDX_ICCS_DT_RES_USM_LGM_STAT;
-		pIHdrReqM_Snd->numItem = 0;
+		pIHdrReqM_Snd->numItem = m_CentralMonitorGreenCnt & 0xff;
+		//pIHdrReqM_Snd->numItem = 0;
 
 		pITrlReqM = (ITEM_TRL_REQM *)&m_bufSnd[sizeof(ITEM_HDR_REQM) +sizeof(ITEM_RESM_USM_LGM_STAT)];
 		break;

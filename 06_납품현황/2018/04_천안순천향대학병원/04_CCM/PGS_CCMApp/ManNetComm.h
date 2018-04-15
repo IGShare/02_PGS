@@ -29,6 +29,8 @@ public:
 	volatile BOOL m_bConnected;
 	volatile BOOL m_bEnable;
 
+	volatile int m_CentralMonitorGreenCnt;
+
 	BYTE *m_bufRcv;
 	BYTE *m_bufSnd;
 	volatile int m_posPkt;
