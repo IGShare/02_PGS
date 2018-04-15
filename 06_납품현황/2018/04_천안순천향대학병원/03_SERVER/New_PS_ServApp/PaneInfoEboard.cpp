@@ -117,7 +117,7 @@ void CPaneInfoEboard::OnSize(UINT nType, int cx, int cy)
 
 void CPaneInfoEboard::UpdateMainList (BOOL bFullUpdate)
 {
-	return;/////////////////////////////////////////////////////////
+	//return;/////////////////////////////////////////////////////////
 	int i, j;
 	BOOL noSelected = TRUE;
 	INFO_CTRL_DEV_ALL *pICDA = &glInfoGlobal.iCDA;

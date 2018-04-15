@@ -255,24 +255,24 @@ BOOL ReadInfoGlobal ()
 
 	fclose (fp);
 
-//	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_ENTRANCE_01] = 1;
+	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_ENTRANCE_01] = 1;
 //	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_ENTRANCE_02] = 2;
 
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID1] =  1;
+//	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID1] =  1;
 	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID2] =  2;
 	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID3] =  3;
 	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID4] =  4;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID5] =  5;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID6] =  6;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID7] =  7;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID8] =  8;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID9] =  9;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID10] =  10;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID11] =  11;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID12] =  12;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID13] =  13;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID14] =  14;
-	glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID15] =  15;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID5] =  5;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID6] =  6;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID7] =  7;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID8] =  8;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID9] =  9;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID10] =  10;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID11] =  11;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID12] =  12;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID13] =  13;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID14] =  14;
+	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID15] =  15;
 
 	//glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_ENTRANCE_01] =  13;
 

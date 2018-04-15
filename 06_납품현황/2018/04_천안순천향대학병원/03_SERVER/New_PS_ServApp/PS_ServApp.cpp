@@ -131,16 +131,16 @@ BOOL CPS_ServAppApp::InitInstance()
 	pMainFrame->UpdateWindow();
 
 	// 메인 도면을 맨 위에 띄움[S]
-	//INFO_JUST_MADE_VIEW *pIJMV = &glInfoGlobal.unGVA.iGVA.iJMV;
-	//
-	//pIJMV->bInfoCopyOK = FALSE;
-	//pIJMV->idxMainBDI = 0;
-	//pIJMV->idxSubBDI = -1;
-	//DoFileNew ();
-	//while (pIJMV->bInfoCopyOK == FALSE)
-	//{
-	//	Sleep (0);
-	//}
+	INFO_JUST_MADE_VIEW *pIJMV = &glInfoGlobal.unGVA.iGVA.iJMV;
+	
+	pIJMV->bInfoCopyOK = FALSE;
+	pIJMV->idxMainBDI = 0;
+	pIJMV->idxSubBDI = -1;
+	DoFileNew ();
+	while (pIJMV->bInfoCopyOK == FALSE)
+	{
+		Sleep (0);
+	}
 	
 	//pIJMV->bInfoCopyOK = FALSE;
 	//pIJMV->idxMainBDI = 1;

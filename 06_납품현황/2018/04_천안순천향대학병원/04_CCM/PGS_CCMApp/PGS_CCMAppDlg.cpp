@@ -703,10 +703,11 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	if(m_commEbd1.m_Connect == FALSE)
 		return FALSE;
 
-	int nEBD1_Green1_L, nEBD1_Green1_R;
+	int nEBD1_Entrance_1, nEBD1_Entrance_2,nEBD1_Entrance_3,nEBD1_Entrance_4;
+	//int nEBD1_Green1_L, nEBD1_Green1_R;
 	int nEBD1_Green2_L, nEBD1_Green2_R;
-	//int nEBD1_Green3_L, nEBD1_Green3_R;
-	//int nEBD1_Green4_L, nEBD1_Green4_R;
+	int nEBD1_Green3_L, nEBD1_Green3_R;
+	int nEBD1_Green4_L, nEBD1_Green4_R;
 	//int nEBD1_Green5_L, nEBD1_Green5_R;
 	//int nEBD1_Green6_L, nEBD1_Green6_R;
 	//int nEBD1_Green7_L, nEBD1_Green7_R;
@@ -752,8 +753,19 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 		}
 	}
 
-	nEBD1_Green1_L		=	bufNGrGrp[ 1];				
-	nEBD1_Green1_R		=	bufNGrGrp[ 2];			
+	bufNGrGrp[ 4] = glIGlobal.EBDComm_numFreeCMS;
+
+	nEBD1_Entrance_1 = bufNGrGrp[ 1];
+	nEBD1_Entrance_2 = bufNGrGrp[ 2];
+	nEBD1_Entrance_3 = bufNGrGrp[ 3];
+	nEBD1_Entrance_4 = bufNGrGrp[ 4];
+
+	nEBD1_Green2_L		=	bufNGrGrp[ 2];				
+	nEBD1_Green2_R		=	bufNGrGrp[ 2];		
+	nEBD1_Green3_L		=	bufNGrGrp[ 3];				
+	nEBD1_Green3_R		=	bufNGrGrp[ 3];	
+	nEBD1_Green4_L		=	bufNGrGrp[ 4];				
+	nEBD1_Green4_R		=	bufNGrGrp[ 4];	
 
 	//nEBD1_Green2_L		=	bufNGrGrp[ 5];				
 	//nEBD1_Green2_R		=	bufNGrGrp[ 3]+bufNGrGrp[ 4];				
@@ -794,24 +806,46 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	// 0xe0 0x1c    : _h    : 장애인
 
 
-	if((nEBD1_Green1_L != m_nOld_EBD1_Green1_L) || (nEBD1_Green1_R != m_nOld_EBD1_Green1_R) ){
-			sprintf_s (strTmp, MAX_PATH, "일반경차%4d%4d", nEBD1_Green1_R, nEBD1_Green1_L);
-			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID1], strTmp, bufClrGreen, &m_commEbd1);
+	if((nEBD1_Entrance_1 != m_nOld_EBD2_Green1) || (nEBD1_Entrance_2 != m_nOld_EBD2_Green2) || (nEBD1_Entrance_3 != m_nOld_EBD2_Green3) || (nEBD1_Entrance_4 != m_nOld_EBD2_Green4) ){
+			sprintf_s (strTmp, MAX_PATH, "%4d%4d%4d%4d", nEBD1_Entrance_1, nEBD1_Entrance_2,nEBD1_Entrance_3,nEBD1_Entrance_4);
+			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_ENTRANCE_01], strTmp, bufClrGreen, &m_commEbd1);
+			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
+		
+	}
+	if((nEBD1_Green2_L != m_nOld_EBD1_Green2_L) || (nEBD1_Green2_R != m_nOld_EBD1_Green2_R) ){
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l%4d%4d", nEBD1_Green2_R, nEBD1_Green2_L);
+			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID2], strTmp, bufClrGreen, &m_commEbd1);
+			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
+		
+	}
+	if((nEBD1_Green3_L != m_nOld_EBD1_Green3_L) || (nEBD1_Green3_R != m_nOld_EBD1_Green3_R) ){
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l%4d%4d", nEBD1_Green3_R, nEBD1_Green3_L);
+			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID3], strTmp, bufClrGreen, &m_commEbd1);
+			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
+		
+	}
+	if((nEBD1_Green4_L != m_nOld_EBD1_Green4_L) || (nEBD1_Green4_R != m_nOld_EBD1_Green4_R) ){
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l%4d%4d", nEBD1_Green4_R, nEBD1_Green4_L);
+			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID4], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
 
 
 
-	m_nOld_EBD1_Green1_L   = nEBD1_Green1_L;
-	m_nOld_EBD1_Green1_R   = nEBD1_Green1_R;
-	//m_nOld_EBD1_Green2_L   = nEBD1_Green2_L;
-	//m_nOld_EBD1_Green2_R   = nEBD1_Green2_R;
-	//m_nOld_EBD1_Green3_L   = nEBD1_Green3_L;
-	//m_nOld_EBD1_Green3_R   = nEBD1_Green3_R;
+	//m_nOld_EBD1_Green1_L   = nEBD1_Green1_L;
+	//m_nOld_EBD1_Green1_R   = nEBD1_Green1_R;
+	m_nOld_EBD2_Green1		= nEBD1_Entrance_1;
+	m_nOld_EBD2_Green2		= nEBD1_Entrance_2;
+	m_nOld_EBD2_Green3		= nEBD1_Entrance_3;
+	m_nOld_EBD2_Green4		= nEBD1_Entrance_4;
 
-	//m_nOld_EBD1_Green4_L   = nEBD1_Green4_L;
-	//m_nOld_EBD1_Green4_R   = nEBD1_Green4_R;
+	m_nOld_EBD1_Green2_L   = nEBD1_Green2_L;
+	m_nOld_EBD1_Green2_R   = nEBD1_Green2_R;
+	m_nOld_EBD1_Green3_L   = nEBD1_Green3_L;
+	m_nOld_EBD1_Green3_R   = nEBD1_Green3_R;
+	m_nOld_EBD1_Green4_L   = nEBD1_Green4_L;
+	m_nOld_EBD1_Green4_R   = nEBD1_Green4_R;
 	//m_nOld_EBD1_Green5_L   = nEBD1_Green5_L;
 	//m_nOld_EBD1_Green5_R   = nEBD1_Green5_R;
 	//m_nOld_EBD1_Green6_L   = nEBD1_Green6_L;

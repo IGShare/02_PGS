@@ -134,7 +134,7 @@ void CPaneBD::UpdateCurStat ()
 
 void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 {
-	return;/////////////////////////////////////////////////////////
+	//return;/////////////////////////////////////////////////////////
 	STAT_PARKING_AREA stPaAll, stPaB1F, stPaB2F,stPaB3F, stPaB4F;
 	INFO_BACK_DRAWING_ALL *pIBDA = &glInfoGlobal.iBDA;
 	INFO_BACK_DRAWING_ITEM *pIBDI;
@@ -153,20 +153,20 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 
 		strTmp = "전체";
 		m_pLicMain->InsertItem (0, LPCTSTR(strTmp));
-		strTmp = "B1F";
+		strTmp = "1F";
 		m_pLicMain->InsertItem (1, LPCTSTR(strTmp));
-		strTmp = "B2F";
+		strTmp = "2F";
 		m_pLicMain->InsertItem (2, LPCTSTR(strTmp));
-		strTmp = "B3F";
+		strTmp = "3F";
 		m_pLicMain->InsertItem (3, LPCTSTR(strTmp));
-		strTmp = "B4F";
+		strTmp = "4F";
 		m_pLicMain->InsertItem (4, LPCTSTR(strTmp));
 
 	}
 //	for(int j = 0; j<pIBDA->numBDI; j++)
 	{
 		pIBDI = &pIBDA->bufBDI[pIBDA->bufIdxMainBDI[0]];
-		GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F,stPaB2F, stPaB3F, stPaB4F);
+		GetCurStatFromBDI (pIBDI, stPaAll, stPaB1F, stPaB2F, stPaB3F, stPaB4F);
 		//전체
 		strTmp.Format ("%d", stPaAll.nTotal);
 		m_pLicMain->SetItem (0, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
@@ -200,12 +200,12 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 		m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 
 		//B4F
-		strTmp.Format ("%d", stPaB4F.nTotal);
-		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		strTmp.Format ("%d", stPaB4F.nParked);
-		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		strTmp.Format ("%d", stPaB4F.nFree);
-		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		//strTmp.Format ("%d", stPaB4F.nTotal);
+		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		//strTmp.Format ("%d", stPaB4F.nParked);
+		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		//strTmp.Format ("%d", stPaB4F.nFree);
+		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 	}
 
 }
