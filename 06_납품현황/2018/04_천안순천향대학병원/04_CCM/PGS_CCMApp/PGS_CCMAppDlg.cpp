@@ -154,6 +154,7 @@ UINT TH_CMS_InfoRcvProc (LPVOID pParam)
 						{
 							numFreeCMS = (bufRcv[i +2] -'0') *100 +(bufRcv[i +3] -'0') *10 +(bufRcv[i +4] -'0') *1;
 							glIGlobal.EBDComm_numFreeCMS = numFreeCMS;
+							break;
 						}
 
 						i += TH_CMS_IRP_SZ_INFO_PKT;
