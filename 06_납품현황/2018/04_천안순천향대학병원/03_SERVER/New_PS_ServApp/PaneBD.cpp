@@ -200,12 +200,12 @@ void CPaneBD::UpdateMainList (BOOL bFullUpdate)
 		m_pLicMain->SetItem (3, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 
 		//B4F
-		//strTmp.Format ("%d", stPaB4F.nTotal);
-		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB4F.nParked);
-		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
-		//strTmp.Format ("%d", stPaB4F.nFree);
-		//m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", 66);
+		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_ALL, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB4F.nParked);
+		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_OCCUPIED, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
+		strTmp.Format ("%d", stPaB4F.nFree);
+		m_pLicMain->SetItem (4, IDX_ML_COL_BD_NUM_AVAILABLE, LVIF_TEXT, LPCTSTR(strTmp), 0, 0, 0, 0);
 	}
 
 }
