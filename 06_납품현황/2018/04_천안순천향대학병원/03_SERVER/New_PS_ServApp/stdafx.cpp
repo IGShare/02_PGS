@@ -526,9 +526,9 @@ void GetCurStatFromBDI (
 	stPaB3F.nParked = 0;
 	stPaB3F.nFree = 0;
 
-	stPaB4F.nTotal = 0;
-	stPaB4F.nParked = 0;
-	stPaB4F.nFree = 0;
+	stPaB4F.nTotal = 66;
+	stPaB4F.nParked = 66-glInfoGlobal.unGVA.iGVA.m_CentralMonitorGreenCnt;
+	stPaB4F.nFree = glInfoGlobal.unGVA.iGVA.m_CentralMonitorGreenCnt;
 
 	for (i=0; i<pIBDI->numDispItem; i++)
 	{
@@ -614,6 +614,10 @@ void GetCurStatFromBDI (
 
 		}
 	}
+
+	stPaAll.nTotal += stPaB4F.nTotal;
+	stPaAll.nParked += stPaB2F.nParked;
+	stPaAll.nFree += stPaB3F.nFree;
 }
 
 
