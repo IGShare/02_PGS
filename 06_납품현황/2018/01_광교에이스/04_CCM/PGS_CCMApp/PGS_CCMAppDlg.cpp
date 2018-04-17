@@ -750,37 +750,29 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 		}
 	}
 
-	nEBD1_Green1_L		=	bufNGrGrp[ 5]+bufNGrGrp[ 8]+bufNGrGrp[ 9]+bufNGrGrp[ 12]+bufNGrGrp[ 13]+bufNGrGrp[ 15];				
-	nEBD1_Green1_R		=	bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4]+bufNGrGrp[ 6]+bufNGrGrp[ 7]+bufNGrGrp[ 10]+bufNGrGrp[ 11]+bufNGrGrp[ 14];			
+	nEBD1_Green1_L		=	bufNGrGrp[ 1]+bufNGrGrp[ 2];				
+	nEBD1_Green1_R		=	bufNGrGrp[ 1]+bufNGrGrp[ 2];			
 
-	nEBD1_Green2_L		=	bufNGrGrp[ 5];				
-	nEBD1_Green2_R		=	bufNGrGrp[ 3]+bufNGrGrp[ 4];				
-	nEBD1_Green3_L		=	bufNGrGrp[ 8]+bufNGrGrp[ 9];				
-	nEBD1_Green3_R		=	bufNGrGrp[ 6]+bufNGrGrp[ 7];	
+	nEBD1_Green2_L		=	bufNGrGrp[ 2];				
+	nEBD1_Green2_R		=	bufNGrGrp[ 2];				
+	nEBD1_Green3_L		=	bufNGrGrp[ 3]+bufNGrGrp[ 4];				
+	nEBD1_Green3_R		=	bufNGrGrp[ 3]+bufNGrGrp[ 4];	
 
-	nEBD1_Green4_L		=	bufNGrGrp[16]+bufNGrGrp[17]+bufNGrGrp[18]+bufNGrGrp[19]+bufNGrGrp[20]+bufNGrGrp[21]+bufNGrGrp[22]+bufNGrGrp[23]+bufNGrGrp[24];				
-	nEBD1_Green4_R		=	bufNGrGrp[10]+bufNGrGrp[11];	
+	nEBD1_Green4_L		=	bufNGrGrp[4];				
+	nEBD1_Green4_R		=	bufNGrGrp[4];
 
-	nEBD1_Green5_L		=	bufNGrGrp[ 15];				
-	nEBD1_Green5_R		=	bufNGrGrp[ 14];	
+	nEBD1_Green5_L		=	bufNGrGrp[ 5]+bufNGrGrp[ 6];				
+	nEBD1_Green5_R		=	bufNGrGrp[ 5]+bufNGrGrp[ 6];	
 
-	nEBD1_Green6_L		=	bufNGrGrp[16]+bufNGrGrp[18]+bufNGrGrp[19]+bufNGrGrp[20]+bufNGrGrp[21]+bufNGrGrp[22]+bufNGrGrp[23];		
-	nEBD1_Green6_R		=	bufNGrGrp[17];		
+	nEBD1_Green6_L		=	bufNGrGrp[6];		
+	nEBD1_Green6_R		=	bufNGrGrp[6];		
 
-	nEBD1_Green7_L		=	bufNGrGrp[18]+bufNGrGrp[19]+bufNGrGrp[20]+bufNGrGrp[21]+bufNGrGrp[22]+bufNGrGrp[23]+bufNGrGrp[24];
-	nEBD1_Green7_R		=	bufNGrGrp[18]+bufNGrGrp[19]+bufNGrGrp[20]+bufNGrGrp[21]+bufNGrGrp[22]+bufNGrGrp[23]+bufNGrGrp[24];
+	nEBD1_Green7_L		=	bufNGrGrp[7]+bufNGrGrp[8];
+	nEBD1_Green7_R		=	bufNGrGrp[7]+bufNGrGrp[8];
 
-	nEBD1_Green8_L		=	bufNGrGrp[19]+bufNGrGrp[20]+bufNGrGrp[21]+bufNGrGrp[22]+bufNGrGrp[23]+bufNGrGrp[24];		
-	nEBD1_Green8_R		=	bufNGrGrp[18];	
+	nEBD1_Green8_L		=	bufNGrGrp[8];		
+	nEBD1_Green8_R		=	bufNGrGrp[8];	
 
-	nEBD1_Green9_L		=	bufNGrGrp[20]+bufNGrGrp[21]+bufNGrGrp[22]+bufNGrGrp[23]+bufNGrGrp[24];					
-	nEBD1_Green9_R		=	bufNGrGrp[19];		
-
-	nEBD1_Green10_L		=	bufNGrGrp[22]+bufNGrGrp[23]+bufNGrGrp[24];					
-	nEBD1_Green10_R		=	bufNGrGrp[21];	
-
-	nEBD1_Green11_L		=	bufNGrGrp[23];				
-	nEBD1_Green11_R		=	bufNGrGrp[23];				
 	
 
 	//전광판 setting
@@ -793,32 +785,32 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 
 
 	if((nEBD1_Green1_L != m_nOld_EBD1_Green1_L) || (nEBD1_Green1_R != m_nOld_EBD1_Green1_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green1_R, nEBD1_Green1_L);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l B4%4d", nEBD1_Green1_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID1], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
 	if((nEBD1_Green2_L != m_nOld_EBD1_Green2_L) || (nEBD1_Green2_R != m_nOld_EBD1_Green2_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d", nEBD1_Green2_R, nEBD1_Green2_L);
+			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green2_R, nEBD1_Green2_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID2], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
 	if((nEBD1_Green3_L != m_nOld_EBD1_Green3_L) || (nEBD1_Green3_R != m_nOld_EBD1_Green3_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d", nEBD1_Green3_R, nEBD1_Green3_L);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l B3%4d", nEBD1_Green3_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID3], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 	}
 
 
 	if((nEBD1_Green4_L != m_nOld_EBD1_Green4_L) || (nEBD1_Green4_R != m_nOld_EBD1_Green4_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d", nEBD1_Green4_R, nEBD1_Green4_L);
+			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green4_R, nEBD1_Green4_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID4], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
 	if((nEBD1_Green5_L != m_nOld_EBD1_Green5_L) || (nEBD1_Green5_R != m_nOld_EBD1_Green5_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d", nEBD1_Green5_R, nEBD1_Green5_L);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l B2%4d", nEBD1_Green5_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID5], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
@@ -830,7 +822,7 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	}
 
 	if((nEBD1_Green7_L != m_nOld_EBD1_Green7_L) || (nEBD1_Green7_R != m_nOld_EBD1_Green7_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_r_r%4d주차", nEBD1_Green7_R, nEBD1_Green7_L);
+			sprintf_s (strTmp, MAX_PATH, "_l_l_l_l B1%4d", nEBD1_Green7_L);
 			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID7], strTmp, bufClrGreen, &m_commEbd1);
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
@@ -841,24 +833,7 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
 		
 	}
-	if((nEBD1_Green9_L != m_nOld_EBD1_Green9_L) || (nEBD1_Green9_R != m_nOld_EBD1_Green9_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green9_R, nEBD1_Green9_L);
-			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID9], strTmp, bufClrGreen, &m_commEbd1);
-			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
-	}
 
-	if((nEBD1_Green10_L != m_nOld_EBD1_Green10_L) || (nEBD1_Green10_R != m_nOld_EBD1_Green10_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d", nEBD1_Green10_R, nEBD1_Green10_L);
-			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID10], strTmp, bufClrGreen, &m_commEbd1);
-			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
-		
-	}
-	if((nEBD1_Green11_L != m_nOld_EBD1_Green11_L) || (nEBD1_Green11_R != m_nOld_EBD1_Green11_R) ){
-			sprintf_s (strTmp, MAX_PATH, "_r_r_r_r%4d주차", nEBD1_Green11_R, nEBD1_Green11_L);
-			SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_ID11], strTmp, bufClrGreen, &m_commEbd1);
-			Sleep (glIGlobal.EBD1Comm_timeSendInterval);
-		
-	}
 
 
 	m_nOld_EBD1_Green1_L   = nEBD1_Green1_L;
@@ -879,13 +854,7 @@ BOOL CPGS_CCMAppDlg::SendEBoard1Message ()
 	m_nOld_EBD1_Green7_R   = nEBD1_Green7_R;
 	m_nOld_EBD1_Green8_L   = nEBD1_Green8_L;
 	m_nOld_EBD1_Green8_R   = nEBD1_Green8_R;
-	m_nOld_EBD1_Green9_L   = nEBD1_Green9_L;
-	m_nOld_EBD1_Green9_R   = nEBD1_Green9_R;
 
-	m_nOld_EBD1_Green10_L   = nEBD1_Green10_L;
-	m_nOld_EBD1_Green10_R   = nEBD1_Green10_R;
-	m_nOld_EBD1_Green11_L   = nEBD1_Green11_L;
-	m_nOld_EBD1_Green11_R   = nEBD1_Green11_R;
 
 
 	memcpy (&m_bufNOldGrGrp[0], &bufNGrGrp[0], sizeof(int) *NUM_EBD_GROUP);
