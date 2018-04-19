@@ -87,6 +87,8 @@ public:
 	int m_nOldGreen8_SBD_R;
 	int m_nOldGreen9_SBD_L;
 	int m_nOldGreen9_SBD_R;
+	int m_nOldGreen10_SBD_L;
+	int m_nOldGreen10_SBD_R;
 	int m_nOldGreen10_EBD_B1;
 	int m_nOldGreen10_EBD_B2;
 

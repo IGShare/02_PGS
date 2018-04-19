@@ -122,6 +122,8 @@ CPS_CCM_App_SGDlg::CPS_CCM_App_SGDlg(CWnd* pParent /*=NULL*/)
 	m_nOldGreen8_SBD_R = -1;
 	m_nOldGreen9_SBD_L = -1;
 	m_nOldGreen9_SBD_R = -1;
+	m_nOldGreen10_SBD_L = -1;
+	m_nOldGreen10_SBD_R = -1;
 	m_nOldGreen10_EBD_B1 = -1;
 	m_nOldGreen10_EBD_B2 = -1;
 	m_isConnectedCom = 0;
@@ -883,7 +885,7 @@ BOOL CPS_CCM_App_SGDlg::ReqSetOpMode (int idxSCM)
 
 void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 {
-//	return;//////////////////////////////////////////////////
+	//return;//////////////////////////////////////////////////
 
 	if(m_isConnectedCom == 0) return;
 
@@ -933,27 +935,27 @@ void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 	//nGreen1_1EBD		=	bufNGrGrp[ 1]+bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4]+bufNGrGrp[ 5]+bufNGrGrp[ 6]+bufNGrGrp[ 7]+bufNGrGrp[ 8]+bufNGrGrp[ 9]; // ÁöÇÏ1Ãþ º»°ü
 
 	
-	nGreen1_EBD_B1 = bufNGrGrp[ 1];
-	nGreen2_SBD_L = bufNGrGrp[ 1];
-	nGreen3_SBD_L = bufNGrGrp[ 1];
-	nGreen4_SBD_L = bufNGrGrp[ 1];
-	nGreen5_SBD_L = bufNGrGrp[ 1];
-	nGreen6_SBD_L = bufNGrGrp[ 1];
-	nGreen7_SBD_L = bufNGrGrp[ 1];
-	nGreen8_SBD_L = bufNGrGrp[ 1];
-	nGreen9_SBD_L = bufNGrGrp[ 1];
-	nGreen10_SBD_L = bufNGrGrp[ 1];
+	nGreen1_EBD_B1 = bufNGrGrp[ 1]+bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4];
+	nGreen2_SBD_L = bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4];
+	nGreen3_SBD_L = bufNGrGrp[ 4];
+	nGreen4_SBD_L = bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4];
+	nGreen5_SBD_L = bufNGrGrp[ 1]+bufNGrGrp[ 3]+bufNGrGrp[ 4];
+	nGreen6_SBD_L = bufNGrGrp[ 7]+bufNGrGrp[ 8]+bufNGrGrp[ 9];
+	nGreen7_SBD_L = bufNGrGrp[ 6]+bufNGrGrp[ 7]+bufNGrGrp[ 8]+bufNGrGrp[ 9];
+	nGreen8_SBD_L = bufNGrGrp[ 8]+bufNGrGrp[ 9];
+	nGreen9_SBD_L = bufNGrGrp[ 8];
+	nGreen10_SBD_L = bufNGrGrp[ 9];
 
-	nGreen1_EBD_B2 = bufNGrGrp[ 1];
-	nGreen2_SBD_R = bufNGrGrp[ 1];
-	nGreen3_SBD_R = bufNGrGrp[ 1];
-	nGreen4_SBD_R = bufNGrGrp[ 1];
-	nGreen5_SBD_R = bufNGrGrp[ 1];
-	nGreen6_SBD_R = bufNGrGrp[ 1];
-	nGreen7_SBD_R = bufNGrGrp[ 1];
-	nGreen8_SBD_R = bufNGrGrp[ 1];
-	nGreen9_SBD_R = bufNGrGrp[ 1];
-	nGreen10_SBD_R = bufNGrGrp[ 1];
+	nGreen1_EBD_B2 = bufNGrGrp[ 5]+bufNGrGrp[ 6]+bufNGrGrp[ 7]+bufNGrGrp[ 8]+bufNGrGrp[ 9];
+	nGreen2_SBD_R = bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4];
+	nGreen3_SBD_R = bufNGrGrp[ 3];
+	nGreen4_SBD_R = bufNGrGrp[ 2]+bufNGrGrp[ 3]+bufNGrGrp[ 4];
+	nGreen5_SBD_R = bufNGrGrp[ 1]+bufNGrGrp[ 3]+bufNGrGrp[ 4];
+	nGreen6_SBD_R = bufNGrGrp[ 5]+bufNGrGrp[ 6];
+	nGreen7_SBD_R = bufNGrGrp[ 6]+bufNGrGrp[ 7]+bufNGrGrp[ 8]+bufNGrGrp[ 9];
+	nGreen8_SBD_R = bufNGrGrp[ 7]+bufNGrGrp[ 8];
+	nGreen9_SBD_R = bufNGrGrp[ 5]+bufNGrGrp[ 6]+bufNGrGrp[ 7];
+	nGreen10_SBD_R = bufNGrGrp[ 9];
 
 
 
@@ -1014,26 +1016,30 @@ void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_ENTRANCE_01], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
 	}
+
 	//B1F - ID 2
 	if (nGreen2_SBD_L != m_nOldGreen2_SBD_L || nGreen2_SBD_R != m_nOldGreen2_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen2_SBD_R, nGreen2_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_u_u_u_u%4d B1F",nGreen2_SBD_R);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B1F_02], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
 	}
+
+
 	//B1F - ID 3
 	if (nGreen3_SBD_L != m_nOldGreen3_SBD_L || nGreen3_SBD_R != m_nOldGreen3_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen3_SBD_R, nGreen3_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d",nGreen3_SBD_R, nGreen3_SBD_L);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B1F_03], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
 	}
+		
 	//B1F - ID 4
 	if (nGreen4_SBD_L != m_nOldGreen4_SBD_L || nGreen4_SBD_R != m_nOldGreen4_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen4_SBD_R, nGreen4_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_u_u_u_u%4d B1F",nGreen4_SBD_R);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B1F_04], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
@@ -1041,7 +1047,7 @@ void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 	//B1F - ID 5
 	if (nGreen5_SBD_L != m_nOldGreen5_SBD_L || nGreen5_SBD_R != m_nOldGreen5_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen5_SBD_R, nGreen5_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_u_u_u_u%4d B1F",nGreen5_SBD_R);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B1F_05], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
@@ -1049,7 +1055,7 @@ void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 	//B2F - ID 6
 	if (nGreen6_SBD_L != m_nOldGreen6_SBD_L || nGreen6_SBD_R != m_nOldGreen6_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen6_SBD_R, nGreen6_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_r_r_l_l%4d%4d",nGreen6_SBD_R, nGreen6_SBD_L);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B2F_06], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
@@ -1057,19 +1063,21 @@ void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 	//B2F - ID 7
 	if (nGreen7_SBD_L != m_nOldGreen7_SBD_L || nGreen7_SBD_R != m_nOldGreen7_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen7_SBD_R, nGreen7_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_u_u_u_u%4d B2F",nGreen7_SBD_R);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B2F_07], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
 	}
+	
 	//B2F - ID 8
 	if (nGreen8_SBD_L != m_nOldGreen8_SBD_L || nGreen8_SBD_R != m_nOldGreen8_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen8_SBD_R, nGreen8_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_r_r_u_u%4d%4d",nGreen8_SBD_R, nGreen8_SBD_L);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B2F_08], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
 	}
+	
 	//B2F - ID 9
 	if (nGreen9_SBD_L != m_nOldGreen9_SBD_L || nGreen9_SBD_R != m_nOldGreen9_SBD_R )
 	{
@@ -1079,9 +1087,9 @@ void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
 	}
 	//B2F - ID 9
-	if (nGreen9_SBD_L != m_nOldGreen9_SBD_L || nGreen9_SBD_R != m_nOldGreen9_SBD_R )
+	if (nGreen10_SBD_L != m_nOldGreen10_SBD_L || nGreen10_SBD_R != m_nOldGreen10_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "_u_u_l_l%4d%4d",nGreen10_SBD_R, nGreen10_SBD_L);
+		sprintf_s (strTmp, MAX_PATH, "_u_u_u_u%4d B2F",nGreen10_SBD_R);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_STAIR_B2F_10], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
