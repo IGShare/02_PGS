@@ -1011,7 +1011,7 @@ void CPS_CCM_App_SGDlg::SendEBoardMessage ()
 	////Entrance - ID 1
 	if (nGreen1_EBD_B1 != m_nOldGreen1_SBD_L || nGreen1_EBD_B2 != m_nOldGreen1_SBD_R )
 	{
-		sprintf_s (strTmp, MAX_PATH, "%4d%4d",nGreen1_EBD_B2, nGreen1_EBD_B1);
+		sprintf_s (strTmp, MAX_PATH, "%4d%4d",nGreen1_EBD_B1, nGreen1_EBD_B2);
 		
 		SendTxtToEBoard (glIGlobal.EBD1Comm_bufDstID[IDX_EBD1_ENTRANCE_01], strTmp, bufClrGreen, &m_commEbd);
 		Sleep (glIGlobal.EBD2Comm_timeSendInterval);
